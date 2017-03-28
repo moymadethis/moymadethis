@@ -1,0 +1,67 @@
+
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/**
+ * Base styling for heading elements.
+ */
+ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $heading-font-color;
+	font-family: $heading-font-family;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0 0 $vertical-spacing;
+	text-transform: uppercase;
+	
+	.band--dark & {
+		color: $white;
+	}
+}
+
+.oversize {
+	@include font-size(125);
+	line-height: 1;
+	
+	@include bp(bp4) {
+		@include font-size(150);
+	}
+}
+
+h1 { 
+	@include font-size(90);
+
+	@include bp(bp4) {
+		@include font-size(100);
+	}
+}
+
+h2 { 
+	@include font-size(65);
+
+	@include bp(bp4) {
+		@include font-size(75);
+	}
+}
+
+h3 { 
+	@include font-size(40);
+
+	@include bp(bp4) {
+		@include font-size(50);
+	}
+}
+
+h4 { 
+	@include font-size(15);
+
+	@include bp(bp4) {
+		@include font-size(25);
+	}
+}

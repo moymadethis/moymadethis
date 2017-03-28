@@ -1,0 +1,147 @@
+
+// SYSTEM  ================================================
+
+$debug-mode						: false;
+$debug-color-error				: red;
+$debug-color-warning			: yellow;
+$debug-outline-width			: 5px;
+$debug-outline-style			: solid;
+
+
+
+
+
+// COLOUR  ================================================
+
+$black 							: rgb(0,0,0);
+$white 							: rgb(255,255,255);
+
+$grey-darker					: rgb(13,15,15);
+$grey-dark						: rgb(64,69,70);
+$grey							: rgb(114,124,125);
+$grey-light						: rgb(177,182,183);
+$grey-lighter					: rgb(238,240,240);
+
+$color-primary-darker			: rgb(130,164,46);
+$color-primary-dark 			: rgb(147,184,51);
+$color-primary 					: rgb(86,218,215);
+$color-primary-light			: rgb(181,215,97);
+$color-primary-lighter			: rgb(237,245,215);
+
+
+
+
+
+// BASICS  ================================================
+
+$body-background 				: $white;
+$vertical-spacing				: 20px;
+$gutter		 					: 20px;
+$max-width						: 90.000rem;
+$MQs							: true;
+
+
+
+
+
+// TYPOGRAPHY  ================================================
+
+// Base
+
+$font-size 						: 18;
+$font-family 					: "tablet-gothic-narrow", "Helvetica Neue", sans-serif;
+$font-color 					: $grey;
+$font-lineheight 				: 1.5;
+$font-weight 					: 400;
+
+// Alt
+
+$alt-font-family 				: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$alt-font-color 				: inherit;
+$alt-font-lineheight 			: $font-lineheight;
+$alt-font-weight 				: 400;
+
+// Extra type variables
+
+$handwritten-font-family		: "Indie Flower", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$amp-font-family 				: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');
+$codefont-font-family			: Monaco, Courier New, monospace;
+
+// Headings
+
+$heading-font-color 			: $grey-darker;
+$heading-font-family 			: "ff-good-headline-web-pro-con", "Helvetica Neue", sans-serif;
+$heading-font-style 			: italic;
+$heading-font-weight 			: 900;
+$heading-lineheight				: $font-lineheight;
+
+
+
+
+
+// Links  ================================================
+
+$link-color 		    		: $color-primary-dark;
+$link-color-hover 				: $black;
+$link-color-visited   			: $link-color;
+$link-color-focus 				: $link-color-hover;
+
+$base-bg						: $white;
+
+
+
+
+
+// TEXTURE  ================================================
+
+$border-color    				: $grey-lighter;
+$border-style					: solid;
+$border-width 					: 4px;
+$border-radius 					: 0;
+$border							: $border-width $border-style $border-color;
+
+
+
+
+
+// 320 AND UP  ================================================
+
+// Buttons
+
+$button-bg 								: transparent;
+$button-border-color					: $grey-darker;
+$button-border-style 					: $border-style;
+$button-border-width 					: $border-width;
+$button-border-radius 					: $border-radius;
+
+$button-font-family						: $font-family;
+$button-font-size 						: $font-size;
+$button-font-color 						: $grey-darker;
+$button-font-weight 					: 600;
+$button-letter-spacing					: 0.025em;
+$button-font-transform 					: none;
+
+$button-bg-hover 						: $grey-darker;
+$button-border-color-hover				: $grey-darker;
+$button-font-color-hover 				: $white;
+
+
+// Images
+
+$figcaption-font-family			: $alt-font-family;
+$figcaption-font-size			: 1.6rem;
+$figcaption-font-style			: normal;
+$figcaption-font-weight			: normal;
+$figcaption-text-transform		: none;
+
+
+// Misc.
+
+$transition-duration			: .25s;
+$transition-timing-function		: ease;
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+
+/* ==========================================================================
+   #QUOTES
+   ========================================================================== */
+
+/**
+ * Base quote styles.
+ */
+
+blockquote {
+	color: $grey-darker;
+	font-style: italic;
+	font-weight: 600;
+	margin: ($vertical-spacing * 2) $gutter;
+
+	@include bp(bp3) {
+		margin: ($vertical-spacing * 2) ($gutter * 2);
+	}
+	
+	@include bp(bp5) {
+		margin: ($vertical-spacing * 2) ($gutter * 3);
+	}
+
+	p {
+		@include font-size(40);
+		font-style: italic;
+		
+		line-height: 1.4;
+	 
+		@include bp(bp4) {
+			@include font-size(50);
+		}
+	}
+	
+	> p {
+		position: relative;
+		text-indent: 4px;
+		
+		&:first-child:before,
+		&:last-of-type:after {
+			color: $color-primary;
+			content: "\201c";
+			display: inline;
+			font-size: 45px;
+			font-family: "Georgia";
+			font-style: normal;
+			line-height: 0.1em;
+			//margin-left: -30px;
+			position: relative;
+			top: 8px;
+			left: -4px;
+			text-indent: 0;
+		}
+		
+		&:last-of-type:after {
+			content: "\201d";
+			top: 12px;
+			right: -4px;
+			left: auto;
+		}
+	}
+	
+	footer {
+		@include font-size($font-size);
+		margin-top: -$vertical-spacing / 4;
+		
+		&:before {
+			background: $grey-darker;
+			content: "";
+			display: inline-block;
+			height: 2px;
+			margin-right: $gutter / 2;
+			position: relative;
+			top: 10px;
+			vertical-align: text-top;
+			width: 10px;
+		}
+	}
+
+	small {
+		font-family: $alt-font-family;
+		text-transform : uppercase;
+
+		@include bp(bp3) {
+			padding-left: ($gutter * 2);
+		}
+	}
+
+	cite {
+		font-style: normal;
+	}
+}

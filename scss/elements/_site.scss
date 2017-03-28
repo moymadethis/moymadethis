@@ -1,0 +1,155 @@
+
+/* ==========================================================================
+   #SITE
+   ========================================================================== */
+
+/**
+ * Viewports.
+ */
+
+@-webkit-viewport 	{ width: device-width;}
+@-moz-viewport 		{ width: device-width;}
+@-ms-viewport 		{ width: device-width;}
+@-o-viewport 		{ width: device-width;}
+@viewport 			{ width: device-width;}
+
+
+/**
+ * Base `html` styling.
+ *
+ * 1. Prevents content jumping when `.show-nav` is applied to `body` which is
+ *    caused because `overflow: hidden;` is applied, which hides any scrollbar. 
+ */
+ 
+html {
+	background: $body-background;
+	font-size: 62.5%;
+	//margin-left: calc(100vw - 100%); /* [1] */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: $base-bg;
+	-webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Base `body` styling.
+ */
+
+body {
+	background-color: transparent;
+	color: $font-color;
+	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+	font-family: $font-family;
+	@include font-size(16);
+	font-weight: $font-weight;
+	line-height: $font-lineheight;
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+
+	@include bp(bp4) {
+		@include font-size($font-size);
+	}
+}
+
+
+/**
+ * Putting touch-action: manipulation; on a clickable element makes WebKit
+ * consider touches that begin on the element only for the purposes of panning 
+ * and pinching to zoom. This means WebKit does not consider double-tap gestures
+ * on the element, so single taps are dispatched immediately.
+ */
+ 
+a,
+button,
+input,
+select,
+textarea,
+label,
+summary {
+	touch-action : manipulation;
+}
+
+
+
+
+
+/* ==========================================================================
+   #PAGE LOAD (pace.js)
+   ========================================================================== */
+   
+/**
+ * The `.page` div acts as a container for all the content on a page. Including
+ * the header and footer.
+ *
+ * 1. Padding to push content down as `.page-head` uses `position: absolute;`.
+ * 2. We use flexbox to make `.page-foot` a sticky footer to keep it fixed to
+ *    bottom of the page when there's not enough content to push it down.
+ * 3. Using flexbox we set the height to 100% and also `box-sizing: border-box;`
+ *    to compensate for the vertical padding.
+ * 4. When pace.js is running we add `opacity` to the `body` element so we can
+ *    fade the page in with a transition once it's loaded.
+ * 5. Just incase Javascript doesn't load, we force `opacity: 1;` so content is
+ *    still visible.
+ */
+
+.page {
+	box-sizing: border-box;/* [3] */
+	display: flex; /* [2] */
+	flex-direction: column; /* [2] */
+	min-height: 100vh; /* [3] */
+	opacity: 0;
+	padding-top: 75px; /* [1] */
+	
+	.pace-done & {
+		opacity: 1; /* [4] */
+		transition: opacity .5s ease;
+	}
+	
+	.no-js & {
+		opacity: 1 !important; /* [5] */
+	}
+}
+
+
+
+
+
+/* ==========================================================================
+   #PAGE LOAD (pace.js)
+   ========================================================================== */
+   
+/**
+ * Pace.js is a plug-in that adds a progress indicator to your pages. We use a
+ * basic bar that spans across the top of the browser, indicting the page load
+ * progress, which disppears once it's done.
+ */
+
+.pace {
+	pointer-events: none;
+	user-select: none;
+}
+
+.pace-progress {
+	background: $color-primary;
+	height: 4px;
+	position: fixed;
+	top: 0;
+	right: 100%;
+	width: 100%;
+	z-index: 2000;	
+}
+
+/**
+ * What happens when the bar isn't needed anymore.
+ */
+ 
+.pace-inactive {
+	//display: none;
+	
+	.pace-progress {
+		opacity: 0;
+		transition: all .10s;
+	}
+}

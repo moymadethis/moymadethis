@@ -1,0 +1,38 @@
+
+/* ==========================================================================
+   #COLOUR
+   ========================================================================== */
+
+/**
+ * Default anchor styling.
+ */
+
+a {
+	border-bottom: 4px solid lighten($color-primary,35%);
+	color: $link-color;
+	text-decoration: none;
+	transition: all .25s;
+	
+	&:visited {
+		color: $link-color-visited;
+	}
+	
+	&:hover {
+		color: $link-color-hover;
+		text-decoration: none;
+	}
+	
+	&:focus {
+		outline: thin dotted;
+		color: $link-color-focus;
+	}
+	
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+	
+	&:link {
+		//transition: color .25s;
+	}
+}

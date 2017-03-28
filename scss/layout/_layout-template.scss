@@ -1,0 +1,55 @@
+
+.work {
+	list-style: none;
+	margin: 0 auto;
+	padding: 50px 0 0;
+	max-width: 1200px;
+}
+
+.work__item {
+	//border-bottom: $border-width $border-style $border-color;
+	@include clearfix;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	@include bp(bp5) {
+		display: flex;
+		align-items: center;
+		
+/*
+		&:nth-child(odd) {
+			flex-direction: row-reverse;
+		}
+*/
+	}
+}
+
+.work__image-link {
+	border: none;
+	display: block;
+	position: relative;
+	
+	@include bp(bp5) {
+		width: 50%;
+		
+		li:nth-child(even) & {
+			right: 0;
+		}
+	}
+}
+
+.work__image {
+	width: 100%;
+	height: 75%;
+}
+
+.work__desc {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0 50px;
+	
+	@include bp(bp5) {
+		width: 50%;
+	}
+}

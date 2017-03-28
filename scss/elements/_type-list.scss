@@ -1,0 +1,30 @@
+
+/* ==========================================================================
+   #LISTS
+   ========================================================================== */
+
+/**
+ * Base list styles.
+ */
+ 
+ul,
+ol {
+	margin: 0 0 ($vertical-spacing) 0;
+	padding: 0 0 0 ($gutter);
+
+	@include bp(bp3) { 
+		margin: 0 0 ($vertical-spacing) -22px;
+	}
+}
+
+li {
+	@include font-size($font-size);
+	margin-bottom: ($vertical-spacing / 8);
+}
+
+li > ul,
+li > ol {
+	list-style-type: none;
+	margin: 1.5rem 0 0 ($gutter);
+	padding: 0;
+}

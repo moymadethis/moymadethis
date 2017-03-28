@@ -1,0 +1,2027 @@
+/* ==========================================================================
+   #VARIABLES
+   ========================================================================== */
+/* ==========================================================================
+   #MIXINS
+   ========================================================================== */
+/**
+ * Clearfix
+ */
+/**
+ * Typography
+ */
+/**
+ * Media Queries.
+ * 
+ * 1. $bp2  =  480px 	(30rem)
+ * 2. $bp3  =  600px 	(37.5rem)
+ * 3. $bp4  =  768px 	(48rem)
+ * 4. $bp5  =  1024px 	(64rem)
+ * 5. $bp6  =  1220px 	(76.250rem)
+ * 6. $bp7  =  1400px 	(87.5rem)
+ */
+html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+/* ==========================================================================
+   #COLOUR
+   ========================================================================== */
+/**
+ * Default anchor styling.
+ */
+a {
+  border-bottom: 4px solid #e8fafa;
+  color: #93b833;
+  text-decoration: none;
+  -webkit-transition: all .25s;
+          transition: all .25s; }
+  a:visited {
+    color: #93b833; }
+  a:hover {
+    color: black;
+    text-decoration: none; }
+  a:focus {
+    outline: thin dotted;
+    color: black; }
+  a:hover, a:active {
+    outline: 0; }
+
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+/**
+ * Default styling for buttons. Extend this object with a `.btn--*` skin class
+ * to change background-color, size or apply a relevant icon preceding the text.
+ *
+ * 1. Addtional `:before` styling is included for when an `icon` is required.
+ * 2. Add a left margin when to any `.btn` that follows another.
+ */
+.btn {
+  background-color: black;
+  background-repeat: no-repeat;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 900;
+  height: auto;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  *margin-left: .3em;
+  padding: 9px 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  -webkit-transition: all .25s;
+          transition: all .25s;
+  vertical-align: middle; }
+  .btn .icon {
+    /* [1] */
+    fill: white;
+    height: 20px;
+    width: 20px; }
+  .btn:visited {
+    background-color: black;
+    color: white; }
+  .btn:hover, .btn:focus {
+    background-color: #56dad7;
+    color: white;
+    outline: 0; }
+  .btn:active {
+    top: 1px; }
+  .btn + .btn {
+    margin-left: 5px;
+    /* [2] */ }
+
+/**
+ * For disabled buttons use a class of `.btn--disabled` which lowers opacity and
+ * changes the cursor. Extends `.btn`.
+ */
+.btn--disabled {
+  cursor: default;
+  opacity: .50; }
+
+/**
+ * Alternative button skins. Extends `.btn`.
+ */
+.btn--primary {
+  background: #56dad7;
+  border-color: #56dad7;
+  color: white; }
+  .btn--primary:visited {
+    background-color: #56dad7;
+    border-color: #56dad7;
+    color: white; }
+  .btn--primary:hover, .btn--primary:focus {
+    background-color: black;
+    border-color: black;
+    color: white; }
+
+/**
+ * Alternative button skins. Extends `.btn`.
+ */
+.btn--neutral {
+  background: #e9ebeb;
+  border-color: #c1c6c7;
+  color: #99a1a2; }
+  .btn--neutral .icon {
+    fill: #99a1a2; }
+  .btn--neutral:visited {
+    background-color: #e9ebeb;
+    border-color: #c1c6c7;
+    color: #99a1a2; }
+  .btn--neutral:hover, .btn--neutral:focus {
+    background-color: #b1b6b7;
+    border-color: #b1b6b7;
+    color: white; }
+    .btn--neutral:hover .icon, .btn--neutral:focus .icon {
+      fill: white; }
+
+.btn--stroke {
+  background: transparent;
+  border: 4px solid black;
+  padding: 5px 25px;
+  color: black; }
+  .btn--stroke:visited {
+    background: transparent;
+    color: black; }
+  .btn--stroke:hover, .btn--stroke:focus {
+    background: black;
+    border-color: black;
+    color: white; }
+  .btn--stroke.btn--primary {
+    border-color: #56dad7;
+    color: #56dad7; }
+    .btn--stroke.btn--primary:visited {
+      color: #56dad7; }
+    .btn--stroke.btn--primary:hover, .btn--stroke.btn--primary:focus {
+      background: #56dad7;
+      color: white; }
+  .btn--stroke.btn--neutral {
+    border-color: #c1c6c7;
+    color: #99a1a2; }
+    .btn--stroke.btn--neutral:visited {
+      color: #e9ebeb; }
+    .btn--stroke.btn--neutral:hover, .btn--stroke.btn--neutral:focus {
+      background: #b1b6b7;
+      border-color: #b1b6b7;
+      color: white; }
+
+/**
+ * Alternative button sizes. Extends `.btn`.
+ */
+.btn--large {
+  font-size: 23px;
+  font-size: 2.3rem; }
+  .btn--large:before {
+    font-size: 110%; }
+
+.btn--small {
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 4px 12px 4px; }
+  .btn--small:before {
+    font-size: 110%;
+    margin-left: -3px; }
+
+.btn--mini {
+  font-size: 13px;
+  font-size: 1.3rem;
+  padding: 2px 10px 2px; }
+  .btn--mini:before {
+    font-size: 110%;
+    margin-left: -3px;
+    top: 0; }
+
+/**
+ * 100% wide (block) button. Extends `.btn`.
+ */
+.btn--block {
+  display: block;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+  width: 100%; }
+
+.btn--link {
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 75%; }
+  .btn--link .icon {
+    margin: 0 10px 0 -5px; }
+
+.btn--arrow .icon,
+.btn--grid .icon {
+  fill: white;
+  opacity: 0;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: all .15s 0s;
+          transition: all .15s 0s; }
+.btn--arrow:hover .icon, .btn--arrow:focus .icon,
+.btn--grid:hover .icon,
+.btn--grid:focus .icon {
+  opacity: 1;
+  -webkit-transition: all .20s .15s;
+          transition: all .20s .15s; }
+
+.btn--arrow .icon {
+  right: 20px; }
+.btn--arrow:hover, .btn--arrow:focus {
+  padding-right: 44px; }
+  .btn--arrow:hover .icon, .btn--arrow:focus .icon {
+    right: 14px; }
+  .btn--arrow:hover.btn--stroke, .btn--arrow:focus.btn--stroke {
+    padding-right: 40px; }
+    .btn--arrow:hover.btn--stroke .icon, .btn--arrow:focus.btn--stroke .icon {
+      right: 10px; }
+
+.btn--grid .icon {
+  left: 25px; }
+.btn--grid:hover, .btn--grid:focus {
+  padding-left: 52px; }
+  .btn--grid:hover .icon, .btn--grid:focus .icon {
+    left: 19px; }
+  .btn--grid:hover.btn--stroke, .btn--grid:focus.btn--stroke {
+    padding-left: 48px; }
+    .btn--grid:hover.btn--stroke .icon, .btn--grid:focus.btn--stroke .icon {
+      left: 15px; }
+
+.icon--grid {
+  display: inline-block;
+  opacity: 0;
+  width: 20px; }
+  .icon--grid .row-1,
+  .icon--grid .row-2,
+  .icon--grid .row-3 {
+    background: white;
+    display: block;
+    height: 4px;
+    margin: 2px;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: opacity 0s .20s;
+            transition: opacity 0s .20s;
+    width: 4px; }
+    .icon--grid .row-1:before, .icon--grid .row-1:after,
+    .icon--grid .row-2:before,
+    .icon--grid .row-2:after,
+    .icon--grid .row-3:before,
+    .icon--grid .row-3:after {
+      background: white;
+      content: "";
+      display: block;
+      height: 4px;
+      margin: 2px;
+      opacity: 0;
+      position: absolute;
+      top: -2px;
+      right: -8px;
+      width: 4px;
+      -webkit-transition: opacity 0s .20s;
+              transition: opacity 0s .20s; }
+    .icon--grid .row-1:after,
+    .icon--grid .row-2:after,
+    .icon--grid .row-3:after {
+      left: auto;
+      right: -14px; }
+  .btn:hover .icon--grid, .btn:focus .icon--grid {
+    opacity: 1; }
+    .btn:hover .icon--grid .row-1,
+    .btn:hover .icon--grid .row-2,
+    .btn:hover .icon--grid .row-3, .btn:focus .icon--grid .row-1,
+    .btn:focus .icon--grid .row-2,
+    .btn:focus .icon--grid .row-3 {
+      opacity: 1; }
+      .btn:hover .icon--grid .row-1:before, .btn:hover .icon--grid .row-1:after,
+      .btn:hover .icon--grid .row-2:before,
+      .btn:hover .icon--grid .row-2:after,
+      .btn:hover .icon--grid .row-3:before,
+      .btn:hover .icon--grid .row-3:after, .btn:focus .icon--grid .row-1:before, .btn:focus .icon--grid .row-1:after,
+      .btn:focus .icon--grid .row-2:before,
+      .btn:focus .icon--grid .row-2:after,
+      .btn:focus .icon--grid .row-3:before,
+      .btn:focus .icon--grid .row-3:after {
+        opacity: 1; }
+    .btn:hover .icon--grid .row-1, .btn:focus .icon--grid .row-1 {
+      -webkit-transition: opacity .10s  0s   ease-out;
+              transition: opacity .10s  0s   ease-out; }
+    .btn:hover .icon--grid .row-1:before, .btn:focus .icon--grid .row-1:before {
+      -webkit-transition: opacity .10s .05s ease-out;
+              transition: opacity .10s .05s ease-out; }
+    .btn:hover .icon--grid .row-1:after, .btn:focus .icon--grid .row-1:after {
+      -webkit-transition: opacity .10s .10s ease-out;
+              transition: opacity .10s .10s ease-out; }
+    .btn:hover .icon--grid .row-2, .btn:focus .icon--grid .row-2 {
+      -webkit-transition: opacity .10s .15s ease-out;
+              transition: opacity .10s .15s ease-out; }
+    .btn:hover .icon--grid .row-2:before, .btn:focus .icon--grid .row-2:before {
+      -webkit-transition: opacity .10s .20s ease-out;
+              transition: opacity .10s .20s ease-out; }
+    .btn:hover .icon--grid .row-2:after, .btn:focus .icon--grid .row-2:after {
+      -webkit-transition: opacity .10s .25s ease-out;
+              transition: opacity .10s .25s ease-out; }
+    .btn:hover .icon--grid .row-3, .btn:focus .icon--grid .row-3 {
+      -webkit-transition: opacity .10s .30s ease-out;
+              transition: opacity .10s .30s ease-out; }
+    .btn:hover .icon--grid .row-3:before, .btn:focus .icon--grid .row-3:before {
+      -webkit-transition: opacity .10s .35s ease-out;
+              transition: opacity .10s .35s ease-out; }
+    .btn:hover .icon--grid .row-3:after, .btn:focus .icon--grid .row-3:after {
+      -webkit-transition: opacity .10s .40s ease-out;
+              transition: opacity .10s .40s ease-out; }
+
+/* ==========================================================================
+   #TEXT-INPUTS
+   ========================================================================== */
+/**
+ * Default textfield and textarea styling.
+ *
+ * 1. Removes default iOS input shadow.
+ */
+.text-input {
+  background-color: white;
+  background-image: none;
+  border: 4px solid #eef0f0;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #404546;
+  display: block;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+  width: 100%;
+  max-width: 100%;
+  -moz-appearance: none;
+  /* [1] */
+  -webkit-appearance: none;
+  /* [1] */ }
+  .text-input:hover {
+    border-color: #e0e4e4; }
+  .text-input:focus {
+    border-color: #d3d8d8;
+    outline: none; }
+
+textarea.text-input {
+  height: 160px;
+  resize-x: none; }
+
+/**
+ * Remove -webkit- styling on `<input type="search />`
+ */
+input[type="search"] {
+  -webkit-appearance: none; }
+
+/**
+ * Placeholder text styles.
+ */
+.text-input::-webkit-input-placeholder {
+  color: #b1b6b7;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-style: italic; }
+.text-input:-moz-placeholder {
+  color: #b1b6b7;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-style: italic;
+  opacity: 1; }
+.text-input::-moz-placeholder {
+  color: #b1b6b7;
+  font-style: italic;
+  opacity: 1; }
+.text-input:-ms-input-placeholder {
+  color: #b1b6b7;
+  font-style: italic; }
+
+[placeholder]:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .5s .5s ease;
+          transition: opacity .5s .5s ease; }
+
+/* ==========================================================================
+   #SELECT
+   ========================================================================== */
+select {
+  margin-bottom: 20px;
+  width: auto;
+  max-width: 100%;
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist; }
+
+/* ==========================================================================
+   #RADIO/CHECKBOXES
+   ========================================================================== */
+/**
+ * Default `checkbox` & `radio` styling. Extended in _uniform.scss.
+ *
+ * 1. Styling when javascript is disabled is extended within `.no-js {}`.
+ */
+.no-js {
+  /* [1] */ }
+  .no-js .radiobtn,
+  .no-js .checkbox {
+    padding-left: 20px; }
+  .no-js .radiobtn input[type="radio"],
+  .no-js .checkbox input[type="checkbox"] {
+    float: left;
+    margin: 4px 0 0 -20px; }
+
+/* ==========================================================================
+   #FORM-GROUP
+   ========================================================================== */
+/**
+ * `.form-group` is used to group labels and inputs/form elements together.
+ *
+ * 1. All margins are equal for consistency.
+ * 2. `Clearfix` is applied to prevent margin collapse, helping with spacing
+ *    consistency. And also for when a class of `.form-horz` is used to present
+ *    the label and controls horizontally aligned which is achieved using floats
+ *    and extended in _768.scss.
+ * 3. When a class of `.error` is applied we adjust the colouring of text/input
+ *    elements so it stands out, drawing the users attention to where they've
+ *    made a mistake entering data on the form.
+ */
+.form-group__title,
+.form-group__controls {
+  margin-bottom: 10px;
+  /* [1] */ }
+
+.form-group {
+  /* [2] */ }
+  .form-group:before, .form-group:after {
+    content: "";
+    display: table; }
+  .form-group:after {
+    clear: both; }
+  .form-group .btn {
+    margin-bottom: 10px; }
+  .form-group.error {
+    /* [3] */ }
+    .form-group.error .form-group__title,
+    .form-group.error .required {
+      color: #ee3856; }
+    .form-group.error .text-input {
+      background: #fcd7dd;
+      border-color: #ee3856; }
+    .form-group.error ::-webkit-input-placeholder {
+      color: #f2677e; }
+    .form-group.error :-moz-placeholder {
+      color: #f2677e; }
+    .form-group.error ::-moz-placeholder {
+      color: #f2677e; }
+    .form-group.error :-ms-input-placeholder {
+      color: #f2677e; }
+
+.error__text {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #ee3856;
+  margin: -15px 0 20px;
+  font-style: italic; }
+
+/**
+ * `.form-group__title` is applied to a label (title) to the group of controls.
+ */
+.form-group__title {
+  color: #0d0f0f;
+  font-style: italic;
+  font-weight: 600; }
+
+.required {
+  color: #82a42e;
+  font-style: normal; }
+
+/**
+ * `.form-group__controls` is used to contain elements that require action, for
+ * example inputs, textareas, radio/checkboxes and selects.
+ *
+ * 1. Paragraph margins are adjusted to match that of the form elements.
+ */
+.form-group__controls:before, .form-group__controls:after {
+  content: "";
+  display: table; }
+.form-group__controls:after {
+  clear: both; }
+.form-group__controls p {
+  margin-bottom: 10px;
+  /* [1] */ }
+
+/* ==========================================================================
+   #UNIFORM.JS
+   ========================================================================== */
+/**
+ * General settings.
+ */
+.selector,
+.checker,
+.radio,
+.uploader {
+  display: -moz-inline-box;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  /* Keeping this as :focus to remove browser styles */ }
+
+.selector:focus,
+.checker:focus,
+.radio:focus,
+.uploader:focus {
+  outline: 0; }
+
+/**
+ * Remove default webkit and possible mozilla .search styles. Keeping this as
+ * `:active` to remove browser styles.
+ */
+.checker input,
+input[type="search"],
+input[type="search"]:active {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
+/**
+ * `select` replacement styling.
+ */
+.selector {
+  background: black url(../img/sprite/form-inputs.png) no-repeat right -80px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-size: 1.3rem;
+  height: 35px;
+  line-height: 35px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-right: 35px;
+  position: relative;
+  width: 100%; }
+  .selector span {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    padding: 0 15px 0 10px;
+    text-overflow: ellipsis;
+    -webkit-transition: background-color .25s;
+            transition: background-color .25s;
+    white-space: nowrap; }
+  .selector:hover span {
+    background-color: black; }
+  .selector select {
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    margin: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+
+/**
+ * `checkbox` & `radio` replacement styling. Aside from the background-image
+ *  position the styling of both is very similar so I've grouped them together.
+ */
+.checker,
+.radio {
+  height: 20px;
+  margin: 0 5px 10px 0;
+  position: relative;
+  vertical-align: text-top;
+  width: 20px; }
+  .checkbox .checker, .radiobtn .checker, .checkbox
+  .radio, .radiobtn
+  .radio {
+    margin: -3px 5px 0 0;
+    vertical-align: middle; }
+  .checker span,
+  .radio span {
+    background: url(../img/sprite/form-inputs.png) no-repeat left -20px;
+    display: block;
+    height: 100%;
+    width: 100%; }
+    .checker span.checked,
+    .radio span.checked {
+      background-position: right -20px; }
+  .checker input,
+  .radio input {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    height: 20px;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 20px;
+    zoom: 1; }
+
+/**
+ * `radio` specifc background positions.
+ */
+.radio span {
+  background-position: left top; }
+  .radio span.checked {
+    background-position: right top; }
+
+/**
+ * `uploader` replacement styling.
+ */
+.uploader {
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 35px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  padding-right: 106px;
+  width: 100%; }
+  .uploader .btn {
+    cursor: pointer;
+    font-size: 14px;
+    font-size: 1.4rem;
+    height: 35px;
+    letter-spacing: 0;
+    line-height: 35px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px; }
+  .uploader .filename {
+    box-sizing: border-box;
+    cursor: default;
+    display: block;
+    float: left;
+    height: 35px;
+    line-height: 33px;
+    margin-right: 6px;
+    overflow: hidden;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%; }
+  .uploader input {
+    background: none;
+    border: none;
+    cursor: pointer;
+    float: right;
+    height: 100%;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10; }
+
+/* ==========================================================================
+   #FORMS
+   ========================================================================== */
+/**
+ * Base `form` styles.
+ */
+form {
+  border: 0;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0; }
+  form p {
+    margin-bottom: 10px; }
+  form ul {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0; }
+  form li {
+    margin-bottom: 0; }
+
+/**
+ * Horizontally align form labels (titles) and inputs within `form-group` items.
+ */
+.form-horz {
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 37.5em) {
+    .form-horz .alert {
+      margin-left: 30%; }
+    .form-horz .form-group__title {
+      float: left;
+      position: relative;
+      top: 5px;
+      width: 25%; }
+    .form-horz .form-group__controls,
+    .form-horz .error__text {
+      margin-left: 30%; } }
+
+/**
+ * Base `fieldset` styles.
+ *
+ * 1. Remove bottom margin from the last fieldset for consistent spacing.
+ */
+fieldset {
+  border: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  min-width: 0; }
+  fieldset:last-of-type {
+    margin-bottom: 0; }
+
+/**
+ * Legend.
+ */
+legend {
+  border: 0;
+  border-bottom: 4px solid #eef0f0;
+  color: #727c7d;
+  display: block;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: inherit;
+  margin-bottom: 40px;
+  padding: 0 0 10px 0;
+  width: 100%;
+  *width: auto; }
+
+/**
+ * Base `label` styles.
+ */
+label {
+  color: #727c7d;
+  display: block;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  max-width: 100%; }
+
+/**
+ * The main form heading.
+ *
+ * 1. Reduce space between heading and following paragraph (if there is one).
+ */
+.form-title {
+  margin-bottom: 20px; }
+  .form-title small {
+    font-weight: 400; }
+  .form-title + p {
+    margin: -16px 0 20px;
+    /* [1] */ }
+
+/* ==========================================================================
+   #HR
+   ========================================================================== */
+/**
+ * Base `hr` styling.
+ */
+hr {
+  border: 0;
+  border-bottom: 8px solid #eef0f0;
+  clear: both;
+  display: block;
+  height: 0;
+  margin: 50px 0;
+  padding: 0;
+  width: 50px;
+  /*
+  	
+  	@media (-webkit-min-device-pixel-ratio: 2), 
+  	(min-resolution: 192dpi) { 
+  		border-width : 2px;
+  	}
+  */ }
+  hr.align-center, .align-center hr {
+    margin-right: auto;
+    margin-left: auto; }
+  .hgroup + hr {
+    margin-top: -60px; }
+
+.hr-primary {
+  border-color: #56dad7; }
+
+/*------------------------------------*\
+    IMAGES
+   ========================================================================== */
+/**
+ * Base `img` styles.
+ */
+img {
+  border-width: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic; }
+
+img[width],
+img[height] {
+  max-width: none; }
+
+/**
+ * Add border to image.
+ */
+.img-stroke {
+  border: 8px solid #eef0f0;
+  box-sizing: border-box; }
+
+/**
+ * Alignment options.
+ */
+.img-left {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: auto; }
+
+.img-right {
+  float: right;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  width: auto; }
+
+.img-center {
+  display: block;
+  width: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto; }
+
+.img-left img,
+.img-right img,
+.img-center img {
+  width: auto; }
+
+/**
+ * `figure` and `figcatpion` styles.
+ */
+figure {
+  display: block;
+  margin: 0 0 20px 0; }
+  figure img {
+    margin-bottom: 20px; }
+
+figcaption {
+  color: #b1b6b7;
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: none; }
+  img + figcaption {
+    margin-top: -10px; }
+  .img-stroke + figcaption {
+    padding: 0 8px; }
+
+/* ==========================================================================
+   #SITE
+   ========================================================================== */
+/**
+ * Viewports.
+ */
+@-webkit-viewport {
+  width: device-width; }
+@-moz-viewport {
+  width: device-width; }
+@-ms-viewport {
+  width: device-width; }
+@-o-viewport {
+  width: device-width; }
+@viewport {
+  width: device-width; }
+/**
+ * Base `html` styling.
+ *
+ * 1. Prevents content jumping when `.show-nav` is applied to `body` which is
+ *    caused because `overflow: hidden;` is applied, which hides any scrollbar. 
+ */
+html {
+  background: white;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: white;
+  -webkit-text-size-adjust: 100%; }
+
+/**
+ * Base `body` styling.
+ */
+body {
+  background-color: transparent;
+  color: #727c7d;
+  -webkit-font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+     -moz-font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+          font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    body {
+      font-size: 20px;
+      font-size: 2rem; } }
+
+/**
+ * Putting touch-action: manipulation; on a clickable element makes WebKit
+ * consider touches that begin on the element only for the purposes of panning 
+ * and pinching to zoom. This means WebKit does not consider double-tap gestures
+ * on the element, so single taps are dispatched immediately.
+ */
+a,
+button,
+input,
+select,
+textarea,
+label,
+summary {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation; }
+
+/* ==========================================================================
+   #PAGE LOAD (pace.js)
+   ========================================================================== */
+/**
+ * The `.page` div acts as a container for all the content on a page. Including
+ * the header and footer.
+ *
+ * 1. Padding to push content down as `.page-head` uses `position: absolute;`.
+ * 2. We use flexbox to make `.page-foot` a sticky footer to keep it fixed to
+ *    bottom of the page when there's not enough content to push it down.
+ * 3. Using flexbox we set the height to 100% and also `box-sizing: border-box;`
+ *    to compensate for the vertical padding.
+ * 4. When pace.js is running we add `opacity` to the `body` element so we can
+ *    fade the page in with a transition once it's loaded.
+ * 5. Just incase Javascript doesn't load, we force `opacity: 1;` so content is
+ *    still visible.
+ */
+.page {
+  box-sizing: border-box;
+  /* [3] */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /* [2] */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* [2] */
+  min-height: 100vh;
+  /* [3] */
+  opacity: 0;
+  padding-top: 75px;
+  /* [1] */ }
+  .pace-done .page {
+    opacity: 1;
+    /* [4] */
+    -webkit-transition: opacity .5s ease;
+            transition: opacity .5s ease; }
+  .no-js .page {
+    opacity: 1 !important;
+    /* [5] */ }
+
+/* ==========================================================================
+   #PAGE LOAD (pace.js)
+   ========================================================================== */
+/**
+ * Pace.js is a plug-in that adds a progress indicator to your pages. We use a
+ * basic bar that spans across the top of the browser, indicting the page load
+ * progress, which disppears once it's done.
+ */
+.pace {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.pace-progress {
+  background: #56dad7;
+  height: 4px;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  z-index: 2000; }
+
+/**
+ * What happens when the bar isn't needed anymore.
+ */
+.pace-inactive .pace-progress {
+  opacity: 0;
+  -webkit-transition: all .10s;
+          transition: all .10s; }
+
+/* ==========================================================================
+   #TABLES
+   ========================================================================== */
+/**
+ * Base `table` styles.
+ */
+table {
+  background-color: transparent;
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%; }
+
+th,
+td {
+  border-bottom: 2px solid #eef0f0;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top; }
+
+th {
+  color: #0d0f0f;
+  font-style: italic;
+  font-weight: 900;
+  text-align: left; }
+
+/**
+ * Use `.table-condensed` to reduce cell padding for tighter layouts.
+ */
+.table-condensed th,
+.table-condensed td {
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 5px; }
+
+/**
+ * Use `.table-striped` to add a background to table cells but only those within
+ * 'odd' table rows to create a striped effect.
+ */
+.table-stripe tbody tr:nth-child(odd) td,
+.table-stripe tbody tr:nth-child(odd) th {
+  background-color: white; }
+
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+/**
+ * Base styling for heading elements.
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0d0f0f;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0 0 10px; }
+  .band--dark h1, .band--dark
+  h2, .band--dark
+  h3, .band--dark
+  h4, .band--dark
+  h5, .band--dark
+  h6 {
+    color: white; }
+
+.oversize {
+  font-size: 45px;
+  font-size: 4.5rem;
+  line-height: 1;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    .oversize {
+      font-size: 72px;
+      font-size: 7.2rem; } }
+
+h1 {
+  font-size: 45px;
+  font-size: 4.5rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    h1 {
+      font-size: 53px;
+      font-size: 5.3rem; } }
+
+h2 {
+  font-size: 38px;
+  font-size: 3.8rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    h2 {
+      font-size: 45px;
+      font-size: 4.5rem; } }
+
+h3 {
+  font-size: 32px;
+  font-size: 3.2rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    h3 {
+      font-size: 38px;
+      font-size: 3.8rem; } }
+
+h4 {
+  font-size: 27px;
+  font-size: 2.7rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    h4 {
+      font-size: 32px;
+      font-size: 3.2rem; } }
+
+h5 {
+  font-size: 23px;
+  font-size: 2.3rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    h5 {
+      font-size: 27px;
+      font-size: 2.7rem; } }
+
+h6 {
+  font-size: 20px;
+  font-size: 2rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    h6 {
+      font-size: 23px;
+      font-size: 2.3rem; } }
+
+.btn + h1,
+.btn + h2,
+.btn + h3,
+.btn + h4 {
+  margin-top: 40px; }
+
+/* ==========================================================================
+   #FONTELLO
+   ========================================================================== */
+/**
+ * Call the font files.
+ */
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot");
+  src: url("../font/fontello.eot#iefix") format("embedded-opentype"), url("../font/fontello.woff2") format("woff2"), url("../font/fontello.woff") format("woff"), url("../font/fontello.ttf") format("truetype"), url("../font/fontello.svg#fontello") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+/**
+ * Base styling for `.icon---*` class. Comments (1-5) below were included in the
+ * fontello generated CSS file, so I didn't want to remove them incase it broke
+ * anything.
+ *
+ * 1) Be more comfortable with increased icons size. Remove if not needed.
+ * 2) Fix buttons height, for twitter bootstrap.
+ * 3) Animation center compensation - margins should be symmetric. Remove if not
+ *    needed.
+ * 4) For safety reset parent styles, that can break glyph codes.
+ * 5) Font smoothing. That was taken from TWBS.
+ *
+ * 6) I added `position: relative;` so I could knock the icon down a pixel. This
+ *    seems to work/looked better across the board.
+ */
+[class^="icon--"]:before,
+[class*=" icon--"]:before {
+  display: inline-block;
+  font-family: "fontello";
+  font-size: 120%;
+  /* [1] */
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+  /* [2] */
+  margin-right: 5px;
+  position: relative;
+  /* [6] */
+  top: 1px;
+  /* [6] */
+  speak: none;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  /* [4] */
+  text-transform: none;
+  /* [4] */
+  -webkit-font-smoothing: antialiased;
+  /* [5] */
+  -moz-osx-font-smoothing: grayscale;
+  /* [5] */ }
+
+/**
+ * Classes needed to add relative icons.
+ */
+.icon--attachment:before {
+  content: '\e800'; }
+
+.icon--bell:before {
+  content: '\e801'; }
+
+.icon--calendar:before {
+  content: '\e802'; }
+
+.icon--circle-cross:before {
+  content: '\e803'; }
+
+.icon--circle-down:before {
+  content: '\e804'; }
+
+.icon--circle-help:before {
+  content: '\e805'; }
+
+.icon--circle-info:before {
+  content: '\e806'; }
+
+.icon--circle-left:before {
+  content: '\e807'; }
+
+.icon--circle-minus:before {
+  content: '\e808'; }
+
+.icon--circle-plus:before {
+  content: '\e809'; }
+
+.icon--circle-right:before {
+  content: '\e80a'; }
+
+.icon--circle-tick:before {
+  content: '\e80b'; }
+
+.icon--circle-up:before {
+  content: '\e80c'; }
+
+.icon--clock:before {
+  content: '\e80d'; }
+
+.icon--cog:before {
+  content: '\e80e'; }
+
+.icon--cross:before {
+  content: '\e80f'; }
+
+.icon--received:before {
+  content: '\e810'; }
+
+.icon--edit:before {
+  content: '\e811'; }
+
+.icon--export:before {
+  content: '\e812'; }
+
+.icon--eye-with-line:before {
+  content: '\e813'; }
+
+.icon--eye:before {
+  content: '\e814'; }
+
+.icon--quill:before {
+  content: '\e815'; }
+
+.icon--flag:before {
+  content: '\e816'; }
+
+.icon--folder:before {
+  content: '\e817'; }
+
+.icon--forward:before {
+  content: '\e818'; }
+
+.icon--gauge:before {
+  content: '\e819'; }
+
+.icon--lifebuoy:before {
+  content: '\e81a'; }
+
+.icon--lock-open:before {
+  content: '\e81b'; }
+
+.icon--lock:before {
+  content: '\e81c'; }
+
+.icon--mag:before {
+  content: '\e81d'; }
+
+.icon--mail:before {
+  content: '\e81e'; }
+
+.icon--minus:before {
+  content: '\e81f'; }
+
+.icon--new-message:before {
+  content: '\e820'; }
+
+.icon--old-phone:before {
+  content: '\e821'; }
+
+.icon--open-book:before {
+  content: '\e822'; }
+
+.icon--paper-plane:before {
+  content: '\e823'; }
+
+.icon--plus:before {
+  content: '\e824'; }
+
+.icon--print:before {
+  content: '\e825'; }
+
+.icon--reply:before {
+  content: '\e826'; }
+
+.icon--save:before {
+  content: '\e827'; }
+
+.icon--select-arrows:before {
+  content: '\e828'; }
+
+.icon--star:before {
+  content: '\e829'; }
+
+.icon--tick:before {
+  content: '\e82a'; }
+
+.icon--trash:before {
+  content: '\e82b'; }
+
+.icon--arrow-down:before {
+  content: '\e82c'; }
+
+.icon--arrow-left:before {
+  content: '\e82d'; }
+
+.icon--arrow-right:before {
+  content: '\e82e'; }
+
+.icon--arrow-up:before {
+  content: '\e82f'; }
+
+.icon--award:before {
+  content: '\e830'; }
+
+.icon--sent:before {
+  content: '\e831'; }
+
+.icon--user:before {
+  content: '\e832'; }
+
+.icon--warning:before {
+  content: '\e833'; }
+
+/* ==========================================================================
+   #LISTS
+   ========================================================================== */
+/**
+ * Base list styles.
+ */
+ul,
+ol {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 20px;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 37.5em) {
+    ul,
+    ol {
+      margin: 0 0 20px -22px; } }
+
+li {
+  font-size: 18px;
+  font-size: 1.8rem;
+  margin-bottom: 2.5px; }
+
+li > ul,
+li > ol {
+  list-style-type: none;
+  margin: 1.5rem 0 0 20px;
+  padding: 0; }
+
+/**
+ * Inline list.
+ */
+.list-inline {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 37.5em) {
+    .list-inline {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+  .list-inline li {
+    /* [1] */
+    /* [2] */
+    /* [3] */
+    /* [4] */
+    /* [5] */
+    /* [6] */ }
+    @media (min-width: 37.5em) {
+      .list-inline li {
+        display: inline-block;
+        margin-right: 20px; } }
+    .list-inline li:last-child {
+      margin-right: 0; }
+
+/**
+ * Adds a bottom border as horizontal rule between each list-item.
+ */
+.list-bordered {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+  padding: 0; }
+  .list-bordered li {
+    background: none;
+    border-bottom: 2px solid #eef0f0;
+    margin-bottom: 10px;
+    padding: 0 0 10px; }
+    .list-bordered li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0; }
+
+/**
+ * Plain list.
+ */
+.list-plain {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0; }
+
+/* ==========================================================================
+   #DEFINITION LISTS
+   ========================================================================== */
+/**
+ * Base `dl` styles.
+ */
+dt {
+  font-size: 23px;
+  font-size: 2.3rem;
+  margin-bottom: 2.5px; }
+
+dd {
+  line-height: 1.3;
+  margin-bottom: 40px;
+  margin-left: 0; }
+
+/**
+ * Inline definition list.
+ */
+.dl-inline {
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .dl-inline dt,
+  .dl-inline dd {
+    display: inline;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-bottom: 0; }
+  .dl-inline dt {
+    font-weight: 700; }
+  .dl-inline dd + dt::before {
+    content: "\A";
+    white-space: pre; }
+  .dl-inline dd + dd::before {
+    content: ', ';
+    font-weight: normal;
+    margin-left: -.25em; }
+
+/* ==========================================================================
+   #TYPE MISC
+   ========================================================================== */
+/**
+ * Highlighted styles.
+ */
+::-moz-selection {
+  background-color: white;
+  text-shadow: none; }
+
+::selection {
+  background-color: white;
+  text-shadow: none; }
+
+/**
+ * Text-level.
+ */
+address {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 20px; }
+
+abbr[title] {
+  border-bottom: 1px dotted #eef0f0;
+  cursor: help; }
+
+.amp {
+  font-family: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua"); }
+
+dfn {
+  font-style: italic; }
+
+ins {
+  background-color: white;
+  color: #727c7d;
+  text-decoration: none; }
+
+mark {
+  background-color: white;
+  color: #727c7d;
+  font-style: italic;
+  font-weight: bold; }
+
+/*
+ * Strong (bold), emphasized (italic) and small text.
+ */
+b,
+strong {
+  font-weight: 700; }
+
+i,
+em {
+  font-style: italic; }
+
+small {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+/*
+ * Class of `.amp` can be used to subtly darken/emphasize text.
+ */
+.amp {
+  color: black; }
+
+/*
+ * Code.
+ */
+code {
+  background-color: white;
+  padding: .25em .5em;
+  vertical-align: middle; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+ * Superscript/subscript.
+ */
+sub,
+sup {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+/* ==========================================================================
+   #PARAGRAPHS
+   ========================================================================== */
+/**
+ * Base paragraph styles.
+ */
+p {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    p {
+      line-height: 1.5; } }
+  @media (min-width: 64em) {
+    p {
+      line-height: 1.6; } }
+
+/**
+ * Classified paragraphs for lead, secondary, tertiary and milli statements.
+ */
+.lead {
+  color: #b1b6b7;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-style: italic;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    .lead {
+      font-size: 27px;
+      font-size: 2.7rem;
+      line-height: 1.4; } }
+
+.secondary {
+  font-size: 16px;
+  font-size: 1.6rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    .secondary {
+      font-size: 18px;
+      font-size: 1.8rem;
+      line-height: 1.4; } }
+
+.tertiary {
+  font-size: 14px;
+  font-size: 1.4rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    .tertiary {
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 1.4; } }
+
+.milli {
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    .milli {
+      font-size: 14px;
+      font-size: 1.4rem; } }
+
+/**
+ * Text columns. 
+ */
+.columns {
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    .columns {
+      -webkit-column-count: 2;
+         -moz-column-count: 2;
+              column-count: 2;
+      -webkit-column-gap: 40px;
+         -moz-column-gap: 40px;
+              column-gap: 40px; } }
+  .columns p {
+    /* [1] */
+    /* [2] */
+    /* [3] */
+    /* [4] */
+    /* [5] */
+    /* [6] */ }
+    @media (min-width: 48em) {
+      .columns p {
+        display: inline-block;
+        -webkit-hyphens: auto;
+           -moz-hyphens: auto;
+            -ms-hyphens: auto;
+                hyphens: auto;
+        hyphenate-limit-chars: 3;
+        hyphenate-limit-lines: 4;
+        margin-bottom: 0;
+        text-align: justify; } }
+  .columns p + p {
+    /* [1] */
+    /* [2] */
+    /* [3] */
+    /* [4] */
+    /* [5] */
+    /* [6] */ }
+    @media (min-width: 48em) {
+      .columns p + p {
+        text-indent: 40px; } }
+  .columns p:last-child:after {
+    content: " \00B6";
+    font-size: 10px;
+    font-size: 1rem; }
+
+/* ==========================================================================
+   #QUOTES
+   ========================================================================== */
+/**
+ * Base quote styles.
+ */
+blockquote {
+  color: #0d0f0f;
+  font-style: italic;
+  font-weight: 600;
+  margin: 40px 20px;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 37.5em) {
+    blockquote {
+      margin: 40px 40px; } }
+  @media (min-width: 64em) {
+    blockquote {
+      margin: 40px 60px; } }
+  blockquote p {
+    font-size: 23px;
+    font-size: 2.3rem;
+    font-style: italic;
+    line-height: 1.4;
+    /* [1] */
+    /* [2] */
+    /* [3] */
+    /* [4] */
+    /* [5] */
+    /* [6] */ }
+    @media (min-width: 48em) {
+      blockquote p {
+        font-size: 27px;
+        font-size: 2.7rem; } }
+  blockquote > p {
+    position: relative;
+    text-indent: 4px; }
+    blockquote > p:first-child:before, blockquote > p:last-of-type:after {
+      color: #56dad7;
+      content: "\201c";
+      display: inline;
+      font-size: 45px;
+      font-family: "Georgia";
+      font-style: normal;
+      line-height: 0.1em;
+      position: relative;
+      top: 8px;
+      left: -4px;
+      text-indent: 0; }
+    blockquote > p:last-of-type:after {
+      content: "\201d";
+      top: 12px;
+      right: -4px;
+      left: auto; }
+  blockquote footer {
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-top: -5px; }
+    blockquote footer:before {
+      background: #0d0f0f;
+      content: "";
+      display: inline-block;
+      height: 2px;
+      margin-right: 10px;
+      position: relative;
+      top: 10px;
+      vertical-align: text-top;
+      width: 10px; }
+  blockquote small {
+    font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    /* [1] */
+    /* [2] */
+    /* [3] */
+    /* [4] */
+    /* [5] */
+    /* [6] */ }
+    @media (min-width: 37.5em) {
+      blockquote small {
+        padding-left: 40px; } }
+  blockquote cite {
+    font-style: normal; }
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+/**
+ * Used for grid layouts. Grid items must be contained in a `.layout` wrapper
+ * with each 'column' having a class of `.layout__item`. Widths are set with
+ * additional #WIDTHS classes.
+ *
+ * 1. On small screen devices every `.layout__item` is 100% wide so they all
+ *    stack by default.
+ * 2. Purely for Service page but it's the only place that used this layout (for
+ *    now) so maybe need to come back to later. Maintains consistant spacing of
+ *    content on smaller screens.
+ */
+.grid {
+  margin-left: -100px; }
+  .grid:before, .grid:after {
+    content: "";
+    display: table; }
+  .grid:after {
+    clear: both; }
+
+.grid__item {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 100px;
+  width: 100%;
+  /* [1] */ }
+  .grid__item.one-half + .one-half {
+    /* [1] */
+    margin-top: 40px;
+    /* [1] */
+    /* [2] */
+    /* [3] */
+    /* [4] */
+    /* [5] */
+    /* [6] */ }
+    @media (min-width: 64em) {
+      .grid__item.one-half + .one-half {
+        margin-top: 0; } }
+
+/*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+/**
+ * The design allows to stack `.layout__item`s on small screen devices, so the
+ * first breakpoint they're used is 600px, up to 991px.
+ *
+ * 1. As this is still quite a narrow screen width, we set the `.one-quarter` 
+ *    class to 50% so they appear in halves.
+ * 2. ...unless `one-quarter` follows a `.three-quarters` item (blog post). Here
+ *    we set the width to 100% so it stretches the width of the screen, matching
+ *    the width of the `.three-quarter` item that precedes it.
+ */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .one-quarter {
+    width: 50%;
+    /* [1] */ }
+    .one-quarter:nth-child(odd) {
+      clear: left; }
+
+  .three-quarters + .one-quarter {
+    width: 100%;
+    /* [2] */ } }
+/**
+ * Above a screen width of 991px width classes use the value that reflects their
+ * class name.
+ */
+/* [1] */
+/* [2] */
+/* [3] */
+/* [4] */
+/* [5] */
+/* [6] */
+@media (min-width: 64em) {
+  .one-half,
+  .two-quarters {
+    width: 50%; }
+
+  .one-third {
+    width: 33.333%; }
+
+  .two-thirds {
+    width: 66.666%; }
+
+  .one-quarter {
+    width: 25%; }
+
+  .three-quarters {
+    width: 75%; } }
+/* ==========================================================================
+   #SITE-HEAD
+   ========================================================================== */
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+/* ==========================================================================
+   #PROJECT DETAIL
+   ========================================================================== */
+/**
+ * Grid-like layout system.
+ */
