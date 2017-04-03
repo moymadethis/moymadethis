@@ -40,12 +40,11 @@ article, aside, figure, footer, header, hgroup, nav, section {
  */
 a {
   border-bottom: 4px solid #e8fafa;
-  color: #93b833;
+  color: #56dad7;
   text-decoration: none;
-  -webkit-transition: all .25s;
-          transition: all .25s; }
+  transition: all .25s; }
   a:visited {
-    color: #93b833; }
+    color: #56dad7; }
   a:hover {
     color: black;
     text-decoration: none; }
@@ -79,18 +78,18 @@ a {
   font-family: "tablet-gothic-narrow", "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 900;
   height: auto;
+  letter-spacing: 0.02em;
   line-height: 1.5;
   margin-bottom: 20px;
   *margin-left: .3em;
-  padding: 9px 25px;
+  padding: 10px 20px;
   position: relative;
   text-align: center;
   text-decoration: none;
   text-transform: none;
-  -webkit-transition: all .25s;
-          transition: all .25s;
+  transition: all .25s;
   vertical-align: middle; }
   .btn:visited {
     background-color: transparent;
@@ -227,9 +226,7 @@ html {
 body {
   background-color: transparent;
   color: #727c7d;
-  -webkit-font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
-     -moz-font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
-          font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
   font-family: "tablet-gothic-narrow", "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
@@ -262,85 +259,7 @@ select,
 textarea,
 label,
 summary {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation; }
-
-/* ==========================================================================
-   #PAGE LOAD (pace.js)
-   ========================================================================== */
-/**
- * The `.page` div acts as a container for all the content on a page. Including
- * the header and footer.
- *
- * 1. Padding to push content down as `.page-head` uses `position: absolute;`.
- * 2. We use flexbox to make `.page-foot` a sticky footer to keep it fixed to
- *    bottom of the page when there's not enough content to push it down.
- * 3. Using flexbox we set the height to 100% and also `box-sizing: border-box;`
- *    to compensate for the vertical padding.
- * 4. When pace.js is running we add `opacity` to the `body` element so we can
- *    fade the page in with a transition once it's loaded.
- * 5. Just incase Javascript doesn't load, we force `opacity: 1;` so content is
- *    still visible.
- */
-.page {
-  box-sizing: border-box;
-  /* [3] */
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  /* [2] */
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  /* [2] */
-  min-height: 100vh;
-  /* [3] */
-  opacity: 0;
-  padding-top: 75px;
-  /* [1] */ }
-  .pace-done .page {
-    opacity: 1;
-    /* [4] */
-    -webkit-transition: opacity .5s ease;
-            transition: opacity .5s ease; }
-  .no-js .page {
-    opacity: 1 !important;
-    /* [5] */ }
-
-/* ==========================================================================
-   #PAGE LOAD (pace.js)
-   ========================================================================== */
-/**
- * Pace.js is a plug-in that adds a progress indicator to your pages. We use a
- * basic bar that spans across the top of the browser, indicting the page load
- * progress, which disppears once it's done.
- */
-.pace {
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
-
-.pace-progress {
-  background: #56dad7;
-  height: 4px;
-  position: fixed;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  z-index: 2000; }
-
-/**
- * What happens when the bar isn't needed anymore.
- */
-.pace-inactive .pace-progress {
-  opacity: 0;
-  -webkit-transition: all .10s;
-          transition: all .10s; }
+  touch-action: manipulation; }
 
 /* ==========================================================================
    #HEADINGS
@@ -357,31 +276,9 @@ h6 {
   color: #0d0f0f;
   font-family: "ff-good-headline-web-pro-con", "Helvetica Neue", sans-serif;
   font-weight: normal;
-  line-height: 1;
+  line-height: .95;
   margin: 0 0 20px;
   text-transform: uppercase; }
-  .band--dark h1, .band--dark
-  h2, .band--dark
-  h3, .band--dark
-  h4, .band--dark
-  h5, .band--dark
-  h6 {
-    color: white; }
-
-.oversize {
-  font-size: 125px;
-  font-size: 12.5rem;
-  line-height: 1;
-  /* [1] */
-  /* [2] */
-  /* [3] */
-  /* [4] */
-  /* [5] */
-  /* [6] */ }
-  @media (min-width: 48em) {
-    .oversize {
-      font-size: 150px;
-      font-size: 15rem; } }
 
 h1 {
   font-size: 90px;
@@ -778,16 +675,95 @@ blockquote {
 
   .three-quarters {
     width: 75%; } }
+/* ==========================================================================
+   #PAGE LOAD (pace.js)
+   ========================================================================== */
+/**
+ * The `.page` div acts as a container for all the content on a page. Including
+ * the header and footer.
+ *
+ * 1. We use flexbox to make `.page-foot` a sticky footer to keep it fixed to
+ *    bottom of the page when there's not enough content to push it down.
+ * 2. Using flexbox we set the height to 100% and also `box-sizing: border-box;`
+ *    to compensate for the vertical padding.
+ * 3. When pace.js is running we add `opacity` to the `body` element so we can
+ *    fade the page in with a transition once it's loaded.
+ * 4. Just incase Javascript doesn't load, we force `opacity: 1;` so content is
+ *    still visible.
+ */
+.page {
+  box-sizing: border-box;
+  /* [3] */
+  display: flex;
+  /* [2] */
+  flex-direction: column;
+  /* [2] */
+  min-height: 100vh;
+  /* [3] */
+  opacity: 0;
+  padding: 20px 20px; }
+  .pace-done .page {
+    opacity: 1;
+    /* [4] */
+    transition: opacity .5s ease; }
+  .no-js .page {
+    opacity: 1 !important;
+    /* [5] */ }
+
+/* ==========================================================================
+   #PAGE LOAD (pace.js)
+   ========================================================================== */
+/**
+ * Pace.js is a plug-in that adds a progress indicator to your pages. We use a
+ * basic bar that spans across the top of the browser, indicting the page load
+ * progress, which disppears once it's done.
+ */
+.pace {
+  pointer-events: none;
+  user-select: none; }
+
+.pace-progress {
+  background: #56dad7;
+  height: 4px;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  z-index: 2000; }
+
+/**
+ * What happens when the bar isn't needed anymore.
+ */
+.pace-inactive .pace-progress {
+  opacity: 0;
+  transition: all .10s; }
+
+/* ==========================================================================
+   #SITE-HEAD
+   ========================================================================== */
+.page-head {
+  margin-bottom: 20px; }
+
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+/* ==========================================================================
+   #INDEX
+   ========================================================================== */
 .work {
   list-style: none;
   margin: 0 auto;
-  padding: 50px 0 0;
+  padding: 0;
   max-width: 1200px; }
 
 .work__item {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
+  max-width: 600px;
   /* [1] */
   /* [2] */
   /* [3] */
@@ -801,24 +777,14 @@ blockquote {
     clear: both; }
   @media (min-width: 64em) {
     .work__item {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      /*
-      		&:nth-child(odd) {
-      			flex-direction: row-reverse;
-      		}
-      */ } }
+      align-items: center;
+      max-width: none; } }
 
 .work__image-link {
   border: none;
   display: block;
-  position: relative;
+  width: 100%;
   /* [1] */
   /* [2] */
   /* [3] */
@@ -827,18 +793,23 @@ blockquote {
   /* [6] */ }
   @media (min-width: 64em) {
     .work__image-link {
-      width: 50%; }
-      li:nth-child(even) .work__image-link {
-        right: 0; } }
+      width: 50%; } }
 
 .work__image {
-  width: 100%;
-  height: 75%; }
+  display: block;
+  width: 100%; }
+
+.work__title a {
+  border: none;
+  color: #0d0f0f; }
+  .work__title a:visited {
+    color: #0d0f0f; }
+  .work__title a:hover, .work__title a:focus {
+    color: #56dad7; }
 
 .work__desc {
   box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 8.33333%;
   /* [1] */
   /* [2] */
   /* [3] */
@@ -847,17 +818,26 @@ blockquote {
   /* [6] */ }
   @media (min-width: 64em) {
     .work__desc {
+      padding: 0 50px;
       width: 50%; } }
 
-/* ==========================================================================
-   #SITE-HEAD
-   ========================================================================== */
-/* ==========================================================================
-   #FOOTER
-   ========================================================================== */
 /* ==========================================================================
    #PROJECT DETAIL
    ========================================================================== */
 /**
- * Grid-like layout system.
+ * Base `.masthead` styles.
  */
+.masthead {
+  margin: -20px;
+  padding: 100px 20px 0;
+  width: 100%; }
+
+.masthead__image {
+  display: block;
+  margin: 0 auto -100px; }
+
+/**
+ * Great British Meat Co.
+ */
+.page-head--gbm {
+  background: black url(../img/interface/work/gbm/masthead-bg.jpg) 0 0; }

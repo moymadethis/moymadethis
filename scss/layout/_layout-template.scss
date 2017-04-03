@@ -1,55 +1,77 @@
+/* ==========================================================================
+   #PAGE LOAD (pace.js)
+   ========================================================================== */
+   
+/**
+ * The `.page` div acts as a container for all the content on a page. Including
+ * the header and footer.
+ *
+ * 1. We use flexbox to make `.page-foot` a sticky footer to keep it fixed to
+ *    bottom of the page when there's not enough content to push it down.
+ * 2. Using flexbox we set the height to 100% and also `box-sizing: border-box;`
+ *    to compensate for the vertical padding.
+ * 3. When pace.js is running we add `opacity` to the `body` element so we can
+ *    fade the page in with a transition once it's loaded.
+ * 4. Just incase Javascript doesn't load, we force `opacity: 1;` so content is
+ *    still visible.
+ */
 
-.work {
-	list-style: none;
-	margin: 0 auto;
-	padding: 50px 0 0;
-	max-width: 1200px;
-}
-
-.work__item {
-	//border-bottom: $border-width $border-style $border-color;
-	@include clearfix;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-
-	@include bp(bp5) {
-		display: flex;
-		align-items: center;
-		
-/*
-		&:nth-child(odd) {
-			flex-direction: row-reverse;
-		}
-*/
+.page {
+	box-sizing: border-box;/* [3] */
+	display: flex; /* [2] */
+	flex-direction: column; /* [2] */
+	min-height: 100vh; /* [3] */
+	opacity: 0;
+	padding: $vertical-spacing $gutter;
+	
+	.pace-done & {
+		opacity: 1; /* [4] */
+		transition: opacity .5s ease;
+	}
+	
+	.no-js & {
+		opacity: 1 !important; /* [5] */
 	}
 }
 
-.work__image-link {
-	border: none;
-	display: block;
-	position: relative;
-	
-	@include bp(bp5) {
-		width: 50%;
-		
-		li:nth-child(even) & {
-			right: 0;
-		}
-	}
+
+
+
+
+/* ==========================================================================
+   #PAGE LOAD (pace.js)
+   ========================================================================== */
+   
+/**
+ * Pace.js is a plug-in that adds a progress indicator to your pages. We use a
+ * basic bar that spans across the top of the browser, indicting the page load
+ * progress, which disppears once it's done.
+ */
+
+.pace {
+	pointer-events: none;
+	user-select: none;
 }
 
-.work__image {
+.pace-progress {
+	background: $color-primary;
+	height: 4px;
+	position: fixed;
+	top: 0;
+	right: 100%;
 	width: 100%;
-	height: 75%;
+	z-index: 2000;	
 }
 
-.work__desc {
-	box-sizing: border-box;
-	margin: 0 auto;
-	padding: 0 50px;
+/**
+ * What happens when the bar isn't needed anymore.
+ */
+ 
+.pace-inactive {
+	//display: none;
 	
-	@include bp(bp5) {
-		width: 50%;
+	.pace-progress {
+		opacity: 0;
+		transition: all .10s;
 	}
 }

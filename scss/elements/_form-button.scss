@@ -26,10 +26,11 @@
 	@include font-size($button-font-size);
 	font-weight: $button-font-weight;
 	height: auto;
+	letter-spacing: $button-letter-spacing;
 	line-height: $font-lineheight;
 	margin-bottom: $vertical-spacing;
 	*margin-left: .3em;
-	padding: 9px 25px;
+	padding: 10px 20px;
 	position: relative;
 	text-align: center;
 	text-decoration: none;

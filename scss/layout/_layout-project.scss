@@ -4,5 +4,25 @@
    ========================================================================== */
 
 /**
- * Grid-like layout system.
+ * Base `.masthead` styles.
  */
+
+.masthead {
+	margin: -$gutter;
+	padding: ($gutter * 5) $gutter 0;
+	width: 100%;
+}
+
+.masthead__image {
+	display: block;
+	margin: 0 auto -100px;
+}
+
+
+/**
+ * Great British Meat Co.
+ */
+ 
+.page-head--gbm {
+	background: $black url(../img/interface/work/gbm/masthead-bg.jpg) 0 0 ;
+}

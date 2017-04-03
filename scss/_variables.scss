@@ -22,11 +22,9 @@ $grey							: rgb(114,124,125);
 $grey-light						: rgb(177,182,183);
 $grey-lighter					: rgb(238,240,240);
 
-$color-primary-darker			: rgb(130,164,46);
-$color-primary-dark 			: rgb(147,184,51);
+
 $color-primary 					: rgb(86,218,215);
-$color-primary-light			: rgb(181,215,97);
-$color-primary-lighter			: rgb(237,245,215);
+
 
 
 
@@ -81,7 +79,7 @@ $heading-lineheight				: $font-lineheight;
 
 // Links  ================================================
 
-$link-color 		    		: $color-primary-dark;
+$link-color 		    		: $color-primary;
 $link-color-hover 				: $black;
 $link-color-visited   			: $link-color;
 $link-color-focus 				: $link-color-hover;
@@ -117,8 +115,8 @@ $button-border-radius 					: $border-radius;
 $button-font-family						: $font-family;
 $button-font-size 						: $font-size;
 $button-font-color 						: $grey-darker;
-$button-font-weight 					: 600;
-$button-letter-spacing					: 0.025em;
+$button-font-weight 					: 900;
+$button-letter-spacing					: 0.02em;
 $button-font-transform 					: none;
 
 $button-bg-hover 						: $grey-darker;
