@@ -5,4 +5,11 @@
 
 .page-head {
 	margin-bottom: $vertical-spacing;
+	padding: $vertical-spacing $gutter;
+}
+
+.page-head__home-link {
+	border: none;
+	display: block;
+	float: left;
 }

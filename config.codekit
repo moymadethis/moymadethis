@@ -24,7 +24,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1076,
+		"initialSize": 191,
 		"inputAbbreviatedPath": "\/favicon.png",
 		"outputAbbreviatedPath": "\/favicon.png",
 		"outputPathIsOutsideProject": 0,
@@ -58,6 +58,17 @@
 		"initialSize": 240257,
 		"inputAbbreviatedPath": "\/img\/content\/work\/beatsuite\/tile\/beatsuite.jpg",
 		"outputAbbreviatedPath": "\/img\/content\/work\/beatsuite\/tile\/beatsuite.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/dartmoor\/masthead\/dartmoor-device.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/content\/work\/dartmoor\/masthead\/dartmoor-device.png",
+		"outputAbbreviatedPath": "\/img\/content\/work\/dartmoor\/masthead\/dartmoor-device.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -106,6 +117,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/content\/work\/metropolis\/masthead\/metropolis-device.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/content\/work\/metropolis\/masthead\/metropolis-device.png",
+		"outputAbbreviatedPath": "\/img\/content\/work\/metropolis\/masthead\/metropolis-device.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/content\/work\/metropolis\/tile\/metropolis.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -113,6 +135,17 @@
 		"initialSize": 119766,
 		"inputAbbreviatedPath": "\/img\/content\/work\/metropolis\/tile\/metropolis.jpg",
 		"outputAbbreviatedPath": "\/img\/content\/work\/metropolis\/tile\/metropolis.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/oca\/masthead\/oca-device.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/content\/work\/oca\/masthead\/oca-device.png",
+		"outputAbbreviatedPath": "\/img\/content\/work\/oca\/masthead\/oca-device.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -747,7 +780,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Stephen Moy",
+"lastSavedByUser": "Stephen",
 "manualImportLinks": {
 	},
 "projectAttributes": {

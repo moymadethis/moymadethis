@@ -22,7 +22,6 @@
 	flex-direction: column; /* [2] */
 	min-height: 100vh; /* [3] */
 	opacity: 0;
-	padding: $vertical-spacing $gutter;
 	
 	.pace-done & {
 		opacity: 1; /* [4] */
