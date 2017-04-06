@@ -1,4 +1,22 @@
 
+.band {
+	width: 100%;
+	
+	.masthead + & {
+		padding-top: (100px + $vertical-spacing);
+	}
+}
+
+.wrap {
+	margin: 0 auto;
+	padding: 0 $gutter;
+	max-width: 1200px;
+}
+
+.wrap--narrow {
+	max-width: 900px;
+}
+
 /* ==========================================================================
    #INDEX
    ========================================================================== */

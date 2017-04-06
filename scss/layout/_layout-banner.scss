@@ -4,8 +4,12 @@
    ========================================================================== */
 
 .page-head {
-	margin-bottom: $vertical-spacing;
+	@include clearfix;
+	box-sizing: border-box;
 	padding: $vertical-spacing $gutter;
+	position: relative;
+	z-index: 1000;
+	width: 100%;
 }
 
 .page-head__home-link {

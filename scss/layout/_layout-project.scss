@@ -8,9 +8,15 @@
  */
 
 .masthead {
-	margin: -$gutter;
-	padding: ($gutter * 5) $gutter 0;
+	position: relative;
 	width: 100%;
+}
+
+.masthead__wrap {
+	margin: 0 auto;
+	position: relative;
+	max-width: 900px;
+	z-index: 100;
 }
 
 .masthead__image {
@@ -23,6 +29,217 @@
  * Great British Meat Co.
  */
  
-.page-head--gbm {
-	background: $black url(../img/interface/work/gbm/masthead-bg.jpg) 0 0 ;
+.masthead--gbm {
+	background: rgb(40,30,25) url(../img/interface/work/gbm/masthead-bg.jpg) 0 0;
 }
+
+
+/**
+ * BeatSuite
+ */
+ 
+.masthead--beatsuite {
+	//background: url(../img/interface/work/beatsuite/masthead-bg.png) no-repeat center center, linear-gradient(to right, rgba(57,151,226,1) 0%, rgba(20,57,197,1) 100%);
+	background: rgb(25,170,248) url(../img/interface/work/beatsuite/masthead-bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+
+/**
+ * Pokerstars
+ */
+ 
+.masthead--pokerstars {
+	background: $black url(../img/interface/work/pokerstars/masthead-bg.jpg) repeat-x left top;
+	
+		
+		&:before {
+			background: url(../img/interface/work/pokerstars/spade.png) no-repeat 0 bottom;
+			content: "";
+			display: block;
+			height: 475px;
+			opacity: .05;
+			position: absolute;
+			bottom: -25px;
+			left: 50%;
+			margin-left: -850px;
+			width: 510px;
+		}
+
+}
+
+
+/**
+ * OOBE
+ */
+ 
+.masthead--oobe {
+	background: rgb(216,219,46) url(../img/interface/work/oobe/masthead-bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+
+/**
+ * OCA
+ */
+ 
+.masthead--oca {
+	background: rgb(201,25,34);
+}
+
+
+/**
+ * Metropolis
+ */
+ 
+.masthead--metropolis {
+	background: $grey-dark;
+}
+
+.metropallax {
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.metropallax__inner {
+	height: 116%;
+	min-height: 116%;
+	position: relative;
+	top: -8%;
+	left: -8%;
+	width: 116%;
+}
+
+.metropallax__layer {
+	height: 100%;
+	min-height: 100%;
+	width: 100%;
+	
+	.skyline {
+		height: 400px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+
+
+
+.metropallax__layer--back {
+	background: url(../img/interface/work/metropolis/masthead-bg.jpg) no-repeat center center;
+	background-size: cover;
+	
+	#smoke {
+		display: block;
+		height: 100%;
+		min-height: 100%;
+		left: 0;
+		opacity: .35;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	
+	.skyline {
+		background: url(../img/interface/work/metropolis/buildings-back.png) repeat-x center top;
+		opacity: .40;
+		
+		&:before {
+			background: url(../img/interface/work/metropolis/spotlight.png) no-repeat left bottom;
+			content: "";
+			display: block;
+			height: 500px;
+			margin-right: -600px;
+			position: absolute;
+			right: 50%;
+			bottom: 300px;
+			width: 100px;
+			z-index: -1;
+			//transform: rotate(40deg);
+			transform-origin: center bottom;		
+			animation-name: spin;
+		    animation-duration: 6000ms;
+		    animation-iteration-count: infinite;
+		    animation-timing-function: linear;
+		}
+	}
+}
+
+.metropallax__layer--mid {
+	
+	.skyline {
+		background: url(../img/interface/work/metropolis/buildings-mid.png) repeat-x center top;
+		opacity: 80;
+		
+		&:before,
+		&:after {
+			background: url(../img/interface/work/metropolis/spotlight.png) no-repeat left bottom;
+			content: "";
+			display: block;
+			height: 500px;
+			margin-left: -635px;
+			position: absolute;
+			bottom: 350px;
+			left: 50%;
+			width: 100px;
+			z-index: -1;
+			//transform: rotate(40deg);
+			transform-origin: center bottom;		
+			animation-name: spin;
+		    animation-duration: 8000ms;
+		    animation-iteration-count: infinite;
+		    animation-timing-function: linear;
+		}
+		
+		&:after {
+			margin-right: -620px;
+			margin-left: 0;
+			right: 50%;
+			bottom: 300px;
+			left: auto;
+			animation-duration: 10000ms;
+		}
+	}
+}
+
+.metropallax__layer--front {
+	display: none;
+
+	.skyline {
+		background: url(../img/interface/work/metropolis/buildings-front.png) repeat-x center top;
+	}
+}
+
+@keyframes spin { 
+    0% { 
+        -webkit-transform: rotate(12deg); 
+    }
+
+	20% { 
+        -webkit-transform: rotate(24deg); 
+    }
+    
+    40% { 
+        -webkit-transform: rotate(0deg); 
+    }
+    
+    60% { 
+        -webkit-transform: rotate(12deg); 
+    }
+    
+    80% { 
+        -webkit-transform: rotate(-24deg); 
+    }
+    
+    100% { 
+        -webkit-transform: rotate(12deg); 
+    }
+}
+
+
+

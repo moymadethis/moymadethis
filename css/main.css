@@ -740,8 +740,16 @@ blockquote {
    #SITE-HEAD
    ========================================================================== */
 .page-head {
-  margin-bottom: 20px;
-  padding: 20px 20px; }
+  box-sizing: border-box;
+  padding: 20px 20px;
+  position: relative;
+  z-index: 1000;
+  width: 100%; }
+  .page-head:before, .page-head:after {
+    content: "";
+    display: table; }
+  .page-head:after {
+    clear: both; }
 
 .page-head__home-link {
   border: none;
@@ -754,6 +762,19 @@ blockquote {
 /* ==========================================================================
    #FOOTER
    ========================================================================== */
+.band {
+  width: 100%; }
+  .masthead + .band {
+    padding-top: 120px; }
+
+.wrap {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px; }
+
+.wrap--narrow {
+  max-width: 900px; }
+
 /* ==========================================================================
    #INDEX
    ========================================================================== */
@@ -832,9 +853,14 @@ blockquote {
  * Base `.masthead` styles.
  */
 .masthead {
-  margin: -20px;
-  padding: 100px 20px 0;
+  position: relative;
   width: 100%; }
+
+.masthead__wrap {
+  margin: 0 auto;
+  position: relative;
+  max-width: 900px;
+  z-index: 100; }
 
 .masthead__image {
   display: block;
@@ -843,5 +869,153 @@ blockquote {
 /**
  * Great British Meat Co.
  */
-.page-head--gbm {
-  background: black url(../img/interface/work/gbm/masthead-bg.jpg) 0 0; }
+.masthead--gbm {
+  background: #281e19 url(../img/interface/work/gbm/masthead-bg.jpg) 0 0; }
+
+/**
+ * BeatSuite
+ */
+.masthead--beatsuite {
+  background: #19aaf8 url(../img/interface/work/beatsuite/masthead-bg.jpg) no-repeat center center;
+  background-size: cover; }
+
+/**
+ * Pokerstars
+ */
+.masthead--pokerstars {
+  background: black url(../img/interface/work/pokerstars/masthead-bg.jpg) repeat-x left top; }
+  .masthead--pokerstars:before {
+    background: url(../img/interface/work/pokerstars/spade.png) no-repeat 0 bottom;
+    content: "";
+    display: block;
+    height: 475px;
+    opacity: .05;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    margin-left: -850px;
+    width: 510px; }
+
+/**
+ * OOBE
+ */
+.masthead--oobe {
+  background: #d8db2e url(../img/interface/work/oobe/masthead-bg.jpg) no-repeat center center;
+  background-size: cover; }
+
+/**
+ * OCA
+ */
+.masthead--oca {
+  background: #c91922; }
+
+/**
+ * Metropolis
+ */
+.masthead--metropolis {
+  background: #404546; }
+
+.metropallax {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+.metropallax__inner {
+  height: 116%;
+  min-height: 116%;
+  position: relative;
+  top: -8%;
+  left: -8%;
+  width: 116%; }
+
+.metropallax__layer {
+  height: 100%;
+  min-height: 100%;
+  width: 100%; }
+  .metropallax__layer .skyline {
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+
+.metropallax__layer--back {
+  background: url(../img/interface/work/metropolis/masthead-bg.jpg) no-repeat center center;
+  background-size: cover; }
+  .metropallax__layer--back #smoke {
+    display: block;
+    height: 100%;
+    min-height: 100%;
+    left: 0;
+    opacity: .35;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+  .metropallax__layer--back .skyline {
+    background: url(../img/interface/work/metropolis/buildings-back.png) repeat-x center top;
+    opacity: .40; }
+    .metropallax__layer--back .skyline:before {
+      background: url(../img/interface/work/metropolis/spotlight.png) no-repeat left bottom;
+      content: "";
+      display: block;
+      height: 500px;
+      margin-right: -600px;
+      position: absolute;
+      right: 50%;
+      bottom: 300px;
+      width: 100px;
+      z-index: -1;
+      transform-origin: center bottom;
+      animation-name: spin;
+      animation-duration: 6000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; }
+
+.metropallax__layer--mid .skyline {
+  background: url(../img/interface/work/metropolis/buildings-mid.png) repeat-x center top;
+  opacity: 80; }
+  .metropallax__layer--mid .skyline:before, .metropallax__layer--mid .skyline:after {
+    background: url(../img/interface/work/metropolis/spotlight.png) no-repeat left bottom;
+    content: "";
+    display: block;
+    height: 500px;
+    margin-left: -635px;
+    position: absolute;
+    bottom: 350px;
+    left: 50%;
+    width: 100px;
+    z-index: -1;
+    transform-origin: center bottom;
+    animation-name: spin;
+    animation-duration: 8000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .metropallax__layer--mid .skyline:after {
+    margin-right: -620px;
+    margin-left: 0;
+    right: 50%;
+    bottom: 300px;
+    left: auto;
+    animation-duration: 10000ms; }
+
+.metropallax__layer--front {
+  display: none; }
+  .metropallax__layer--front .skyline {
+    background: url(../img/interface/work/metropolis/buildings-front.png) repeat-x center top; }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(12deg); }
+  20% {
+    -webkit-transform: rotate(24deg); }
+  40% {
+    -webkit-transform: rotate(0deg); }
+  60% {
+    -webkit-transform: rotate(12deg); }
+  80% {
+    -webkit-transform: rotate(-24deg); }
+  100% {
+    -webkit-transform: rotate(12deg); } }
