@@ -29,6 +29,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dene.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dene.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/favicon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -258,6 +267,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/interface\/work\/dartmoor\/masthead-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.25573e+06,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/dartmoor\/masthead-bg.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/dartmoor\/masthead-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/interface\/work\/gbm\/masthead-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -295,7 +315,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 10485,
+		"initialSize": 16573,
 		"inputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/buildings-mid.png",
 		"outputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/buildings-mid.png",
 		"outputPathIsOutsideProject": 0,
@@ -313,13 +333,35 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/interface\/work\/metropolis\/spotlight.png": {
+	"\/img\/interface\/work\/metropolis\/spotlight-1.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 4101,
-		"inputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/spotlight.png",
-		"outputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/spotlight.png",
+		"initialSize": 3224,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/spotlight-1.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/spotlight-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/metropolis\/spotlight-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4150,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/spotlight-2.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/spotlight-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/metropolis\/zeppelin.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4477,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/zeppelin.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/zeppelin.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -523,6 +565,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/metropolis.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/moor-than-meets-the-eye.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/moor-than-meets-the-eye.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

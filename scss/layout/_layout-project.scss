@@ -89,6 +89,16 @@
 
 
 /**
+ * Dartmoor (Moor than meets the eye)
+ */
+ 
+.masthead--dartmoor {
+	background: rgb(61,160,211) url(../img/interface/work/dartmoor/masthead-bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+
+/**
  * Metropolis
  */
  
@@ -134,6 +144,30 @@
 	background: url(../img/interface/work/metropolis/masthead-bg.jpg) no-repeat center center;
 	background-size: cover;
 	
+	.skyline {
+		background: url(../img/interface/work/metropolis/buildings-back.png) repeat-x center 0;
+		opacity: .35;
+	}
+	
+	// Zeppelin
+	&:before {
+		background: url(../img/interface/work/metropolis/zeppelin.png) no-repeat left top;
+		content: "";
+		display: block;
+		height: 23px;
+		opacity: .75;
+		position: absolute;
+		bottom: 400px;
+		left: 50%;
+		margin-left: -600px;
+		width: 70px;
+		z-index: 100;
+		animation-name: zeppelin-bounce;
+	    animation-duration: 4s;
+	    animation-iteration-count: infinite;
+	    animation-timing-function: none;
+	}
+	
 	#smoke {
 		display: block;
 		height: 100%;
@@ -144,84 +178,113 @@
 		top: 0;
 		width: 100%;
 	}
-	
-	.skyline {
-		background: url(../img/interface/work/metropolis/buildings-back.png) repeat-x center top;
-		opacity: .40;
-		
-		&:before {
-			background: url(../img/interface/work/metropolis/spotlight.png) no-repeat left bottom;
-			content: "";
-			display: block;
-			height: 500px;
-			margin-right: -600px;
-			position: absolute;
-			right: 50%;
-			bottom: 300px;
-			width: 100px;
-			z-index: -1;
-			//transform: rotate(40deg);
-			transform-origin: center bottom;		
-			animation-name: spin;
-		    animation-duration: 6000ms;
-		    animation-iteration-count: infinite;
-		    animation-timing-function: linear;
-		}
-	}
 }
 
 .metropallax__layer--mid {
 	
 	.skyline {
 		background: url(../img/interface/work/metropolis/buildings-mid.png) repeat-x center top;
-		opacity: 80;
 		
+		// Lights (right)
 		&:before,
 		&:after {
-			background: url(../img/interface/work/metropolis/spotlight.png) no-repeat left bottom;
+			background: url(../img/interface/work/metropolis/spotlight-1.png) no-repeat left bottom;
 			content: "";
 			display: block;
-			height: 500px;
-			margin-left: -635px;
+			height: 400px;
+			margin-right: -580px;
 			position: absolute;
-			bottom: 350px;
-			left: 50%;
-			width: 100px;
+			bottom: 300px;
+			right: 50%;
+			width: 60px;
+			opacity: .50;
 			z-index: -1;
-			//transform: rotate(40deg);
 			transform-origin: center bottom;		
-			animation-name: spin;
-		    animation-duration: 8000ms;
+			animation-name: lights-right;
+		    animation-duration: 12s;
 		    animation-iteration-count: infinite;
-		    animation-timing-function: linear;
+		    animation-timing-function: ease-in-out;
 		}
 		
 		&:after {
-			margin-right: -620px;
-			margin-left: 0;
-			right: 50%;
-			bottom: 300px;
-			left: auto;
-			animation-duration: 10000ms;
+			background-image: url(../img/interface/work/metropolis/spotlight-2.png);
+			animation-duration: 20s;
+			opacity: .25;
+			margin-right: -600px;
+			width: 100px;
 		}
 	}
 }
 
 .metropallax__layer--front {
-	display: none;
 
 	.skyline {
 		background: url(../img/interface/work/metropolis/buildings-front.png) repeat-x center top;
+		
+		// Lights (left)
+		&:before,
+		&:after {
+			background: url(../img/interface/work/metropolis/spotlight-1.png) no-repeat left bottom;
+			content: "";
+			display: block;
+			height: 400px;
+			margin-left: -660px;
+			opacity: .50;
+			position: absolute;
+			bottom: 300px;
+			left: 50%;
+			width: 60px;
+			z-index: -1;
+			transform-origin: center bottom;		
+			animation-name: lights-left;
+		    animation-duration: 15s;
+		    animation-iteration-count: infinite;
+		    animation-timing-function: ease-in-out;
+		}
+		
+		&:after {
+			background-image: url(../img/interface/work/metropolis/spotlight-2.png);
+			margin-left: -680px;
+			opacity: .25;
+			width: 100px;
+			animation-duration: 22s;
+		}
 	}
 }
 
-@keyframes spin { 
+@keyframes zeppelin {
+	
     0% { 
-        -webkit-transform: rotate(12deg); 
+        left: 0; 
+    }
+    
+    100% { 
+        left: 100%; 
+    }
+}
+
+@keyframes zeppelin-bounce {
+	
+    0% { 
+        transform: translateY(-4px);
+    }
+    
+    50% { 
+        transform: translateY(4px);
+    }
+    
+    100% { 
+        transform: translateY(-4px); 
+    }
+}
+
+@keyframes lights-left { 
+    0% { 
+        -webkit-transform: rotate(15deg); 
     }
 
 	20% { 
-        -webkit-transform: rotate(24deg); 
+        -webkit-transform: rotate(30deg); 
     }
     
     40% { 
@@ -229,15 +292,41 @@
     }
     
     60% { 
-        -webkit-transform: rotate(12deg); 
+        -webkit-transform: rotate(15deg); 
     }
     
     80% { 
-        -webkit-transform: rotate(-24deg); 
+        -webkit-transform: rotate(25deg); 
     }
     
     100% { 
-        -webkit-transform: rotate(12deg); 
+        -webkit-transform: rotate(15deg); 
+    }
+}
+
+@keyframes lights-right { 
+    0% { 
+        -webkit-transform: rotate(-15deg); 
+    }
+
+	20% { 
+        -webkit-transform: rotate(-30deg); 
+    }
+    
+    40% { 
+        -webkit-transform: rotate(0deg); 
+    }
+    
+    60% { 
+        -webkit-transform: rotate(-15deg); 
+    }
+    
+    80% { 
+        -webkit-transform: rotate(-25deg); 
+    }
+    
+    100% { 
+        -webkit-transform: rotate(-15deg); 
     }
 }
 

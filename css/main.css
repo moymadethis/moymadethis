@@ -39,12 +39,12 @@ article, aside, figure, footer, header, hgroup, nav, section {
  * Default anchor styling.
  */
 a {
-  border-bottom: 4px solid #e8fafa;
-  color: #56dad7;
+  border-bottom: 4px solid #88eeee;
+  color: #18acac;
   text-decoration: none;
   transition: all .25s; }
   a:visited {
-    color: #56dad7; }
+    color: #18acac; }
   a:hover {
     color: black;
     text-decoration: none; }
@@ -539,7 +539,7 @@ blockquote {
     position: relative;
     text-indent: 4px; }
     blockquote > p:first-child:before, blockquote > p:last-of-type:after {
-      color: #56dad7;
+      color: #18acac;
       content: "\201c";
       display: inline;
       font-size: 45px;
@@ -721,7 +721,7 @@ blockquote {
   user-select: none; }
 
 .pace-progress {
-  background: #56dad7;
+  background: #18acac;
   height: 4px;
   position: fixed;
   top: 0;
@@ -830,7 +830,7 @@ blockquote {
   .work__title a:visited {
     color: #0d0f0f; }
   .work__title a:hover, .work__title a:focus {
-    color: #56dad7; }
+    color: #18acac; }
 
 .work__desc {
   box-sizing: border-box;
@@ -910,6 +910,13 @@ blockquote {
   background: #c91922; }
 
 /**
+ * Dartmoor (Moor than meets the eye)
+ */
+.masthead--dartmoor {
+  background: #3da0d3 url(../img/interface/work/dartmoor/masthead-bg.jpg) no-repeat center center;
+  background-size: cover; }
+
+/**
  * Metropolis
  */
 .masthead--metropolis {
@@ -945,6 +952,25 @@ blockquote {
 .metropallax__layer--back {
   background: url(../img/interface/work/metropolis/masthead-bg.jpg) no-repeat center center;
   background-size: cover; }
+  .metropallax__layer--back .skyline {
+    background: url(../img/interface/work/metropolis/buildings-back.png) repeat-x center 0;
+    opacity: .35; }
+  .metropallax__layer--back:before {
+    background: url(../img/interface/work/metropolis/zeppelin.png) no-repeat left top;
+    content: "";
+    display: block;
+    height: 23px;
+    opacity: .75;
+    position: absolute;
+    bottom: 400px;
+    left: 50%;
+    margin-left: -600px;
+    width: 70px;
+    z-index: 100;
+    animation-name: zeppelin-bounce;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: none; }
   .metropallax__layer--back #smoke {
     display: block;
     height: 100%;
@@ -954,68 +980,94 @@ blockquote {
     position: absolute;
     top: 0;
     width: 100%; }
-  .metropallax__layer--back .skyline {
-    background: url(../img/interface/work/metropolis/buildings-back.png) repeat-x center top;
-    opacity: .40; }
-    .metropallax__layer--back .skyline:before {
-      background: url(../img/interface/work/metropolis/spotlight.png) no-repeat left bottom;
-      content: "";
-      display: block;
-      height: 500px;
-      margin-right: -600px;
-      position: absolute;
-      right: 50%;
-      bottom: 300px;
-      width: 100px;
-      z-index: -1;
-      transform-origin: center bottom;
-      animation-name: spin;
-      animation-duration: 6000ms;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear; }
 
 .metropallax__layer--mid .skyline {
-  background: url(../img/interface/work/metropolis/buildings-mid.png) repeat-x center top;
-  opacity: 80; }
+  background: url(../img/interface/work/metropolis/buildings-mid.png) repeat-x center top; }
   .metropallax__layer--mid .skyline:before, .metropallax__layer--mid .skyline:after {
-    background: url(../img/interface/work/metropolis/spotlight.png) no-repeat left bottom;
+    background: url(../img/interface/work/metropolis/spotlight-1.png) no-repeat left bottom;
     content: "";
     display: block;
-    height: 500px;
-    margin-left: -635px;
+    height: 400px;
+    margin-right: -580px;
     position: absolute;
-    bottom: 350px;
-    left: 50%;
-    width: 100px;
+    bottom: 300px;
+    right: 50%;
+    width: 60px;
+    opacity: .50;
     z-index: -1;
     transform-origin: center bottom;
-    animation-name: spin;
-    animation-duration: 8000ms;
+    animation-name: lights-right;
+    animation-duration: 12s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear; }
+    animation-timing-function: ease-in-out; }
   .metropallax__layer--mid .skyline:after {
-    margin-right: -620px;
-    margin-left: 0;
-    right: 50%;
+    background-image: url(../img/interface/work/metropolis/spotlight-2.png);
+    animation-duration: 20s;
+    opacity: .25;
+    margin-right: -600px;
+    width: 100px; }
+
+.metropallax__layer--front .skyline {
+  background: url(../img/interface/work/metropolis/buildings-front.png) repeat-x center top; }
+  .metropallax__layer--front .skyline:before, .metropallax__layer--front .skyline:after {
+    background: url(../img/interface/work/metropolis/spotlight-1.png) no-repeat left bottom;
+    content: "";
+    display: block;
+    height: 400px;
+    margin-left: -660px;
+    opacity: .50;
+    position: absolute;
     bottom: 300px;
-    left: auto;
-    animation-duration: 10000ms; }
+    left: 50%;
+    width: 60px;
+    z-index: -1;
+    transform-origin: center bottom;
+    animation-name: lights-left;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+  .metropallax__layer--front .skyline:after {
+    background-image: url(../img/interface/work/metropolis/spotlight-2.png);
+    margin-left: -680px;
+    opacity: .25;
+    width: 100px;
+    animation-duration: 22s; }
 
-.metropallax__layer--front {
-  display: none; }
-  .metropallax__layer--front .skyline {
-    background: url(../img/interface/work/metropolis/buildings-front.png) repeat-x center top; }
-
-@keyframes spin {
+@keyframes zeppelin {
   0% {
-    -webkit-transform: rotate(12deg); }
+    left: 0; }
+  100% {
+    left: 100%; } }
+@keyframes zeppelin-bounce {
+  0% {
+    transform: translateY(-4px); }
+  50% {
+    transform: translateY(4px); }
+  100% {
+    transform: translateY(-4px); } }
+@keyframes lights-left {
+  0% {
+    -webkit-transform: rotate(15deg); }
   20% {
-    -webkit-transform: rotate(24deg); }
+    -webkit-transform: rotate(30deg); }
   40% {
     -webkit-transform: rotate(0deg); }
   60% {
-    -webkit-transform: rotate(12deg); }
+    -webkit-transform: rotate(15deg); }
   80% {
-    -webkit-transform: rotate(-24deg); }
+    -webkit-transform: rotate(25deg); }
   100% {
-    -webkit-transform: rotate(12deg); } }
+    -webkit-transform: rotate(15deg); } }
+@keyframes lights-right {
+  0% {
+    -webkit-transform: rotate(-15deg); }
+  20% {
+    -webkit-transform: rotate(-30deg); }
+  40% {
+    -webkit-transform: rotate(0deg); }
+  60% {
+    -webkit-transform: rotate(-15deg); }
+  80% {
+    -webkit-transform: rotate(-25deg); }
+  100% {
+    -webkit-transform: rotate(-15deg); } }
