@@ -2,15 +2,6 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19051",
 "files": {
-	"\/_style-guide.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_style-guide.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/beatsuite.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -42,7 +33,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 191,
+		"initialSize": 1076,
 		"inputAbbreviatedPath": "\/favicon.png",
 		"outputAbbreviatedPath": "\/favicon.png",
 		"outputPathIsOutsideProject": 0,
@@ -98,6 +89,17 @@
 		"initialSize": 385242,
 		"inputAbbreviatedPath": "\/img\/content\/work\/dartmoor\/tile\/dartmoor-moor-than-meets-the-eye.jpg",
 		"outputAbbreviatedPath": "\/img\/content\/work\/dartmoor\/tile\/dartmoor-moor-than-meets-the-eye.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/dene\/masthead\/dene-device.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/content\/work\/dene\/masthead\/dene-device.png",
+		"outputAbbreviatedPath": "\/img\/content\/work\/dene\/masthead\/dene-device.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -278,6 +280,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/interface\/work\/dene\/masthead-bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/dene\/masthead-bg.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/dene\/masthead-bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/interface\/work\/gbm\/masthead-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -443,17 +456,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/site\/logo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 4811,
-		"inputAbbreviatedPath": "\/img\/site\/logo.png",
-		"outputAbbreviatedPath": "\/img\/site\/logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/site\/social-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -515,17 +517,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
-		},
-	"\/js\/min\/main-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/main-min.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/main-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
 		},
 	"\/js\/modernizr-2.8.3.min.js": {
 		"fileType": 64,
@@ -1008,7 +999,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Stephen",
+"lastSavedByUser": "Stephen Moy",
 "manualImportLinks": {
 	},
 "projectAttributes": {

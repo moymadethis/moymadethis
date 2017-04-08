@@ -3,13 +3,13 @@
 	width: 100%;
 	
 	.masthead + & {
-		padding-top: (100px + $vertical-spacing);
+		padding-top: 80px;
 	}
 }
 
 .wrap {
 	margin: 0 auto;
-	padding: 0 $gutter;
+	padding: ($vertical-spacing * 2) $gutter $vertical-spacing;
 	max-width: 1200px;
 }
 
@@ -76,6 +76,10 @@
 			color: $link-color;
 		}
 	}
+}
+
+.work__sub-title {
+	@include font-size(25);
 }
 
 .work__desc {

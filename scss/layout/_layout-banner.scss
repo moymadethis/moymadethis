@@ -16,4 +16,16 @@
 	border: none;
 	display: block;
 	float: left;
+	fill: $white;
+}
+
+.page-head__logo {
+	height: 75px;
+	transition: all .25s;
+	width: 75px;
+	
+	@include bp(bp4) {
+		height: 100px;
+		width: 100px;
+	}
 }

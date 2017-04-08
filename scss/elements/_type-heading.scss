@@ -16,39 +16,39 @@ h6 {
 	color: $heading-font-color;
 	font-family: $heading-font-family;
 	font-weight: normal;
-	line-height: .95;
+	line-height: .90;
 	margin: 0 0 $vertical-spacing;
 	text-transform: uppercase;
 }
 
 h1 { 
-	@include font-size(90);
+	@include font-size(80);
 
-	@include bp(bp4) {
+	@include bp(bp3) {
 		@include font-size(100);
 	}
 }
 
 h2 { 
-	@include font-size(65);
+	@include font-size(60);
 
-	@include bp(bp4) {
-		@include font-size(75);
+	@include bp(bp3) {
+		@include font-size(80);
 	}
 }
 
 h3 { 
 	@include font-size(40);
 
-	@include bp(bp4) {
-		@include font-size(50);
+	@include bp(bp3) {
+		@include font-size(60);
 	}
 }
 
 h4 { 
-	@include font-size(15);
-
-	@include bp(bp4) {
-		@include font-size(25);
+	@include font-size(20);
+	
+	@include bp(bp3) {
+		@include font-size(40);
 	}
 }
