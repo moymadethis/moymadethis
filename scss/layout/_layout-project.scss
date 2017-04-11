@@ -35,7 +35,7 @@
 
 
 /**
- * BeatSuite
+ * BeatSuite.
  */
  
 .masthead--beatsuite {
@@ -46,31 +46,29 @@
 
 
 /**
- * Pokerstars
+ * Pokerstars.
  */
  
 .masthead--pokerstars {
 	background: $black url(../img/interface/work/pokerstars/masthead-bg.jpg) repeat-x left top;
-	
 		
-		&:before {
-			background: url(../img/interface/work/pokerstars/spade.png) no-repeat 0 bottom;
-			content: "";
-			display: block;
-			height: 475px;
-			opacity: .05;
-			position: absolute;
-			bottom: -25px;
-			left: 50%;
-			margin-left: -850px;
-			width: 510px;
-		}
-
+	&:before {
+		background: url(../img/interface/work/pokerstars/spade.png) no-repeat 0 bottom;
+		content: "";
+		display: block;
+		height: 475px;
+		opacity: .04;
+		position: absolute;
+		bottom: -25px;
+		left: 50%;
+		margin-left: -850px;
+		width: 510px;
+	}
 }
 
 
 /**
- * OOBE
+ * OOBE.
  */
  
 .masthead--oobe {
@@ -84,12 +82,15 @@
  */
  
 .masthead--oca {
-	background: rgb(201,25,34);
+	background: 
+		url(../img/interface/work/oca/masthead-bottom-bg.png) repeat-x center bottom,
+		url(../img/interface/work/oca/masthead-bg.jpg) center center,
+		rgb(201,25,34);
 }
 
 
 /**
- * Dartmoor (Moor than meets the eye)
+ * Dartmoor (Moor than meets the eye).
  */
  
 .masthead--dartmoor {
@@ -99,7 +100,7 @@
 
 
 /**
- * Dene
+ * Dene.
  */
  
 .masthead--dene {
@@ -108,7 +109,389 @@
 
 
 /**
- * Metropolis
+ * Infinite Edge.
+ */
+ 
+.masthead--infinite-edge {
+	background: $white url(../img/interface/work/infinite-edge/masthead-bg.png) no-repeat center bottom;
+	background-size: cover;
+	
+	@include bp(bp4) {
+		background-size: inherit;
+	}
+}
+
+
+/**
+ * Ferno.
+ */
+ 
+.masthead--ferno {
+	background:
+		url(../img/interface/work/ferno/gloss.png) no-repeat left top,
+		linear-gradient(to bottom, rgba(lighten($black, 15%), 1) 0%, rgba(lighten($black, 2.5%), 1) 100%);
+	background-size: contain;
+	box-shadow: inset 0 -8px 0 0 rgb(235,12,24), inset 0 -10px 0 0 $white;
+	
+	@include bp(bp5) {
+		background-size: inherit;
+	}
+}
+
+/**
+ * Education World.
+ */
+ 
+.masthead--edworld {
+	background:
+		url(../img/interface/work/education-world/masthead-bottom-bg.png) repeat-x center bottom,
+		url(../img/interface/work/education-world/masthead-bg.png) center bottom,
+		rgb(102,182,243);
+}
+
+
+/**
+ * TTE.
+ */
+ 
+.masthead--tte {
+	background: $black url(../img/interface/work/tte/masthead-bg.jpg) no-repeat center 55%;
+}
+
+
+/**
+ * Simple Data.
+ */
+ 
+.masthead--simple-data {
+	background: $black url(../img/interface/work/simple-data/masthead-bg.jpg) center center;
+	background-size: cover;
+}
+
+@keyframes point {
+	0%  	{transform:scale(0);}
+	40%		{transform:scale(1.20);}
+	60%		{transform:scale(.90);}
+	80%		{transform:scale(1.10);}
+	100%	{transform:scale(1);}
+}
+
+@keyframes pulse {
+	0%   	{transform: scale(0); opacity: 0;}
+    10% 	{transform: scale(1); opacity: .60;}
+	50%  	{transform: scale(2); opacity: 0;}
+    100% 	{transform: scale(0); opacity: 0;}  
+} 
+
+@keyframes line {
+	0%   	{width: 0%;}
+	100% 	{width: 100%;}
+}
+
+
+#animated-line {
+	bottom: 20px;
+	display: block;
+	left: 0;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 20px;
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	
+	.inner {
+		height: 300px;
+		left: -8px;
+		position: relative;
+	}
+	
+	[class*='line'] {
+		width: 0;
+	}
+	
+	[class*='ball-container'] {
+		height: 16px;
+		position: absolute;
+		width: 16px;
+		z-index: 10;
+	}
+	
+	[class*="line"]:not([class*="line-box"]) { 		/* Cause easy selectors are too mainstream */
+		-webkit-animation-name: line;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-timing-function:linear;
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-name: line; 							/* Don't use "-moz-animation: line 1s linear forwards;" because that will override the -moz-animation-delay" */
+		-moz-animation-duration: 1s;
+		-moz-animation-timing-function:	linear;
+		-moz-animation-fill-mode: forwards;
+		-o-animation-name: line;
+		-o-animation-duration: 1s;
+		-o-animation-timing-function: linear;
+		-o-animation-fill-mode: forwards;
+		animation-name: line;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+	}
+	
+	/* GRAPH */
+	
+	[class*="line"]:not([class*="line-box"]) {
+		background: $white; 
+		height: 4px;
+		width: 0;
+		-webkit-transform-origin: 0% 0%;
+		-moz-transform-origin: 0% 0%;
+		-o-transform-origin: 0% 0%;
+		transform-origin: 0% 0%;
+	}
+	
+	[class*="ball"]:not([class*="ball-container"]) {
+		background-color: rgb(12,82,82); 
+		border: 4px solid $white;
+		border-radius: 100%;
+		height: 8px;
+		position: absolute;
+		width: 8px;
+		
+		-webkit-transform: scale(0);
+		-webkit-animation: point 0.4s linear forwards;
+		-moz-transform: scale(0);
+		-moz-animation: point 0.4s linear forwards;
+		-o-transform: scale(0);
+		-o-animation: point 0.4s linear forwards;
+		transform: scale(0);
+		animation: point 0.4s linear forwards;
+	}
+	
+	.pulse {
+		border: 2px solid $white;
+		border-radius: 100%;
+		height: 16px;
+	    margin-left: -2px;
+		position: absolute;
+		width: 16px;
+	
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+		-o-transform: scale(0);
+		transform: scale(0);
+		
+		-webkit-animation: pulse 1s linear forwards;
+		-moz-animation: pulse 1s linear forwards;
+		-o-animation: pulse 1s linear forwards;
+		animation: pulse 1s linear forwards;
+	}
+	
+	
+	/* COORDINATE POINTS */
+	
+	.ball-container0  	{bottom: 100px; left:0;}
+	.ball-container1 	{bottom: 70px; 	left:10%;}
+	.ball-container2 	{bottom: 110px; left:20%;}
+	.ball-container3 	{bottom: 140px; left:30%;}
+	.ball-container4 	{bottom: 100px; left:40%;}
+	.ball-container5 	{bottom: 40px; 	left:50%;}
+	.ball-container6 	{bottom: 0px; 	left:60%;}
+	.ball-container7 	{bottom: 160px; left:70%;}
+	.ball-container8 	{bottom: 100px; left:80%;}
+	.ball-container9 	{bottom: 40px; 	left:90%;}
+	.ball-container10	{bottom: 0; 	left:100%;}
+	
+	.pulse0	 			{bottom: 98px;  left: 0;}
+	.pulse1				{bottom: 68px; 	left: 10%;}
+	.pulse2 			{bottom: 108px; left: 20%;}
+	.pulse3 			{bottom: 138px; left: 30%;}
+	.pulse4 			{bottom: 98px;  left: 40%;}
+	.pulse5 			{bottom: 38px; 	left: 50%;}
+	.pulse6 			{bottom: -2px; 	left: 60%;}
+	.pulse7 			{bottom: 158px; left: 70%;}
+	.pulse8 			{bottom: 98px;  left: 80%;}
+	.pulse9 			{bottom: 38px; 	left: 90%;}
+	.pulse10 			{bottom: -2px; 	right: -18px;}
+	
+	/* CONTROL LAYER DELAY */
+	
+	#layerBall0,
+	#layerPulse0 {
+		-webkit-animation-delay: 0s;
+		-moz-animation-delay: 0s;
+		-o-animation-delay: 0s;
+		animation-delay: 0s;
+	}
+	#layerBall1,
+	#layerPulse1 {
+		-webkit-animation-delay: 1s;
+		-moz-animation-delay: 1s;
+		-o-animation-delay: 1s;
+		animation-delay: 1s;
+	}
+	#layerBall2,
+	#layerPulse2 {
+		-webkit-animation-delay: 2s;
+		-moz-animation-delay: 2s;
+		-o-animation-delay: 2s;
+		animation-delay: 2s;
+	}
+	#layerBall3,
+	#layerPulse3 {
+		-webkit-animation-delay: 3s;
+		-moz-animation-delay: 3s;
+		-o-animation-delay: 3s; 
+		animation-delay: 3s; 
+	}
+	#layerBall4,
+	#layerPulse4 {
+		-webkit-animation-delay: 4s;
+		-moz-animation-delay: 4s;
+		-o-animation-delay: 4s;
+		animation-delay: 4s;
+	}
+	#layerBall5,
+	#layerPulse5 {
+		-webkit-animation-delay: 5s;
+		-moz-animation-delay: 5s;
+		-o-animation-delay: 5s;
+		animation-delay: 5s;
+	}
+	#layerBall6,
+	#layerPulse6 {
+		-webkit-animation-delay: 6s;
+		-moz-animation-delay: 6s;
+		-o-animation-delay: 6s;
+		animation-delay: 6s;
+	}
+	#layerBall7,
+	#layerPulse7 {
+		-webkit-animation-delay: 7s;
+		-moz-animation-delay: 7s;
+		-o-animation-delay: 7s;
+		animation-delay: 7s;
+	}
+	#layerBall8,
+	#layerPulse8 {
+		-webkit-animation-delay: 8s;
+		-moz-animation-delay: 8s;
+		-o-animation-delay: 8s;
+		animation-delay: 8s;
+	}
+	#layerBall9,
+	#layerPulse9 {
+		-webkit-animation-delay: 9s;
+		-moz-animation-delay: 9s;
+		-o-animation-delay: 9s;
+		animation-delay: 9s;
+		}
+	#layerBall10,
+	#layerPulse10 {
+		-webkit-animation-delay: 10s;
+		-moz-animation-delay: 10s; 
+		-o-animation-delay: 10s; 
+		animation-delay: 10s; 
+	}
+	
+	.line0 {
+		-webkit-animation-delay: 0s;
+		-moz-animation-delay: 0s;
+		-o-animation-delay: 0s;
+		animation-delay: 0s;
+	}
+	.line1 {
+		-webkit-animation-delay: 1s;
+		-moz-animation-delay: 1s;
+		-o-animation-delay: 1s;
+		animation-delay: 1s;
+	}
+	.line2 {
+		-webkit-animation-delay: 2s;
+		-moz-animation-delay: 2s;
+		-o-animation-delay: 2s;
+		animation-delay: 2s;
+	}
+	.line3 {
+		-webkit-animation-delay: 3s;
+		-moz-animation-delay: 3s;
+		-o-animation-delay: 3s;
+		animation-delay: 3s;
+	}
+	.line4 {
+		-webkit-animation-delay: 4s;
+		-moz-animation-delay: 4s;
+		-o-animation-delay: 4s;
+		animation-delay: 4s;
+	}
+	.line5 {
+		-webkit-animation-delay: 5s;
+		-moz-animation-delay: 5s;
+		-o-animation-delay: 5s;
+		animation-delay: 5s;
+	}
+	.line6 {
+		-webkit-animation-delay: 6s;
+		-moz-animation-delay: 6s;
+		-o-animation-delay: 6s;
+		animation-delay: 6s;
+	}
+	.line7 {
+		-webkit-animation-delay: 7s;
+		-moz-animation-delay: 7s;
+		-o-animation-delay: 7s;
+		animation-delay: 7s;
+	}
+	.line8 {
+		-webkit-animation-delay: 8s;
+		-moz-animation-delay: 8s;
+		-o-animation-delay: 8s;
+		animation-delay: 8s;
+	}
+	.line9 {
+		-webkit-animation-delay: 9s;
+		-moz-animation-delay: 9s;
+		-o-animation-delay: 9s;
+		animation-delay: 9s;
+	}
+}
+
+/**
+ * Slim Be
+ */
+ 
+.masthead--slim-be {
+	background: 
+		url(../img/interface/work/slim-be/red-tile-gradient.jpg) repeat-x center bottom,
+		url(../img/interface/work/slim-be/red-tile-light.jpg) center 0, 
+		rgb(228,26,55);
+		
+	
+	&:before {
+		background: linear-gradient(to bottom, rgba($white,0) 0%,rgba($white,1) 100%);
+		content: "";
+		display: block;
+		height: 100px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+	}
+		
+	#masthead-svg {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		
+		path {
+			stroke-width: 8;
+		    stroke: rgb(253,198,37);
+		}
+	}
+}
+
+/**
+ * Metropolis.
  */
  
 .masthead--metropolis {
@@ -141,9 +524,14 @@
 	.skyline {
 		height: 400px;
 		position: absolute;
-		bottom: 0;
+		bottom: -175px;
 		left: 0;
+		transition: all .25s;
 		width: 100%;
+		
+		@include bp(bp3) {
+			bottom: 0;
+		}
 	}
 }
 
@@ -288,54 +676,56 @@
 }
 
 @keyframes lights-left { 
+	
     0% { 
-        -webkit-transform: rotate(15deg); 
+        transform: rotate(15deg); 
     }
 
 	20% { 
-        -webkit-transform: rotate(30deg); 
+        transform: rotate(30deg); 
     }
     
     40% { 
-        -webkit-transform: rotate(0deg); 
+        transform: rotate(0deg); 
     }
     
     60% { 
-        -webkit-transform: rotate(15deg); 
+        transform: rotate(15deg); 
     }
     
     80% { 
-        -webkit-transform: rotate(25deg); 
+        transform: rotate(25deg); 
     }
     
     100% { 
-        -webkit-transform: rotate(15deg); 
+        transform: rotate(15deg); 
     }
 }
 
-@keyframes lights-right { 
+@keyframes lights-right {
+	 
     0% { 
-        -webkit-transform: rotate(-15deg); 
+       transform: rotate(-15deg); 
     }
 
 	20% { 
-        -webkit-transform: rotate(-30deg); 
+        transform: rotate(-30deg); 
     }
     
     40% { 
-        -webkit-transform: rotate(0deg); 
+        transform: rotate(0deg); 
     }
     
     60% { 
-        -webkit-transform: rotate(-15deg); 
+        transform: rotate(-15deg); 
     }
     
     80% { 
-        -webkit-transform: rotate(-25deg); 
+        transform: rotate(-25deg); 
     }
     
     100% { 
-        -webkit-transform: rotate(-15deg); 
+        transform: rotate(-15deg); 
     }
 }
 

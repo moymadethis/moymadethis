@@ -893,14 +893,14 @@ blockquote {
   background: #281e19 url(../img/interface/work/gbm/masthead-bg.jpg) 0 0; }
 
 /**
- * BeatSuite
+ * BeatSuite.
  */
 .masthead--beatsuite {
   background: #19aaf8 url(../img/interface/work/beatsuite/masthead-bg.jpg) no-repeat center center;
   background-size: cover; }
 
 /**
- * Pokerstars
+ * Pokerstars.
  */
 .masthead--pokerstars {
   background: black url(../img/interface/work/pokerstars/masthead-bg.jpg) repeat-x left top; }
@@ -909,7 +909,7 @@ blockquote {
     content: "";
     display: block;
     height: 475px;
-    opacity: .05;
+    opacity: .04;
     position: absolute;
     bottom: -25px;
     left: 50%;
@@ -917,7 +917,7 @@ blockquote {
     width: 510px; }
 
 /**
- * OOBE
+ * OOBE.
  */
 .masthead--oobe {
   background: #d8db2e url(../img/interface/work/oobe/masthead-bg.jpg) no-repeat center center;
@@ -927,23 +927,392 @@ blockquote {
  * OCA
  */
 .masthead--oca {
-  background: #c91922; }
+  background: url(../img/interface/work/oca/masthead-bottom-bg.png) repeat-x center bottom, url(../img/interface/work/oca/masthead-bg.jpg) center center, #c91922; }
 
 /**
- * Dartmoor (Moor than meets the eye)
+ * Dartmoor (Moor than meets the eye).
  */
 .masthead--dartmoor {
   background: #3da0d3 url(../img/interface/work/dartmoor/masthead-bg.jpg) no-repeat center center;
   background-size: cover; }
 
 /**
- * Dene
+ * Dene.
  */
 .masthead--dene {
   background: black url(../img/interface/work/dene/masthead-bg.png) 0 0; }
 
 /**
- * Metropolis
+ * Infinite Edge.
+ */
+.masthead--infinite-edge {
+  background: white url(../img/interface/work/infinite-edge/masthead-bg.png) no-repeat center bottom;
+  background-size: cover;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    .masthead--infinite-edge {
+      background-size: inherit; } }
+
+/**
+ * Ferno.
+ */
+.masthead--ferno {
+  background: url(../img/interface/work/ferno/gloss.png) no-repeat left top, linear-gradient(to bottom, #262626 0%, #060606 100%);
+  background-size: contain;
+  box-shadow: inset 0 -8px 0 0 #eb0c18, inset 0 -10px 0 0 white;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 64em) {
+    .masthead--ferno {
+      background-size: inherit; } }
+
+/**
+ * Education World.
+ */
+.masthead--edworld {
+  background: url(../img/interface/work/education-world/masthead-bottom-bg.png) repeat-x center bottom, url(../img/interface/work/education-world/masthead-bg.png) center bottom, #66b6f3; }
+
+/**
+ * TTE.
+ */
+.masthead--tte {
+  background: black url(../img/interface/work/tte/masthead-bg.jpg) no-repeat center 55%; }
+
+/**
+ * Simple Data.
+ */
+.masthead--simple-data {
+  background: black url(../img/interface/work/simple-data/masthead-bg.jpg) center center;
+  background-size: cover; }
+
+@keyframes point {
+  0% {
+    transform: scale(0); }
+  40% {
+    transform: scale(1.2); }
+  60% {
+    transform: scale(0.9); }
+  80% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  10% {
+    transform: scale(1);
+    opacity: .60; }
+  50% {
+    transform: scale(2);
+    opacity: 0; }
+  100% {
+    transform: scale(0);
+    opacity: 0; } }
+@keyframes line {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
+#animated-line {
+  bottom: 20px;
+  display: block;
+  left: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 20px;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  /* GRAPH */
+  /* COORDINATE POINTS */
+  /* CONTROL LAYER DELAY */ }
+  #animated-line .inner {
+    height: 300px;
+    left: -8px;
+    position: relative; }
+  #animated-line [class*='line'] {
+    width: 0; }
+  #animated-line [class*='ball-container'] {
+    height: 16px;
+    position: absolute;
+    width: 16px;
+    z-index: 10; }
+  #animated-line [class*="line"]:not([class*="line-box"]) {
+    /* Cause easy selectors are too mainstream */
+    -webkit-animation-name: line;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: line;
+    /* Don't use "-moz-animation: line 1s linear forwards;" because that will override the -moz-animation-delay" */
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-name: line;
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: linear;
+    -o-animation-fill-mode: forwards;
+    animation-name: line;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; }
+  #animated-line [class*="line"]:not([class*="line-box"]) {
+    background: white;
+    height: 4px;
+    width: 0;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    transform-origin: 0% 0%; }
+  #animated-line [class*="ball"]:not([class*="ball-container"]) {
+    background-color: #0c5252;
+    border: 4px solid white;
+    border-radius: 100%;
+    height: 8px;
+    position: absolute;
+    width: 8px;
+    -webkit-transform: scale(0);
+    -webkit-animation: point 0.4s linear forwards;
+    -moz-transform: scale(0);
+    -moz-animation: point 0.4s linear forwards;
+    -o-transform: scale(0);
+    -o-animation: point 0.4s linear forwards;
+    transform: scale(0);
+    animation: point 0.4s linear forwards; }
+  #animated-line .pulse {
+    border: 2px solid white;
+    border-radius: 100%;
+    height: 16px;
+    margin-left: -2px;
+    position: absolute;
+    width: 16px;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-animation: pulse 1s linear forwards;
+    -moz-animation: pulse 1s linear forwards;
+    -o-animation: pulse 1s linear forwards;
+    animation: pulse 1s linear forwards; }
+  #animated-line .ball-container0 {
+    bottom: 100px;
+    left: 0; }
+  #animated-line .ball-container1 {
+    bottom: 70px;
+    left: 10%; }
+  #animated-line .ball-container2 {
+    bottom: 110px;
+    left: 20%; }
+  #animated-line .ball-container3 {
+    bottom: 140px;
+    left: 30%; }
+  #animated-line .ball-container4 {
+    bottom: 100px;
+    left: 40%; }
+  #animated-line .ball-container5 {
+    bottom: 40px;
+    left: 50%; }
+  #animated-line .ball-container6 {
+    bottom: 0px;
+    left: 60%; }
+  #animated-line .ball-container7 {
+    bottom: 160px;
+    left: 70%; }
+  #animated-line .ball-container8 {
+    bottom: 100px;
+    left: 80%; }
+  #animated-line .ball-container9 {
+    bottom: 40px;
+    left: 90%; }
+  #animated-line .ball-container10 {
+    bottom: 0;
+    left: 100%; }
+  #animated-line .pulse0 {
+    bottom: 98px;
+    left: 0; }
+  #animated-line .pulse1 {
+    bottom: 68px;
+    left: 10%; }
+  #animated-line .pulse2 {
+    bottom: 108px;
+    left: 20%; }
+  #animated-line .pulse3 {
+    bottom: 138px;
+    left: 30%; }
+  #animated-line .pulse4 {
+    bottom: 98px;
+    left: 40%; }
+  #animated-line .pulse5 {
+    bottom: 38px;
+    left: 50%; }
+  #animated-line .pulse6 {
+    bottom: -2px;
+    left: 60%; }
+  #animated-line .pulse7 {
+    bottom: 158px;
+    left: 70%; }
+  #animated-line .pulse8 {
+    bottom: 98px;
+    left: 80%; }
+  #animated-line .pulse9 {
+    bottom: 38px;
+    left: 90%; }
+  #animated-line .pulse10 {
+    bottom: -2px;
+    right: -18px; }
+  #animated-line #layerBall0,
+  #animated-line #layerPulse0 {
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s; }
+  #animated-line #layerBall1,
+  #animated-line #layerPulse1 {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s; }
+  #animated-line #layerBall2,
+  #animated-line #layerPulse2 {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s; }
+  #animated-line #layerBall3,
+  #animated-line #layerPulse3 {
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s; }
+  #animated-line #layerBall4,
+  #animated-line #layerPulse4 {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    animation-delay: 4s; }
+  #animated-line #layerBall5,
+  #animated-line #layerPulse5 {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    -o-animation-delay: 5s;
+    animation-delay: 5s; }
+  #animated-line #layerBall6,
+  #animated-line #layerPulse6 {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    animation-delay: 6s; }
+  #animated-line #layerBall7,
+  #animated-line #layerPulse7 {
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    -o-animation-delay: 7s;
+    animation-delay: 7s; }
+  #animated-line #layerBall8,
+  #animated-line #layerPulse8 {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    animation-delay: 8s; }
+  #animated-line #layerBall9,
+  #animated-line #layerPulse9 {
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    -o-animation-delay: 9s;
+    animation-delay: 9s; }
+  #animated-line #layerBall10,
+  #animated-line #layerPulse10 {
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    -o-animation-delay: 10s;
+    animation-delay: 10s; }
+  #animated-line .line0 {
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s; }
+  #animated-line .line1 {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s; }
+  #animated-line .line2 {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s; }
+  #animated-line .line3 {
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s; }
+  #animated-line .line4 {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    animation-delay: 4s; }
+  #animated-line .line5 {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    -o-animation-delay: 5s;
+    animation-delay: 5s; }
+  #animated-line .line6 {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    animation-delay: 6s; }
+  #animated-line .line7 {
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    -o-animation-delay: 7s;
+    animation-delay: 7s; }
+  #animated-line .line8 {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    animation-delay: 8s; }
+  #animated-line .line9 {
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    -o-animation-delay: 9s;
+    animation-delay: 9s; }
+
+/**
+ * Slim Be
+ */
+.masthead--slim-be {
+  background: url(../img/interface/work/slim-be/red-tile-gradient.jpg) repeat-x center bottom, url(../img/interface/work/slim-be/red-tile-light.jpg) center 0, #e41a37; }
+  .masthead--slim-be:before {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+    content: "";
+    display: block;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; }
+  .masthead--slim-be #masthead-svg {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+    .masthead--slim-be #masthead-svg path {
+      stroke-width: 8;
+      stroke: #fdc625; }
+
+/**
+ * Metropolis.
  */
 .masthead--metropolis {
   background: #404546; }
@@ -971,9 +1340,19 @@ blockquote {
   .metropallax__layer .skyline {
     height: 400px;
     position: absolute;
-    bottom: 0;
+    bottom: -175px;
     left: 0;
-    width: 100%; }
+    transition: all .25s;
+    width: 100%;
+    /* [1] */
+    /* [2] */
+    /* [3] */
+    /* [4] */
+    /* [5] */
+    /* [6] */ }
+    @media (min-width: 37.5em) {
+      .metropallax__layer .skyline {
+        bottom: 0; } }
 
 .metropallax__layer--back {
   background: url(../img/interface/work/metropolis/masthead-bg.jpg) no-repeat center center;
@@ -1073,27 +1452,27 @@ blockquote {
     transform: translateY(-4px); } }
 @keyframes lights-left {
   0% {
-    -webkit-transform: rotate(15deg); }
+    transform: rotate(15deg); }
   20% {
-    -webkit-transform: rotate(30deg); }
+    transform: rotate(30deg); }
   40% {
-    -webkit-transform: rotate(0deg); }
+    transform: rotate(0deg); }
   60% {
-    -webkit-transform: rotate(15deg); }
+    transform: rotate(15deg); }
   80% {
-    -webkit-transform: rotate(25deg); }
+    transform: rotate(25deg); }
   100% {
-    -webkit-transform: rotate(15deg); } }
+    transform: rotate(15deg); } }
 @keyframes lights-right {
   0% {
-    -webkit-transform: rotate(-15deg); }
+    transform: rotate(-15deg); }
   20% {
-    -webkit-transform: rotate(-30deg); }
+    transform: rotate(-30deg); }
   40% {
-    -webkit-transform: rotate(0deg); }
+    transform: rotate(0deg); }
   60% {
-    -webkit-transform: rotate(-15deg); }
+    transform: rotate(-15deg); }
   80% {
-    -webkit-transform: rotate(-25deg); }
+    transform: rotate(-25deg); }
   100% {
-    -webkit-transform: rotate(-15deg); } }
+    transform: rotate(-15deg); } }

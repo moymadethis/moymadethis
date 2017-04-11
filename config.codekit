@@ -29,16 +29,34 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/education-world.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/education-world.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/favicon.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1076,
+		"initialSize": 191,
 		"inputAbbreviatedPath": "\/favicon.png",
 		"outputAbbreviatedPath": "\/favicon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/ferno.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ferno.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/great-british-meat-co.html": {
 		"fileType": 8192,
@@ -115,6 +133,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/content\/work\/education-world\/masthead\/education-world-device.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 494912,
+		"inputAbbreviatedPath": "\/img\/content\/work\/education-world\/masthead\/education-world-device.png",
+		"outputAbbreviatedPath": "\/img\/content\/work\/education-world\/masthead\/education-world-device.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/education-world\/tile\/education-world.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 229833,
+		"inputAbbreviatedPath": "\/img\/content\/work\/education-world\/tile\/education-world.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/education-world\/tile\/education-world.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/ferno\/masthead\/ferno-device.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/content\/work\/ferno\/masthead\/ferno-device.png",
+		"outputAbbreviatedPath": "\/img\/content\/work\/ferno\/masthead\/ferno-device.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/ferno\/tile\/ferno.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 71054,
+		"inputAbbreviatedPath": "\/img\/content\/work\/ferno\/tile\/ferno.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/ferno\/tile\/ferno.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/content\/work\/gbm\/masthead\/great-british-meat-device.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -133,6 +195,28 @@
 		"initialSize": 239101,
 		"inputAbbreviatedPath": "\/img\/content\/work\/gbm\/tile\/great-british-meat.jpg",
 		"outputAbbreviatedPath": "\/img\/content\/work\/gbm\/tile\/great-british-meat.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/infinite-edge\/masthead\/infinite-edge-device.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/content\/work\/infinite-edge\/masthead\/infinite-edge-device.png",
+		"outputAbbreviatedPath": "\/img\/content\/work\/infinite-edge\/masthead\/infinite-edge-device.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/infinite-edge\/tile\/infinite-edge.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 121079,
+		"inputAbbreviatedPath": "\/img\/content\/work\/infinite-edge\/tile\/infinite-edge.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/infinite-edge\/tile\/infinite-edge.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -225,24 +309,57 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/interface\/interlacing.png": {
+	"\/img\/content\/work\/simple-data\/masthead\/simple-data-device.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 954,
-		"inputAbbreviatedPath": "\/img\/interface\/interlacing.png",
-		"outputAbbreviatedPath": "\/img\/interface\/interlacing.png",
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/content\/work\/simple-data\/masthead\/simple-data-device.png",
+		"outputAbbreviatedPath": "\/img\/content\/work\/simple-data\/masthead\/simple-data-device.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/interface\/interlacing@2x.png": {
+	"\/img\/content\/work\/simple-data\/tile\/simple-data.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 196376,
+		"inputAbbreviatedPath": "\/img\/content\/work\/simple-data\/tile\/simple-data.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/simple-data\/tile\/simple-data.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/slim-be\/masthead\/slim-be-device.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 957,
-		"inputAbbreviatedPath": "\/img\/interface\/interlacing@2x.png",
-		"outputAbbreviatedPath": "\/img\/interface\/interlacing@2x.png",
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/content\/work\/slim-be\/masthead\/slim-be-device.png",
+		"outputAbbreviatedPath": "\/img\/content\/work\/slim-be\/masthead\/slim-be-device.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/slim-be\/tile\/slim-be.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 230508,
+		"inputAbbreviatedPath": "\/img\/content\/work\/slim-be\/tile\/slim-be.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/slim-be\/tile\/slim-be.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/tte\/tile\/tte.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 191164,
+		"inputAbbreviatedPath": "\/img\/content\/work\/tte\/tile\/tte.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/tte\/tile\/tte.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -291,6 +408,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/interface\/work\/education-world\/masthead-bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2154,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/education-world\/masthead-bg.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/education-world\/masthead-bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/education-world\/masthead-bottom-bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1457,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/education-world\/masthead-bottom-bg.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/education-world\/masthead-bottom-bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/ferno\/gloss.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23213,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/ferno\/gloss.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/ferno\/gloss.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/interface\/work\/gbm\/masthead-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -298,6 +448,17 @@
 		"initialSize": 24587,
 		"inputAbbreviatedPath": "\/img\/interface\/work\/gbm\/masthead-bg.jpg",
 		"outputAbbreviatedPath": "\/img\/interface\/work\/gbm\/masthead-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/infinite-edge\/masthead-bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 118121,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/infinite-edge\/masthead-bg.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/infinite-edge\/masthead-bg.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -379,6 +540,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/interface\/work\/oca\/masthead-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.16799e+06,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/oca\/masthead-bg.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/oca\/masthead-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/oca\/masthead-bottom-bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 63613,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/oca\/masthead-bottom-bg.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/oca\/masthead-bottom-bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/interface\/work\/oobe\/masthead-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -408,6 +591,94 @@
 		"initialSize": 14277,
 		"inputAbbreviatedPath": "\/img\/interface\/work\/pokerstars\/spade.png",
 		"outputAbbreviatedPath": "\/img\/interface\/work\/pokerstars\/spade.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/simple-data\/masthead-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.07429e+06,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/simple-data\/masthead-bg.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/simple-data\/masthead-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/slim-be\/bg-lightpaperfibers.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 134783,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/bg-lightpaperfibers.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/bg-lightpaperfibers.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/slim-be\/bg-lightpaperfibers@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 208106,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/bg-lightpaperfibers@2x.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/bg-lightpaperfibers@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/slim-be\/red-tile-gradient.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 49794,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/red-tile-gradient.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/red-tile-gradient.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/slim-be\/red-tile-gradient@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 135398,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/red-tile-gradient@2x.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/red-tile-gradient@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/slim-be\/red-tile-light.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34132,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/red-tile-light.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/red-tile-light.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/slim-be\/red-tile-light@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 92106,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/red-tile-light@2x.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/slim-be\/red-tile-light@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/work\/tte\/masthead-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 307415,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/tte\/masthead-bg.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/tte\/masthead-bg.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -485,6 +756,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/infinite-edge.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/infinite-edge.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/js\/jquery-3.1.1.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -517,6 +797,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
+		},
+	"\/js\/min\/main-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/main-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/main-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/js\/modernizr-2.8.3.min.js": {
 		"fileType": 64,
@@ -995,11 +1286,38 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/simple-data.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/simple-data.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/slim-be.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/slim-be.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/tte.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/tte.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Stephen Moy",
+"lastSavedByUser": "Stephen",
 "manualImportLinks": {
 	},
 "projectAttributes": {
