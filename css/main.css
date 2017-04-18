@@ -802,6 +802,16 @@ blockquote {
 .work--alt .work__desc {
   display: none; }
 
+.work--alt-2 {
+  max-width: 1800px !important; }
+  .work--alt-2 .work__item {
+    float: left;
+    width: 33.33333%; }
+  .work--alt-2 .work__image-link {
+    width: 100%; }
+  .work--alt-2 .work__desc {
+    display: none; }
+
 .work {
   list-style: none;
   margin: 0 auto;
