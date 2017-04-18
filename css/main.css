@@ -794,6 +794,14 @@ blockquote {
 /* ==========================================================================
    #INDEX
    ========================================================================== */
+.work--alt .work__item {
+  float: left;
+  width: 33.33333%; }
+.work--alt .work__image-link {
+  width: 100%; }
+.work--alt .work__desc {
+  display: none; }
+
 .work {
   list-style: none;
   margin: 0 auto;
