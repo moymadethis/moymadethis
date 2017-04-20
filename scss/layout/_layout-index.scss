@@ -59,12 +59,12 @@
 	list-style: none;
 	margin: 0 auto;
 	padding: 0;
-	max-width: 1200px;
+	width: 100%;
 }
 
 .work__item {
 	@include clearfix;
-	margin: 0 auto;
+	margin: 0 auto $vertical-spacing;
 	padding: 0;
 	width: 100%;
 	max-width: 600px;
@@ -75,7 +75,7 @@
 		max-width: none;
 		
 		&:nth-child(even) {
-			//flex-direction: row-reverse;
+			flex-direction: row-reverse;
 		}
 	}
 }

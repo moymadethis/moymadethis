@@ -25,6 +25,33 @@
 }
 
 
+
+.masthead--home {
+	background: $grey-darker;
+	color: $grey-light;
+	
+	.masthead__wrap {
+		padding: 20px 0 80px;
+
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: $white;
+	}
+	
+	.lead {
+		color: $grey-lighter;
+	}
+	
+	hr {
+		border-color: $color-primary;
+	}
+}
+
+
 /**
  * Great British Meat Co.
  */
