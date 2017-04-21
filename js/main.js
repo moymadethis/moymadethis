@@ -1,5 +1,38 @@
 
 /* ==========================================================================
+   #NAVIGATION
+   ========================================================================== */
+ 
+/* 
+ * Creates classes to enable responsive navigation.
+ */
+
+// Wait for the DOM to be ready (all elements printed on page regardless if 
+// loaded or not).
+$(function() {
+
+	// Bind a click event to anything with the class "toggle-nav".
+	$('.page-head__toggle').click(function() {
+		if ($('body').hasClass('show-nav')) {
+			$('body').removeClass('show-nav').addClass('hide-nav');
+
+			setTimeout(function() {
+				$('body').removeClass('hide-nav');
+			}, 500);
+
+		} else {
+			$('body').removeClass('hide-nav').addClass('show-nav');
+		}
+		// Deactivate the default behavior of going to the next page on click.
+		return false;
+	});
+});
+
+
+
+
+
+/* ==========================================================================
    #SVG4EVERYBODY
    ========================================================================== */
  

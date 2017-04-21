@@ -114,7 +114,7 @@ hr {
   clear: both;
   display: block;
   height: 0;
-  margin: 50px 0;
+  margin: 40px 0;
   padding: 0;
   width: 50px; }
 
@@ -904,7 +904,7 @@ p {
    ========================================================================== */
 .page-head {
   box-sizing: border-box;
-  padding: 20px 20px;
+  padding: 20px 2.5%;
   position: relative;
   z-index: 1000;
   width: 100%; }
@@ -938,9 +938,322 @@ p {
 /* ==========================================================================
    #FOOTER
    ========================================================================== */
+.page-foot {
+  background: #0d0f0f;
+  padding: 100px 0 80px;
+  text-align: center; }
+  .page-foot a:hover,
+  .page-foot a:focus {
+    color: white; }
+
+.page-foot__home-link {
+  border-bottom: none;
+  display: inline-block;
+  margin: -50px auto 50px;
+  opacity: .10;
+  width: 75px; }
+
+.icon {
+  height: 1em;
+  width: 1em; }
+
+.hgroup.align-center hr {
+  margin-left: auto;
+  margin-right: auto; }
+
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+.contact-list {
+  list-style: none; }
+
+.contact-list__item {
+  display: inline-block;
+  margin-bottom: 10px; }
+  .contact-list__item:first-child {
+    width: 100%; }
+
+.contact-list__link {
+  border-bottom: 0; }
+
+.social-list {
+  list-style: none; }
+  .social-list .icon {
+    fill: #2dbec1;
+    height: 50px;
+    width: 50px; }
+
+.social-list__item {
+  display: inline-block; }
+
+.social-list__link {
+  border-bottom: 0; }
+
 /* ==========================================================================
-   #FOOTER
+   #NAVIGATION
    ========================================================================== */
+/* ==========================================================================
+   #SITE-NAV
+   ========================================================================== */
+/**
+ * `.site-nav` is the main page navigation. It has 3 states:
+ */
+.show-nav {
+  overflow: hidden; }
+
+.site-nav {
+  background: transparent;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  transition: background .75s ease;
+  user-select: none;
+  visibility: hidden;
+  width: 100%;
+  z-index: -1; }
+  .show-nav .site-nav {
+    background: #2dbec1;
+    overflow-y: auto;
+    visibility: visible;
+    z-index: 1000; }
+  .hide-nav .site-nav {
+    background: transparent;
+    height: 100%;
+    visibility: visible;
+    width: 100%;
+    z-index: 1000; }
+
+.site-nav__list {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  width: 100%; }
+
+.site-nav__item {
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.5s 0s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .show-nav .site-nav__item {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .25s;
+    transition-duration: 1s; }
+
+.site-nav__link {
+  background: transparent;
+  border-bottom: none;
+  color: white;
+  display: block;
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 30px;
+  font-style: italic;
+  font-weight: 900;
+  padding: 5px 0;
+  transition: none;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  .site-nav__link:visited {
+    background: transparent;
+    color: white; }
+  .site-nav__link:hover, .site-nav__link:focus {
+    background: white;
+    color: #2dbec1; }
+  @media (min-width: 64em) {
+    .site-nav__link {
+      font-size: 45px;
+      font-size: 4.5rem;
+      line-height: 45px;
+      padding: 10px 0; } }
+
+.site-nav__link--current {
+  background: #2dbec1; }
+  .site-nav__link--current:hover, .site-nav__link--current:focus {
+    background: white; }
+
+/**
+ * Toggle that shows/hides the navigation list.
+ *
+ * 1. Background-position is adjusted when class of `.open` is added by
+ *    responsive-nav.js.
+ * 2. Hide toggle in wider viewports.
+ */
+.page-head__toggle {
+  border-bottom: none;
+  cursor: pointer;
+  display: block;
+  height: 55px;
+  float: right;
+  position: fixed;
+  top: 30px;
+  right: 2.5%;
+  text-indent: -9999px;
+  transition: all .25s ease-in;
+  width: 55px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+  z-index: 9999999999999;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 48em) {
+    .page-head__toggle {
+      top: 40px; } }
+  .page-head__toggle:focus {
+    outline: none; }
+  .page-head__toggle span {
+    background: #2dbec1;
+    display: block;
+    height: 6px;
+    position: absolute;
+    top: 26px;
+    right: 10px;
+    left: 10px; }
+    .page-head__toggle span:before, .page-head__toggle span:after {
+      background: #2dbec1;
+      content: "";
+      display: block;
+      height: 6px;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100%; }
+    .page-head__toggle span:after {
+      top: auto;
+      bottom: -10px; }
+    .show-nav .page-head__toggle span {
+      background: #0d0f0f; }
+      .show-nav .page-head__toggle span:before, .show-nav .page-head__toggle span:after {
+        background: #0d0f0f; }
+
+.page-head__toggle span {
+  transition: background 0s .25s; }
+
+.page-head__toggle span::before,
+.page-head__toggle span::after {
+  transition-duration: .25s, .25s;
+  transition-delay: .25s, 0s; }
+
+.page-head__toggle span::before {
+  transition-property: top, transform; }
+
+.page-head__toggle span::after {
+  transition-property: bottom, transform; }
+
+/* active state, i.e. menu open */
+.show-nav .page-head__toggle span {
+  background: none !important; }
+.show-nav .page-head__toggle span:before {
+  top: 0;
+  transform: rotate(45deg); }
+.show-nav .page-head__toggle span:after {
+  bottom: 0;
+  transform: rotate(-45deg); }
+.show-nav .page-head__toggle span:before,
+.show-nav .page-head__toggle span:after {
+  transition-delay: 0s, .25s; }
+
+.site-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+
+.site-nav {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  background: transparent;
+  text-align: left;
+  display: block;
+  -o-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: background 500ms ease;
+  -moz-transition: background 500ms ease;
+  transition: background 500ms ease;
+  z-index: 999999999;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
+
+.show-nav .site-nav {
+  z-index: 1; }
+
+.hide-nav .site-nav {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  z-index: 1; }
+
+.site-nav ul {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.site-nav ul li a {
+  display: block;
+  text-decoration: none !important;
+  height: 100px;
+  line-height: 100px;
+  font-size: 50px;
+  color: #fff;
+  opacity: 0;
+  border: none;
+  transition: all 400ms cubic-bezier(0.17, 0.67, 0.38, 1.46);
+  transform: scale(0.3); }
+
+.show-nav .site-nav ul li a {
+  opacity: 1;
+  transform: scale(1); }
+
+.site-nav ul li:nth-child(1) a {
+  transition-delay: 0; }
+
+.site-nav ul li:nth-child(2) a {
+  transition-delay: 0.025s; }
+
+.site-nav ul li:nth-child(3) a {
+  transition-delay: 0.050s; }
+
+.site-nav ul li:nth-child(4) a {
+  transition-delay: 0.075s; }
+
 .band {
   width: 100%; }
   .masthead + .band {
@@ -1082,7 +1395,8 @@ p {
   .masthead--home .lead {
     color: #eef0f0; }
   .masthead--home hr {
-    border-color: #2dbec1; }
+    border-color: #2dbec1;
+    margin: 20px 0 20px; }
 
 /**
  * Great British Meat Co.

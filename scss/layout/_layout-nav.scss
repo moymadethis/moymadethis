@@ -1,4 +1,331 @@
 
 /* ==========================================================================
-   #FOOTER
+   #NAVIGATION
    ========================================================================== */
+
+
+/* ==========================================================================
+   #SITE-NAV
+   ========================================================================== */
+
+/**
+ * `.site-nav` is the main page navigation. It has 3 states:
+ */
+ 
+ .show-nav {
+	 overflow: hidden;
+ }
+
+.site-nav {
+	background: transparent;
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	text-align: center;
+	transform: translate3d(0, 0, 0);
+	transition: background .75s ease;
+	user-select: none;
+	visibility: hidden;
+	width: 100%;
+	z-index: -1;
+	
+	.show-nav & {
+		background: $color-primary;
+		overflow-y: auto;
+		visibility: visible;
+		z-index: 1000;
+	}
+	
+	.hide-nav & {
+		background: transparent;
+		height: 100%;
+		visibility: visible;
+		width: 100%;
+		z-index: 1000;
+	}
+}
+
+.site-nav__list {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+.site-nav__item {
+	margin: 0;
+	opacity: 0;
+	transform: translateY(-100px);
+	transition: all .5s 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	
+	.show-nav & {
+	    opacity: 1;
+		transform: translateY(0);
+		transition-delay: .25s;
+		transition-duration: 1s;
+    }
+}
+
+.site-nav__link {
+	background: transparent;
+	border-bottom: none;
+	color: $white;
+	display: block;
+	@include font-size(30);
+	line-height: 30px;
+	font-style: italic;
+	font-weight: 900;
+	padding: ($vertical-spacing / 4) 0;
+	transition: none;
+	
+	&:visited {
+		background: transparent;
+		color: $white;
+	}
+	
+	&:hover,
+	&:focus {
+		background: $white;
+		color: $color-primary;
+	}
+	
+	@include bp(bp5) {
+		@include font-size(45);
+		line-height: 45px;
+		padding: ($vertical-spacing / 2) 0;
+	}
+}
+
+.site-nav__link--current {
+	background: $color-primary;
+	
+	&:hover,
+	&:focus {
+		background: $white;
+	}
+}
+
+
+
+
+
+
+
+
+
+/**
+ * Toggle that shows/hides the navigation list.
+ *
+ * 1. Background-position is adjusted when class of `.open` is added by
+ *    responsive-nav.js.
+ * 2. Hide toggle in wider viewports.
+ */
+
+.page-head__toggle {
+	border-bottom: none;
+	cursor: pointer;
+	display: block;
+	height: 55px;
+	float: right;
+	position: fixed;
+	top: 30px;
+	right: 2.5%;
+	text-indent: -9999px;
+	transition: all .25s ease-in;
+	width: 55px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;
+	user-select: none;
+	z-index: 9999999999999;
+	
+	@include bp(bp4) {
+		top: 40px;
+	}
+	
+	&:focus {
+		outline: none;
+	}
+	
+	span {
+		background: $color-primary;
+		display: block;
+		height: 6px;
+		position: absolute;
+		top: 26px;
+		right: 10px;
+		left: 10px;
+		
+		&:before,
+		&:after {
+			background: $color-primary;
+			content: "";
+			display: block;
+			height: 6px;
+			position: absolute;
+			top: -10px;
+			left: 0;
+			width: 100%;	
+		}
+		
+		&:after {
+			top: auto;
+			bottom: -10px;
+		}
+		
+		.show-nav & {
+			background: $grey-darker;
+			
+			&:before,
+			&:after {
+				background: $grey-darker;
+			}
+		}
+	}
+}
+
+
+.page-head__toggle span {
+  transition: background 0s .25s;
+}
+
+.page-head__toggle span::before,
+.page-head__toggle span::after {
+  transition-duration: .25s, .25s;
+  transition-delay: .25s, 0s;
+}
+
+.page-head__toggle span::before {
+  transition-property: top, transform;
+}
+
+.page-head__toggle span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+
+.show-nav {
+	
+	.page-head__toggle span {
+	  background: none !important;
+	}
+	
+	.page-head__toggle span:before {
+	  top: 0;
+	  transform: rotate(45deg);
+	}
+	
+	.page-head__toggle span:after {
+	  bottom: 0;
+	  transform: rotate(-45deg);
+	}
+	
+	.page-head__toggle span:before,
+	.page-head__toggle span:after {
+	  transition-delay: 0s, .25s;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+.site-wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.site-nav {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    background: transparent;
+    text-align: left;
+    display: block;
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: background 500ms ease;
+    -moz-transition: background 500ms ease;
+    transition: background 500ms ease;
+    z-index: 999999999;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+    -moz-box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+}
+
+.show-nav .site-nav {
+    z-index: 1;
+}
+
+.hide-nav .site-nav {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.site-nav ul {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.site-nav ul li a {
+    display: block;
+    text-decoration: none!important;
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+    color: #fff;
+    opacity: 0;
+    border: none;
+    transition: all 400ms cubic-bezier(.17, .67, .38, 1.46);
+    transform: scale(0.3);
+}
+
+.show-nav .site-nav ul li a {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.site-nav ul li:nth-child(1) a {
+    transition-delay: 0;
+}
+
+.site-nav ul li:nth-child(2) a {
+    transition-delay: 0.025s;
+}
+
+.site-nav ul li:nth-child(3) a {
+    transition-delay: 0.050s;
+}
+
+.site-nav ul li:nth-child(4) a {
+    transition-delay: 0.075s;
+}
