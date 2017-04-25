@@ -29,9 +29,9 @@
 	left: 0;
 	text-align: center;
 	transform: scale(.90);
-	transition: border .10s .10s ease-in, opacity .10s .50s ease, transform .10s .50s ease;
+	transition: border .10s .10s ease-in, opacity .10s .40s ease, transform .10s .40s ease, visibility .10s .40s;
 	user-select: none;
-	//visibility: hidden;
+	visibility: hidden;
 	width: 100%;
 	z-index: -1;
 	
@@ -40,13 +40,13 @@
 		opacity: 1;
 		overflow-y: auto;
 		transition: border .05s .40s ease-in, opacity .10s ease-in, transform .20s ease-in;
-		//visibility: visible;
+		visibility: visible;
 		transform: scale(1);
 		z-index: 1000;
 	}
 	
 	.hide-nav & {
-		//visibility: visible;
+		visibility: visible;
 		z-index: 1000;
 	}
 }
@@ -65,7 +65,7 @@
 .site-nav__item {
 	margin: $vertical-spacing 0;
 	opacity: 0;
-	transform: translateY(-100px);
+	transform: translateY(-150px);
 	transition: all .40s 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	
 	.show-nav & {
