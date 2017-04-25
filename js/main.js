@@ -9,6 +9,7 @@
 
 // Wait for the DOM to be ready (all elements printed on page regardless if 
 // loaded or not).
+
 $(function() {
 
 	// Bind a click event to anything with the class "toggle-nav".
@@ -27,7 +28,6 @@ $(function() {
 		return false;
 	});
 });
-
 
 
 
