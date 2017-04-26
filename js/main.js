@@ -19,7 +19,7 @@ $(function() {
 
 			setTimeout(function() {
 				$('body').removeClass('hide-nav');
-			}, 500);
+			}, 800);
 
 		} else {
 			$('body').removeClass('hide-nav').addClass('show-nav');

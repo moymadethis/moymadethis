@@ -54,7 +54,7 @@
 
 .pace-progress {
 	background: $color-primary;
-	height: 4px;
+	height: 8px;
 	position: fixed;
 	top: 0;
 	right: 100%;
@@ -80,7 +80,6 @@
 
 
 
-@import url(https://fonts.googleapis.com/css?family=Cabin);
 
 $colorOutline: #ffffff;
 $colorOutlineFade: #4e5559;
@@ -109,20 +108,6 @@ $animDuration: 5s;
     );
 }
 
-
-
-/*
-p {
-  margin-top: 50px;
-  font-family: "Cabin", sans-serif;
-  letter-spacing: 12px;
-  text-indent: 12px;
-  color: $colorOutline;
-  animation: 
-    colorText $animDuration ease-out infinite,
-    nudgeText $animDuration ease-out infinite;
-}
-*/
 
 .mouse {
 	@include bgGradient;
@@ -259,23 +244,4 @@ p {
   60% { transform: translateY(0); }
   80% { transform: translateY($posMouse); }
   90% { transform: translateY(0); }
-}
-
-@keyframes nudgeText {
-  0% { transform: translateY(0); }
-  20% { transform: translateY($posText); }
-  30% { transform: translateY(0); }
-  50% { transform: translateY($posText); }
-  60% { transform: translateY(0); }
-  80% { transform: translateY($posText); }
-  90% { transform: translateY(0); }
-}
-
-@keyframes colorText { 
-  21% { color: $colorOutlineFade; }
-  30% { color: $colorOutline; }
-  51% { color: $colorOutlineFade; }
-  60% { color: $colorOutline; }
-  81% { color: $colorOutlineFade; }
-  90% { color: $colorOutline; }
 }

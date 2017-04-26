@@ -1,25 +1,41 @@
 
 /* ==========================================================================
-   #SITE-HEAD
+   #HEADER
    ========================================================================== */
-
+   
+/**
+ * Website header which contains a logo and navigation toggle.
+ */
+ 
 .page-head {
 	@include clearfix;
 	box-sizing: border-box;
-	padding: $vertical-spacing 2.5%;
+	padding: $vertical-spacing $gutter;
 	position: relative;
 	z-index: 1000;
 	width: 100%;
 }
 
+/**
+ * Link (to homepage) which is parent of `.page-head__logo`.
+ */
+ 
 .page-head__home-link {
 	border: none;
 	display: block;
 	float: left;
-	fill: $white;
+	
+	.circle {fill: $grey-darker;}
+	.stroke {fill: $white;}
+	.m		{fill: $white;}
 }
 
+/**
+ * Website logo, child of `.page-head__home-link`.
+ */
+ 
 .page-head__logo {
+	display: block;
 	height: 75px;
 	transition: all .25s;
 	width: 75px;
@@ -27,5 +43,134 @@
 	@include bp(bp4) {
 		height: 100px;
 		width: 100px;
+	}
+}
+
+
+
+
+
+/* ==========================================================================
+   #MAIN NAVIGATION TOGGLE
+   ========================================================================== */
+
+/**
+ * Toggle that shows/hides the navigation list.
+ *
+ * 1. Toggle container has a larger hit area than the icon suggests.
+ * 2. Adjust position of toggle on wider viewports.
+ * 3. Remove `:focus` styling.
+ * 4. Styling of the middle line of menu icon.
+ * 5. Styling for top and bottom lines.
+ * 6. Bottom line specific styling.
+ */
+
+.page-head__toggle { /* [1] */
+	border-bottom: none;
+	cursor: pointer;
+	display: block;
+	height: 50px;
+	float: right;
+	position: fixed;
+	top: 30px;
+	right: $gutter * 1.5;
+	text-indent: -9999px;
+	transition: all .25s ease-in;
+	width: 50px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;
+	user-select: none;
+	z-index: 9999999999999;
+	
+	@include bp(bp4) { /* [2] */
+		top: 40px;
+		right: $gutter * 2;
+	}
+	
+	&:focus {
+		outline: none; /* [3] */
+	}
+	
+	span { /* [4] */
+		background: $color-primary;
+		display: block;
+		height: 6px;
+		position: absolute;
+		top: 26px;
+		right: 5px;
+		left: 10px;
+		transition: background .20s .05s; // Not sure why but .05s delay looks better.
+		
+		&:before,
+		&:after { /* [5] */
+			background: $color-primary;
+			content: "";
+			display: block;
+			height: 6px;
+			position: absolute;
+			top: -10px;
+			left: 0;
+			transition-duration: .20s, .20s, .20s;
+			transition-delay: .80s, .20s, 0s;
+			transition-property: background, top, transform;
+			width: 100%;	
+		}
+		
+		&:after { /* [6] */
+			top: auto;
+			bottom: -10px;
+			transition-property: background, bottom, transform;
+		}
+	}
+}
+
+/**
+ * Styling of the toggle once navigation is visible.
+ *
+ * 1. Instantly hide middle line.
+ * 2. Change colour and transitition delay. First value is `background-color`,
+ *    the next is position (0s for sharper transition) and the last is for the
+ *    actual `transform`.
+ * 3. Adjust position of top/bottom lines to form an 'x' shape.
+ */
+
+.show-nav {
+	
+	.page-head__toggle span {
+		background: none; /* [1] */
+		transition: background .10s .10s;
+	}
+	
+	.page-head__toggle span:before,
+	.page-head__toggle span:after { /* [2] */
+		background: $grey-darker;
+		transition-delay: .10s, 0s, .20s;
+	}
+	
+	.page-head__toggle span:before { /* [3] */
+		top: 0;
+		transform: rotate(45deg);
+	}
+	
+	.page-head__toggle span:after { /* [3] */
+		bottom: 0;
+		transform: rotate(-45deg);
+	}
+}
+
+/**
+ * A class is added to the `body` when the navigation is in the process of
+ * closing. This helps us with some suitble styling adjustments...
+ *
+ * 1. Set the `background-color` to match top/bottom lines.
+ * 2. Add delay to transition so middle line is only shown once there's space
+ *    for it, once the top/bottom lines are in position.
+ */
+
+.hide-nav {
+	
+	.page-head__toggle span {
+		background: $grey-darker; /* [1] */
+		transition: background .10s .20s;
 	}
 }

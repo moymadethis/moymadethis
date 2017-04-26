@@ -1,15 +1,16 @@
 
 .band {
+	padding: 150px 0 130px;
 	width: 100%;
 	
-	.masthead + & {
-		padding-top: 80px;
+	.page-head + & {
+		padding-top: $vertical-spacing;
 	}
 }
 
 .wrap {
 	margin: 0 auto;
-	padding: ($vertical-spacing * 2) $gutter $vertical-spacing;
+	padding: 0 $gutter;
 	max-width: 1200px;
 }
 

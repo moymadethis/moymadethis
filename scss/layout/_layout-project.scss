@@ -31,7 +31,7 @@
 	color: $grey-light;
 	
 	.masthead__wrap {
-		padding: 20px 0 80px;
+		padding: 0 $gutter 60px;
 
 	}
 	
@@ -42,13 +42,34 @@
 		color: $white;
 	}
 	
+	p {
+		margin-bottom: 0;
+	}
+	
 	.lead {
 		color: $grey-lighter;
+		margin-bottom: $vertical-spacing;
 	}
 	
 	hr {
 		border-color: $color-primary;
 		margin: $vertical-spacing 0 $vertical-spacing;
+	}
+	
+	a {
+		border-color: transparent;
+		color: $color-primary;
+		padding-bottom: 2px;
+		
+		&:visited {
+			color: $color-primary;
+		}
+		
+		&:hover,
+		&:focus {
+			color: $white;
+			border-color: $color-primary;
+		}
 	}
 }
 
@@ -67,7 +88,6 @@
  */
  
 .masthead--beatsuite {
-	//background: url(../img/interface/work/beatsuite/masthead-bg.png) no-repeat center center, linear-gradient(to right, rgba(57,151,226,1) 0%, rgba(20,57,197,1) 100%);
 	background: rgb(25,170,248) url(../img/interface/work/beatsuite/masthead-bg.jpg) no-repeat center center;
 	background-size: cover;
 }

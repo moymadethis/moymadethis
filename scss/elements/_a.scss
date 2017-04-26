@@ -11,7 +11,7 @@ a {
 	border-bottom: 4px solid lighten($color-primary,35%);
 	color: $link-color;
 	text-decoration: none;
-	transition: all .25s;
+	transition: all .20s;
 	
 	&:visited {
 		color: $link-color-visited;

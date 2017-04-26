@@ -3,10 +3,20 @@
    #FOOTER
    ========================================================================== */
 
+/**
+ * Website footer.
+ */
+ 
 .page-foot {
 	background: $grey-darker;
-	padding: ($vertical-spacing*5) 0 ($vertical-spacing*4);
+	color: $white;
+	padding: 150px 0 130px;
 	text-align: center;
+	
+	a,
+	a:visited {
+		color: $white;
+	}
 	
 	a:hover,
 	a:focus {
@@ -14,15 +24,35 @@
 	}
 }
 
+/**
+ * Link (to homepage) which is parent of `.page-foot__logo`.
+ */
+ 
 .page-foot__home-link {
-	border-bottom: none;
+	border: none;
 	display: inline-block;
-	margin: (-$vertical-spacing * 2.5) auto ($vertical-spacing * 2.5);
-	opacity: .10;
-	width: 75px;
+	margin: 0 auto ($vertical-spacing * 2);
+	
+	.circle {fill: $grey-darker;}
+	.stroke {fill: $white;}
+	.m		{fill: $white;}
 }
 
-
+/**
+ * Website footer logo, child of `.page-foot__home-link`.
+ */
+ 
+.page-foot__logo {
+	display: block;
+	height: 75px;
+	transition: all .25s;
+	width: 75px;
+	
+	@include bp(bp4) {
+		height: 100px;
+		width: 100px;
+	}
+}
 
 
 
@@ -36,6 +66,7 @@
 
 
 .hgroup {
+	margin-bottom: $vertical-spacing * 2;
 
 	&.align-center {
 		
@@ -59,22 +90,82 @@
 
 .contact-list {
 	list-style: none;
+	margin: 0 0 ($vertical-spacing / 2);
+	padding-left: 0;
+	
+	.icon {
+		fill: $color-primary;
+		font-size: 1.2em;
+		margin-right: $gutter / 2;
+		position: relative;
+		top: 2px;
+		vertical-align: text-top;
+	}
+	
+	.icon--envelope {
+		top: 3px;
+	}
+	
+	.icon--location {
+		margin-right: $gutter / 4;
+	}
 }
 
 .contact-list__item {
 	display: inline-block;
-	margin-bottom: $vertical-spacing/2;
-	
-	&:first-child {
-		width: 100%;
-	}
+	margin: 0 ($vertical-spacing / 2) ($vertical-spacing / 2);
 }
 
 .contact-list__link {
-	border-bottom: 0;
+	border-color: transparent;
+	padding-bottom: 2px;
+	
+	&:hover,
+	&:active {
+		border-color: lighten($grey-darker,10%);
+	}
 }
 
 
+.site-nav {
+	
+	.contact-list {
+		color: $grey-darker;
+		position: absolute;
+		bottom: $vertical-spacing;
+		left: 0;
+		opacity: 0;
+		text-align: center;
+		width: 100%;
+		transform: translateY(100px);
+		transition: all .40s .10s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		
+		.show-nav & {
+		    opacity: 1;
+			transform: translateY(0);
+			transition-delay: .60s;
+			transition-duration: .60s;
+	    }
+	}
+
+	.contact-list__link {
+		color: $grey-darker;
+		
+		&:visited {
+			color: $grey-darker;
+		}
+		
+		&:hover,
+		&:focus {
+			color: $grey-darker;
+			border-color: darken($color-primary,5%);
+		}
+	}
+	
+	.icon {
+		fill: $grey-darker;
+	}
+}
 
 
 

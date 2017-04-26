@@ -1,21 +1,22 @@
 
 /* ==========================================================================
-   #NAVIGATION
-   ========================================================================== */
-
-
-/* ==========================================================================
    #SITE-NAV
    ========================================================================== */
 
 /**
- * `.site-nav` is the main page navigation. It has 3 states:
+ * A class of `.show-nav` is added to the body tag once `.site-nav` is activated
+ * (visible) once the `.page-head__toggle` is clicked. `.page-head__toggle` is
+ * extended in _layout-banner.scss.
  */
  
  .show-nav {
 	 overflow: hidden;
  }
-
+ 
+/**
+ * `.site-nav` is the main page navigation. It has 3 states:
+ */
+ 
 .site-nav {
 	background: $color-primary;
 	border: 0 solid $white;
@@ -29,7 +30,7 @@
 	left: 0;
 	text-align: center;
 	transform: scale(.90);
-	transition: border .10s .10s ease-in, opacity .10s .40s ease, transform .10s .40s ease, visibility .10s .40s;
+	transition: border .10s .10s ease-in, opacity .10s .80s ease, transform .20s .80s ease, visibility .10s .80s;
 	user-select: none;
 	visibility: hidden;
 	width: 100%;
@@ -38,7 +39,6 @@
 	.show-nav & {
 		border-width: 16px;
 		opacity: 1;
-		overflow-y: auto;
 		transition: border .05s .40s ease-in, opacity .10s ease-in, transform .20s ease-in;
 		visibility: visible;
 		transform: scale(1);
@@ -46,6 +46,7 @@
 	}
 	
 	.hide-nav & {
+		transform: scale(1);
 		visibility: visible;
 		z-index: 1000;
 	}
@@ -63,10 +64,10 @@
 }
 
 .site-nav__item {
-	margin: $vertical-spacing 0;
+	margin: ($vertical-spacing / 2) 0;
 	opacity: 0;
 	transform: translateY(-150px);
-	transition: all .40s 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all .40s .40s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	
 	.show-nav & {
 	    opacity: 1;
@@ -93,16 +94,35 @@
 	transition: all .25s;
 	text-transform: uppercase;
 	
+	&:after {
+		background: darken($color-primary,5%);
+		content: "";
+		display: block;
+		height: 8px;
+		position: absolute;
+		bottom: -$vertical-spacing / 4;
+		left: 50%;
+		transition: all .10s ease;
+		width: 0;
+	}
+	
 	&:visited {
 		background: transparent;
 		color: $grey-darker;
 	}
-	
+
 	&:hover,
-	&:focus {
-		color: $white;
+	&:focus,
+	&.current {
+		color: lighten($color-primary,50%);
+		outline: none;
+		
+		&:after {
+			margin-left: -25px;
+			width: 50px;
+		}
 	}
-	
+
 	@include bp(bp5) {
 		@include font-size(60);
 		line-height: 60px;
@@ -118,122 +138,3 @@
 		background: $white;
 	}
 }
-
-
-
-
-
-/**
- * Toggle that shows/hides the navigation list.
- *
- * 1. Background-position is adjusted when class of `.open` is added by
- *    responsive-nav.js.
- * 2. Hide toggle in wider viewports.
- */
-
-.page-head__toggle {
-	border-bottom: none;
-	cursor: pointer;
-	display: block;
-	height: 55px;
-	float: right;
-	position: fixed;
-	top: 30px;
-	right: 2.5%;
-	text-indent: -9999px;
-	transition: all .25s ease-in;
-	width: 55px;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-touch-callout: none;
-	user-select: none;
-	z-index: 9999999999999;
-	
-	@include bp(bp4) {
-		top: 40px;
-	}
-	
-	&:focus {
-		outline: none;
-	}
-	
-	span {
-		background: $color-primary;
-		display: block;
-		height: 6px;
-		position: absolute;
-		top: 26px;
-		right: 10px;
-		left: 10px;
-		
-		&:before,
-		&:after {
-			background: $color-primary;
-			content: "";
-			display: block;
-			height: 6px;
-			position: absolute;
-			top: -10px;
-			left: 0;
-			width: 100%;	
-		}
-		
-		&:after {
-			top: auto;
-			bottom: -10px;
-		}
-		
-		.show-nav & {
-			background: $grey-darker;
-			
-			&:before,
-			&:after {
-				background: $grey-darker;
-			}
-		}
-	}
-}
-
-
-.page-head__toggle span {
-  transition: background 0s .25s;
-}
-
-.page-head__toggle span::before,
-.page-head__toggle span::after {
-  transition-duration: .25s, .25s;
-  transition-delay: .25s, 0s;
-}
-
-.page-head__toggle span::before {
-  transition-property: top, transform;
-}
-
-.page-head__toggle span::after {
-  transition-property: bottom, transform;
-}
-
-/* active state, i.e. menu open */
-
-.show-nav {
-	
-	.page-head__toggle span {
-	  background: none !important;
-	}
-	
-	.page-head__toggle span:before {
-	  top: 0;
-	  transform: rotate(45deg);
-	}
-	
-	.page-head__toggle span:after {
-	  bottom: 0;
-	  transform: rotate(-45deg);
-	}
-	
-	.page-head__toggle span:before,
-	.page-head__toggle span:after {
-	  transition-delay: 0s, .25s;
-	}
-
-}
-
