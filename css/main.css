@@ -1427,13 +1427,14 @@ blockquote {
   .masthead--home hr {
     border-color: #2dbec1;
     margin: 20px 0 20px; }
-  .masthead--home a {
+  .masthead--home p a {
     border-color: transparent;
     color: #2dbec1;
+    font-weight: 600;
     padding-bottom: 2px; }
-    .masthead--home a:visited {
+    .masthead--home p a:visited {
       color: #2dbec1; }
-    .masthead--home a:hover, .masthead--home a:focus {
+    .masthead--home p a:hover, .masthead--home p a:focus {
       color: white;
       border-color: #2dbec1; }
 
@@ -1904,6 +1905,8 @@ blockquote {
     @media (min-width: 37.5em) {
       .metropallax__layer .skyline {
         bottom: 0; } }
+  .masthead--home .metropallax__layer .skyline {
+    bottom: 0; }
 
 .metropallax__layer--back {
   background: url(../img/interface/work/metropolis/masthead-bg.jpg) no-repeat center center;

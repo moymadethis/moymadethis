@@ -56,9 +56,10 @@
 		margin: $vertical-spacing 0 $vertical-spacing;
 	}
 	
-	a {
+	p a {
 		border-color: transparent;
 		color: $color-primary;
+		font-weight: 600;
 		padding-bottom: 2px;
 		
 		&:visited {
@@ -578,6 +579,13 @@
 		width: 100%;
 		
 		@include bp(bp3) {
+			bottom: 0;
+		}
+	}
+	
+	.masthead--home & {
+		
+		.skyline {
 			bottom: 0;
 		}
 	}
