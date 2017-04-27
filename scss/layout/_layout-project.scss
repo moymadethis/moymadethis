@@ -41,9 +41,23 @@
 	h4 {
 		color: $white;
 	}
-	
+
 	p {
-		margin-bottom: 0;
+		
+		br {
+			display: none;
+		}
+		
+		@include bp(bp4) {
+			
+			&:not(.lead) {
+				@include font-size(19);
+			}
+			
+			br {
+				display: inherit;
+			}
+		}
 	}
 	
 	.lead {

@@ -1420,7 +1420,20 @@ blockquote {
   .masthead--home h4 {
     color: white; }
   .masthead--home p {
-    margin-bottom: 0; }
+    /* [1] */
+    /* [2] */
+    /* [3] */
+    /* [4] */
+    /* [5] */
+    /* [6] */ }
+    .masthead--home p br {
+      display: none; }
+    @media (min-width: 48em) {
+      .masthead--home p:not(.lead) {
+        font-size: 19px;
+        font-size: 1.9rem; }
+      .masthead--home p br {
+        display: inherit; } }
   .masthead--home .lead {
     color: #eef0f0;
     margin-bottom: 20px; }
