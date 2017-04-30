@@ -59,7 +59,6 @@ $alt-font-weight 				: 400;
 
 // Extra type variables
 
-$handwritten-font-family		: "Indie Flower", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $amp-font-family 				: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');
 $codefont-font-family			: Monaco, Courier New, monospace;
 
@@ -124,10 +123,10 @@ $button-font-color-hover 				: $white;
 
 // Images
 
-$figcaption-font-family			: $alt-font-family;
+$figcaption-font-family			: $font-family;
 $figcaption-font-size			: 1.6rem;
 $figcaption-font-style			: normal;
-$figcaption-font-weight			: normal;
+$figcaption-font-weight			: 600;
 $figcaption-text-transform		: none;
 
 

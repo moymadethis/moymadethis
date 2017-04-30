@@ -81,7 +81,7 @@ figure {
 }
 
 figcaption {
-	color: $grey-light;
+	color: lighten($grey-light,10%);
 	font-family: $figcaption-font-family;
 	font-size: $figcaption-font-size;
 	font-style: $figcaption-font-style;
@@ -95,5 +95,20 @@ figcaption {
 	
 	.img-stroke + & {
 		padding: 0 8px;
+	}
+}
+
+
+	
+.bulge {
+	transition: all .10s;
+	
+	@include bp(bp7) {
+		margin: ($vertical-spacing * 2) -20% ($vertical-spacing * 2);
+		text-align: center;
+		
+		img {
+			width: 100%;
+		}
 	}
 }
