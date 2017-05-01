@@ -104,11 +104,14 @@ figcaption {
 	transition: all .10s;
 	
 	@include bp(bp7) {
-		margin: ($vertical-spacing * 2) -20% ($vertical-spacing * 2);
-		text-align: center;
-		
+		margin: ($vertical-spacing * 2) -150px ($vertical-spacing * 2);
+
 		img {
 			width: 100%;
+		}
+		
+		figcaption {
+			margin: 0 150px $vertical-spacing;
 		}
 	}
 }

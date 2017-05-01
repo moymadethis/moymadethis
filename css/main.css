@@ -199,10 +199,11 @@ figcaption {
   /* [6] */ }
   @media (min-width: 87.5em) {
     .bulge {
-      margin: 40px -20% 40px;
-      text-align: center; }
+      margin: 40px -150px 40px; }
       .bulge img {
-        width: 100%; } }
+        width: 100%; }
+      .bulge figcaption {
+        margin: 0 150px 20px; } }
 
 /* ==========================================================================
    #SITE
