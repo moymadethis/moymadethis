@@ -98,6 +98,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/content\/about\/me-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 552583,
+		"inputAbbreviatedPath": "\/img\/content\/about\/me-2.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/about\/me-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/content\/work\/beatsuite\/masthead\/beatsuite-device.png": {
 		"fileType": 32768,
 		"ignore": 0,
