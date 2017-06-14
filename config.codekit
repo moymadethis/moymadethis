@@ -76,35 +76,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/img\/content\/about\/map.jpg": {
+	"\/img\/content\/about\/me.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 309250,
-		"inputAbbreviatedPath": "\/img\/content\/about\/map.jpg",
-		"outputAbbreviatedPath": "\/img\/content\/about\/map.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/content\/about\/me-1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 494897,
-		"inputAbbreviatedPath": "\/img\/content\/about\/me-1.jpg",
-		"outputAbbreviatedPath": "\/img\/content\/about\/me-1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/content\/about\/me-2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 552583,
-		"inputAbbreviatedPath": "\/img\/content\/about\/me-2.jpg",
-		"outputAbbreviatedPath": "\/img\/content\/about\/me-2.jpg",
+		"initialSize": 796012,
+		"inputAbbreviatedPath": "\/img\/content\/about\/me.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/about\/me.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -230,6 +208,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/content\/work\/gbm\/mockups\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.0756e+06,
+		"inputAbbreviatedPath": "\/img\/content\/work\/gbm\/mockups\/1.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/gbm\/mockups\/1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/gbm\/mockups\/2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.12552e+06,
+		"inputAbbreviatedPath": "\/img\/content\/work\/gbm\/mockups\/2.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/gbm\/mockups\/2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/gbm\/mockups\/3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.47725e+06,
+		"inputAbbreviatedPath": "\/img\/content\/work\/gbm\/mockups\/3.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/gbm\/mockups\/3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/content\/work\/gbm\/tile\/great-british-meat.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -270,6 +281,28 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/img\/content\/work\/metropolis\/masthead\/metropolis-device.png",
 		"outputAbbreviatedPath": "\/img\/content\/work\/metropolis\/masthead\/metropolis-device.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/metropolis\/mockups\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 398374,
+		"inputAbbreviatedPath": "\/img\/content\/work\/metropolis\/mockups\/1.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/metropolis\/mockups\/1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/metropolis\/mockups\/2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 143545,
+		"inputAbbreviatedPath": "\/img\/content\/work\/metropolis\/mockups\/2.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/metropolis\/mockups\/2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -318,6 +351,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/content\/work\/oobe\/mockups\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 515826,
+		"inputAbbreviatedPath": "\/img\/content\/work\/oobe\/mockups\/1.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/oobe\/mockups\/1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/oobe\/mockups\/2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 507886,
+		"inputAbbreviatedPath": "\/img\/content\/work\/oobe\/mockups\/2.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/oobe\/mockups\/2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/oobe\/mockups\/3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 826062,
+		"inputAbbreviatedPath": "\/img\/content\/work\/oobe\/mockups\/3.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/oobe\/mockups\/3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/content\/work\/oobe\/tile\/oobe.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -336,6 +402,28 @@
 		"initialSize": 332023,
 		"inputAbbreviatedPath": "\/img\/content\/work\/pokerstars\/masthead\/pokerstars-device.png",
 		"outputAbbreviatedPath": "\/img\/content\/work\/pokerstars\/masthead\/pokerstars-device.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/pokerstars\/mockups\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 638768,
+		"inputAbbreviatedPath": "\/img\/content\/work\/pokerstars\/mockups\/1.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/pokerstars\/mockups\/1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/pokerstars\/mockups\/2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 443923,
+		"inputAbbreviatedPath": "\/img\/content\/work\/pokerstars\/mockups\/2.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/pokerstars\/mockups\/2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -380,6 +468,17 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/img\/content\/work\/slim-be\/masthead\/slim-be-device.png",
 		"outputAbbreviatedPath": "\/img\/content\/work\/slim-be\/masthead\/slim-be-device.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/slim-be\/mockups\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.79287e+06,
+		"inputAbbreviatedPath": "\/img\/content\/work\/slim-be\/mockups\/1.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/slim-be\/mockups\/1.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -758,13 +857,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/site\/apple-touch-icon.png": {
+	"\/img\/site\/apple-touch-icon-precomposed.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2156,
-		"inputAbbreviatedPath": "\/img\/site\/apple-touch-icon.png",
-		"outputAbbreviatedPath": "\/img\/site\/apple-touch-icon.png",
+		"initialSize": 1739,
+		"inputAbbreviatedPath": "\/img\/site\/apple-touch-icon-precomposed.png",
+		"outputAbbreviatedPath": "\/img\/site\/apple-touch-icon-precomposed.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

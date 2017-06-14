@@ -81,7 +81,7 @@ figure {
 }
 
 figcaption {
-	color: lighten($grey-light,10%);
+	color: $grey-darker;
 	font-family: $figcaption-font-family;
 	font-size: $figcaption-font-size;
 	font-style: $figcaption-font-style;
@@ -100,15 +100,30 @@ figcaption {
 
 
 	
-.bulge {
+.pop {
 	transition: all .10s;
 	
 	@include bp(bp7) {
-		margin: ($vertical-spacing * 2) -150px ($vertical-spacing * 2);
+		margin: ($vertical-spacing * 3) -100px ($vertical-spacing * 2);
 
 		img {
 			width: 100%;
 		}
+		
+		figcaption {
+			margin: 0 100px $vertical-spacing;
+		}
+	}
+	
+	&:last-child {
+		margin-bottom: $vertical-spacing;
+	}
+}
+
+.pop--wide {
+	
+	@include bp(bp7) {
+		margin: ($vertical-spacing * 3) -150px ($vertical-spacing * 2);
 		
 		figcaption {
 			margin: 0 150px $vertical-spacing;

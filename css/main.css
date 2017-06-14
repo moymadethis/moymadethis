@@ -67,10 +67,10 @@ a {
 .btn {
   background-color: transparent;
   background-repeat: no-repeat;
-  border: 4px solid #0d0f0f;
+  border: 4px solid #0e1010;
   border-radius: 0;
   box-sizing: border-box;
-  color: #0d0f0f;
+  color: #0e1010;
   cursor: pointer;
   display: inline-block;
   *display: inline;
@@ -93,9 +93,9 @@ a {
   vertical-align: middle; }
   .btn:visited {
     background-color: transparent;
-    color: #0d0f0f; }
+    color: #0e1010; }
   .btn:hover, .btn:focus {
-    background-color: #0d0f0f;
+    background-color: #0e1010;
     color: white;
     outline: 0; }
   .btn:active {
@@ -109,7 +109,7 @@ a {
  */
 hr {
   border: 0;
-  border-bottom: 8px solid #eef0f0;
+  border-bottom: 8px solid #eff1f1;
   clear: both;
   display: block;
   height: 0;
@@ -137,7 +137,7 @@ img[height] {
  * Add border to image.
  */
 .img-stroke {
-  border: 8px solid #eef0f0;
+  border: 8px solid #eff1f1;
   box-sizing: border-box; }
 
 /**
@@ -177,7 +177,7 @@ figure {
     margin-bottom: 20px; }
 
 figcaption {
-  color: #cccfcf;
+  color: #0e1010;
   font-family: "tablet-gothic-narrow", "Helvetica Neue", sans-serif;
   font-size: 1.6rem;
   font-style: normal;
@@ -189,7 +189,7 @@ figcaption {
   .img-stroke + figcaption {
     padding: 0 8px; }
 
-.bulge {
+.pop {
   transition: all .10s;
   /* [1] */
   /* [2] */
@@ -198,11 +198,26 @@ figcaption {
   /* [5] */
   /* [6] */ }
   @media (min-width: 87.5em) {
-    .bulge {
-      margin: 40px -150px 40px; }
-      .bulge img {
+    .pop {
+      margin: 60px -100px 40px; }
+      .pop img {
         width: 100%; }
-      .bulge figcaption {
+      .pop figcaption {
+        margin: 0 100px 20px; } }
+  .pop:last-child {
+    margin-bottom: 20px; }
+
+.pop--wide {
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 87.5em) {
+    .pop--wide {
+      margin: 60px -150px 40px; }
+      .pop--wide figcaption {
         margin: 0 150px 20px; } }
 
 /* ==========================================================================
@@ -241,7 +256,7 @@ html {
  */
 body {
   background-color: transparent;
-  color: #727c7d;
+  color: #778586;
   font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
   font-family: "tablet-gothic-narrow", "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -289,7 +304,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #0d0f0f;
+  color: #0e1010;
   font-family: "ff-good-headline-web-pro-con", "Helvetica Neue", sans-serif;
   font-weight: normal;
   line-height: .90;
@@ -408,7 +423,7 @@ address {
   margin-bottom: 20px; }
 
 abbr[title] {
-  border-bottom: 1px dotted #eef0f0;
+  border-bottom: 1px dotted #eff1f1;
   cursor: help; }
 
 .amp {
@@ -419,12 +434,12 @@ dfn {
 
 ins {
   background-color: white;
-  color: #727c7d;
+  color: #778586;
   text-decoration: none; }
 
 mark {
   background-color: white;
-  color: #727c7d;
+  color: #778586;
   font-style: italic;
   font-weight: bold; }
 
@@ -492,7 +507,7 @@ p {
  * Classified paragraphs for lead, secondary, tertiary and milli statements.
  */
 .lead {
-  color: #b1b6b7;
+  color: #b3bcbc;
   font-size: 20px;
   font-size: 2rem;
   /* [1] */
@@ -514,7 +529,7 @@ p {
  * Base quote styles.
  */
 blockquote {
-  color: #0d0f0f;
+  color: #0e1010;
   font-style: italic;
   font-weight: 600;
   margin: 40px 20px;
@@ -576,7 +591,7 @@ blockquote {
     font-size: 1.8rem;
     margin-top: -5px; }
     blockquote footer:before {
-      background: #0d0f0f;
+      background: #0e1010;
       content: "";
       display: inline-block;
       height: 2px;
@@ -775,7 +790,7 @@ blockquote {
   .mouse:before {
     width: 21px;
     height: 41px;
-    background-color: #0d0f0f;
+    background-color: #0e1010;
     border-radius: 100px; }
   .mouse:after {
     background-color: #ffffff;
@@ -900,7 +915,7 @@ blockquote {
   display: block;
   float: left; }
   .page-head__home-link .circle {
-    fill: #0d0f0f; }
+    fill: #0e1010; }
   .page-head__home-link .stroke {
     fill: white; }
   .page-head__home-link .m {
@@ -1014,7 +1029,7 @@ blockquote {
 .show-nav .page-head__toggle span:before,
 .show-nav .page-head__toggle span:after {
   /* [2] */
-  background: #0d0f0f;
+  background: #0e1010;
   transition-delay: .10s, 0s, .20s; }
 .show-nav .page-head__toggle span:before {
   /* [3] */
@@ -1034,7 +1049,7 @@ blockquote {
  *    for it, once the top/bottom lines are in position.
  */
 .hide-nav .page-head__toggle span {
-  background: #0d0f0f;
+  background: #0e1010;
   /* [1] */
   transition: background .10s .20s; }
 
@@ -1045,7 +1060,7 @@ blockquote {
  * Website footer.
  */
 .page-foot {
-  background: #0d0f0f;
+  background: #0e1010;
   color: white;
   padding: 150px 0 130px;
   text-align: center; }
@@ -1064,7 +1079,7 @@ blockquote {
   display: inline-block;
   margin: 0 auto 40px; }
   .page-foot__home-link .circle {
-    fill: #0d0f0f; }
+    fill: #0e1010; }
   .page-foot__home-link .stroke {
     fill: white; }
   .page-foot__home-link .m {
@@ -1132,10 +1147,10 @@ blockquote {
   border-color: transparent;
   padding-bottom: 2px; }
   .contact-list__link:hover, .contact-list__link:active {
-    border-color: #252a2a; }
+    border-color: #262b2b; }
 
 .site-nav .contact-list {
-  color: #0d0f0f;
+  color: #0e1010;
   position: absolute;
   bottom: 20px;
   left: 0;
@@ -1150,14 +1165,14 @@ blockquote {
     transition-delay: .60s;
     transition-duration: .60s; }
 .site-nav .contact-list__link {
-  color: #0d0f0f; }
+  color: #0e1010; }
   .site-nav .contact-list__link:visited {
-    color: #0d0f0f; }
+    color: #0e1010; }
   .site-nav .contact-list__link:hover, .site-nav .contact-list__link:focus {
-    color: #0d0f0f;
+    color: #0e1010;
     border-color: #28aaac; }
 .site-nav .icon {
-  fill: #0d0f0f; }
+  fill: #0e1010; }
 
 .social-list {
   list-style: none; }
@@ -1250,7 +1265,7 @@ blockquote {
 .site-nav__link {
   background: transparent;
   border-bottom: none;
-  color: #0d0f0f;
+  color: #0e1010;
   display: block;
   font-family: "ff-good-headline-web-pro-con", "Helvetica Neue", sans-serif;
   font-size: 40px;
@@ -1277,7 +1292,7 @@ blockquote {
     width: 0; }
   .site-nav__link:visited {
     background: transparent;
-    color: #0d0f0f; }
+    color: #0e1010; }
   .site-nav__link:hover, .site-nav__link:focus, .site-nav__link.current {
     color: #f1fcfc;
     outline: none; }
@@ -1381,9 +1396,9 @@ blockquote {
 
 .work__title a {
   border: none;
-  color: #0d0f0f; }
+  color: #0e1010; }
   .work__title a:visited {
-    color: #0d0f0f; }
+    color: #0e1010; }
   .work__title a:hover, .work__title a:focus {
     color: #2dbec1; }
 
@@ -1426,8 +1441,8 @@ blockquote {
   margin: 0 auto -100px; }
 
 .masthead--home {
-  background: #0d0f0f;
-  color: #b1b6b7; }
+  background: #0e1010;
+  color: #b3bcbc; }
   .masthead--home .masthead__wrap {
     padding: 0 20px 80px; }
   .masthead--home h1,
@@ -1451,7 +1466,7 @@ blockquote {
       .masthead--home p br {
         display: inherit; } }
   .masthead--home .lead {
-    color: #eef0f0;
+    color: #eff1f1;
     margin-bottom: 20px; }
   .masthead--home hr {
     border-color: #2dbec1;
@@ -1896,7 +1911,7 @@ blockquote {
  * Metropolis.
  */
 .masthead--metropolis {
-  background: #404546; }
+  background: #424b4b; }
 
 .metropallax {
   height: 100%;
