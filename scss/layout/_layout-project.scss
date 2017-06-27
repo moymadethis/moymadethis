@@ -31,7 +31,7 @@
 	color: $grey-light;
 	
 	.masthead__wrap {
-		padding: 0 $gutter 80px;
+		padding: 0 $gutter ($vertical-spacing * 2);
 
 	}
 	
@@ -67,7 +67,6 @@
 	
 	hr {
 		border-color: $color-primary;
-		margin: $vertical-spacing 0 $vertical-spacing;
 	}
 	
 	p a {

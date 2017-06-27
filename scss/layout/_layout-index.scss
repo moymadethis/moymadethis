@@ -8,6 +8,10 @@
 	}
 }
 
+.band--tint {
+	background-color: darken($white,2%);
+}
+
 .wrap {
 	margin: 0 auto;
 	padding: 0 $gutter;

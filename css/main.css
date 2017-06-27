@@ -1317,6 +1317,9 @@ blockquote {
   .page-head + .band {
     padding-top: 20px; }
 
+.band--tint {
+  background-color: #fafafa; }
+
 .wrap {
   margin: 0 auto;
   padding: 0 20px;
@@ -1444,7 +1447,7 @@ blockquote {
   background: #0e1010;
   color: #b3bcbc; }
   .masthead--home .masthead__wrap {
-    padding: 0 20px 80px; }
+    padding: 0 20px 40px; }
   .masthead--home h1,
   .masthead--home h2,
   .masthead--home h3,
@@ -1469,8 +1472,7 @@ blockquote {
     color: #eff1f1;
     margin-bottom: 20px; }
   .masthead--home hr {
-    border-color: #2dbec1;
-    margin: 20px 0 20px; }
+    border-color: #2dbec1; }
   .masthead--home p a {
     border-color: transparent;
     color: #2dbec1;
