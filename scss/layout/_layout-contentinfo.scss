@@ -66,7 +66,11 @@
 
 
 .hgroup {
-	margin-bottom: $vertical-spacing * 2;
+	margin-bottom: $vertical-spacing;
+	
+	.lead {
+		margin-top: -$vertical-spacing / 2;
+	}
 
 	&.align-center {
 		
@@ -131,13 +135,14 @@
 	
 	.contact-list {
 		color: $grey-darker;
+		display: block;
 		position: absolute;
 		bottom: $vertical-spacing;
 		left: 0;
 		opacity: 0;
 		text-align: center;
 		width: 100%;
-		transform: translateY(100px);
+		transform: translateY(200px);
 		transition: all .40s .10s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		
 		.show-nav & {
@@ -168,6 +173,21 @@
 }
 
 
+@media screen and (max-height: 500px) {
+    
+   .show-nav .site-nav .contact-list {
+	   transform: translateY(200px);
+	   transition-delay: 0;
+   }
+}
+
+@media (max-height: 800px) and (max-width: 400px) {
+    
+   .show-nav .site-nav .contact-list {
+	   transform: translateY(200px);
+	   transition-delay: 0;
+   }
+}
 
 
 

@@ -960,7 +960,7 @@ blockquote {
   display: block;
   height: 50px;
   float: right;
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 30px;
   text-indent: -9999px;
@@ -1109,7 +1109,9 @@ blockquote {
   width: 1em; }
 
 .hgroup {
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
+  .hgroup .lead {
+    margin-top: -10px; }
   .hgroup.align-center hr {
     margin-left: auto;
     margin-right: auto; }
@@ -1151,13 +1153,14 @@ blockquote {
 
 .site-nav .contact-list {
   color: #0e1010;
+  display: block;
   position: absolute;
   bottom: 20px;
   left: 0;
   opacity: 0;
   text-align: center;
   width: 100%;
-  transform: translateY(100px);
+  transform: translateY(200px);
   transition: all 0.4s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   .show-nav .site-nav .contact-list {
     opacity: 1;
@@ -1174,6 +1177,14 @@ blockquote {
 .site-nav .icon {
   fill: #0e1010; }
 
+@media screen and (max-height: 500px) {
+  .show-nav .site-nav .contact-list {
+    transform: translateY(200px);
+    transition-delay: 0; } }
+@media (max-height: 800px) and (max-width: 400px) {
+  .show-nav .site-nav .contact-list {
+    transform: translateY(200px);
+    transition-delay: 0; } }
 .social-list {
   list-style: none; }
   .social-list .icon {
@@ -1318,7 +1329,7 @@ blockquote {
     padding-top: 20px; }
 
 .band--tint {
-  background-color: #fafafa; }
+  background-color: #fafbfb; }
 
 .wrap {
   margin: 0 auto;
@@ -1331,24 +1342,6 @@ blockquote {
 /* ==========================================================================
    #INDEX
    ========================================================================== */
-.work--alt .work__item {
-  float: left;
-  width: 33.33333%; }
-.work--alt .work__image-link {
-  width: 100%; }
-.work--alt .work__desc {
-  display: none; }
-
-.work--alt-2 {
-  max-width: 1800px !important; }
-  .work--alt-2 .work__item {
-    float: left;
-    width: 33.33333%; }
-  .work--alt-2 .work__image-link {
-    width: 100%; }
-  .work--alt-2 .work__desc {
-    display: none; }
-
 .work {
   list-style: none;
   margin: 0 auto;
@@ -1472,7 +1465,7 @@ blockquote {
     color: #eff1f1;
     margin-bottom: 20px; }
   .masthead--home hr {
-    border-color: #2dbec1; }
+    border-color: #424b4b; }
   .masthead--home p a {
     border-color: transparent;
     color: #2dbec1;
@@ -1525,7 +1518,7 @@ blockquote {
  * OCA
  */
 .masthead--oca {
-  background: url(../img/interface/work/oca/masthead-bottom-bg.png) repeat-x center bottom, url(../img/interface/work/oca/masthead-bg.jpg) center center, #c91922; }
+  background: url(../img/interface/work/oca/masthead-bottom-grey-bg.png) repeat-x center bottom, url(../img/interface/work/oca/masthead-bg.jpg) center center, #c91922; }
 
 /**
  * Dartmoor (Moor than meets the eye).
@@ -1889,12 +1882,25 @@ blockquote {
  * Slim Be
  */
 .masthead--slim-be {
-  background: url(../img/interface/work/slim-be/red-tile-gradient.jpg) repeat-x center bottom, url(../img/interface/work/slim-be/red-tile-light.jpg) center 0, #e41a37; }
+  background: url(../img/interface/work/slim-be/red-tile-gradient.jpg) repeat-x center bottom, url(../img/interface/work/slim-be/red-tile-light.jpg) center 0, #e41a37;
+  /*
+  	&:before {
+  		background: linear-gradient(to bottom, rgba($white,0) 0%,rgba($white,1) 100%);
+  		content: "";
+  		display: block;
+  		height: 100px;
+  		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		width: 100%;
+  		z-index: 1;
+  	}
+  */ }
   .masthead--slim-be:before {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+    background: #fcd23e;
     content: "";
     display: block;
-    height: 100px;
+    height: 8px;
     position: absolute;
     bottom: 0;
     left: 0;
