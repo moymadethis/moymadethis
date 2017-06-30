@@ -230,6 +230,61 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/content\/work\/ferno\/mockups\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 431082,
+		"inputAbbreviatedPath": "\/img\/content\/work\/ferno\/mockups\/1.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/ferno\/mockups\/1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/ferno\/mockups\/2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 395977,
+		"inputAbbreviatedPath": "\/img\/content\/work\/ferno\/mockups\/2.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/ferno\/mockups\/2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/ferno\/mockups\/3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 525808,
+		"inputAbbreviatedPath": "\/img\/content\/work\/ferno\/mockups\/3.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/ferno\/mockups\/3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/ferno\/mockups\/4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 448931,
+		"inputAbbreviatedPath": "\/img\/content\/work\/ferno\/mockups\/4.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/ferno\/mockups\/4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/ferno\/mockups\/5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 472772,
+		"inputAbbreviatedPath": "\/img\/content\/work\/ferno\/mockups\/5.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/ferno\/mockups\/5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/content\/work\/ferno\/tile\/ferno.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
