@@ -549,6 +549,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/content\/work\/pokerstars\/mockups\/3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 739090,
+		"inputAbbreviatedPath": "\/img\/content\/work\/pokerstars\/mockups\/3.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/pokerstars\/mockups\/3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/pokerstars\/mockups\/4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 642264,
+		"inputAbbreviatedPath": "\/img\/content\/work\/pokerstars\/mockups\/4.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/pokerstars\/mockups\/4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/content\/work\/pokerstars\/tile\/pokerstars.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -567,6 +589,17 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/img\/content\/work\/simple-data\/masthead\/simple-data-device.png",
 		"outputAbbreviatedPath": "\/img\/content\/work\/simple-data\/masthead\/simple-data-device.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/content\/work\/simple-data\/mockups\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/content\/work\/simple-data\/mockups\/1.jpg",
+		"outputAbbreviatedPath": "\/img\/content\/work\/simple-data\/mockups\/1.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

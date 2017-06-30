@@ -1500,11 +1500,11 @@ blockquote {
     content: "";
     display: block;
     height: 475px;
-    opacity: .04;
+    opacity: .05;
     position: absolute;
-    bottom: -25px;
+    bottom: -10px;
     left: 50%;
-    margin-left: -850px;
+    margin-left: 150px;
     width: 510px; }
 
 /**
