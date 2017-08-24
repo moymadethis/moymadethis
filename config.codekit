@@ -1088,6 +1088,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/site\/linkedin-media-image.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9209,
+		"inputAbbreviatedPath": "\/img\/site\/linkedin-media-image.png",
+		"outputAbbreviatedPath": "\/img\/site\/linkedin-media-image.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/site\/social-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
