@@ -268,39 +268,3 @@ $(function(){
 /* ==========================================================================
    #SIMPLE DATA - animated lines.
    ========================================================================== */
-
-$(function(){
-	placeLines = function(){
-		
-		for(i=0; i<=9; i++){
-			var Dy = $('.ball-container'+i).position().top - $('.ball-container'+(i+1)).position().top;
-			var Dx = $('.ball-container'+(i+1)).position().left - $('.ball-container'+i).position().left;
-			var length = Math.sqrt(Dy*Dy + Dx*Dx);
-			var angle = Math.atan2(Dy, Dx) * (-1);
-			var containerHeight = $('#animated-line > .inner').height();
-			var transform = 'rotate('+angle + 'rad)';
-			$('.line'+i).css({
-				'transform': transform
-			})
-			
-			var offsetTop = $('.ball-container'+i).offset().top +6;
-			var offsetLeft= $('.ball-container'+i).offset().left +6;
-			
-			$('.line-box'+i).css({
-				'width': length +'px'
-				}).offset({
-				left: offsetLeft,
-				top: offsetTop
-			});
-		}
-	};
-	
-	$(document).ready(function(){
-	    placeLines();
-	});
-	
-	$(window).resize(function(){
-		console.log('resizing');
-		placeLines();
-	});
-});
