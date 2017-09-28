@@ -262,7 +262,11 @@ $(function(){
 });
 
 
-
+paceOptions = {
+  ajax: false, // disabled
+  document: false, // disabled
+  eventLag: false // disabled
+};
 
 
 /* ==========================================================================
