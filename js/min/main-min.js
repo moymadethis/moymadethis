@@ -1,1 +1,313 @@
-$(function(){$(".page-head__toggle").click(function(){return $("body").hasClass("show-nav")?($("body").removeClass("show-nav").addClass("hide-nav"),setTimeout(function(){$("body").removeClass("hide-nav")},800)):$("body").removeClass("hide-nav").addClass("show-nav"),!1})}),$(function(){svg4everybody()}),$(function(){var t=document.getElementById("metropallax"),i=new Parallax(t,{relativeInput:!0,calibrateX:!1,calibrateY:!0,invertX:!1,invertY:!0,limitX:!1,limitY:0,scalarX:2,scalarY:8,frictionX:.2,frictionY:.8,originX:0,originY:1})}),$(function(){function t(t){this.x=0,this.y=0,this.xVelocity=0,this.yVelocity=0,this.radius=5,this.context=t,this.draw=function(){return this.image?void this.context.drawImage(this.image,this.x-128,this.y-128):(this.context.beginPath(),this.context.arc(this.x,this.y,this.radius,0,2*Math.PI,!1),this.context.fillStyle="rgba(0, 255, 255, 1)",this.context.fill(),void this.context.closePath())},this.update=function(){this.x+=this.xVelocity,this.y+=this.yVelocity,this.x>=l?(this.xVelocity=-this.xVelocity,this.x=l):this.x<=0&&(this.xVelocity=-this.xVelocity,this.x=0),this.y>=r?(this.yVelocity=-this.yVelocity,this.y=r):this.y<=0&&(this.yVelocity=-this.yVelocity,this.y=0)},this.setPosition=function(t,i){this.x=t,this.y=i},this.setVelocity=function(t,i){this.xVelocity=t,this.yVelocity=i},this.setImage=function(t){this.image=t}}function i(t,i){return Math.random()*(i-t)+t}function e(){var e=document.getElementById("smoke");if(e.getContext){u=e.getContext("2d");for(var o=0;a>o;++o){var s=new t(u);s.setPosition(i(0,l),i(0,r)),s.setVelocity(i(-h,h),i(-h,h)),n.push(s)}}else alert("Please use a modern browser")}function o(){u.fillStyle="rgba(0, 0, 0, 0.5)",u.fillRect(0,0,400,400),n.forEach(function(t){t.draw()})}function s(){n.forEach(function(t){t.update()})}var n=[],a=8,h=4,c=24,l=400,r=400,y=new Image;y.onload=function(){n.forEach(function(t){t.setImage(y)})},y.src="http://www.blog.jonnycornwell.com/wp-content/uploads/2012/07/Smoke10.png";var u;e(),u&&setInterval(function(){s(),o()},1e3/c)});
+
+/* ==========================================================================
+   #NAVIGATION
+   ========================================================================== */
+ 
+/* 
+ * Creates classes to enable responsive navigation.
+ */
+
+// Wait for the DOM to be ready (all elements printed on page regardless if 
+// loaded or not).
+
+$(function() {
+
+	// Bind a click event to anything with the class "toggle-nav".
+	$('.page-head__toggle').click(function() {
+		if ($('body').hasClass('show-nav')) {
+			$('body').removeClass('show-nav').addClass('hide-nav');
+
+			setTimeout(function() {
+				$('body').removeClass('hide-nav');
+			}, 800);
+
+		} else {
+			$('body').removeClass('hide-nav').addClass('show-nav');
+		}
+		// Deactivate the default behavior of going to the next page on click.
+		return false;
+	});
+});
+
+
+
+
+/* ==========================================================================
+   #SVG4EVERYBODY
+   ========================================================================== */
+ 
+$(function(){
+	svg4everybody();
+});
+
+
+
+
+
+/* ==========================================================================
+   #PARALLAX
+   ========================================================================== */
+   
+/* 
+ * Adds classes to specified navigation element when page is scrolled up/down.
+ */
+
+$(function(){
+	var scene = document.getElementById('metropallax');
+	var parallaxInstance = new Parallax(scene, {
+		relativeInput: true,
+		calibrateX: false,
+		calibrateY: true,
+		invertX: false,
+		invertY: true,
+		limitX: false,
+		//limitY: 10,
+		limitY: 0,
+		scalarX: 2,
+		scalarY: 8,
+		frictionX: 0.2,
+		frictionY: 0.8,
+		originX: 0.0,
+		originY: 1.0
+	});
+});
+
+
+
+
+
+/* ==========================================================================
+   #CANVAS SMOKE
+   ========================================================================== */
+   
+$(function(){
+
+	// Create an array to store our particles
+	var particles = [];
+	
+	// The amount of particles to render
+	var particleCount = 8;
+	// Orig 30
+	
+	// The maximum velocity in each direction
+	var maxVelocity = 4;
+	
+	// The target frames per second (how often do we want to update / redraw the scene)
+	var targetFPS = 24;
+	// Orig 33
+	
+	// Set the dimensions of the canvas as variables so they can be used.
+	var canvasWidth = 400;
+	var canvasHeight = 400;
+	
+	// Create an image object (only need one instance)
+	var imageObj = new Image();
+	
+	// Once the image has been downloaded then set the image on all of the particles
+	imageObj.onload = function() {
+	    particles.forEach(function(particle) {
+	            particle.setImage(imageObj);
+	    });
+	};
+	
+	// Once the callback is arranged then set the source of the image
+	imageObj.src = "http://www.blog.jonnycornwell.com/wp-content/uploads/2012/07/Smoke10.png";
+	
+	// A function to create a particle object.
+	function Particle(context) {
+	
+	    // Set the initial x and y positions
+	    this.x = 0;
+	    this.y = 0;
+	
+	    // Set the initial velocity
+	    this.xVelocity = 0;
+	    this.yVelocity = 0;
+	
+	    // Set the radius
+	    this.radius = 5;
+	
+	    // Store the context which will be used to draw the particle
+	    this.context = context;
+	
+	    // The function to draw the particle on the canvas.
+	    this.draw = function() {
+	        
+	        // If an image is set draw it
+	        if(this.image){
+	            this.context.drawImage(this.image, this.x-128, this.y-128);         
+	            // If the image is being rendered do not draw the circle so break out of the draw function                
+	            return;
+	        }
+	        // Draw the circle as before, with the addition of using the position and the radius from this object.
+	        this.context.beginPath();
+	        this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
+	        this.context.fillStyle = "rgba(0, 255, 255, 1)";
+	        this.context.fill();
+	        this.context.closePath();
+	    };
+	
+	    // Update the particle.
+	    this.update = function() {
+	        // Update the position of the particle with the addition of the velocity.
+	        this.x += this.xVelocity;
+	        this.y += this.yVelocity;
+	
+	        // Check if has crossed the right edge
+	        if (this.x >= canvasWidth) {
+	            this.xVelocity = -this.xVelocity;
+	            this.x = canvasWidth;
+	        }
+	        // Check if has crossed the left edge
+	        else if (this.x <= 0) {
+	            this.xVelocity = -this.xVelocity;
+	            this.x = 0;
+	        }
+	
+	        // Check if has crossed the bottom edge
+	        if (this.y >= canvasHeight) {
+	            this.yVelocity = -this.yVelocity;
+	            this.y = canvasHeight;
+	        }
+	        
+	        // Check if has crossed the top edge
+	        else if (this.y <= 0) {
+	            this.yVelocity = -this.yVelocity;
+	            this.y = 0;
+	        }
+	    };
+	
+	    // A function to set the position of the particle.
+	    this.setPosition = function(x, y) {
+	        this.x = x;
+	        this.y = y;
+	    };
+	
+	    // Function to set the velocity.
+	    this.setVelocity = function(x, y) {
+	        this.xVelocity = x;
+	        this.yVelocity = y;
+	    };
+	    
+	    this.setImage = function(image){
+	        this.image = image;
+	    }
+	}
+	
+	// A function to generate a random number between 2 values
+	function generateRandom(min, max){
+	    return Math.random() * (max - min) + min;
+	}
+	
+	// The canvas context if it is defined.
+	var context;
+	
+	// Initialise the scene and set the context if possible
+	function init() {
+	    var canvas = document.getElementById('smoke');
+	    if (canvas.getContext) {
+	
+	        // Set the context variable so it can be re-used
+	        context = canvas.getContext('2d');
+	
+	        // Create the particles and set their initial positions and velocities
+	        for(var i=0; i < particleCount; ++i){
+	            var particle = new Particle(context);
+	            
+	            // Set the position to be inside the canvas bounds
+	            particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
+	            
+	            // Set the initial velocity to be either random and either negative or positive
+	            particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
+	            particles.push(particle);            
+	        }
+	    }
+	    else {
+	        alert("Please use a modern browser");
+	    }
+	}
+	
+	// The function to draw the scene
+	function draw() {
+	    // Clear the drawing surface and fill it with a black background
+	    context.fillStyle = "rgba(0, 0, 0, 0.5)";
+	    context.fillRect(0, 0, 400, 400);
+	
+	    // Go through all of the particles and draw them.
+	    particles.forEach(function(particle) {
+	        particle.draw();
+	    });
+	}
+	
+	// Update the scene
+	function update() {
+	    particles.forEach(function(particle) {
+	        particle.update();
+	    });
+	}
+	
+	// Initialize the scene
+	init();
+	
+	// If the context is set then we can draw the scene (if not then the browser does not support canvas)
+	if (context) {
+	    setInterval(function() {
+	        // Update the scene befoe drawing
+	        update();
+	
+	        // Draw the scene
+	        draw();
+	    }, 1000 / targetFPS);
+	}
+});
+
+
+
+
+
+/* ==========================================================================
+   #SIMPLE DATA - animated lines.
+   ========================================================================== */
+
+$(function(){
+	placeLines = function(){
+		
+		for(i=0; i<=9; i++){
+			var Dy = $('.ball-container'+i).position().top - $('.ball-container'+(i+1)).position().top;
+			var Dx = $('.ball-container'+(i+1)).position().left - $('.ball-container'+i).position().left;
+			var length = Math.sqrt(Dy*Dy + Dx*Dx);
+			var angle = Math.atan2(Dy, Dx) * (-1);
+			var containerHeight = $('#animated-line > .inner').height();
+			var transform = 'rotate('+angle + 'rad)';
+			$('.line'+i).css({
+				'transform': transform
+			})
+			
+			var offsetTop = $('.ball-container'+i).offset().top +6;
+			var offsetLeft= $('.ball-container'+i).offset().left +6;
+			
+			$('.line-box'+i).css({
+				'width': length +'px'
+				}).offset({
+				left: offsetLeft,
+				top: offsetTop
+			});
+		}
+	};
+	
+	// Only run the script if `animated-line` is on the page. Prevents console errors.
+	if ($('#animated-line').length > 0) { 
+	
+		$(document).ready(function(){
+		    placeLines();
+		});
+		
+		$(window).resize(function(){
+			console.log('resizing');
+			placeLines();
+		});
+		
+	}
+});
+
+
