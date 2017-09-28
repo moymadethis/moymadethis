@@ -9,7 +9,7 @@
 
 p { 
 	@include font-size($font-size);
-	line-height: 1.5;
+	line-height: $font-lineheight;
 	margin-bottom: ($vertical-spacing);
 }
 
@@ -19,10 +19,10 @@ p {
 
 .lead {
 	color: $grey-light;
-	@include font-size(20);
+	@include font-size(18);
 
 	@include bp(bp4) {
-		@include font-size(25);
+		@include font-size(22);
 		line-height: 1.4;
 	}
 }

@@ -26,7 +26,7 @@ img[height] {
  */
  
 .img-stroke {
-	border: ($border-width * 2) $border-style $border-color;
+	border: $border-width $border-style $border-color;
 	box-sizing: border-box;
 }
 

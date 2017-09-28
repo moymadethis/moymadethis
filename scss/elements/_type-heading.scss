@@ -25,12 +25,12 @@ h1 {
 	@include font-size(80);
 
 	@include bp(bp3) {
-		@include font-size(100);
+		@include font-size(90);
 	}
 }
 
 h2 { 
-	@include font-size(60);
+	@include font-size(70);
 
 	@include bp(bp3) {
 		@include font-size(80);
@@ -38,17 +38,17 @@ h2 {
 }
 
 h3 { 
-	@include font-size(40);
+	@include font-size(60);
 
 	@include bp(bp3) {
-		@include font-size(60);
+		@include font-size(70);
 	}
 }
 
 h4 { 
-	@include font-size(20);
+	@include font-size(30);
 	
 	@include bp(bp3) {
-		@include font-size(40);
+		@include font-size(50);
 	}
 }
