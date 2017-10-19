@@ -37,11 +37,20 @@ $(function() {
    #NPROGRESS
    ========================================================================== */
    
-$('body').show();
-$('.version').text(NProgress.version);
-NProgress.start();
-setTimeout(function() { NProgress.done(); $('.nprogress-busy').addClass('nprogress-done'); }, 1000);
-    
+$(function() {
+	
+	NProgress.configure({ 
+		showSpinner: false
+	});
+	
+	NProgress.start();
+	
+	setTimeout(function(){ 
+		NProgress.done(); $('.nprogress-busy').addClass('nprogress-done');
+	}, 1000);
+	
+});
+   
     
     
     
