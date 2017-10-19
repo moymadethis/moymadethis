@@ -41,6 +41,7 @@ $(function() {
 	
 	NProgress.configure({ 
 		showSpinner: false,
+		speed: 250
 	});
 	
 	NProgress.start();
@@ -332,3 +333,5 @@ $(function(){
 		
 	}
 });
+
+
