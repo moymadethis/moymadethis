@@ -45,7 +45,7 @@ $MQs							: true;
 // Base
 
 $font-size 						: 17;
-$font-family 					: "droidsans", "Helvetica Neue", sans-serif;
+$font-family 					: "Droid Sans", "Helvetica Neue", sans-serif;
 $font-color 					: $grey;
 $font-lineheight 				: 1.5;
 $font-weight 					: 400;
@@ -65,7 +65,7 @@ $codefont-font-family			: Monaco, Courier New, monospace;
 // Headings
 
 $heading-font-color 			: $grey-darker;
-$heading-font-family 			: "goodpro", "Helvetica Neue", sans-serif;
+$heading-font-family 			: "Good Pro", "Helvetica Neue", sans-serif;
 $heading-font-style 			: italic;
 $heading-font-weight 			: 900;
 $heading-lineheight				: $font-lineheight;
@@ -92,7 +92,7 @@ $base-bg						: $white;
 $border-color    				: $grey-lighter;
 $border-style					: solid;
 $border-width 					: 8px;
-$border-radius 					: 0;
+$border-radius 					: 2px;
 $border							: $border-width $border-style $border-color;
 
 
@@ -106,13 +106,13 @@ $border							: $border-width $border-style $border-color;
 $button-bg 								: transparent;
 $button-border-color					: $grey-darker;
 $button-border-style 					: $border-style;
-$button-border-width 					: $border-width / 2;
+$button-border-width 					: $border-width / 4;
 $button-border-radius 					: $border-radius;
 
 $button-font-family						: $font-family;
 $button-font-size 						: $font-size;
 $button-font-color 						: $grey-darker;
-$button-font-weight 					: 900;
+$button-font-weight 					: 700;
 $button-letter-spacing					: 0.02em;
 $button-font-transform 					: none;
 

@@ -8,11 +8,15 @@
  */
 
 @font-face {
-	font-family: 'goodpro';
-	src: url('../font/GoodPro-CondBlack.woff2') format('woff2'),
-		 url('../font/GoodPro-CondBlack.woff') format('woff');
+	font-family: 'Good Pro';
+	src: url('../font/GoodPro-CondBlack.eot');
+	src: url('../font/GoodPro-CondBlack.eot?#iefix') format('embedded-opentype'),
+		 url('../font/GoodPro-CondBlack.woff2') format('woff2'),
+		 url('../font/GoodPro-CondBlack.woff') format('woff'),
+		 url('../font/GoodPro-CondBlack.ttf') format('truetype'),
+		 url('../font/GoodPro-CondBlack.svg#GoodPro-CondBlack') format('svg');
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 900;
 }
 
 
@@ -21,17 +25,25 @@
  */
 
 @font-face {
-	font-family: 'droidsans';
-	src: url('../font/DroidSans.woff2') format('woff2'),
-		 url('../font/DroidSans.woff') format('woff');	
+	font-family: 'Droid Sans';
+	src: url('../font/DroidSans.eot');
+	src: url('../font/DroidSans.eot?#iefix') format('embedded-opentype'),
+		 url('../font/DroidSans.woff2') format('woff2'),
+		 url('../font/DroidSans.woff') format('woff'),
+		 url('../font/DroidSans.ttf') format('truetype'),
+		 url('../font/DroidSans.svg#DroidSans') format('svg');
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
-	font-family: 'droidsans-bold';
-	src: url('../font/DroidSans-Bold.woff2') format('woff2'),
-		 url('../font/DroidSans-Bold.woff') format('woff');	
+	font-family: 'Droid Sans';
+	src: url('../font/DroidSans-Bold.eot');
+	src: url('../font/DroidSans-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../font/DroidSans-Bold.woff2') format('woff2'),
+		 url('../font/DroidSans-Bold.woff') format('woff'),
+		 url('../font/DroidSans-Bold.ttf') format('truetype'),
+		 url('../font/DroidSans-Bold.svg#DroidSans-Bold') format('svg');
 	font-style: normal;
-	font-weight: normal;
+	font-weight: bold;
 }

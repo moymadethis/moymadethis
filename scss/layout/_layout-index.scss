@@ -1,10 +1,27 @@
 
 .band {
-	padding: 150px 0 130px;
+	padding: 120px 0 100px;
+	transition: all .25s;
 	width: 100%;
+	
+	@include bp(bp3) {
+		padding: 130px 0 110px;
+	}
+	
+	@include bp(bp4) {
+		padding: 140px 0 120px;
+	}
+	
+	@include bp(bp5) {
+		padding: 150px 0 130px;
+	}
 	
 	.page-head + & {
 		padding-top: $vertical-spacing;
+	}
+	
+	.masthead--home + & {
+		padding-top: 100px;
 	}
 }
 
@@ -105,3 +122,47 @@
 		width: 50%;
 	}
 }
+
+/*
+
+.work__item {
+	display: block !important;
+	float: left;
+	width: 33.33333% !important;
+	
+	hr {
+		display: none;
+	}
+	
+	br {
+		display: none;
+	}
+	
+	.btn {
+		display: none;
+	}
+	
+	p {
+		display: none;
+	}
+}
+
+.work__title {
+	font-size: 25px;
+}
+
+.work__sub-title {
+	color: $grey;
+	font-family: $font-family;
+	font-size: 19px;
+	text-transform: capitalize;
+}
+
+.work__image-link {
+	width: 100% !important;
+}
+
+.work__desc {
+	width: 100% !important;
+}
+*/

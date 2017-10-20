@@ -40,8 +40,7 @@ $(function() {
 $(function() {
 	
 	NProgress.configure({ 
-		showSpinner: false,
-		speed: 250
+		showSpinner: false
 	});
 	
 	NProgress.start();
@@ -77,23 +76,28 @@ $(function(){
  */
 
 $(function(){
-	var scene = document.getElementById('metropallax');
-	var parallaxInstance = new Parallax(scene, {
-		relativeInput: true,
-		calibrateX: false,
-		calibrateY: true,
-		invertX: false,
-		invertY: true,
-		limitX: false,
-		//limitY: 10,
-		limitY: 0,
-		scalarX: 2,
-		scalarY: 8,
-		frictionX: 0.2,
-		frictionY: 0.8,
-		originX: 0.0,
-		originY: 1.0
-	});
+	
+	// Only run the script if `#metropallax` is on the page. Prevents console errors.
+	if ($('#metropallax').length > 0) { 
+
+		var scene = document.getElementById('metropallax');
+		var parallaxInstance = new Parallax(scene, {
+			relativeInput: true,
+			calibrateX: false,
+			calibrateY: true,
+			invertX: false,
+			invertY: true,
+			limitX: false,
+			//limitY: 10,
+			limitY: 0,
+			scalarX: 2,
+			scalarY: 8,
+			frictionX: 0.2,
+			frictionY: 0.8,
+			originX: 0.0,
+			originY: 1.0
+		});
+	}
 });
 
 
@@ -135,7 +139,7 @@ $(function(){
 	};
 	
 	// Once the callback is arranged then set the source of the image
-	imageObj.src = "http://www.blog.jonnycornwell.com/wp-content/uploads/2012/07/Smoke10.png";
+	imageObj.src = "img/interface/work/metropolis/smoke.png";
 	
 	// A function to create a particle object.
 	function Particle(context) {
@@ -270,8 +274,13 @@ $(function(){
 	    });
 	}
 	
-	// Initialize the scene
-	init();
+	// Only run the script if `#metropallax` is on the page. Prevents console errors.
+	
+	if ($('#smoke').length > 0) {
+		
+		// Initialize the scene
+		init();
+	}
 	
 	// If the context is set then we can draw the scene (if not then the browser does not support canvas)
 	if (context) {

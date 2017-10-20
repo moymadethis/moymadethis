@@ -102,6 +102,7 @@ figcaption {
 
 	
 .pop {
+	margin-top: $vertical-spacing * 2;
 	transition: all .10s;
 	
 	@include bp(bp7) {

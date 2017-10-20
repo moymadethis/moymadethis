@@ -857,6 +857,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/interface\/work\/metropolis\/smoke.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 38503,
+		"inputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/smoke.png",
+		"outputAbbreviatedPath": "\/img\/interface\/work\/metropolis\/smoke.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/interface\/work\/metropolis\/spotlight-1.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1165,17 +1176,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/main-min.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/main-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/min\/nprogress-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/nprogress-min.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/nprogress-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

@@ -10,8 +10,20 @@
 .page-foot {
 	background: $grey-darker;
 	color: $white;
-	padding: 150px 0 130px;
+	padding: 120px 0 100px;
 	text-align: center;
+	
+	@include bp(bp3) {
+		padding: 130px 0 110px;
+	}
+	
+	@include bp(bp4) {
+		padding: 140px 0 120px;
+	}
+	
+	@include bp(bp5) {
+		padding: 150px 0 130px;
+	}
 	
 	a,
 	a:visited {

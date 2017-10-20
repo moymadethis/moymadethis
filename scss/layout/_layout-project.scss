@@ -31,7 +31,12 @@
 	color: $grey-light;
 	
 	.masthead__wrap {
-		padding: 0 $gutter ($vertical-spacing * 2);
+		padding: $vertical-spacing $gutter ($vertical-spacing * 2);
+		transition: padding .25s;
+		
+		@include bp(bp6) {
+			padding-top: 0;
+		}
 
 	}
 	
