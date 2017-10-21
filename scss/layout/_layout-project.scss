@@ -34,6 +34,15 @@
 		padding: $vertical-spacing $gutter ($vertical-spacing * 2);
 		transition: padding .25s;
 		
+		.nprogress-busy & {
+			transform: translateY(20px);
+		}
+		
+		.nprogress-done & {
+			transition: all .20s ease-out .70s;
+			transform: translateY(0);
+		}
+		
 		@include bp(bp6) {
 			padding-top: 0;
 		}

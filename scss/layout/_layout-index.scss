@@ -4,6 +4,15 @@
 	transition: all .25s;
 	width: 100%;
 	
+	.nprogress-busy & {
+		transform: translateY(20px);
+	}
+	
+	.nprogress-done & {
+		transition: all .40s ease-out .75s;
+		transform: translateY(0);
+	}
+	
 	@include bp(bp3) {
 		padding: 130px 0 110px;
 	}
