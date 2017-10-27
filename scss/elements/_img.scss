@@ -1,6 +1,6 @@
 
-/*------------------------------------*\
-    IMAGES
+/* ==========================================================================
+   #IMAGES
    ========================================================================== */
 
 /**
@@ -19,6 +19,17 @@ img {
 img[width],
 img[height] {
 	max-width: none;
+}
+
+
+/**
+ * Base `video` styles.
+ */
+ 
+video {
+	height:auto;
+	width:100%;
+	max-width: 100%;
 }
 
 
@@ -108,7 +119,8 @@ figcaption {
 	@include bp(bp7) {
 		margin: ($vertical-spacing * 3) -100px ($vertical-spacing * 2);
 
-		img {
+		img,
+		video {
 			width: 100%;
 		}
 		

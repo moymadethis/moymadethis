@@ -106,6 +106,15 @@
 }
 
 .work__title {
+	@include font-size(54);
+	
+	@include bp(bp3) {
+		@include font-size(66);
+	}
+
+	@include bp(bp6) {
+		@include font-size(78);
+	}
 	
 	a {
 		border: none;
@@ -123,7 +132,15 @@
 }
 
 .work__sub-title {
-	@include font-size(25);
+	@include font-size(18);
+	
+	@include bp(bp3) {
+		@include font-size(21);
+	}
+
+	@include bp(bp6) {
+		@include font-size(24);
+	}
 }
 
 .work__desc {

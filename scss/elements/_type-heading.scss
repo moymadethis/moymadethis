@@ -18,37 +18,54 @@ h6 {
 	font-weight: normal;
 	line-height: .90;
 	margin: 0 0 $vertical-spacing;
+	transition: font-size .20s;
 	text-transform: uppercase;
 }
 
 h1 { 
-	@include font-size(80);
-
+	@include font-size(60);
+	
 	@include bp(bp3) {
+		@include font-size(75);
+	}
+
+	@include bp(bp6) {
 		@include font-size(90);
 	}
 }
 
 h2 { 
-	@include font-size(70);
-
+	@include font-size(42);
+	
 	@include bp(bp3) {
-		@include font-size(80);
+		@include font-size(54);
+	}
+
+	@include bp(bp6) {
+		@include font-size(66);
 	}
 }
 
 h3 { 
-	@include font-size(60);
-
+	@include font-size(30);
+	
 	@include bp(bp3) {
-		@include font-size(70);
+		@include font-size(39);
+	}
+
+	@include bp(bp6) {
+		@include font-size(48);
 	}
 }
 
 h4 { 
-	@include font-size(30);
+	@include font-size(24);
 	
 	@include bp(bp3) {
-		@include font-size(50);
+		@include font-size(30);
+	}
+
+	@include bp(bp6) {
+		@include font-size(36);
 	}
 }

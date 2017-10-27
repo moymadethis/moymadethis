@@ -68,6 +68,43 @@ $(function(){
 
 
 /* ==========================================================================
+   #VIDEOS
+   ========================================================================== */
+   
+/* 
+ * Only plays a video when it enters the browser window.
+ */
+ 
+$(document).ready(function() {
+    // Get media - with autoplay disabled (audio or video).
+    var media = $('video').not("[autoplay='autoplay']");
+    var tolerancePixel = 200;
+
+    function checkMedia(){
+        // Get current browser top and bottom.
+        var scrollTop = $(window).scrollTop() + tolerancePixel;
+        var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+
+        media.each(function(index, el) {
+            var yTopMedia = $(this).offset().top;
+            var yBottomMedia = $(this).height() + yTopMedia;
+            
+			// Don't play video when outside of viewport.
+            if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
+                $(this).get(0).play();
+            } else {
+                $(this).get(0).pause();
+            }
+        });
+    }
+    $(document).on('scroll', checkMedia);
+});
+
+
+
+
+
+/* ==========================================================================
    #PARALLAX
    ========================================================================== */
    

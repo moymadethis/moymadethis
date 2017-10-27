@@ -8,9 +8,17 @@
  */
 
 p { 
-	@include font-size($font-size);
+	@include font-size(15);
 	line-height: $font-lineheight;
 	margin-bottom: ($vertical-spacing);
+	
+	@include bp(bp3) {
+		@include font-size(16);
+	}
+	
+	@include bp(bp6) {
+		@include font-size($font-size);
+	}
 }
 
 /**
@@ -19,10 +27,16 @@ p {
 
 .lead {
 	color: $grey-light;
-	@include font-size(18);
+	@include font-size(17);
+	line-height: 1.4;
+	
+	@include bp(bp3) {
+		@include font-size(19);
+		
+	}
 
-	@include bp(bp4) {
-		@include font-size(22);
-		line-height: 1.4;
+	@include bp(bp6) {
+		@include font-size(21);
+		
 	}
 }
