@@ -14,9 +14,15 @@
 
 .masthead__wrap {
 	margin: 0 auto;
+	padding-top: $vertical-spacing;
 	position: relative;
+	transition: padding .25s;
 	max-width: 900px;
 	z-index: 100;
+	
+	@include bp(bp6) {
+		padding-top: 0;
+	}
 }
 
 .masthead__image {
@@ -32,7 +38,6 @@
 	
 	.masthead__wrap {
 		padding: $vertical-spacing $gutter ($vertical-spacing * 2);
-		transition: padding .25s;
 		
 		.nprogress-busy & {
 			transform: translateY(20px);
@@ -46,7 +51,6 @@
 		@include bp(bp6) {
 			padding-top: 0;
 		}
-
 	}
 	
 	h1,
