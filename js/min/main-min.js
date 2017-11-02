@@ -75,30 +75,118 @@ $(function(){
  * Only plays a video when it enters the browser window.
  */
  
-$(document).ready(function() {
-    // Get media - with autoplay disabled (audio or video).
-    var media = $('video').not("[autoplay='autoplay']");
-    var tolerancePixel = 200;
+$(function() {
 
-    function checkMedia(){
-        // Get current browser top and bottom.
-        var scrollTop = $(window).scrollTop() + tolerancePixel;
-        var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+    var target = $('video').not('[autoplay="autoplay"]'),
+        zenith, nadir;
 
-        media.each(function(index, el) {
-            var yTopMedia = $(this).offset().top;
-            var yBottomMedia = $(this).height() + yTopMedia;
-            
-			// Don't play video when outside of viewport.
-            if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
-                $(this).get(0).play();
+    $(window).on('load resize', storeDimensions).scroll($.restrain(100, checkPlay));
+
+    storeDimensions();
+
+    target.each(function() {
+
+        $(this).on('ended', function() {
+
+            $(this).siblings('.player__flow').text('PLAY');
+        });
+    });
+
+    $('.player__audio').click(function() {
+
+        var media = $(this).siblings('video');
+
+        $(this).text(function(i, v) {
+            return v === 'MUTE' ? 'UNMUTE' : 'MUTE';
+        });
+
+        if (media[0].muted) media[0].muted = false;
+        else media[0].muted = true;
+    });
+
+    $('.player__flow').click(function() {
+
+        var media = $(this).siblings('video');
+
+        media.addClass('managed');
+
+        $(this).text(function(i, v) {
+            return v === 'PLAY' ? 'PAUSE' : 'PLAY';
+        });
+        
+        if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+		} else {
+			$(this).addClass('active');
+		} 
+        
+        if (media[0].busy) media[0].pause();
+        else media[0].play();
+    });
+
+    function storeDimensions() {
+
+        zenith = [];
+        nadir = [];
+
+        target.each(function() {
+
+            var placement = $(this).offset().top,
+                size = $(this).height();
+
+            zenith.push(placement - $(window).height() * 0.9 + size);
+            nadir.push(placement + size * 0.1);
+        });
+    }
+
+    function checkPlay() {
+
+        var spot = $(window).scrollTop();
+
+        target.each(function(i) {
+
+            if (!this.busy && $(this).hasClass('managed')) return;
+
+            var interface = $(this).siblings('.player__flow');
+
+            if (spot > zenith[i] && spot < nadir[i]) {
+                if (this.busy) return;
+                this.play();
+                interface.text('PAUSE');
             } else {
-                $(this).get(0).pause();
+                if (this.paused) return;
+                this.pause();
+                interface.text('PLAY');
             }
         });
     }
-    $(document).on('scroll', checkMedia);
 });
+
+Object.defineProperty(HTMLMediaElement.prototype, 'busy', {
+    get: function() {
+        return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+    }
+});
+
+$.restrain = function(delay, callback) {
+
+    var executed = 0,
+        debounce,
+        throttle = function() {
+
+            var elapsed = Math.min(delay, Date.now() - executed),
+                remain = delay - elapsed;
+            debounce && clearTimeout(debounce);
+            elapsed == delay && runIt();
+            if (remain) debounce = setTimeout(runIt, remain);
+
+            function runIt() {
+                executed = Date.now();
+                callback.apply(this, arguments);
+            }
+        }
+    return throttle;
+}
 
 
 
@@ -125,14 +213,13 @@ $(function(){
 			invertX: false,
 			invertY: true,
 			limitX: false,
-			//limitY: 10,
-			limitY: 0,
+			limitY: false,
 			scalarX: 2,
-			scalarY: 8,
-			frictionX: 0.2,
-			frictionY: 0.8,
-			originX: 0.0,
-			originY: 1.0
+			scalarY: 2,
+			frictionX: 0.75,
+			frictionY: 0.75,
+			originX: 0.5,
+			originY: 0.5
 		});
 	}
 });

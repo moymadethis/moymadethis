@@ -14,7 +14,7 @@
 
 .masthead__wrap {
 	margin: 0 auto;
-	padding-top: $vertical-spacing;
+	padding-top: $vertical-spacing / 2;
 	position: relative;
 	transition: padding .25s;
 	max-width: 900px;
@@ -37,7 +37,7 @@
 	color: $grey-light;
 	
 	.masthead__wrap {
-		padding: $vertical-spacing $gutter ($vertical-spacing * 2);
+		padding: ($vertical-spacing / 2) $gutter $vertical-spacing;
 		
 		.nprogress-busy & {
 			transform: translateY(20px);
@@ -587,7 +587,7 @@
  */
  
 .masthead--metropolis {
-	background: $grey-dark;
+	background: $black;
 }
 
 .metropallax {
@@ -600,12 +600,12 @@
 }
 
 .metropallax__inner {
-	height: 116%;
-	min-height: 116%;
+	height: 120%;
+	min-height: 120%;
 	position: relative;
-	top: -8%;
-	left: -8%;
-	width: 116%;
+	top: -10%;
+	left: -10%;
+	width: 120%;
 }
 
 .metropallax__layer {
