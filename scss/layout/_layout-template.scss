@@ -80,11 +80,39 @@
 
 
 
+.player__controls {
+	overflow: hidden;
+}
 
+.player__btn {
+	background: transparent url(../img/sprite/player.png) no-repeat left top;
+	border: none;
+	border-radius: 100%;
+	cursor: pointer;
+	display: block;
+	float: left;
+	height: 40px;
+	margin: 0;
+	outline: 0;
+	overflow: hidden;
+	padding: 0;
+	text-indent: -9999px;
+	transition: all .25s;
+	width: 40px;
+	
+	&.active {
+		background-position: right top;
+	}
+}
 
-
-
-
+.player__btn--audio {
+	background-position: left bottom;
+	float: right;
+	
+	&.active {
+		background-position: right bottom;
+	}
+}
 
 
 

@@ -15,7 +15,7 @@ h5,
 h6 {
 	color: $heading-font-color;
 	font-family: $heading-font-family;
-	font-weight: normal;
+	font-weight: $heading-font-weight;
 	line-height: .90;
 	margin: 0 0 $vertical-spacing;
 	transition: font-size .20s;

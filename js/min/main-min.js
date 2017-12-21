@@ -86,43 +86,46 @@ $(function() {
 
     target.each(function() {
 
-        $(this).on('ended', function() {
+        if (this.readyState > 2) initControl(this);
+        else $(this).on('loadeddata', initControl(this));
 
-            $(this).siblings('.player__flow').text('PLAY');
+        $(this).on('ended', function() {
+            $(this).siblings('.player__btn--flow').removeClass('active');
         });
     });
 
-    $('.player__audio').click(function() {
+    $('.player__btn--audio').click(function() {
 
         var media = $(this).siblings('video');
 
-        $(this).text(function(i, v) {
-            return v === 'MUTE' ? 'UNMUTE' : 'MUTE';
-        });
-
-        if (media[0].muted) media[0].muted = false;
-        else media[0].muted = true;
+        if (media[0].muted) {
+            media[0].muted = false;
+            $(this).addClass('active');
+        } else {
+            media[0].muted = true;
+            $(this).removeClass('active');
+        }
     });
 
-    $('.player__flow').click(function() {
+    $('.player__btn--flow').click(function() {
 
         var media = $(this).siblings('video');
 
         media.addClass('managed');
 
-        $(this).text(function(i, v) {
-            return v === 'PLAY' ? 'PAUSE' : 'PLAY';
-        });
-        
-        if ($(this).hasClass('active')) {
-			$(this).removeClass('active');
-		} else {
-			$(this).addClass('active');
-		} 
-        
-        if (media[0].busy) media[0].pause();
-        else media[0].play();
+        if (media[0].busy) {
+            media[0].pause();
+            $(this).removeClass('active');
+        } else {
+            media[0].play();
+            $(this).addClass('active');
+        }
     });
+
+    function initControl(aim) {
+
+        $(aim).addClass('deft').siblings('button').show();
+    }
 
     function storeDimensions() {
 
@@ -145,18 +148,18 @@ $(function() {
 
         target.each(function(i) {
 
-            if (!this.busy && $(this).hasClass('managed')) return;
+            if (!$(this).hasClass('deft') || (!this.busy && $(this).hasClass('managed'))) return;
 
-            var interface = $(this).siblings('.player__flow');
+            var interface = $(this).siblings('.player__btn--flow');
 
             if (spot > zenith[i] && spot < nadir[i]) {
                 if (this.busy) return;
                 this.play();
-                interface.text('PAUSE');
+                interface.addClass('active');
             } else {
                 if (this.paused) return;
                 this.pause();
-                interface.text('PLAY');
+                interface.removeClass('active');
             }
         });
     }
