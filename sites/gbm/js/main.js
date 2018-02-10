@@ -125,6 +125,25 @@ $(function(){
  * Filter toggle.
  */
 
+   
+var stickyHeader = $('.page-head').offset().top;
+
+$(window).on( 'scroll', function(){
+	if ($(window).scrollTop() >= stickyHeader) {
+		$('.page-head').addClass('page-head--fixed');
+	} else {
+		$('.page-head').removeClass('page-head--fixed');
+	}
+});
+    
+    
+    
+    
+    
+/* 
+ * Filter toggle.
+ */
+
 // media query event handler
 if (matchMedia) {
   const mq = window.matchMedia("(min-width: 1024px)");
