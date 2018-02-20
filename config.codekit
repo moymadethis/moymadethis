@@ -1717,11 +1717,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/sites\/gbm\/css\/jquery.mmenu.css": {
+	"\/sites\/gbm\/css\/jquery.mmenu.all.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sites\/gbm\/css\/jquery.mmenu.css",
+		"inputAbbreviatedPath": "\/sites\/gbm\/css\/jquery.mmenu.all.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -2006,12 +2006,32 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/sites\/gbm\/js\/jquery.mmenu.js": {
+	"\/sites\/gbm\/js\/jquery.mmenu.all.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/js\/jquery.mmenu.all.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sites\/gbm\/js\/jquery.mmenu.all.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sites\/gbm\/js\/jquery.mmenu.js",
-		"outputAbbreviatedPath": "\/sites\/gbm\/js\/min\/jquery.mmenu-min.js",
+		"inputAbbreviatedPath": "\/sites\/gbm\/js\/jquery.mmenu.all.js",
+		"outputAbbreviatedPath": "\/sites\/gbm\/js\/min\/jquery.mmenu.all-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/sites\/gbm\/js\/jquery.mmenu.fixedelements.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/js\/jquery.mmenu.fixedelements.js",
+		"outputAbbreviatedPath": "\/sites\/gbm\/js\/min\/jquery.mmenu.fixedelements-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

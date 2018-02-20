@@ -7,10 +7,17 @@
  * Slide-out mobile menu with sub-menu support.
  * http://mmenu.frebsite.nl
  */
+ 
+/* 
+ * Main Menu navigation.
+ */
 
 $(document).ready(function() {
 	$(".site-nav").mmenu({
 		// Options
+		navbar: {
+			title: false
+		}
 	}, {
 		// Configuration
 		clone: true,
@@ -18,8 +25,13 @@ $(document).ready(function() {
 			pageSelector: ".page"
 		},
 		classNames: {
-			selected: "active"
-		}
+			selected: "active",
+			fixedElements: {
+				fixed: "fixed",
+				sticky: "sticky"
+            }
+		},
+		
 	});
 	
 	var API = $(".site-nav").data("mmenu");
@@ -42,7 +54,38 @@ $(document).ready(function() {
 	});
 });
 
+/* 
+ * Filter/categories navigation.
+ */
 
+$(document).ready(function() {
+	$(".filters").mmenu({
+		// Options
+		navbar: {
+			title: "Filters"
+		}
+	}, {
+		// Configuration
+		clone: true,
+		offCanvas: {
+			pageSelector: ".page"
+		},
+		classNames: {
+			selected: "active"
+		}
+	});
+	
+	var API = $(".filters").data("mmenu");
+	var $icon = $(".filter-toggle");
+      
+	$icon.on("click", function() {
+		API.open();
+	});
+});
+
+$(".filter-toggle").click(function(){
+    $(".grid").toggleClass("hide-filters");
+});
 
 
 
@@ -122,10 +165,11 @@ $(function(){
    ========================================================================== */
    
 /* 
- * Filter toggle.
+ * Sticky header.
  */
 
    
+/*
 var stickyHeader = $('.page-head').offset().top;
 
 $(window).on( 'scroll', function(){
@@ -135,37 +179,23 @@ $(window).on( 'scroll', function(){
 		$('.page-head').removeClass('page-head--fixed');
 	}
 });
-    
-    
-    
-    
-    
-/* 
- * Filter toggle.
- */
+*/
 
-// media query event handler
-if (matchMedia) {
-  const mq = window.matchMedia("(min-width: 1024px)");
-  mq.addListener(WidthChange);
-  WidthChange(mq);
-}
+/*
+var stickyHeader = $('.page-head').offset().top;
+var s = $(".page-head"),
+	navHeight = s.height();
 
-// media query change
-function WidthChange(mq) {
-  if (mq.matches) {
-    $(".filter-toggle").click(function(){
-	    $(".grid").toggleClass("hide-filters");
-	});
-  } else {
-    $(".filter-toggle").click(function(){
-	    $(".filters").toggleClass("open");
-	});
-  }
-
-}
-
-
+$(window).on( 'scroll', function(){
+	if ($(window).scrollTop() >= stickyHeader) {
+		$('.page-head').addClass('page-head--fixed');
+		$('body').css('marginTop', navHeight);
+	} else {
+		$('.page-head').removeClass('page-head--fixed');
+		$('body').css('marginTop', '0');
+	}
+});
+*/
 
 
 

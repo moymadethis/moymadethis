@@ -17,7 +17,7 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
 		<link rel="stylesheet" type="text/css" href="css/slick.css" />
 
 		<!-- Favicon -->
@@ -75,7 +75,7 @@
 				
 				<nav class="site-nav">
 					<ul class="site-nav__list">
-						<li class="site-nav__item"><a href="index.html" class="site-nav__link site-nav__link--home">Home</a></li>
+						<li class="site-nav__item site-nav__item--home"><a href="index.html" class="site-nav__link site-nav__link--home">Home</a></li>
 						<li class="site-nav__item has-megamenu"><span class="site-nav__link">Meat</span>
 							<div class="site-nav__megamenu">
 								<ul class="site-nav__sub-list">
@@ -102,8 +102,12 @@
 			</header>
 			
 			<div class="masthead">
-				<h1 class="masthead__title">Beef</h1>
-				<p class="masthead__copy">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<div class="wrap">
+					
+					<h1 class="masthead__title">Beef</h1>
+					<p class="masthead__copy">We're really proud of our beef here at Great British Meat Company. It's sourced from beef herds, raised by award winning independent farmers, near to us here on the lovely grasslands of Northern England. Working with independent farmers and abattoirs means we pay a fair price to the farmer, cutting out the middle-men, and we are able to get it produced to our exact specification. We then age it for up to four weeks in a temperature controlled ageing room, where it slowly looses moisture, develops flavour and becomes more and more tender. This gives our beef a natural sweetness, and because we butcher it ourselves, we can ensure only the best cuts make it to your plate.</p>
+					
+				</div>
 			</div>
 			
 			<div class="band">
@@ -119,49 +123,59 @@
 					<div class="filter-controls">
 						<span class="btn filter-toggle"><svg class="icon icon--settings"><use xlink:href="img/sprite/sprite.svg#icon-settings"></use></svg> Show/hide filter</span>
 						<select>
-							<option>Popular</option>
-							<option>Best Sellers</option>
-							<option>Price: low to high</option>
 							<option>Price height to low</option>
+							<option>Price: low to high</option>
+							<option>Saving</option>
+							<option>Popularity</option>
+							<option>Alphabetically</option>
 						</select>
 					</div>
 					
 					<div class="grid filter-grid">
 						
-						<div class="grid__item one-quarter filter-grid__filters">					
-								
-							<nav class="filters accordion">
-							
-								<div class="accordion__item">						
-									<h3 class="filters__title accordion__title">Type of meat <span class="accordion__title-icon"></span></h3>
-									<ul class="filters__list accordion__panel">
-										<li class="filters__item"><a class="filters__link">Bulk Buys</a></li>
-										<li class="filters__item"><a class="filters__link">Beef</a></li>
-										<li class="filters__item"><a class="filters__link">Lamb</a></li>
-										<li class="filters__item"><a class="filters__link">Chicken</a></li>
-										<li class="filters__item"><a class="filters__link">Pork</a></li>
-										<li class="filters__item"><a class="filters__link">Poultry</a></li>
-										<li class="filters__item"><a class="filters__link">Sausage</a></li>
-										<li class="filters__item"><a class="filters__link">Bacon</a></li>
-										<li class="filters__item"><a class="filters__link">Deli</a></li>
-										<li class="filters__item"><a class="filters__link">BBQ Packs</a></li>
-										<li class="filters__item"><a class="filters__link">Hampers</a></li>
-									</ul>
+						<div class="grid__item one-quarter filter-grid__filters">	
+
+							<nav class="filters">
+								<div class="filters__wrap">
+									
+									<div class="filters__panel">
+										<h3 class="filters__title">Meat <a href="#" class="filters__clear">Clear</a></h3>
+										<ul class="filters__list">
+											<li class="filters__item"><a class="filters__link">Bulk Buys</a></li>
+											<li class="filters__item"><a class="filters__link">Beef</a></li>
+											<li class="filters__item"><a class="filters__link">Lamb</a></li>
+											<li class="filters__item"><a class="filters__link">Chicken</a></li>
+											<li class="filters__item"><a class="filters__link">Pork</a></li>
+											<li class="filters__item"><a class="filters__link">Poultry</a></li>
+											<li class="filters__item"><a class="filters__link">Sausage</a></li>
+											<li class="filters__item"><a class="filters__link">Bacon</a></li>
+											<li class="filters__item"><a class="filters__link">Deli</a></li>
+										</ul>
+									</div>
+									
+									<div class="filters__panel">
+										<h3 class="filters__title">Type <a href="#" class="filters__clear">Clear</a></h3>
+										<ul class="filters__list">
+											<li class="filters__item"><a class="filters__link">Bulk Buys</a></li>
+											<li class="filters__item"><a class="filters__link">BBQ Packs</a></li>
+											<li class="filters__item"><a class="filters__link">Hampers</a></li>
+											<li class="filters__item"><a class="filters__link">Lean Meats</a></li>
+											<li class="filters__item"><a class="filters__link">Freezer Boxes</a></li>
+										</ul>
+									</div>
+									
+									<div class="filters__panel">
+										<h3 class="filters__title">Occasion <a href="#" class="filters__clear">Clear</a></h3>
+										<ul class="filters__list">
+											<li class="filters__item"><a class="filters__link">Christmas</a></li>
+											<li class="filters__item"><a class="filters__link">Easter</a></li>
+											<li class="filters__item"><a class="filters__link">Dinner Party</a></li>
+											<li class="filters__item"><a class="filters__link">BBQ</a></li>
+										</ul>
+									</div>
+									
 								</div>
-								
-								<div class="accordion__item">
-									<h3 class="filters__title accordion__title">Another category <span class="accordion__title-icon"></span></h3>
-									<ul class="filters__list accordion__panel">
-										<li class="filters__item"><a class="filters__link">Filter #1</a></li>
-										<li class="filters__item"><a class="filters__link">Filter #2</a></li>
-										<li class="filters__item"><a class="filters__link">Filter #3</a></li>
-										<li class="filters__item"><a class="filters__link">Filter #4</a></li>
-										<li class="filters__item"><a class="filters__link">Filter #5</a></li>
-									</ul>
-								</div>
-								
-							</nav>
-								
+							</nav>	
 							
 						</div>
 
@@ -321,78 +335,112 @@
 			</div>
 			
 			<footer class="page-foot">
-				<div class="wrap">
+									
+				<div class="grid">
 					
-					<div class="grid">
+					<div class="grid__item page-foot__about">
 						
-						<div class="grid__item page-foot__about">
-							
-							<h4>About Us</h4>
-							<p>So who are we? Put simply, we’re your personal butcher online. We source the best meat available in the UK, assure the strictest quality standards in the industry, and have an unrivalled commitment to delivering quality meat at an affordable price.</p>
-							
-						</div>
+						<h4>The Great British Meat Co.</h4>
+						<p>So who are we? Put simply, we’re your personal butcher online. We source the best meat available in the UK, assure the strictest quality standards in the industry, and have an unrivalled commitment to delivering quality meat at an affordable price.</p>
 						
-						<div class="grid__item page-foot__useful-links">					
+					</div>
+					
+					<div class="grid__item page-foot__useful-links">					
 
-							<div class="page-foot__item-group">
-								
-								<h4>My Account</h4>
-								<ul>
-									<li><a href="#">Login</a></li>
-									<li><a href="#">Register</a></li>
-								</ul>	
-								
-							</div>
+						<div class="page-foot__item-group">
 							
-							<div class="page-foot__item-group">
-								
-								<h4>Help</h4>
-								<ul>
-									<li><a href="#">How to order</a></li>
-									<li><a href="#">Customer service</a></li>
-									<li><a href="#">Delivery information</a></li>
-									<li><a href="#">Contact us</a></li>
-								</ul>	
-								
-							</div>
-								
+							<h4>Account</h4>
+							<ul>
+								<li><a href="#">Login</a></li>
+								<li><a href="#">Register</a></li>
+							</ul>
+
+							<h4>About Us</h4>
+							<ul>
+								<li><a href="#">Our Story</a></li>
+								<li><a href="#">Our Meat</a></li>
+								<li><a href="#">Our butchers</a></li>
+								<li><a href="#">Our farmers</a></li>
+								<li><a href="#">Affiliates & Partners</a></li>
+							</ul>
+
 						</div>
 						
-						<div class="grid__item page-foot__contact">
+						<div class="page-foot__item-group">
 							
-							<div class="page-foot__item-group">
+							<h4>Useful Info</h4>
+							<ul>
+								<li><a href="#">Delivery</a></li>
+								<li><a href="#">Returns</a></li>
+								<li><a href="#">Help & FAQs</a></li>
+								<li><a href="#">Payment</a></li>
+								<li><a href="#">Order tracking</a></li>
+								<li><a href="#">Gift vouchers</a></li>
+								<li><a href="#">Rewards</a></li>
+							</ul>	
 							
-								<h4>Contact Us</h4>
-								<ul>
-									<li><svg class="icon icon--location"><use xlink:href="img/sprite/sprite.svg#icon-location"></use></svg> Great British Meat Co.<br />
-									Unit 353a Dukesway Court<br />
-									Team Valley Trading Estate<br />
-									Gateshead<br />
-									NE11 0BH</li>
-									<li><svg class="icon icon--phone"><use xlink:href="img/sprite/sprite.svg#icon-phone"></use></svg> <a href="tel://01914489301">0191 448 9301</a></li>
-									<li><svg class="icon icon--mail"><use xlink:href="img/sprite/sprite.svg#icon-mail"></use></svg> <a href="mailto:hello@greatbritishmeat.com">hello@greatbritishmeat.com</a></li>
-								</ul>
-								
-							</div>
+						</div>
 							
-							<div class="page-foot__item-group">
+					</div>
+					
+					<div class="grid__item page-foot__contact">
+						
+						<div class="page-foot__item-group">
+						
+							<h4>Contact Us</h4>
+							<ul>
+								<li><svg class="icon icon--location"><use xlink:href="img/sprite/sprite.svg#icon-location"></use></svg> Great British Meat Co.<br />
+								Unit 353a Dukesway Court<br />
+								Team Valley Trading Estate<br />
+								Gateshead<br />
+								NE11 0BH</li>
+								<li><svg class="icon icon--phone"><use xlink:href="img/sprite/sprite.svg#icon-phone"></use></svg> <a href="tel://01914489301">0191 448 9301</a></li>
+								<li><svg class="icon icon--mail"><use xlink:href="img/sprite/sprite.svg#icon-mail"></use></svg> <a href="mailto:hello@greatbritishmeat.com">hello@greatbritishmeat.com</a></li>
+							</ul>
 							
-								<h4>Be Social</h4>
-								<ul class="social-list">
-									<li><a href="#"><svg class="icon icon--facebook"><use xlink:href="img/sprite/sprite.svg#icon-facebook"></use></svg></a></li>
-									<li><a href="#"><svg class="icon icon--twitter"><use xlink:href="img/sprite/sprite.svg#icon-twitter"></use></svg></a></li>
-									<li><a href="#"><svg class="icon icon--instagram"><use xlink:href="img/sprite/sprite.svg#icon-instagram"></use></svg></a></li>
-									<li><a href="#"><svg class="icon icon--google"><use xlink:href="img/sprite/sprite.svg#icon-google"></use></svg></a></li>
-									<li><a href="#"><svg class="icon icon--youtube"><use xlink:href="img/sprite/sprite.svg#icon-youtube"></use></svg></a></li>
-								</ul>
-							
-							</div>
-							
+						</div>
+						
+						<div class="page-foot__item-group">
+						
+							<h4>Be Social</h4>
+							<ul class="social-list">
+								<li><a href="#"><svg class="icon icon--facebook"><use xlink:href="img/sprite/sprite.svg#icon-facebook"></use></svg></a></li>
+								<li><a href="#"><svg class="icon icon--twitter"><use xlink:href="img/sprite/sprite.svg#icon-twitter"></use></svg></a></li>
+								<li><a href="#"><svg class="icon icon--instagram"><use xlink:href="img/sprite/sprite.svg#icon-instagram"></use></svg></a></li>
+								<li><a href="#"><svg class="icon icon--google"><use xlink:href="img/sprite/sprite.svg#icon-google"></use></svg></a></li>
+								<li><a href="#"><svg class="icon icon--youtube"><use xlink:href="img/sprite/sprite.svg#icon-youtube"></use></svg></a></li>
+							</ul>
+						
 						</div>
 						
 					</div>
-										
+					
 				</div>
+				
+				<div class="footnote">
+					
+					<ul class="footnote__logos">
+						<li><img src="img/content/payment-logos/paypal.svg" /></li>
+						<li><img src="img/content/payment-logos/stripe.svg" /></li>
+						<li><img src="img/content/payment-logos/visa.svg" /></li>
+						<li><img src="img/content/payment-logos/mastercard.svg" /></li>
+						<li><img src="img/content/payment-logos/maestro.svg" /></li>
+						<li><img src="img/content/payment-logos/solo.svg" /></li>
+						<li><img src="img/content/payment-logos/american-express.svg" /></li>
+						<li><img src="img/content/payment-logos/diners-club.svg" /></li>
+						<li><img src="img/content/payment-logos/jcb.svg" /></li>
+					</ul>
+					
+					<ul class="footnote__legal">
+						<li class="copyright">©Copyright <a href="#">Great British Meat Co.</a> 2018. All Rights Reserved</li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Sitemap</a></li>
+						<li><a href="#">Cookies</a></li>
+					</ul>
+					
+				</div>
+										
 			</footer>
 							
 		</div>
@@ -401,7 +449,8 @@
 		<script src="js/modernizr-3.5.0.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/jquery.mmenu.js"></script>
+        <script src="js/jquery.mmenu.all.js"></script>
+        <script src="js/jquery.mmenu.fixedelements.js"></script>
         <script src="js/jquery.uniform.js"></script>
         <script src="js/slick.min.js"></script>
 		<script src="js/svg4everybody.min.js"></script>
