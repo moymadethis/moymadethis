@@ -73,12 +73,13 @@
 				<ul class="user-nav">
 					<li class="user-nav__item"><a href="#" class="user-nav__link"><svg class="icon icon--search"><use xlink:href="img/sprite/sprite.svg#icon-search"></use></svg></a></li>
 					<li class="user-nav__item"><a href="#" class="user-nav__link"><svg class="icon icon--user"><use xlink:href="img/sprite/sprite.svg#icon-user"></use></svg></a></li>
-					<li class="user-nav__item"><a href="#" class="user-nav__link user-nav__link--basket"><svg class="icon icon--basket"><use xlink:href="img/sprite/sprite.svg#icon-basket"></use></svg> £39.99 <span class="user-nav__qty">3</span></a></li>
+					<li class="user-nav__item user-nav__item--basket"><a href="#" class="user-nav__link user-nav__link--basket"><svg class="icon icon--basket"><use xlink:href="img/sprite/sprite.svg#icon-basket"></use></svg> £39.99 <span class="user-nav__qty">3</span></a></li>
 				</ul>
 				
+				<a href="index.html" class="site-nav__home-link"><img src="img/interface/logo.svg" alt="The Great British Meat Co." class="site-nav__logo" /></a>
+				
 				<nav class="site-nav">
-					<ul class="site-nav__list">
-						<li class="site-nav__item site-nav__item--home"><a href="index.html" class="site-nav__link site-nav__link--home">Home</a></li>
+					<ul class="site-nav__list">					
 						<li class="site-nav__item has-megamenu"><span class="site-nav__link">Meat</span>
 						
 							<div class="site-nav__megamenu">
@@ -120,7 +121,7 @@
 											<div class="mosaic__caption">
 												<h2 class="mosaic__title p-name"><span class="flag p-category">Pork</span> <a href="#" class="moasic__title-link">Smoked Back Bacon</a></h2>
 												<p class="mosaic__desc e-description">British Back Bacon</p>
-												<p class="value"><del>£4.95</del> <data class="p-price" value="4.05">£4.05</data></p>
+												<p class="mosaic__value"><del>£4.95</del> <data class="p-price" value="4.05">£4.05</data></p>
 												<a href="#" class="btn">Add to Cart</a>
 											</div>
 										</li>
@@ -131,7 +132,7 @@
 											<div class="mosaic__caption">
 												<h2 class="mosaic__title p-name"><span class="flag p-category">Beef</span> <a href="#" class="moasic__title-link">Sirloin Steaks</a></h2>
 												<p class="mosaic__desc e-description">2 x 227g/8oz Steaks</p>
-												<p class="value"><del>£12.80</del> <data class="p-price" value="11.60">£11.60</data></p>
+												<p class="mosaic__value"><del>£12.80</del> <data class="p-price" value="11.60">£11.60</data></p>
 												<a href="#" class="btn">Add to Cart</a>
 											</div>
 										</li>
@@ -142,7 +143,7 @@
 											<div class="mosaic__caption">
 												<h2 class="mosaic__title p-name"><span class="flag p-category">Beef</span> <a href="#" class="moasic__title-link">Silverside Joint</a></h2>
 												<p class="mosaic__desc e-description">1kg (serves 2-4)</p>
-												<p class="value"><del>£12.00</del> <data class="p-price" value="6.77">£6.77</data></p>
+												<p class="mosaic__value"><del>£12.00</del> <data class="p-price" value="6.77">£6.77</data></p>
 												<a href="#" class="btn">Add to Cart</a>
 											</div>
 										</li>
@@ -163,61 +164,25 @@
 				
 			</header>
 			
-<!--
 			<div class="band">
 				<div class="wrap">
 					
 					<div class="grid">
 						
-						<div class="grid__item">
+						<div class="grid__item two-thirds">
 							
-							<div class="slick">
-								<li>
-									<a href="#">
-										<figure class="promo">
-											<figcaption class="promo__caption">
-												<h2 class="promo__caption-title">First promo in slideshow</h2>
-												<p class="promo__caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-												<span class="promo__caption__link btn">Buy Now</span>
-											</figcaption>
-											<img src="img/temp/promo-images/promo-wide-1.jpg" alt="ALT TEXT" class="promo__image" />
-										</figure>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<figure class="promo">
-											<figcaption class="promo__caption">
-												<h2 class="promo__caption-title">Second slideshow promo</h2>
-												<p class="promo__caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-												<span class="promo__caption__link btn">Find Out More</span>
-											</figcaption>
-											<img src="img/temp/promo-images/promo-wide-2.jpg" alt="ALT TEXT" class="promo__image" />
-										</figure>
-									</a>
-								</li>
-							</div>
-							
-						</div>
-						
-						<div class="grid__item one-half">
-							<figure class="promo">
-								<figcaption class="promo__caption">
-									<h3 class="promo__caption-title">Secondary promo</h3>
-									<p class="promo__caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-								</figcaption>
-								<img src="img/temp/promo-images/promo-half-1.jpg" alt="ALT TEXT" class="promo__image" />
+							<figure>
+								<img src="img/temp/promo-test.jpg" alt="ALT TEXT" />
 							</figure>
+							
 						</div>
 						
-						<div class="grid__item one-half">
-							<figure class="promo">
-								<figcaption class="promo__caption">
-									<h3 class="promo__caption-title">Secondary promo</h3>
-									<p class="promo__caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-									<span class="promo__caption__link btn">Watch the Video</span>
-								</figcaption>
-								<img src="img/temp/promo-images/promo-half-2.jpg" alt="ALT TEXT" class="promo__image" />
+						<div class="grid__item one-third">
+							<figure>
+								<img src="img/temp/promo-test.jpg" alt="ALT TEXT" />
+							</figure>
+							<figure>
+								<img src="img/temp/promo-test.jpg" alt="ALT TEXT" />
 							</figure>
 						</div>
 						
@@ -225,7 +190,6 @@
 					
 				</div>
 			</div>
--->
 			
 			<div class="band">
 				<div class="wrap">
@@ -245,7 +209,7 @@
 									<span class="flag p-category">Special Offer</span>
 									<h2 class="mosaic__title p-name"><a href="#" class="moasic__title-link">Smoked Back Bacon</a></h2>
 									<p class="mosaic__desc e-description">British Back Bacon</p>
-									<p class="value"><del>£4.95</del> <data class="p-price" value="4.05">£4.05</data></p>
+									<p class="mosaic__value"><del>£4.95</del> <data class="p-price" value="4.05">£4.05</data></p>
 									<a href="#" class="btn">Add to Cart</a>
 								</div>
 							</div>
@@ -259,7 +223,7 @@
 									<span class="flag p-category">Limited Stock</span>
 									<h2 class="mosaic__title p-name"><a href="#" class="moasic__title-link">Sirloin Steaks</a></h2>
 									<p class="mosaic__desc e-description">2 x 227g/8oz Steaks</p>
-									<p class="value"><del>£12.80</del> <data class="p-price" value="11.60">£11.60</data></p>
+									<p class="mosaic__value"><del>£12.80</del> <data class="p-price" value="11.60">£11.60</data></p>
 									<a href="#" class="btn">Add to Cart</a>
 								</div>
 							</div>
@@ -272,7 +236,7 @@
 								<div class="mosaic__caption">
 									<h2 class="mosaic__title p-name"><a href="#" class="moasic__title-link">Silverside Joint</a></h2>
 									<p class="mosaic__desc e-description">1kg (serves 2-4)</p>
-									<p class="value"><del>£12.00</del> <data class="p-price" value="6.77">£6.77</data></p>
+									<p class="mosaic__value"><del>£12.00</del> <data class="p-price" value="6.77">£6.77</data></p>
 									<a href="#" class="btn">Add to Cart</a>
 								</div>
 							</div>
@@ -285,7 +249,7 @@
 								<div class="mosaic__caption">
 									<h2 class="mosaic__title p-name">Lamb</span> <a href="#" class="moasic__title-link">Lamb Shanks</a></h2>
 									<p class="mosaic__desc e-description">2 x 454g/16oz</p>
-									<p class="value"><del>£12.00</del> <data class="p-price" value="10.00">£10.00</data></p>
+									<p class="mosaic__value"><del>£12.00</del> <data class="p-price" value="10.00">£10.00</data></p>
 									<a href="#" class="btn">Add to Cart</a>
 								</div>
 							</div>
@@ -298,7 +262,7 @@
 								<div class="mosaic__caption">
 									<h2 class="mosaic__title p-name">Lamb</span> <a href="#" class="moasic__title-link">Lamb Leg Boneless</a></h2>
 									<p class="mosaic__desc e-description">900g serves 3-4 people</p>
-									<p class="value"><del>£20.25</del> <data class="p-price" value="12.50">£12.50</data></p>
+									<p class="mosaic__value"><del>£20.25</del> <data class="p-price" value="12.50">£12.50</data></p>
 									<a href="#" class="btn">Add to Cart</a>
 								</div>
 							</div>
@@ -311,7 +275,7 @@
 								<div class="mosaic__caption">
 									<h2 class="mosaic__title p-name"><a href="#" class="moasic__title-link">Racks of Lamb</a></h2>
 									<p class="mosaic__desc e-description">2 x 3-bone racks (170g/6oz)</p>
-									<p class="value"><del>£14.00</del> <data class="p-price" value="12.00">£12.00</data></p>
+									<p class="mosaic__value"><del>£14.00</del> <data class="p-price" value="12.00">£12.00</data></p>
 									<a href="#" class="btn">Add to Cart</a>
 								</div>
 							</div>
@@ -375,7 +339,7 @@
 				</div>
 			</div>
 			
-			<div class="band newsletter">
+			<div class="newsletter">
 				<div class="wrap">
 					
 					<div class="newsletter__hgroup">

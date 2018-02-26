@@ -2177,6 +2177,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/sites\/gbm\/img\/content\/chilled-delivery-diagram.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 84232,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/content\/chilled-delivery-diagram.png",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/content\/chilled-delivery-diagram.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/sites\/gbm\/img\/site\/apple-touch-icon-114x114-precomposed.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2419,6 +2430,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/sites\/gbm\/img\/temp\/promo-test.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18999,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/promo-test.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/promo-test.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/sites\/gbm\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2561,6 +2583,37 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sites\/gbm\/product-index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sites\/whco\/img\/bg-wide.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.123e+06,
+		"inputAbbreviatedPath": "\/sites\/whco\/img\/bg-wide.jpg",
+		"outputAbbreviatedPath": "\/sites\/whco\/img\/bg-wide.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/whco\/img\/logo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 71746,
+		"inputAbbreviatedPath": "\/sites\/whco\/img\/logo.jpg",
+		"outputAbbreviatedPath": "\/sites\/whco\/img\/logo.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/whco\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/whco\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
