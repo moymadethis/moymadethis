@@ -17,6 +17,17 @@ $(document).ready(function() {
 		// Options
 		navbar: {
 			title: false
+		},
+		navbars: {
+			"position": "top",
+			"content": [
+				"searchfield"
+			]
+		},
+		"searchfield": {
+            "panel": true,
+            "showSubPanels": false,
+            "showTextItems": true
 		}
 	}, {
 		// Configuration
@@ -58,7 +69,6 @@ $(document).ready(function() {
  * Filter/categories navigation.
  */
 
-/*
 $(document).ready(function() {
 	$(".filters").mmenu({
 		// Options
@@ -77,72 +87,18 @@ $(document).ready(function() {
 	});
 	
 	var API = $(".filters").data("mmenu");
-	var $icon = $(".filter-toggle");
+	var $icon = $(".filter-toggle--mobile");
       
 	$icon.on("click", function() {
 		API.open();
 	});
 });
-*/
 
 
 
-// Testing media queries with jQuery
-// Using matchMedia
-// By Ravenous - July, 2014
-
-
-(function($) {
-	
-	/*
-	* We need to turn it into a function.
-	* To apply the changes both on document ready and when we resize the browser.
-	*/
-	
-	function mediaSize() { 
-		/* Set the matchMedia */
-		if (window.matchMedia('(min-width: 1024px)').matches) {
-		/* Changes when we reach the min-width  */
-		
-			$(".filter-toggle").click(function(){
-			    $(".grid").toggleClass("hide-filters");
-			});
-
-		} else {
-		/* Reset for CSS changes – Still need a better way to do this! */
-		
-			$(".filters").mmenu({
-				// Options
-				navbar: {
-					title: "Filters"
-				}
-			}, {
-				// Configuration
-				clone: true,
-				offCanvas: {
-					pageSelector: ".page"
-				},
-				classNames: {
-					selected: "active"
-				}
-			});
-			
-			var API = $(".filters").data("mmenu");
-			var $icon = $(".filter-toggle");
-		      
-			$icon.on("click", function() {
-				API.open();
-			});
-			
-		}
-	};
-	
-	/* Call the function */
-  mediaSize();
-  /* Attach the function to the resize event listener */
-	window.addEventListener('resize', mediaSize, false);  
-	
-})(jQuery);
+$(".filter-toggle--desktop").click(function(){
+    $(".grid").toggleClass("show-filters");
+});
 
 
 
