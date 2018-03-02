@@ -17,7 +17,6 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
 		<link rel="stylesheet" type="text/css" href="css/slick.css" />
 
 		<!-- Favicon -->
@@ -163,22 +162,26 @@
 							
 							<form>
 								
-								<table>
+								<table class="table-solid">
 									<tbody>
 										<tr>
 											<td>2 x 227g/8oz Steaks</td>
-											<td></td>
 											<td>£11.60</td>
 											<td>
-												<input type="radio" checked />
+												<label class="control control--radio">
+													<input type="radio" checked="checked" name="product-choice" />
+													<div class="control__indicator"></div>
+											    </label>
 											</td>
 										</tr>
 										<tr>
-											<td>5 x 227g/8oz Steaks</td>
-											<td>Most Popular</td>
+											<td>5 x 227g/8oz Steaks <div class="flag">Most Popular</div></td>
 											<td>£20.00</td>
 											<td>
-												<input type="radio" />
+												<label class="control control--radio">
+													<input type="radio"  name="product-choice" />
+													<div class="control__indicator"></div>
+											    </label>
 											</td>
 										</tr>
 									</tbody>
@@ -190,7 +193,7 @@
 									<button class="qty__up"><svg class="icon icon--location"><use xlink:href="img/sprite/sprite.svg#icon-plus"></use></svg></button>
 								</div>
 								
-								<button class="btn">Add to Basket</button>
+								<button class="btn btn--large btn--wide">Add to Basket</button>
 								
 							</form>
 							
@@ -211,9 +214,11 @@
 								<li>Free delivery on orders over £50</li>
 								<li>Choose a delivery date that suits you</li>
 							</ul>
+<!--
 							<figure class="align-center">
 								<img src="img/content/chilled-delivery-diagram.png" alt="Chilled delivery packaging" />
 							</figure>
+-->
 						</div>
 						
 					</div>					
@@ -451,8 +456,6 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/jquery.mmenu.all.js"></script>
-        <script src="js/jquery.mmenu.fixedelements.js"></script>
-        <script src="js/jquery.uniform.js"></script>
         <script src="js/slick.min.js"></script>
 		<script src="js/svg4everybody.min.js"></script>
 		<script src="js/stickyfill.min.js"></script>

@@ -97,23 +97,9 @@ $(document).ready(function() {
 
 
 $(".filter-toggle--desktop").click(function(){
-    $(".grid").toggleClass("show-filters");
+	$(this).toggleClass("active");
+	 $(".grid").toggleClass("show-filters");
 });
-
-
-
-
-
-/* ==========================================================================
-   #UNIFORM (plugin)
-   ========================================================================== */
-   
-/* 
- * Slide-out mobile menu with sub-menu support.
- * http://opensource.audith.org/uniform/
- */
- 
-$("select, input[type='file'], input[type='checkbox'], input[type='radio']").uniform({selectAutoWidth: false, fileButtonClass: 'btn'});
 
 
 
@@ -183,50 +169,31 @@ $(function(){
  * Sticky header.
  */
 
-   
-/*
-var stickyHeader = $('.page-head').offset().top;
+document.addEventListener('DOMContentLoaded', function() {
 
-$(window).on( 'scroll', function(){
-	if ($(window).scrollTop() >= stickyHeader) {
-		$('.page-head').addClass('page-head--fixed');
-	} else {
-		$('.page-head').removeClass('page-head--fixed');
-	}
-});
-*/
+	var mn = $('.page-head'),
+	core = $('.page-head + .band'), // Only target first `.band`.
+	mns = 'page-head--fixed',
+	bit, hdr;
 
-/*
-var stickyHeader = $('.page-head').offset().top;
-var s = $(".page-head"),
-	navHeight = s.height();
+	$(window).resize(function() {
+	
+		bit = mn.outerHeight();
+		hdr = $('.info-bar').outerHeight();
+	})
+	
+	.resize().scroll(function() {
 
-$(window).on( 'scroll', function(){
-	if ($(window).scrollTop() >= stickyHeader) {
-		$('.page-head').addClass('page-head--fixed');
-		$('body').css('marginTop', navHeight);
-	} else {
-		$('.page-head').removeClass('page-head--fixed');
-		$('body').css('marginTop', '0');
-	}
-});
-*/
-
-
-
-/* 
- * Simple accordion.
- */
- 
-$(document).ready(function($) {
-	// Add class of `.open` to first `.accordion__title` as it is set to `display: block` in CSS.
-	//$('.accordion__item:first-child .accordion__title').addClass('open');
-	// Accordion fuctions.
-	$('.accordion').find('.accordion__title').click(function(){
-		// Add class to title.
-		//$(this).toggleClass('open');
-		//Expand or collapse this panel.
-		$(this).next().slideToggle('fast');
+		if ($(this).scrollTop() > hdr) {
+			mn.addClass(mns);
+			core.css('margin-top', bit);
+		} else {
+			mn.removeClass(mns);
+			core.attr('style', '');
+		}
+	})
+	
+	.on('load', function() {
+		$(this).scroll();
 	});
 });
-        

@@ -1717,6 +1717,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/sites\/gbm\/basket.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/basket.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/sites\/gbm\/blog-index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1726,11 +1735,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/sites\/gbm\/css\/jquery.mmenu.all.css": {
-		"fileType": 16,
+	"\/sites\/gbm\/blog-post.html": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sites\/gbm\/css\/jquery.mmenu.all.css",
+		"inputAbbreviatedPath": "\/sites\/gbm\/blog-post.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1744,14 +1753,16 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/sites\/gbm\/css\/slick.css": {
-		"fileType": 16,
+	"\/sites\/gbm\/favicon.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sites\/gbm\/css\/slick.css",
-		"outputAbbreviatedPath": "No Output Path",
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/favicon.png",
+		"outputAbbreviatedPath": "\/sites\/gbm\/favicon.png",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/sites\/gbm\/img\/content\/chilled-delivery-diagram.png": {
 		"fileType": 32768,
@@ -1984,13 +1995,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/sites\/gbm\/img\/temp\/promo-test.jpg": {
+	"\/sites\/gbm\/img\/temp\/promo-images\/promo-16-9.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 18999,
-		"inputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/promo-test.jpg",
-		"outputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/promo-test.jpg",
+		"initialSize": 12919,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/promo-images\/promo-16-9.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/promo-images\/promo-16-9.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/temp\/promo-images\/promo-letterbox.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18067,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/promo-images\/promo-letterbox.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/promo-images\/promo-letterbox.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2137,6 +2159,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sites\/gbm\/product-index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sites\/gbm\/search-results.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/search-results.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

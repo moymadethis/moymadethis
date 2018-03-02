@@ -17,8 +17,6 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
-		<link rel="stylesheet" type="text/css" href="css/slick.css" />
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" type="image/ico" href="favicon.ico">
@@ -137,7 +135,7 @@
 				
 			</header>
 			
-			<div class="masthead">
+			<div class="band masthead">
 				<div class="wrap wrap--narrow">
 					
 					<h1 class="masthead__title">Beef</h1>
@@ -150,22 +148,33 @@
 				<div class="wrap">
 					
 					<ul class="crumbs">
-						<li class="crumbs__item"><a href="#"  class="crumbs__link">Home</a></li>
+						<li class="crumbs__item"><a href="#" class="crumbs__link">Home</a></li>
 						<li class="crumbs__item"><a href="#" class="crumbs__link">Meat</a></li>
 						<li class="crumbs__item">Beef</li>
 					</ul>
 					
 					
 					<div class="filter-controls">
-						<span class="btn btn--neutral filter-toggle filter-toggle--mobile"><svg class="icon icon--settings"><use xlink:href="img/sprite/sprite.svg#icon-settings"></use></svg> Filters</span>
-						<span class="btn btn--neutral filter-toggle filter-toggle--desktop"><svg class="icon icon--settings"><use xlink:href="img/sprite/sprite.svg#icon-settings"></use></svg> Filters</span>
-						<select>
-							<option>Price height to low</option>
-							<option>Price: low to high</option>
-							<option>Saving</option>
-							<option>Popularity</option>
-							<option>Alphabetically</option>
-						</select>
+						<a class="btn btn--neutral filter-toggle filter-toggle--mobile"><svg class="icon icon--settings"><use xlink:href="img/sprite/sprite.svg#icon-settings"></use></svg>
+							<span>Show filters</span>
+							<span>Hide filters</span>
+						</a>
+					
+						<a class="btn btn--neutral filter-toggle filter-toggle--desktop"><svg class="icon icon--settings"><use xlink:href="img/sprite/sprite.svg#icon-settings"></use></svg>
+							<span>Show filters</span>
+							<span>Hide filters</span>
+						</a>
+						
+						<div class="select">
+							<select>
+								<option>Price height to low</option>
+								<option>Price: low to high</option>
+								<option>Saving</option>
+								<option>Popularity</option>
+								<option>Alphabetically</option>
+							</select>
+						</div>
+						
 					</div>
 					
 					<div class="grid filter-grid">
@@ -519,8 +528,6 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/jquery.mmenu.all.js"></script>
-        <script src="js/jquery.mmenu.fixedelements.js"></script>
-        <script src="js/jquery.uniform.js"></script>
         <script src="js/slick.min.js"></script>
 		<script src="js/svg4everybody.min.js"></script>
 		<script src="js/stickyfill.min.js"></script>

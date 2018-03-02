@@ -4,7 +4,7 @@
 
 	<head>
 
-		<title>Blog Index &middot; GBM</title>
+		<title>Basket &middot; GBM</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -135,184 +135,112 @@
 				
 			</header>
 			
-			<div class="band masthead">
-				<div class="wrap warp--narrow">
-					
-					<h1 class="masthead__title">Recipes & Tips</h1>
-					<p class="masthead__text">Get the most out of your meat with our delicious recipes, smart cooking tips and exclusive interviews on the Great British Meat Co. blog.</p>
-					
-				</div>
-			</div>
-			
 			<div class="band">
 				<div class="wrap">
 					
-					<ul class="crumbs">
-						<li class="crumbs__item"><a href="#"  class="crumbs__link">Home</a></li>
-						<li class="crumbs__item">Blog</li>
-					</ul>
-					
-					
-					<div class="filter-controls">
-						<a class="btn btn--neutral filter-toggle filter-toggle--mobile"><svg class="icon icon--settings"><use xlink:href="img/sprite/sprite.svg#icon-settings"></use></svg>
-							<span>Show filters</span>
-							<span>Hide filters</span>
-						</a>
-						<a class="btn btn--neutral filter-toggle filter-toggle--desktop"><svg class="icon icon--settings"><use xlink:href="img/sprite/sprite.svg#icon-settings"></use></svg>
-							<span>Show filters</span>
-							<span>Hide filters</span>
-						</a>
+					<div class="hgroup align-center">
+						<h1>Your Basket</h1>
 					</div>
 					
-					<div class="grid filter-grid">
+					<form class="basket-form">
 						
-						<div class="grid__item one-fifth filter-grid__filters">	
-
-							<nav class="filters">
-								<div class="filters__wrap">
-									
-									<div class="filters__panel">
-										<h3 class="filters__title">Category <a href="#" class="filters__clear">Clear</a></h3>
-										<ul class="filters__list">
-											<li class="filters__item"><a class="filters__link">News</a></li>
-											<li class="filters__item"><a class="filters__link">Recipes</a></li>
-											<li class="filters__item"><a class="filters__link">Tips</a></li>
-											<li class="filters__item"><a class="filters__link">Misc</a></li>
-										</ul>
-									</div>
-									
-								</div>
-							</nav>	
-							
-						</div>
-
-						<div class="grid__item four-fifths filter-grid__content">
-							
-							<ul class="mosaic h-feed">
-								<li class="mosaic__item h-entry">
-									<a href="#" class="mosaic__link">
-										<div class="mosaic__image-wrap">
-											<img src="img/temp/blog-images/thumbs/how-to-cook-a-rib-of-beef.jpg" class="mosaic__image u-featured" alt="ALT TEXT" />
+						<table class="basket">
+							<thead class="basket__head">
+								<tr>
+									<th colspan="2">Item</th>
+									<th>Qty</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody class="basket__body">
+								<tr class="h-product">
+									<td class="basket__image">
+										<img src="img/temp/product-images/thumbs/beef-sirloin-steak.jpg" alt="ALT TEXT" class="u-photo" />
+									</td>
+									<td class="basket__desc">
+										<h2 class="p-name">Sirloin Steaks</h2>
+										<p class="e-description">2 x 227g/8oz Steaks</p>
+										<p class="p-price">£11.60</p>
+									</td>
+									<td class="basket__qty">
+										<div class="qty qty--small">
+											<button class="qty__down"><svg class="icon icon--location"><use xlink:href="img/sprite/sprite.svg#icon-minus"></use></svg></button>
+											<input type="text" value="2" class="text-input qty__input" />
+											<button class="qty__up"><svg class="icon icon--location"><use xlink:href="img/sprite/sprite.svg#icon-plus"></use></svg></button>
+											<a href="#" class="qty__remove">Remove</a>
 										</div>
-										<div class="mosaic__caption">
-											<p class="meta"><span class="flag p-category">Tips</span><time class="dt-published" datetime="2017-09-01 07:45:31">1 Sep 2017</time></p>
-											<h2 class="mosaic__title p-name">How to cook and carve a rib of beef</h2>
-											<p class="mosaic__desc p-summary">Bone-in rib of beef is a rolls-royce cut, and the default choice for butchers and chefs when roasting a joint for a special occasion...</p>
+									</td>
+									<td class="basket__price">
+										<p><strong>£23.20</strong></p>
+									</td>
+								</tr>
+								<tr class="h-product">
+									<td class="basket__image">
+										<img src="img/temp/product-images/thumbs/beef-silverside.jpg" alt="ALT TEXT" class="u-photo" />
+									</td>
+									<td class="basket__desc">
+										<h2 class="p-name">Silverside Joint</h2>
+										<p class="e-description">1kg (serves 2-4)</p>
+										<p class="p-price">£6.77</p>
+									</td>
+									<td class="basket__qty">
+										<div class="qty qty--small">
+											<button class="qty__down"><svg class="icon icon--location"><use xlink:href="img/sprite/sprite.svg#icon-minus"></use></svg></button>
+											<input type="text" value="1" class="text-input qty__input" />
+											<button class="qty__up"><svg class="icon icon--location"><use xlink:href="img/sprite/sprite.svg#icon-plus"></use></svg></button>
+											<a href="#" class="qty__remove">Remove</a>
 										</div>
-									</a>
-								</li>
-								<li class="mosaic__item h-entry">
-									<a href="#" class="mosaic__link">
-										<div class="mosaic__image-wrap">
-											<img src="img/temp/blog-images/thumbs/lamb-chop-recipe.jpg" class="mosaic__image u-featured" alt="ALT TEXT" />
+									</td>
+									<td class="basket__price">
+										<p><strong>£6.77</strong></p>
+									</td>
+								</tr>
+								<tr class="h-product">
+									<td class="basket__image">
+										<img src="img/temp/product-images/thumbs/lamb-rack.jpg" alt="ALT TEXT" class="u-photo" />
+									</td>
+									<td class="basket__desc">
+										<h2 class="p-name">Rack of Lamb</h2>
+										<p class="e-description">2 x 3-bone racks (170g/6oz)</p>
+										<p class="p-price">£12.99</p>
+									</td>
+									<td class="basket__qty">
+										<div class="qty qty--small">
+											<button class="qty__down"><svg class="icon icon--location"><use xlink:href="img/sprite/sprite.svg#icon-minus"></use></svg></button>
+											<input type="text" value="1" class="text-input qty__input" />
+											<button class="qty__up"><svg class="icon icon--location"><use xlink:href="img/sprite/sprite.svg#icon-plus"></use></svg></button>
+											<a href="#" class="qty__remove">Remove</a>
 										</div>
-										<div class="mosaic__caption">
-											<p class="meta"><span class="flag p-category">Recipe</span><time class="dt-published" datetime="2017-09-01 07:45:31">1 Sep 2017</time></p>
-											<h2 class="mosaic__title p-name">Lamb chops with crushed new potatoes</h2>
-											<p class="mosaic__desc p-summary">There is something about eating lamb with your fingers that signals spring has sprung, and alfresco dining isn’t too far away...</p>
-										</div>
-									</a>
-								</li>
-								<li class="mosaic__item h-entry">
-									<a href="#" class="mosaic__link">
-										<div class="mosaic__image-wrap">
-											<img src="img/temp/blog-images/thumbs/how-to-cook-a-turkey.jpg" class="mosaic__image u-featured" alt="ALT TEXT" />
-										</div>
-										<div class="mosaic__caption">
-											<p class="meta"><span class="flag p-category">Tips</span><time class="dt-published" datetime="2017-09-01 07:45:31">1 Sep 2017</time></p>
-											<h2 class="mosaic__title p-name">Turkey Breast Joint Cooking Guide</h2>
-											<p class="mosaic__desc p-summary">Turkey breast joints are easy to cook, so don’t make the mistake of overcooking, so this guide will help you along the way...</p>
-										</div>
-									</a>
-								</li>
-								<li class="mosaic__item h-entry">
-									<a href="#" class="mosaic__link">
-										<div class="mosaic__image-wrap">
-											<img src="img/temp/blog-images/thumbs/how-to-cook-a-rib-of-beef.jpg" class="mosaic__image u-featured" alt="ALT TEXT" />
-										</div>
-										<div class="mosaic__caption">
-											<p class="meta"><span class="flag p-category">Tips</span><time class="dt-published" datetime="2017-09-01 07:45:31">1 Sep 2017</time></p>
-											<h2 class="mosaic__title p-name">How to cook and carve a rib of beef</h2>
-											<p class="mosaic__desc p-summary">Bone-in rib of beef is a rolls-royce cut, and the default choice for butchers and chefs when roasting a joint for a special occasion...</p>
-										</div>
-									</a>
-								</li>
-								<li class="mosaic__item h-entry">
-									<a href="#" class="mosaic__link">
-										<div class="mosaic__image-wrap">
-											<img src="img/temp/blog-images/thumbs/lamb-chop-recipe.jpg" class="mosaic__image u-featured" alt="ALT TEXT" />
-										</div>
-										<div class="mosaic__caption">
-											<p class="meta"><span class="flag p-category">Recipe</span><time class="dt-published" datetime="2017-09-01 07:45:31">1 Sep 2017</time></p>
-											<h2 class="mosaic__title p-name">Lamb chops with crushed new potatoes</h2>
-											<p class="mosaic__desc p-summary">There is something about eating lamb with your fingers that signals spring has sprung, and alfresco dining isn’t too far away...</p>
-										</div>
-									</a>
-								</li>
-								<li class="mosaic__item h-entry">
-									<a href="#" class="mosaic__link">
-										<div class="mosaic__image-wrap">
-											<img src="img/temp/blog-images/thumbs/how-to-cook-a-turkey.jpg" class="mosaic__image u-featured" alt="ALT TEXT" />
-										</div>
-										<div class="mosaic__caption">
-											<p class="meta"><span class="flag p-category">Tips</span><time class="dt-published" datetime="2017-09-01 07:45:31">1 Sep 2017</time></p>
-											<h2 class="mosaic__title p-name">Turkey Breast Joint Cooking Guide</h2>
-											<p class="mosaic__desc p-summary">Turkey breast joints are easy to cook, so don’t make the mistake of overcooking, so this guide will help you along the way...</p>
-										</div>
-									</a>
-								</li>
-								<li class="mosaic__item h-entry">
-									<a href="#" class="mosaic__link">
-										<div class="mosaic__image-wrap">
-											<img src="img/temp/blog-images/thumbs/how-to-cook-a-rib-of-beef.jpg" class="mosaic__image u-featured" alt="ALT TEXT" />
-										</div>
-										<div class="mosaic__caption">
-											<p class="meta"><span class="flag p-category">Tips</span><time class="dt-published" datetime="2017-09-01 07:45:31">1 Sep 2017</time></p>
-											<h2 class="mosaic__title p-name">How to cook and carve a rib of beef</h2>
-											<p class="mosaic__desc p-summary">Bone-in rib of beef is a rolls-royce cut, and the default choice for butchers and chefs when roasting a joint for a special occasion...</p>
-										</div>
-									</a>
-								</li>
-								<li class="mosaic__item h-entry">
-									<a href="#" class="mosaic__link">
-										<div class="mosaic__image-wrap">
-											<img src="img/temp/blog-images/thumbs/lamb-chop-recipe.jpg" class="mosaic__image u-featured" alt="ALT TEXT" />
-										</div>
-										<div class="mosaic__caption">
-											<p class="meta"><span class="flag p-category">Recipe</span><time class="dt-published" datetime="2017-09-01 07:45:31">1 Sep 2017</time></p>
-											<h2 class="mosaic__title p-name">Lamb chops with crushed new potatoes</h2>
-											<p class="mosaic__desc p-summary">There is something about eating lamb with your fingers that signals spring has sprung, and alfresco dining isn’t too far away...</p>
-										</div>
-									</a>
-								</li>
-								<li class="mosaic__item h-entry">
-									<a href="#" class="mosaic__link">
-										<div class="mosaic__image-wrap">
-											<img src="img/temp/blog-images/thumbs/how-to-cook-a-turkey.jpg" class="mosaic__image u-featured" alt="ALT TEXT" />
-										</div>
-										<div class="mosaic__caption">
-											<p class="meta"><span class="flag p-category">Tips</span><time class="dt-published" datetime="2017-09-01 07:45:31">1 Sep 2017</time></p>
-											<h2 class="mosaic__title p-name">Turkey Breast Joint Cooking Guide</h2>
-											<p class="mosaic__desc p-summary">Turkey breast joints are easy to cook, so don’t make the mistake of overcooking, so this guide will help you along the way...</p>
-										</div>
-									</a>
-								</li>
-							</ul>
-							
-							<ul class="pag">
-								<li class="pag__item pag__item--prev"><a href="#" class="pag__link pag__link--prev inactive">Previous</a></li>
-								<li class="pag__item"><a href="#" class="pag__link current">1</a></li>
-								<li class="pag__item"><a href="#" class="pag__link">2</a></li>
-								<li class="pag__item"><a href="#" class="pag__link">3</a></li>
-								<li class="pag__item"><a href="#" class="pag__link">4</a></li>
-								<li class="pag__item">...</li>
-								<li class="pag__item"><a href="#" class="pag__link">7</a></li>
-								<li class="pag__item pag__item--next"><a href="#" class="pag__link pag__link--next">Next</a></li>
-							</ul>		
-							
-						</div>
+									</td>
+									<td class="basket__price">
+										<p><strong>£12.99</strong></p>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot class="basket__foot">
+								<tr>
+									<td colspan="3">
+										<p>Shipping</p>
+									</td>
+									<td>
+										<p><strong>FREE</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<p>Total</p>
+									</td>
+									<td>
+										<p><strong>£42.96</strong></p>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
 						
-					</div>
+						<button class="btn btn--large">Checkout</button>
+						<a href="#" class="btn btn--neutral btn--large">Update Basket</a>
+						
+					</form>
 					
 				</div>
 			</div>
