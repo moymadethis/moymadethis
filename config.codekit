@@ -1717,6 +1717,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/sites\/gbm\/404.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/404.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/sites\/gbm\/basket.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1757,7 +1766,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
+		"initialSize": 137,
 		"inputAbbreviatedPath": "\/sites\/gbm\/favicon.png",
 		"outputAbbreviatedPath": "\/sites\/gbm\/favicon.png",
 		"outputPathIsOutsideProject": 0,
