@@ -1,0 +1,86 @@
+
+/*------------------------------------*\
+    #PAGINATION
+\*------------------------------------*/
+
+/**
+ * Rules for promo modules.
+ */
+ 
+.pag {
+	clear: both;
+	margin: 0 auto $vertical-spacing;
+	padding: 0;
+	text-align: center;
+}
+
+.pag__item {
+	background: none;
+	color: $grey-light;
+	display: inline-block;
+	margin: 0 $gutter / 4;
+	padding-left: 0;
+}
+
+.pag__item--prev,
+.pag__item--next {
+	position: relative;
+	top: -2px;
+	vertical-align: middle;
+}
+	
+.pag__link {
+	background-image: none;
+	color: $color-primary;
+	display: block;
+	padding: 5px;
+	text-shadow: none;
+	
+	&:visited {
+		color: $color-primary;
+	}
+	
+	&:hover,
+	&:active {
+		color: $grey-darker;
+	}
+	
+	&.current {
+		color: $grey-darker;
+		cursor: default;
+		
+		&:visited {
+			color: $grey-darker;
+		}
+	}
+}
+
+.pag__link--prev,
+.pag__link--next {
+	background: url(../img/interface/icon-chevron-left.svg) no-repeat center center;
+	background-size: 20px;
+	height: 20px;
+	margin: 0;
+	opacity: .50;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 20px;
+	
+	&:visited {
+		opacity: .50;
+	}
+	
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
+
+	&.inactive {
+		opacity: .10;
+		cursor: default;
+	}
+}
+
+.pag__link--next {
+	background-image: url(../img/interface/icon-chevron-right.svg);
+}

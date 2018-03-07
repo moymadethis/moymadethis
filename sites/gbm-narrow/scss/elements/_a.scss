@@ -1,0 +1,45 @@
+
+/* ==========================================================================
+   #COLOUR
+   ========================================================================== */
+
+/**
+ * Default anchor styling.
+ */
+
+a {
+	background: linear-gradient($color-primary 0%, $color-primary 100%);
+	background-repeat: no-repeat;
+	background-origin: padding-box;
+	background-position: center bottom 20%;
+	overflow: visible;
+	background-size: 100% 1px;
+	color: $link-color;
+	font-weight: 700;
+	padding: 5px 0;
+	text-decoration: none;
+	text-shadow: 3px 0 $white, 2px 0 $white, 1px 0 $white, -3px 0 $white, -2px 0 $white, -1px 0 $white;
+	transition: all .20s;
+	&:visited {
+		color: $link-color-visited;
+	}
+	
+	&:hover {
+		color: $link-color-hover;
+		text-decoration: none;
+	}
+	
+	&:focus {
+		outline: thin dotted;
+		color: $link-color-focus;
+	}
+	
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+	
+	&:link {
+		//transition: color .25s;
+	}
+}

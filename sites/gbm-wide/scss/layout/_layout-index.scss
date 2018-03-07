@@ -1,0 +1,205 @@
+/* Default/mandatory classes.
+   ========================================================================== */
+
+/**
+ * Grid-like layout system.
+ *
+ * 1. Fix flexbox issue in Safari where items aren't displayed in a row. Notable
+ *    On the first and last rows. This happens because Safari treats `:before`
+ *    and `:after` pseudo-elements as if they were real elements. `width: 0;`
+ *    also works.
+ */
+
+.mosaic {
+	@include clearfix;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0 0 $vertical-spacing (-$gutter / 2);
+	padding: 0;
+	
+	&:before,
+	&:after {
+		content: normal; /* [1] */
+	}
+	
+	@include bp(bp4) {
+		margin-left: -$gutter;
+	}
+}
+
+.mosaic__item {
+	background: none;
+	box-sizing: border-box;
+	display: block;
+	margin-bottom: 0;
+	padding-left: (-$gutter / 2);
+	position: relative;
+	width: 50%;
+	
+	@include bp(bp4) {
+		float: left;
+		padding-left: $gutter;
+		width: 50%;
+		
+		&:nth-child(odd) {
+			clear: left;
+		}
+	}
+	
+	@include bp(bp7) {
+		width: 33.33333%;
+		
+		&:nth-child(odd) {
+			clear: none;
+		}
+		
+		&:nth-child(3n+1) {
+			clear: left;
+		}
+	}
+}
+
+.mosaic__wrap {
+	position: relative;
+}
+
+.mosaic__link {
+	background: $white;
+	border-bottom: none;
+	display: block;
+	font-weight: 400;
+	height: 100%;
+	padding: 0;
+	transition: all .25s;
+	text-shadow: none;
+	
+	&:hover {
+		background-color: $color-primary;
+	}
+}
+
+.mosaic__image-wrap {
+	background-image: none;
+	display: block;
+	overflow: hidden;
+	padding: 0;
+	text-shadow: none;
+}
+
+.mosaic__image {
+	display: block;
+	transition: all .25s ease-out;
+	width: 100%;
+	max-width: 100%;
+	-webkit-backface-visibility: hidden;
+	
+	.mosaic__item:hover & {
+		transform: scale(1.05);
+	}
+}
+
+.mosaic__caption {
+	box-sizing: border-box;
+	color: $grey;
+	display: block;
+	overflow: hidden;
+	padding: $vertical-spacing / 2 $gutter / 2;
+	text-align: center;
+	transition: all .25s;
+	
+	.mosaic__link:hover & {
+		color: lighten($color-primary,50%);
+	}
+	
+	@include bp(bp4) {
+		padding: $vertical-spacing $gutter;
+	}
+}
+
+.mosaic__title {
+	color: $grey-darker;
+	@include font-size(15);
+	margin-bottom: $vertical-spacing / 4;
+	transition: all .20s;
+	
+	a {
+		background-image: none;
+		font-weight: $heading-font-weight;
+		text-shadow: none;
+	}
+	
+	@include bp(bp3) {
+		@include font-size(20);
+	}
+	
+	.mosaic__link:hover & {
+		color: $white;
+	}
+}
+
+.mosaic__desc {
+	margin-bottom: $vertical-spacing / 4;
+}
+
+.mosaic__value {
+	margin-bottom: $vertical-spacing / 2;
+	
+	.p-price {
+		color: $grey-darker;
+		font-weight: 700;
+		margin-left: 5px;
+	}
+}
+
+.meta {
+	color: $grey-light;
+	font-family: $alt-font-family;
+	@include font-size($font-size);
+	margin-bottom: $vertical-spacing / 2;
+	text-transform: uppercase;
+	
+	.mosaic__link:hover & {
+		color: lighten($color-primary,40%);
+	}
+}
+
+.flag {
+	background: $color-primary;
+	color: $white;
+	display: inline-block;
+	font-family: $alt-font-family;
+	@include font-size(13);
+	font-weight: 700;
+	line-height: 14px;
+	margin-right: 5px;
+	padding: 5px 8px;
+	position: relative;
+	text-transform: uppercase;
+	transition: background .25s;
+	
+	.mosaic__link:hover & {
+		background: $black;
+	}
+	
+	.h-product & {
+		position: absolute;
+		top: $vertical-spacing / 2;
+		left: -10px;
+	}
+}
+
+a.flag {
+	background-image: none;
+	text-shadow: none;
+	
+	&:visited {
+		color: $white;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: $link-color-hover;
+		color: $white;
+	}
+}

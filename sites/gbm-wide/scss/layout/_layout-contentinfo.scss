@@ -1,0 +1,229 @@
+
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+/**
+ * Website footer.
+ */
+ 
+.page-foot {
+	background: $grey-darker;
+	@include clearfix;
+	color: $grey-lighter;
+	@include font-size(13);
+	padding: $vertical-spacing * 4 $gutter / 2 0;
+	
+	@include bp(bp5) {
+		padding: $vertical-spacing * 4 $gutter 0;
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: $white;
+		@include font-size(16);
+	}
+	
+	a,
+	a:visited {
+		color: $grey-lighter;
+		text-shadow: 3px 0 $grey-darker, 2px 0 $grey-darker, 1px 0 $grey-darker, -3px 0 $grey-darker, -2px 0 $grey-darker, -1px 0 $grey-darker;
+	}
+	
+	a:hover,
+	a:focus {
+		color: $white;
+	}
+	
+	ul {
+		padding-left: 0;
+	}
+	
+	li {
+		background: none;
+		padding-left: 0;
+	}
+	
+	.icon {
+		fill: $white;
+	}
+	
+	.grid__item {
+		@include clearfix;
+	}
+}
+
+/**
+ * Useful links column in footer.
+ */
+
+.page-foot__about {
+	margin-bottom: $vertical-spacing;
+	
+	@include bp(bp6) {
+		margin-bottom: 0;
+		padding-right: $gutter;
+		width: 40%;
+	}
+}
+
+.page-foot__affiliates {
+	
+	li {
+		display: inline-block;
+		margin-right: $gutter / 2;
+	}
+	
+	img {
+		height: 30px;
+		width: auto;
+		
+		@include bp(bp4) {
+			height: 50px;
+		}
+	}
+}
+
+.page-foot__useful-links {
+	margin-bottom: $vertical-spacing;
+	
+	.page-foot__item-group {
+		float: left;
+		width: 50%;
+	}
+	
+	@include bp(bp4) {
+		margin-bottom: 0;
+		width: 60%;
+	}
+	
+	@include bp(bp5) {
+		width: 50%;
+	}
+	
+	@include bp(bp6) {
+		width: 35%;
+	}
+}
+
+.page-foot__contact {
+	
+	@include bp(bp3) {
+		
+		.page-foot__item-group {
+			float: left;
+			width: 50%;
+		}
+	}
+	
+	@include bp(bp4) {
+		width: 40%;
+		
+		.page-foot__item-group {
+			float: none;
+			width: 100%;
+		}
+	}
+	
+	@include bp(bp5) {
+		width: 50%;
+		
+		.page-foot__item-group {
+			float: left;
+			width: 50%;
+		}
+	}
+	
+	@include bp(bp6) {
+		width: 25%;
+		
+		.page-foot__item-group {
+			float: none;
+			width: 100%;
+		}
+	}
+}
+
+/**
+ * Footnote.
+ */
+ 
+.footnote{
+	background: $black;
+	border-top: 1px solid lighten($grey-darker,2.5%);
+	@include clearfix;
+	margin: $vertical-spacing * 2 0 0 (-$gutter / 2);
+	padding: $vertical-spacing $gutter / 2 $vertical-spacing / 4;
+	text-align: center;
+	width: 100%;
+	
+	@include bp(bp5) {
+		margin-left: -$gutter;
+		padding: $vertical-spacing $gutter $vertical-spacing / 4;
+	}
+ }
+ 
+/**
+ * Footnote logos.
+ */
+ 
+.footnote__logos {
+	margin-bottom: $vertical-spacing / 2;
+	text-align: center;
+	
+	li {
+		display: inline-block;
+		margin: 0 4px $vertical-spacing / 4;
+	}
+	
+	img {
+		height: 20px;
+		width: auto;
+		vertical-align: top;
+	}
+	
+	@include bp(bp5) {
+		float: right;
+		
+		li {
+			margin-right: 0;
+			margin-left: 4px;
+		}
+	}
+}
+ 
+/**
+ * Footnote legal (Copyright, terms, privacy etc).
+ */
+
+.footnote__legal {
+	@include font-size(11);
+	margin-bottom: $vertical-spacing / 2;
+
+	li {
+		display: inline-block;
+		margin: 0 4px $vertical-spacing / 4;
+	}
+	
+	.copyright {
+		display: block;
+	}
+	
+	@include bp(bp3) {
+		
+		.copyright {
+			display: inline-block;
+		}
+	}
+	
+	@include bp(bp5) {
+		float: left;
+		
+		li {
+			margin-right: 8px;
+			margin-left: 0;
+		}
+	}
+}

@@ -1,0 +1,54 @@
+
+/*------------------------------------*\
+    #PAGINATION
+\*------------------------------------*/
+
+/**
+ * Rules for promo modules.
+ */
+ 
+.masthead {
+	background: $black;
+	background-size: cover;
+	color: $grey-lighter;
+	padding: $vertical-spacing * 2 0 $vertical-spacing;
+	position: relative;
+	text-align: center;
+	
+	&:before {
+		background: rgba($black,.25);
+		content: "";
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	
+	.wrap {
+		position: relative;
+	}
+	
+	a {
+		color: $white;
+		text-shadow: none;
+		
+		&:visited {
+			color: $white;
+		}
+		
+		&:hover,
+		&:focus {
+			color: $link-color-hover;
+		}
+	}
+}
+
+.masthead__title {
+	color: $white;
+}
+
+.masthead__text {
+	@include font-size(14);
+}

@@ -1,0 +1,84 @@
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+
+/**
+ * Used for grid layouts. Grid items must be contained in a `.layout` wrapper
+ * with each 'column' having a class of `.layout__item`. Widths are set with
+ * additional #WIDTHS classes.
+ *
+ * 1. On small screen devices every `.layout__item` is 100% wide so they all
+ *    stack by default.
+ * 2. Purely for Service page but it's the only place that used this layout (for
+ *    now) so maybe need to come back to later. Maintains consistant spacing of
+ *    content on smaller screens.
+ */
+
+.grid {
+	@include clearfix;
+	margin-left: -$gutter;
+}
+
+.grid__item {
+	box-sizing: border-box;
+	float: left;
+	padding-left: $gutter;
+	width: 100%; /* [1] */
+}
+
+
+
+
+
+/*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+
+/**
+ * The design allows to stack `.layout__item`s on small screen devices, so the
+ * first breakpoint they're used is 600px, up to 991px.
+ *
+ * 1. As this is still quite a narrow screen width, we set the `.one-quarter` 
+ *    class to 50% so they appear in halves.
+ * 2. ...unless `one-quarter` follows a `.three-quarters` item (blog post). Here
+ *    we set the width to 100% so it stretches the width of the screen, matching
+ *    the width of the `.three-quarter` item that precedes it.
+ */
+
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+	
+	.one-quarter {
+		width: 50%; /* [1] */
+		
+		&:nth-child(odd) {
+			clear: left;
+		}
+	}
+	
+	.three-quarters + .one-quarter {
+		width: 100%; /* [2] */
+	}
+}
+
+/**
+ * Above a screen width of 991px width classes use the value that reflects their
+ * class name.
+ */
+
+@include bp(bp5) {
+	
+	.one-half,
+	.two-quarters 	{width: 50%;}
+	
+	.one-third 		{width: 33.333%;}
+	.two-thirds 	{width: 66.666%;}
+	
+	.one-quarter	{width: 25%;}
+	.three-quarters	{width: 75%;}
+	
+	.one-fifth		{width: 20%;}
+	.two-fifths		{width: 40%;}
+	.three-fifths	{width: 60%;}
+	.four-fifths	{width: 80%;}
+}

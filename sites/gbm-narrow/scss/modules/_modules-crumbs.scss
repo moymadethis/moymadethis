@@ -1,0 +1,40 @@
+
+/*------------------------------------*\
+    #BREADCRUMBS
+\*------------------------------------*/
+
+/**
+ * Rules for promo modules.
+ */
+ 
+.crumbs {
+	@include font-size(14);
+	padding-left: 0;
+	width: 100%;
+}
+
+.crumbs__item {
+	background: none;
+	display: inline-block;
+	padding-left: 0;
+	
+	&:before {
+		color: $grey-light;
+		content: "/";
+		font-weight: 500;
+		margin: 0 $gutter / 4;
+	}
+	
+	&:first-child {
+		
+		&:before {
+			display: none;
+		}
+	}
+}
+
+.crumbs__link {
+	background-image: none;
+	padding: 0;
+	text-shadow: none;
+}

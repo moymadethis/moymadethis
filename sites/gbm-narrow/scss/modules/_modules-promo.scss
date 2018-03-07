@@ -1,0 +1,70 @@
+
+/*------------------------------------*\
+    #PROMOS
+\*------------------------------------*/
+
+/**
+ * Rules for promo modules.
+ *
+ * 1. Overwrite `figure` and `figcaption` margins if the class `.promo` is used
+ *    on those elements and the image.
+ * 2. Overwrite `.btn` margins. NOTE: This can be a `span` element if the entire
+ *    promo is wrapped in an anchor.
+ */
+ 
+.promo {
+	background-image: none;
+	display: block;
+	margin-bottom: $vertical-spacing;
+	overflow: hidden;
+	position: relative;
+	text-shadow: none;
+	
+	.slick-slider & {
+		margin-bottom: 0; /* [1] */
+	}
+}
+
+.promo__image {
+	display: block;
+	margin-bottom: 0; /* [1] */
+	width: 100%;
+	max-width: 100%;
+}
+
+.promo__caption {
+	box-sizing: border-box;
+	@include font-size(14);
+	margin-bottom: 0; /* [1] */
+	padding: $vertical-spacing $gutter;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	width: 100%;
+	z-index: 10;
+	
+	.btn {
+		margin: $vertical-spacing 0 0;
+	}
+	
+	@include bp(bp3) {
+		@include font-size(16);
+		padding: $vertical-spacing $gutter * 2;
+		width: 75%;
+	}
+
+	@include bp(bp4) {
+		@include font-size($font-size);
+		width: 50%;
+	}
+}
+
+.promo__caption-title {
+	margin-bottom: $vertical-spacing / 4;
+}
+
+.promo__caption-text {
+	margin-bottom: 0;
+}

@@ -1,0 +1,69 @@
+/* ==========================================================================
+   #PRODUCT DETAIL
+   ========================================================================== */
+   
+/**
+ * The `.page` div acts as a container for all the content on a page. Including
+ * the header and footer.
+ */
+
+.product__detail {
+	text-align: center;
+}
+
+.product__options {
+	text-align: right;
+	
+	td {
+		@include font-size(13);
+		transition: background-color .20s;
+		vertical-align: middle;
+		
+		&:first-child {
+			text-align: left;
+		}
+	}
+	
+	tr:hover {
+		cursor: pointer;
+		
+		td {
+			background-color: darken($grey-lighter, 2.5%);
+		}
+	}
+	
+	.flag {
+		@include font-size(10);
+		height: 16px;
+		line-height: 16px;
+		margin-right: $gutter / 2;
+		padding: 0 5px;
+		top: -1px;
+		white-space: nowrap;
+		
+		&:before {
+	        border-top: 8px solid transparent;
+	        border-bottom: 8px solid transparent;
+	        border-left: 6px solid $color-primary;
+	        content: "";
+	        display: block;
+	        height: 0; 
+	        position: absolute;
+	        top: 0;
+	        right: -6px;
+	        width: 0; 
+	    }
+	}
+	
+	.control {
+		padding-left: 0;
+		
+		.control__input {
+			margin-left: 0;
+		}
+	}
+}
+
+.product__qty {
+	margin: 0 auto $vertical-spacing;
+}

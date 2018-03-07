@@ -1,0 +1,123 @@
+
+/* ==========================================================================
+   #FORMS
+   ========================================================================== */
+
+/**
+ * Base `form` styles.
+ */
+ 
+form {
+	border: 0;
+	font-family: $form-font-family;
+	margin: 0 0 $vertical-spacing 0;
+	padding: 0;
+	
+	p {
+		margin-bottom: ($vertical-spacing / 2);
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0 0 ($vertical-spacing) 0;
+		padding: 0; }
+
+	li {
+		margin-bottom: 0;
+	}
+}
+
+/**
+ * Horizontally align form labels (titles) and inputs within `form-group` items.
+ */
+
+.form-horz {
+	
+	@include bp(bp3) {
+		
+		.alert {
+			margin-left: 30%;
+		}
+		
+		.form-group__title {
+			float: left;
+			position: relative;
+			top: 5px;
+			width: 25%;
+		}
+		
+		.form-group__controls,
+		.error__text {
+			margin-left: 30%;
+		}
+	}
+}
+ 
+
+/**
+ * Base `fieldset` styles.
+ *
+ * 1. Remove bottom margin from the last fieldset for consistent spacing.
+ */
+
+fieldset {
+	background: lighten($grey-lighter,4%);
+	border: 0;
+	margin-bottom: 4px;
+	padding: $vertical-spacing $gutter $vertical-spacing / 2;
+	min-width: 0; 
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+/**
+ * Legend.
+ */
+
+legend {
+	border: 0;
+	border-bottom: $border-width $border-style $border-color;
+	color: $form-font-color;
+	display: block;
+	@include font-size($font-size);
+	line-height: inherit;
+	margin-bottom: ($vertical-spacing * 2);
+	padding: 0 0 ($vertical-spacing / 2) 0;
+	width: 100%;
+	*width: auto;
+}
+
+/**
+ * Base `label` styles.
+ */
+
+label {
+	color: $label-font-color;
+	display: block;
+	font-family: $label-font-family;
+	@include font-size($label-font-size);
+	margin-bottom: 0; 
+	max-width: 100%; 
+}
+
+
+/**
+ * The main form heading.
+ *
+ * 1. Reduce space between heading and following paragraph (if there is one).
+ */
+
+.form-title {
+	margin-bottom: $vertical-spacing;
+	
+	small {
+		font-weight: 400;
+	}
+	
+	+ p {
+		margin: -$vertical-spacing/1.25 0 $vertical-spacing; /* [1] */
+	}
+}
+
