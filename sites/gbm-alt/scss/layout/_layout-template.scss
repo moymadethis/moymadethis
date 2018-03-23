@@ -1,0 +1,41 @@
+/* ==========================================================================
+   #PAGE
+   ========================================================================== */
+   
+/**
+ * The `.page` div acts as a container for all the content on a page. Including
+ * the header and footer.
+ */
+
+.page {}
+
+.band {
+	padding: $vertical-spacing * 2 0 $vertical-spacing;
+}
+
+.band--tint {
+	background: rgba(72,51,7,.05);
+	border-top: 2px dashed rgba(72,51,7,.10);
+	box-shadow: inset 0 1px $white;
+}
+
+.band--primary {
+	background-color: $color-primary;
+}
+
+.wrap {
+	box-sizing: border-box;
+	@include clearfix;
+	margin: 0 auto;
+	padding: 0 $gutter / 2;
+	width: 100%;
+	max-width: 1400px;
+	
+	@include bp(bp4) {
+		padding: 0 $gutter;
+	}
+}
+
+.wrap--narrow {
+	max-width: 800px;
+}

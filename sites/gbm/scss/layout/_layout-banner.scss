@@ -1,0 +1,248 @@
+
+/* ==========================================================================
+   #INFO-TICKER
+   ========================================================================== */
+   
+/**
+ * Comment here.
+ */
+  
+.info-bar {
+	background: $grey-darker;
+	box-sizing: border-box;
+	@include clearfix;
+	color: $white;
+	padding: 10px $gutter / 2;
+	text-align: center;
+	width: 100%;
+	
+	@include bp(bp5) {
+		padding: 10px $gutter;
+	}
+}
+
+.info-bar__text {
+	color: $white;
+	@include font-size(10);
+	line-height: 1.2;
+	margin-bottom: 0;
+	
+	@include bp(bp6) {
+		float: left;
+		@include font-size(13);
+	}
+}
+
+/**
+ * `.info-bar` contact details.
+ */
+ 
+.info-bar__contact {
+	display: none;
+	@include font-size(13);
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+	float: right;
+	
+	
+	@include bp(bp6) {
+		display: block;
+	}
+	
+	li {
+		background: none;
+		display: inline-block;
+		margin: 0 0 0 20px;
+		padding-left: 0;
+	}
+	
+	a {
+		background-image: none;
+		color: $grey-lighter;
+		font-weight: 700;
+		padding: 0;
+		text-shadow: none;
+		
+		&:visited {
+			color: $grey-lighter;
+		}
+		
+		&:hover,
+		&:focus {
+			color: $white;
+		}
+	}
+	
+	.icon {
+		fill: $color-primary;
+		height: 15px;
+		margin-right: 2px;
+		width: 15px;
+	}
+}
+
+
+
+
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+   
+/**
+ * Comment here.
+ */
+ 
+.page-head {
+	background: transparent;
+	@include clearfix;
+	box-sizing: border-box;
+	padding: 15px $gutter / 2;
+	position: relative;
+	transition: background .20s;
+	width: 100%;
+	z-index: 1000;
+	
+/*
+	    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b2303d), to(#94121f));
+    background-image: -webkit-linear-gradient(top, #b2303d, #94121f);
+    background-color: #94121f;
+    background-image: -moz-linear-gradient(top, #b2303d, #94121f);
+    background-image: -ms-linear-gradient(top, #b2303d, #94121f);
+    background-image: -o-linear-gradient(top, #b2303d, #94121f);
+    background-image: linear-gradient(top, #b2303d, #94121f);
+    background-repeat: repeat-x;
+    border-top: 1px solid #c70017;
+    border-bottom: 1px solid #7a000e;
+    
+    &:before {
+		border-top: 1px dashed rgba($white,.25);
+		border-bottom: 1px dashed rgba($white,.25);
+		box-shadow: 0 1px 2px rgba(0,0,0,.10);
+		content: "";
+		display: block;
+		position: absolute;
+		top: 1px;
+		right: 0;
+		bottom: 1px;
+		left: 0;
+    }
+*/
+	
+	&:before {
+		background: $white;
+		box-shadow: 0 1px 2px rgba(0,0,0,.10);
+		content: "";
+		display: block;
+		height: 1px;
+		opacity: 0;
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		transition: opacity .20s;
+		width: 100%;
+	}
+	
+	@include bp(bp5) {
+		padding: 0 $gutter;
+	}
+	
+	.fixed-header & {
+		background: $white;
+		position: fixed;
+		top: 0;
+		
+		&:before {
+			opacity: 1;
+		}
+	}
+}
+
+
+.site-nav__home-link {
+	background: none;
+	box-sizing: border-box;
+	display: block;
+	margin-left: -35px;
+	position: absolute;
+	top: 7px;
+	left: 50%;
+	text-shadow: none;
+	width: 70px;
+	
+	@include bp(bp5) {
+		float: left;
+		height: 70px;
+		margin: 0 12px 0 0;
+		padding: 10px 0 0;
+		position: relative;
+		top: auto;
+		left: auto;
+		width: 125px;
+	}
+}
+
+/**
+ * Header account.
+ */
+ 
+.user-nav {
+	@include font-size(11);
+	line-height: 2;
+	float: right;
+	margin: 0;
+	padding: 0;
+	
+	@include bp(bp5) {
+		margin-top: 25px;
+	}
+}
+
+.user-nav__item {
+	background: none;
+	display: none;
+	margin: 0 0 0 10px;
+	padding-left: 0;
+	position: relative;
+	
+	&.user-nav__item--basket {
+		display: inline-block;
+	}
+	
+	.icon {
+		height: 20px;
+		width: 20px;
+	}
+	
+	@include bp(bp5) {
+		display: inline-block;
+	}
+}
+
+.user-nav__link {
+	background-image: none;
+	text-shadow: none;
+}
+
+.user-nav__item--basket {
+	
+	.icon {
+		margin-right: 5px;
+	}
+}
+
+.user-nav__qty {
+	background: $color-primary;
+	box-sizing: border-box;
+	border-radius: 100%;
+	color: $white;
+	display: inline-block;
+	@include font-size(10);
+	font-weight: 900;
+	height: 18px;
+	line-height: 18px;
+	position: relative;
+	top: -5px;
+	text-align: center;
+	width: 18px;
+}
