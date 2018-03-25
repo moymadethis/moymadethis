@@ -157,12 +157,48 @@
 }
 
 .mosaic__review {
-	margin-bottom: $vertical-spacing / 2;
+	margin-bottom: 0;
 	
 	.icon {
-		fill: rgb(83,136,41);
-		height: 16px;
-		width: 16px;
+		fill: $grey-light;
+		height: 15px;
+		margin: 0 -1px;
+		width: 15px;
+	}
+	
+	.p-rating[value="1"] {
+		
+		.icon:nth-child(1) {
+			fill: rgb(83,136,41);
+		}
+	}
+	
+	.p-rating[value="2"] {
+		
+		.icon:nth-child(-n+2) {
+			fill: rgb(83,136,41);
+		}
+	}
+	
+	.p-rating[value="3"] {
+		
+		.icon:nth-child(-n+3) {
+			fill: rgb(83,136,41);
+		}
+	}
+	
+	.p-rating[value="4"] {
+		
+		.icon:nth-child(-n+4) {
+			fill: rgb(83,136,41);
+		}
+	}
+	
+	.p-rating[value="5"] {
+		
+		.icon {
+			fill: rgb(83,136,41);
+		}
 	}
 }
 

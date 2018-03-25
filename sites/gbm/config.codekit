@@ -78,24 +78,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/interface\/bg-tile-chalkboard.jpg": {
-		"fileType": 16384,
+	"\/img\/interface\/bg-tile-dark.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 9595,
-		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-chalkboard.jpg",
-		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-chalkboard.jpg",
+		"initialSize": 19121,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-dark.png",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-dark.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/interface\/bg-tile-chalkboard@2x.jpg": {
-		"fileType": 16384,
+	"\/img\/interface\/bg-tile-dark@2x.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 38555,
-		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-chalkboard@2x.jpg",
-		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-chalkboard@2x.jpg",
+		"initialSize": 38284,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-dark@2x.png",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-dark@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -118,6 +118,17 @@
 		"initialSize": 208106,
 		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper@2x.png",
 		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/texture.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24089,
+		"inputAbbreviatedPath": "\/img\/interface\/texture.png",
+		"outputAbbreviatedPath": "\/img\/interface\/texture.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -217,6 +228,28 @@
 		"initialSize": 175851,
 		"inputAbbreviatedPath": "\/img\/temp\/blog-images\/thumbs\/lamb-chop-recipe.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/blog-images\/thumbs\/lamb-chop-recipe.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/hero-images\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 440359,
+		"inputAbbreviatedPath": "\/img\/temp\/hero-images\/1.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/hero-images\/1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/hero-images\/2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 244251,
+		"inputAbbreviatedPath": "\/img\/temp\/hero-images\/2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/hero-images\/2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

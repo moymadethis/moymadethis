@@ -220,6 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	var mn = $('.page-head'), 	/* [1] */
 	core = $('.band').eq(0),	/* [2] */
+	fix = core.attr('style') || '',
 	mns = 'fixed-header',		/* [3] */
 	bit, hdr;
 	
@@ -238,26 +239,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		} else {
 			$("body").removeClass(mns);
 			//mn.removeClass(mns);
-			core.attr('style', '');
+			core.attr('style', fix);
 		}
 	})
 	
 	.on('load', function() {
 		$(this).scroll();
 	});
-});
-
-
-/* 
- * Product options table.
- *
- * On clicking a table `tr` the relevant radio button becomes selected.
- */
- 
-$(document).ready(function() {
-  $('.product__options tr').click(function(event) {
-    if (event.target.type !== 'radio') {
-      $(':radio', this).trigger('click');
-    }
-  });
 });

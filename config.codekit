@@ -2998,24 +2998,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/sites\/gbm\/img\/interface\/bg-tile-chalkboard.jpg": {
-		"fileType": 16384,
+	"\/sites\/gbm\/img\/interface\/bg-tile-dark.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 9595,
-		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-chalkboard.jpg",
-		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-chalkboard.jpg",
+		"initialSize": 17952,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-dark.png",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-dark.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/sites\/gbm\/img\/interface\/bg-tile-chalkboard@2x.jpg": {
-		"fileType": 16384,
+	"\/sites\/gbm\/img\/interface\/bg-tile-dark@2x.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 38555,
-		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-chalkboard@2x.jpg",
-		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-chalkboard@2x.jpg",
+		"initialSize": 38284,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-dark@2x.png",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-dark@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3038,6 +3038,17 @@
 		"initialSize": 208106,
 		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper@2x.png",
 		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/interface\/texture.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24089,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/texture.png",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/texture.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3137,6 +3148,28 @@
 		"initialSize": 175851,
 		"inputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/blog-images\/thumbs\/lamb-chop-recipe.jpg",
 		"outputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/blog-images\/thumbs\/lamb-chop-recipe.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/temp\/hero-images\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 440359,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/hero-images\/1.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/hero-images\/1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/temp\/hero-images\/2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 244251,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/hero-images\/2.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/temp\/hero-images\/2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
