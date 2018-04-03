@@ -353,6 +353,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/temp\/promo-images\/home-promo-letterbox-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 146597,
+		"inputAbbreviatedPath": "\/img\/temp\/promo-images\/home-promo-letterbox-1.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/promo-images\/home-promo-letterbox-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/promo-images\/home-promo-small-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 117465,
+		"inputAbbreviatedPath": "\/img\/temp\/promo-images\/home-promo-small-1.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/promo-images\/home-promo-small-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/promo-images\/home-promo-small-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 196626,
+		"inputAbbreviatedPath": "\/img\/temp\/promo-images\/home-promo-small-2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/promo-images\/home-promo-small-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/promo-images\/home-promo-small-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 104867,
+		"inputAbbreviatedPath": "\/img\/temp\/promo-images\/home-promo-small-3.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/promo-images\/home-promo-small-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/temp\/promo-images\/megamenu-promo-1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -371,28 +415,6 @@
 		"initialSize": 223144,
 		"inputAbbreviatedPath": "\/img\/temp\/promo-images\/megamenu-promo-2.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/promo-images\/megamenu-promo-2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/temp\/promo-images\/promo-16-9.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 12919,
-		"inputAbbreviatedPath": "\/img\/temp\/promo-images\/promo-16-9.jpg",
-		"outputAbbreviatedPath": "\/img\/temp\/promo-images\/promo-16-9.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/temp\/promo-images\/promo-letterbox.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 18067,
-		"inputAbbreviatedPath": "\/img\/temp\/promo-images\/promo-letterbox.jpg",
-		"outputAbbreviatedPath": "\/img\/temp\/promo-images\/promo-letterbox.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
