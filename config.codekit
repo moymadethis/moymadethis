@@ -1782,6 +1782,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/sites\/gbm\/generic-hero.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/generic-hero.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sites\/gbm\/generic.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/generic.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/sites\/gbm\/img\/content\/chilled-delivery-diagram.png": {
 		"fileType": 32768,
 		"ignore": 0,
