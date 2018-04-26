@@ -18,7 +18,7 @@ p {
 .lead {
 	color: $grey-light;
 	@include font-size(16);
-	line-height: 1.4;
+	line-height: 1.2;
 	
 	@include bp(bp3) {
 		@include font-size(18);

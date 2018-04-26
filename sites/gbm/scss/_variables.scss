@@ -107,7 +107,7 @@ $base-bg						: $white;
 
 $border-color    				: $grey-lighter;
 $border-style					: solid;
-$border-width 					: 2px;
+$border-width 					: 1px;
 $border-radius 					: 2px;
 $border							: $border-width $border-style $border-color;
 
@@ -164,20 +164,20 @@ $box-small-border-radius 		: $border-radius;
 
 // Buttons
 
-$button-bg 								: $black;
+$button-bg 								: $grey-darker;
 $button-border-color					: darken($button-bg,10);
 $button-border-style 					: $border-style;
 $button-border-width 					: 2px;
 $button-border-radius 					: 0;
 
 $button-font-family						: $font-family;
-$button-font-size 						: 14;
+$button-font-size 						: 12;
 $button-font-color 						: $white;
 $button-font-weight 					: 700;
 $button-letter-spacing					: 0;
 $button-font-transform 					: uppercase;
 
-$button-bg-hover 						: darken($button-bg,5);
+$button-bg-hover 						: $color-primary;
 $button-border-color-hover				: darken($button-border-color,5);
 $button-font-color-hover 				: $button-font-color;
 
@@ -191,17 +191,17 @@ $button-primary-bg						: $color-primary;
 $button-primary-border-color			: darken($button-primary-bg,10);
 $button-primary-font-color 				: $white;
 
-$button-primary-bg-hover				: darken($button-primary-bg,5);
+$button-primary-bg-hover				: $grey-darker;
 $button-primary-border-color-hover		: darken($button-primary-border-color,5);
 $button-primary-font-color-hover 		: $button-primary-font-color;
 
 // Neutral buttons
 
-$button-neutral-bg						: $grey-lighter;
-$button-neutral-border-color			: darken($button-neutral-bg,10);
+$button-neutral-bg						: $white;
+$button-neutral-border-color			: $border-color;
 $button-neutral-font-color 				: $grey;
 
-$button-neutral-bg-hover				: darken($button-neutral-bg,5);
+$button-neutral-bg-hover				: $button-neutral-bg;
 $button-neutral-border-color-hover		: darken($button-neutral-border-color,5);
 $button-neutral-font-color-hover 		: $button-neutral-font-color;
 
@@ -223,7 +223,7 @@ $input-border-color				: darken($border-color,10%);
 $input-border-color-hover		: $grey-dark;
 $input-border-color-focus		: $color-primary;
 $input-border-style 			: $border-style;
-$input-border-width 			: 2px;
+$input-border-width 			: 1px;
 $input-border-radius 			: 0;
 
 $input-font-family				: $font-family;
@@ -293,4 +293,4 @@ $table-hover-font-color 		: $font-color;
 
 $table-border-color				: $border-color;
 $table-border-style 			: $border-style;
-$table-border-width 			: 2px;
+$table-border-width 			: 1px;

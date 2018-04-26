@@ -167,10 +167,11 @@ select {
  */
 
 .form-group__title {
-	color: $heading-font-color;
-	@include font-size($label-font-color);
+	color: $label-font-color;
+	@include font-size($label-font-size);
 	font-weight: 700;
 	line-height: 1.2;
+	margin-bottom: $vertical-spacing / 4;
 }
 
 .required {

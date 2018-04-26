@@ -110,62 +110,72 @@
 .filter-controls {
 	margin-bottom: $vertical-spacing;
 }
-/*
-
-.filter-grid {
-	
-	.filter-grid__filters{
-		transition-delay: .40s;
-	}
-	
-	.filters {
-		transition: all .40s;
-		transition-delay: .40s;
-	}
-	
-	.filter-grid__content {
-		float: right;
-		transition: width .40s;
-		transition-delay: 0;
-	}
-}
-
-.hide-filters {
-	
-	.filter-grid__filters {
-		padding-left: 0;
-		transition-delay: .80s;
-		width: 0;
-	}
-	
-	.filters {
-		opacity: 0;
-		transform: translateX(-100%);
-		transition-delay: 0;
-	}
-		
-	.filter-grid__content {
-		transition-delay: .80s;
-		width: 100%;
-	}
-}
-*/
 
 .filter-controls {
+	@include clearfix;
 	
 	.select {
 		float: right;
-		width: auto;
+		width: calc(50% - 7.5px);
+		
+		select {
+			height: 40px;
+			line-height: 41px;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		
+		@include bp(bp3) {
+			width: auto;
+			
+			select {
+				background-color: transparent;
+				background-position: right 0 top 14px;
+				border-color: transparent;
+				padding-right: 20px;
+			}
+		}
+	}
+	
+	.search {
+		float: right;
+		width: calc(50% - 7.5px);
+		
+		@include bp(bp3) {
+			margin-top: 15px;
+			width: auto;
+		}
+	}
+	
+	.search__input {
+		background: $white;
+		border: $border;
+		height: 40px;
+		width: 100%;
+		
+		@include bp(bp3) {
+			background: transparent;
+			border: none;
+			height: 25px;
+			width: 80px;
+		}
 	}
 }
 
 .filter-toggle {
+	float: left;
 	height: 40px;
-	line-height: 42px;
+	line-height: 41px;
+	margin-bottom: $vertical-spacing / 2;
 	overflow: hidden;
 	padding: 0 20px 0 50px;
+	transition: none; // Stops delayed animation on `span`
+	text-align: left;
+	text-transform: capitalize;
+	width: calc(50% - 7.5px);
 	
 	.icon {
+		fill: $grey-darker;
 		position: absolute;
 		top: 10px;
 		left: 15px;
@@ -180,6 +190,28 @@
 		
 		span {
 			transform: translate(0,-100%);
+		}
+	}
+	
+	&:focus,
+	&:hover {
+		background-color: transparent;
+		color: $grey-darker;
+		
+		.icon {
+			fill: $grey-darker;
+		}
+	}
+	
+	@include bp(bp3) {
+		background: none;
+		border: none;
+		padding-left: 30px;
+		text-align: center;
+		width: auto;
+		
+		.icon {
+			left: 0;
 		}
 	}
 }
@@ -242,6 +274,9 @@
  * Comments.
  */
 
+.filters {
+	padding-right: $gutter;
+}
 
 .filters__title {
 	border-bottom: $border-width $border-style $border-color;
@@ -258,10 +293,11 @@
 	background: none;
 	color: $grey-light;
 	float: right;
-	@include font-size(13);
+	@include font-size(11);
+	font-weight: 700;
 	padding: 0;
 	position: relative;
-	top: 3px;
+	top: 4px;
 	text-shadow: none;
 	text-transform: capitalize;
 	
@@ -296,18 +332,18 @@
 	color: $grey;
 	cursor: pointer;
 	font-weight: 400;
-	padding: 0 0 0 25px;
+	padding: 0 0 0 20px;
 	position: relative;
 	text-shadow: none;
 	
 	&:before {
-		background-color: $grey-lighter;
-		border: 2px $border-style $grey-light;
+		background-color: $white;
+		border: $border-width $border-style darken($grey-lighter,10%);
 		content: "";
 		display: inline-block;
 		height: 10px;
 		position: absolute;
-		top: 1px;
+		top: 2px;
 		left: 0;
 		transition: all .20s;
 		width: 10px;
@@ -371,6 +407,7 @@
 .qty__up {
 	background: $white;
 	cursor: pointer;
+	transition: border .20s;
 	
 	.icon {
 		fill: $grey-light;
@@ -381,17 +418,16 @@
 		background: $white;
 		
 		.icon {
-			fill: $grey-light;
+			fill: $grey-darker;
 		}
 	}
 	
 	&:hover,
 	&:focus {
-		background-color: $grey-darker;
-		border-color: $grey-darker;
+		border-color: darken($grey-lighter,10%);
 		
 		.icon {
-			fill: $white;
+			fill: $grey-darker;
 		}
 	}
 }

@@ -65,6 +65,14 @@ h4 {
 }
 
 .hgroup__text {
-	margin-top: -5px;
+	color: $grey-light;
+	@include font-size(14);
+	line-height: 1.4;
+	margin-top: -10px;
+	
+	@include bp(bp3) {
+		@include font-size(16);
+		
+	}
 }
 

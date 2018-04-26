@@ -49,8 +49,10 @@
 
 .masthead__title {
 	color: $white;
+	margin-bottom: $vertical-spacing;
 }
 
 .masthead__text {
 	@include font-size(14);
+	margin-top: -20px;
 }

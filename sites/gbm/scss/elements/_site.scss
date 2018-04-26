@@ -41,7 +41,7 @@ body {
 	color: $font-color;
 	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
 	font-family: $font-family;
-	@include font-size(14);
+	@include font-size(12);
 	font-weight: $font-weight;
 	line-height: $font-lineheight;
 	margin: 0;
@@ -49,7 +49,7 @@ body {
 	text-rendering: optimizeLegibility;
 	
 	@include bp(bp3) {
-		@include font-size(16);
+		@include font-size(15);
 	}
 
 	@include bp(bp4) {

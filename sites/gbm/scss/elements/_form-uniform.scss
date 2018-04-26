@@ -90,20 +90,19 @@
 	display: inline-block;
 	position: relative;
 	margin-bottom: ($vertical-spacing / 2);
-	text-transform: uppercase;
 	width: 100%;
 	
 	select {
 		appearance: none;
-		background: $grey-lighter url(../img/interface/icon-select-arrows.svg) no-repeat right 10px center;
+		background: $white url(../img/interface/icon-select-arrows.svg) no-repeat right 10px center;
+		border: $border;
 		background-size: 12px;
-		border: 0;
 		border-radius: 0;
 		color: $font-color;
 		cursor: pointer;
 		display: inline-block;
 		font-family: $button-font-family;	
-		@include font-size($button-font-size);
+		@include font-size(10);
 		font-weight: $button-font-weight;
 		letter-spacing: $button-letter-spacing;
 		line-height: $font-lineheight;
@@ -113,6 +112,7 @@
 		margin: 0;
 		padding: 10px $gutter 10px $gutter / 2;
 		text-overflow: ellipsis;
+		text-transform: capitalize;
 		transition: all .20s;
 		white-space: nowrap;
 		width: 100%;
@@ -123,13 +123,17 @@
 		
 		&:hover,
 		&:focus {
-			background-color: darken($grey-lighter,2.5%);
+			border-color: darken($grey-lighter,10%);
 			color: $grey-darker;
 		}
 		
 		&:disabled {
 			opacity: 0.5;
 			pointer-events: none;
+		}
+		
+		@include bp(bp4) {
+			@include font-size($button-font-size);
 		}
 	}
 }

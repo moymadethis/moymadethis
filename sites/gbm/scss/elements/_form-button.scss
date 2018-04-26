@@ -24,14 +24,14 @@
 	*display: inline;
 	*zoom: 1;
 	font-family: $button-font-family;	
-	@include font-size(12);
+	@include font-size(10);
 	font-weight: $button-font-weight;
 	height: auto;
 	letter-spacing: $button-letter-spacing;
 	line-height: $font-lineheight;
 	margin-bottom: $vertical-spacing;
 	*margin-left: .3em;
-	padding: 10px 30px;
+	padding: 8px $gutter / 2;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
@@ -63,12 +63,29 @@
 	
 	@include bp(bp4) {
 		@include font-size($button-font-size);
+		padding: 10px $gutter;
 	}
 }
 
+.btn--primary {
+	background: $button-primary-bg;
+	color: $button-primary-font-color;
+	
+	&:visited {
+		background-color: $button-primary-bg;
+		color: $button-primary-font-color;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: $button-primary-bg-hover;
+		color: $button-primary-font-color-hover;
+	}
+}
 
 .btn--neutral {
 	background: $button-neutral-bg;
+	border: $border;
 	color: $button-neutral-font-color;
 	
 	.icon {
