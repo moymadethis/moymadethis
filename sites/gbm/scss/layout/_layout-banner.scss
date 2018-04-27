@@ -103,6 +103,8 @@
 	transition: background .20s;
 	width: 100%;
 	z-index: 1000;
+	position: sticky;
+	top: 0;
 	
 	&:before {
 		background: $white;
@@ -123,9 +125,9 @@
 	}
 	
 	.fixed-header & {
-		background: $white;
-		position: fixed;
-		top: 0;
+		//background: $white;
+		//position: fixed;
+		//top: 0;
 		
 		&:before {
 			opacity: 1;

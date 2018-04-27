@@ -216,34 +216,3 @@ $(function(){
  * 3. Create class to manipulate fixed position.
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-
-	var mn = $('.page-head'), 	/* [1] */
-	core = $('.band').eq(0),	/* [2] */
-	fix = core.attr('style') || '',
-	mns = 'fixed-header',		/* [3] */
-	bit, hdr;
-	
-	$(window).resize(function() {
-	
-		bit = mn.outerHeight();
-		hdr = $('.info-bar').outerHeight();
-	})
-	
-	.resize().scroll(function() {
-	
-		if ($(this).scrollTop() > hdr) {
-			//mn.addClass(mns);
-			$("body").addClass(mns);		// Was on the `page-head` element but moved to `body` so I can also target the `mini-cart` when nav is fixed.
-	  		core.css('margin-top', bit);
-		} else {
-			$("body").removeClass(mns);
-			//mn.removeClass(mns);
-			core.attr('style', fix);
-		}
-	})
-	
-	.on('load', function() {
-		$(this).scroll();
-	});
-});
