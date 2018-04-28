@@ -61,9 +61,10 @@ form {
  */
 
 fieldset {
-	background: lighten($grey-lighter,4%);
-	border: 0;
-	margin-bottom: 4px;
+	background: $white;
+	border: $border;
+	box-sizing: border-box;
+	margin-bottom: $vertical-spacing / 2;
 	padding: $vertical-spacing $gutter $vertical-spacing / 2;
 	min-width: 0; 
 

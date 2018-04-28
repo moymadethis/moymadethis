@@ -17,6 +17,7 @@ table {
 
 th,
 td {
+	border-bottom: $table-border-width $table-border-style $table-border-color;
 	@include font-size($table-font-size);
 	line-height: $font-lineheight;
 	padding: $table-padding;
@@ -29,18 +30,12 @@ td {
 }
 
 th {
-	background-color: $grey-lighter;
 	border-top: 0;
+	color: $grey-darker;
 	font-family: $table-font-family;
 	@include font-size($table-font-size);
 	font-weight: $table-header-font-weight;
-	text-transform: uppercase;
 }
-
-td {
-	border-bottom: $table-border-width $table-border-style $table-border-color;
-}
-
 
 .table-condensed {
 

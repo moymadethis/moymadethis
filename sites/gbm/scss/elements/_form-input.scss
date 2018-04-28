@@ -142,15 +142,8 @@ select {
 		}
 		
 		.text-input {
-			background: lighten($color-error,45%);
 			border-color: $color-error;
-			color: $color-error;
 		}
-		
-		::-webkit-input-placeholder {color: lighten($color-error,15%);}
-		:-moz-placeholder 			{color: lighten($color-error,15%);}
-		::-moz-placeholder 			{color: lighten($color-error,15%);}
-		:-ms-input-placeholder 		{color: lighten($color-error,15%);}
 	}
 }
 

@@ -38,7 +38,6 @@ $(document).ready(function() {
 		classNames: {
 			selected: "active",
 			fixedElements: {
-				fixed: "fixed",
 				sticky: "sticky"
             }
 		},
@@ -197,22 +196,4 @@ $(function(){
 	var elements = document.querySelectorAll('.sticky');
 	Stickyfill.add(elements);
 });
-
-
-
-
-
-/* ==========================================================================
-   #CUSTOM JS SNIPPETS
-   ========================================================================== */
-   
-/* 
- * Sticky header.
- *
- * 1. Main header/nav.
- * 2. We need to add a margin to counter the space left by the removal of the
- *    header, otherwise the content will jump. 'eq(0)' gets first `.band` after
- *    the header. NOTE: Header is always followed by `.band` div.
- * 3. Create class to manipulate fixed position.
- */
 

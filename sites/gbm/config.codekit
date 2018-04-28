@@ -118,24 +118,112 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/interface\/bg-tile-paper.png": {
-		"fileType": 32768,
+	"\/img\/interface\/bg-tile-paper--beige.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 134783,
-		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper.png",
-		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper.png",
+		"initialSize": 105948,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--beige.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--beige.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/interface\/bg-tile-paper@2x.png": {
+	"\/img\/interface\/bg-tile-paper--beige@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 208106,
-		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper@2x.png",
-		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper@2x.png",
+		"initialSize": 105948,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--beige@2x.png",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--beige@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/bg-tile-paper--green.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27878,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--green.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--green.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/bg-tile-paper--green@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 88747,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--green@2x.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--green@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/bg-tile-paper--red.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33738,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--red.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--red.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/bg-tile-paper--red@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 105923,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--red@2x.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper--red@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/bg-tile-paper.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33836,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/bg-tile-paper@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 105864,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-paper@2x.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-paper@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/bg-tile-wood.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 42691,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-wood.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-wood.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/interface\/bg-tile-wood@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 156729,
+		"inputAbbreviatedPath": "\/img\/interface\/bg-tile-wood@2x.jpg",
+		"outputAbbreviatedPath": "\/img\/interface\/bg-tile-wood@2x.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -481,8 +569,8 @@
 		},
 	"\/js\/main.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/main.js",
 		"outputAbbreviatedPath": "\/js\/min\/main-min.js",
 		"outputPathIsOutsideProject": 0,

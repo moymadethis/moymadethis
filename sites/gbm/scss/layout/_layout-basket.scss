@@ -45,7 +45,7 @@
 .basket__body {
 	
 	tr {
-		border-bottom: $border-width $border-style $border-color;
+		border-bottom: $table-border-width $table-border-style $table-border-color;
 		display: block;
 		padding: $vertical-spacing / 2 $gutter / 2;
 	}
@@ -68,7 +68,7 @@
 		}
 		
 		td {
-			border-bottom: $border-width $border-style $border-color;
+			border-bottom: $table-border-width $table-border-style $table-border-color;
 			display: table-cell;
 			padding: $vertical-spacing / 2 $gutter / 2;
 			vertical-align: middle;
@@ -81,7 +81,6 @@
 }
 
 .basket__foot {
-	border-bottom: $border-width $border-style $border-color;
 	color: $grey-darker;
 	font-weight: 700;
 	text-align: left;
@@ -109,7 +108,7 @@
 	}
 	
 	tr:last-child td {
-		padding: $table-padding $table-padding 30px;
+		padding: $table-padding $table-padding 0;
 	}
 	
 	p {

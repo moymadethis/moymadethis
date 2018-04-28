@@ -9,7 +9,6 @@
 
 blockquote {
 	color: $grey-darker;
-	font-style: italic;
 	font-weight: 700;
 	margin: ($vertical-spacing * 2) $gutter / 2;
 	
@@ -24,7 +23,6 @@ blockquote {
 
 	p {
 		@include font-size(22);
-		font-style: italic;
 		line-height: 1.2;
 	 
 		@include bp(bp4) {

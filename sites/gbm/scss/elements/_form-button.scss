@@ -85,7 +85,7 @@
 
 .btn--neutral {
 	background: $button-neutral-bg;
-	border: $border;
+	border: $border-width $border-style $input-border-color;
 	color: $button-neutral-font-color;
 	
 	.icon {

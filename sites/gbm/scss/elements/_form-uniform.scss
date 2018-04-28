@@ -5,45 +5,47 @@
 
 .control {
 	@include clearfix;
+	color: $font-color;
 	cursor: pointer;
 	display: block;
-	@include font-size($font-size);
-	margin-bottom: $vertical-spacing / 2;
-	padding-left: $gutter;
+	@include font-size(13);
+	margin-bottom: $vertical-spacing / 4;
+	padding-left: 25px;
 	position: relative;
 	
 	input {
-		height: 20px;
+		height: 15px;
 		margin: 0;
 		opacity: 0;
 		padding: 0;
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 20px;
+		width: 15px;
 		z-index: -1;
 	}
 }
 
 .control__input {
 	background: $white;
-	border: $border-width $border-style darken($color-primary,5%);
-	box-shadow: inset 2px 2px $grey-lighter;
+	border: $input-border-width $input-border-style $input-border-color;
 	box-sizing: border-box;
 	float: left;
-	height: 20px;
-	margin-left: -$gutter;
+	height: 15px;
+	margin-left: -25px;
 	position: relative;
-	width: 20px;
+	top: 3px;
+	width: 15px;
 
 	.control--radio & {
 		border-radius: 100%;
 	}
 	
-	.control:hover input ~ &,
-	.control input:focus ~ &,
+	//.control:hover input ~ &,
+	//.control input:focus ~ &,
 	.control input:checked ~ & {
 		background: $color-primary;
+		border-color: darken($color-primary,10%);
 		box-shadow: none;
 	}
 	
@@ -73,11 +75,11 @@
 .control--radio .control__input:after {
 	background: $white;
 	border-radius: 100%;
-	box-shadow: 1px 1px rgba($black,.10);
-	height: 10px;
+	box-shadow: 1px 1px rgba($black,.20);
+	height: 7px;
 	top: 3px;
 	left: 3px;
-	width: 10px;
+	width: 7px;
 }
 
 
@@ -95,7 +97,7 @@
 	select {
 		appearance: none;
 		background: $white url(../img/interface/icon-select-arrows.svg) no-repeat right 10px center;
-		border: $border;
+		border: $border-width $border-style $input-border-color;
 		background-size: 12px;
 		border-radius: 0;
 		color: $font-color;
