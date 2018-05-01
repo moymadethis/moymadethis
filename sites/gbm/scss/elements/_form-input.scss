@@ -131,7 +131,12 @@ select {
 	@include clearfix;  /* [2] */
 	
 	.btn {
-		margin-bottom: $vertical-spacing / 2;
+		margin-right: $gutter / 4;
+		
+		&.align-right {
+			margin-right: 0;
+			margin-left: $gutter / 4;
+		}
 	}
 	
 	&.error {  /* [3] */
@@ -144,6 +149,14 @@ select {
 		.text-input {
 			border-color: $color-error;
 		}
+	}
+}
+
+.form-group--btns {
+	padding-bottom: $vertical-spacing / 2;
+	
+	.btn {
+		margin-bottom: $vertical-spacing / 2;
 	}
 }
 

@@ -62,7 +62,7 @@
 
 .mm-panel,
 .mm-panels {
-    background: inherit;
+    background: transparent;
     border-color: inherit;
     box-sizing: border-box;
     margin: 0
@@ -427,9 +427,19 @@
 }
 
 .mm-menu {
-    background: #f3f3f3;
-    border-color: rgba(0, 0, 0, .1);
-    color: rgba(0, 0, 0, .75)
+    background: $white;
+    border-color: $border-color;
+    color: $link-color;
+    
+    &:before {
+	    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,.10) 100%);
+	    content: "";
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    width: 4px;
+    }
 }
 
 .mm-menu .mm-navbar a,
@@ -791,10 +801,11 @@
 }
 
 .mm-searchfield input {
-    border: none!important;
+    background: none;
+    border: $input-border-width $input-border-style $input-border-color;
     outline: 0!important;
     box-shadow: none!important;
-    border-radius: 4px;
+    border-radius: 0;
     font: inherit;
     font-size: inherit;
     line-height: 26px;
@@ -880,8 +891,8 @@
 }
 
 .mm-searchfield input {
-    background: rgba(0, 0, 0, .05);
-    color: rgba(0, 0, 0, .75)
+    background: none;
+    color: $input-font-color;
 }
 
 .mm-panel__noresultsmsg {

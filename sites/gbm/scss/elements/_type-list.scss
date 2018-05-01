@@ -63,6 +63,29 @@ ul {
 }
 
 
+/**
+ * Adds a bottom border as horizontal rule between each list-item.
+ */
+
+.list-inline {
+	margin: 0 0 $vertical-spacing/2 0;
+	padding: 0;
+
+	li {
+		background: none;
+		display: inline-block;
+		margin: 0 $vertical-spacing/2 $vertical-spacing/2 0;
+		padding: 0 0 $vertical-spacing/2;
+		
+		&.align-center & {
+			margin: 0 $vertical-spacing/4 $vertical-spacing/2;
+		}
+		
+		&.align-right & {
+			margin: 0 0 $vertical-spacing/2 $vertical-spacing/2;
+		}
+	}
+}
 
 
 

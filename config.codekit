@@ -1833,24 +1833,112 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/sites\/gbm\/img\/interface\/bg-tile-paper.png": {
-		"fileType": 32768,
+	"\/sites\/gbm\/img\/interface\/bg-tile-paper--beige.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 134783,
-		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper.png",
-		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper.png",
+		"initialSize": 33874,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--beige.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--beige.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/sites\/gbm\/img\/interface\/bg-tile-paper@2x.png": {
+	"\/sites\/gbm\/img\/interface\/bg-tile-paper--beige@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 208106,
-		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper@2x.png",
-		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper@2x.png",
+		"initialSize": 105948,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--beige@2x.png",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--beige@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/interface\/bg-tile-paper--green.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33871,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--green.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--green.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/interface\/bg-tile-paper--green@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 105921,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--green@2x.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--green@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/interface\/bg-tile-paper--red.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33863,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--red.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--red.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/interface\/bg-tile-paper--red@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 105932,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--red@2x.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper--red@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/interface\/bg-tile-paper.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33836,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/interface\/bg-tile-paper@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 105864,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper@2x.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-paper@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/interface\/bg-tile-wood.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 44988,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-wood.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-wood.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sites\/gbm\/img\/interface\/bg-tile-wood@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 156729,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-wood@2x.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-wood@2x.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

@@ -8,10 +8,10 @@
  */
  
 .page-foot {
-	background: $grey-darker url(../img/interface/bg-tile-wood.jpg) center top;
+	background: $grey-darker url(../img/interface/bg-tile-chalkboard.jpg) center top;
 	box-shadow: inset 0 1px 5px rgba($black,.50);
 	@include clearfix;
-	color: $grey-lighter;
+	color: $grey-light;
 	@include font-size(13);
 	padding: $vertical-spacing * 4 $gutter / 2 0;
 	text-shadow: 0 1px 1px $black;
@@ -31,14 +31,22 @@
 	a,
 	a:visited {
 		background-image: none;
-		color: $grey-lighter;
+		color: $grey-light;
 		padding: 0;
 		text-shadow: none;
+		
+		> .icon {
+			fill: $grey-light;
+		}
 	}
 	
 	a:hover,
 	a:focus {
 		color: $white;
+		
+		> .icon {
+			fill: $white;
+		}
 	}
 	
 	ul {
@@ -156,9 +164,9 @@
  */
  
 .footnote{
-	//background: rgba($black,.25);
-	//border-top: 1px solid rgba($white,.04);
-	//box-shadow: 0 -1px 5px rgba($black,.50);
+	background: rgba($black,.25);
+	border-top: 1px solid rgba($white,.04);
+	box-shadow: 0 -1px 5px rgba($black,.50);
 	@include clearfix;
 	margin: $vertical-spacing * 2 0 0 (-$gutter / 2);
 	padding: $vertical-spacing $gutter / 2 $vertical-spacing / 4;
@@ -166,7 +174,6 @@
 	text-align: center;
 	width: 100%;
 	
-/*
 	&:before {
 		border-top: 1px dashed rgba($white,.08);
 		content: "";
@@ -177,7 +184,6 @@
 		left: 0;
 		width: 100%;
     }
-*/
 	
 	@include bp(bp5) {
 		margin-left: -$gutter;
@@ -200,7 +206,7 @@
 	
 	img {
 		height: 20px;
-		opacity: .75;
+		opacity: .50;
 		width: auto;
 		vertical-align: top;
 	}

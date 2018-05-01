@@ -9,6 +9,15 @@
 
 .product__detail {
 	text-align: center;
+	
+	.p-name {
+		@include font-size(22);
+		margin-bottom: $vertical-spacing / 4;
+		
+		@include bp(bp6) {
+			@include font-size(28);
+		}
+	}
 }
 
 .product__options {

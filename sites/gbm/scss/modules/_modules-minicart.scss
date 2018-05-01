@@ -24,10 +24,6 @@
 	width: 500px;
 	max-width: calc(100% - 30px);
 	
-	&.hide {
-		display: none;
-	}
-	
 	.fixed-header & {
 		position: fixed;
 	}
