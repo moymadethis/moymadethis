@@ -585,7 +585,7 @@ select {
   display: block; }
 
 .control--checkbox .control__input:after {
-  background: url(../img/interface/icon-check.svg) no-repeat center center;
+  background: url(../assets/icon-check.svg) no-repeat center center;
   background-size: 100%;
   height: 100%;
   width: 100%; }
@@ -612,7 +612,7 @@ select {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
-    background: white url(../img/interface/icon-select-arrows.svg) no-repeat right 10px center;
+    background: white url(../assets/icon-select-arrows.svg) no-repeat right 10px center;
     border: 1px solid #d4d9d9;
     background-size: 12px;
     border-radius: 0;
@@ -908,7 +908,7 @@ html {
  * Base `body` styling.
  */
 body {
-  background: white url(../img/interface/bg-tile-paper.jpg) center 0;
+  background: white url(../assets/bg-tile-paper.jpg) center 0;
   color: #778586;
   -webkit-font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
      -moz-font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
@@ -1176,7 +1176,7 @@ li > ol {
 ul {
   list-style: none; }
   ul li {
-    background: url(../img/interface/bullet.svg) no-repeat 0 8px;
+    background: url(../assets/bullet.svg) no-repeat 0 8px;
     background-size: 5px 5px;
     padding-left: 15px; }
 
@@ -1914,7 +1914,7 @@ blockquote {
 
 .pag__link--prev,
 .pag__link--next {
-  background: url(../img/interface/icon-chevron-left.svg) no-repeat center center;
+  background: url(../assets/icon-chevron-left.svg) no-repeat center center;
   background-size: 20px;
   height: 20px;
   margin: 0;
@@ -1935,7 +1935,7 @@ blockquote {
     cursor: default; }
 
 .pag__link--next {
-  background-image: url(../img/interface/icon-chevron-right.svg); }
+  background-image: url(../assets/icon-chevron-right.svg); }
 
 /*------------------------------------*\
     #OVERLAYS
@@ -1986,7 +1986,7 @@ blockquote {
   #ACCORDION
 \*------------------------------------*/
 .alert {
-  background: #e7d6cc url(../img/interface/bg-tile-paper--beige.jpg) 0 0;
+  background: #e7d6cc url(../assets/bg-tile-paper--beige.jpg) 0 0;
   border: 1px solid #d7baa9;
   box-sizing: border-box;
   clear: both;
@@ -2016,14 +2016,14 @@ blockquote {
       color: #694631; }
 
 .alert--success {
-  background: #c8e1b0 url(../img/interface/bg-tile-paper--green.jpg) 0 0;
+  background: #c8e1b0 url(../assets/bg-tile-paper--green.jpg) 0 0;
   border-color: #aed38b;
   color: #557c2f; }
   .alert--success a:hover, .alert--success a:focus {
     color: #3c5721; }
 
 .alert--error {
-  background: #af3b47 url(../img/interface/bg-tile-paper--red.jpg) 0 0;
+  background: #af3b47 url(../assets/bg-tile-paper--red.jpg) 0 0;
   border-color: #892e38;
   color: #f3dcdf;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
@@ -2093,8 +2093,8 @@ blockquote {
 
 .newsletter {
   background-color: #94121f;
-  background-image: url("../img/interface/texture.png"), -webkit-linear-gradient(#a61423, #700e17);
-  background-image: url("../img/interface/texture.png"), linear-gradient(#a61423, #700e17);
+  background-image: url("../assets/texture.png"), -webkit-linear-gradient(#a61423, #700e17);
+  background-image: url("../assets/texture.png"), linear-gradient(#a61423, #700e17);
   border-top: 1px solid #e5273a;
   border-bottom: 1px solid #82101b;
   padding: 30px 0 15px;
@@ -2476,7 +2476,7 @@ blockquote {
   .filters__link.filters__link--active {
     color: #0e1010; }
     .filters__link.filters__link--active:before {
-      background: #0e1010 url(../img/interface/icon-check.svg) no-repeat center center;
+      background: #0e1010 url(../assets/icon-check.svg) no-repeat center center;
       border-color: #0e1010; }
 
 .qty {
@@ -2859,6 +2859,9 @@ blockquote {
  * The `.page` div acts as a container for all the content on a page. Including
  * the header and footer.
  */
+.page {
+  zoom: 1; }
+
 .band {
   padding: 60px 0 30px; }
 
@@ -2901,7 +2904,7 @@ blockquote {
  * Comment here.
  */
 .info-bar {
-  background: #0e1010 url(../img/interface/bg-tile-chalkboard.jpg) center top;
+  background: #0e1010 url(../assets/bg-tile-chalkboard.jpg) center top;
   box-shadow: inset 0 -4px 8px black;
   box-sizing: border-box;
   color: white;
@@ -3123,7 +3126,7 @@ blockquote {
  * Website footer.
  */
 .page-foot {
-  background: #0e1010 url(../img/interface/bg-tile-chalkboard.jpg) center top;
+  background: #0e1010 url(../assets/bg-tile-chalkboard.jpg) center top;
   box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5);
   color: #b3bcbc;
   font-size: 13px;
