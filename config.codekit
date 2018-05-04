@@ -1811,24 +1811,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/sites\/gbm\/img\/interface\/bg-tile-dark.png": {
-		"fileType": 32768,
+	"\/sites\/gbm\/img\/interface\/bg-tile-chalkboard.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 17952,
-		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-dark.png",
-		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-dark.png",
+		"initialSize": 5652,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-chalkboard.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-chalkboard.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/sites\/gbm\/img\/interface\/bg-tile-dark@2x.png": {
-		"fileType": 32768,
+	"\/sites\/gbm\/img\/interface\/bg-tile-chalkboard@2x.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 38284,
-		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-dark@2x.png",
-		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-dark@2x.png",
+		"initialSize": 21067,
+		"inputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-chalkboard@2x.jpg",
+		"outputAbbreviatedPath": "\/sites\/gbm\/img\/interface\/bg-tile-chalkboard@2x.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

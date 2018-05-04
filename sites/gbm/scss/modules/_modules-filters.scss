@@ -13,7 +13,7 @@
 
 .newsletter {
 	background-color: $color-primary;
-	background-image: url("../img/interface/texture.png"), linear-gradient(lighten($color-primary,4%), darken($color-primary,8%));
+	background-image: url("../assets/texture.png"), linear-gradient(lighten($color-primary,4%), darken($color-primary,8%));
 	border-top: 1px solid lighten($color-primary,20%);
     border-bottom: 1px solid darken($color-primary,4%);
 	padding: $vertical-spacing 0 $vertical-spacing / 2;
@@ -103,6 +103,80 @@
 		float: right;
 		width: 50%;
 	}
+}
+
+.cmApp_signupContainer {
+    width: 100% !important;
+    max-width: 500px !important;
+    min-width: 200px !important;
+    padding: 0px !important;
+    
+    .cmApp_cf {
+    	@include clearfix;
+    	margin: 0 auto $vertical-spacing / 2;
+    	max-width: 500px;
+    	width: 100% !important;
+    	font-family: $button-font-family !important;
+    	
+    	.text-input,
+    	input[type="text"],
+    	.cmApp_formSubmitButton,
+    	.btn {
+    		display: block;
+    		float: left;
+    		margin: 0;
+    		width: 65%;
+    	}
+    	
+    	.text-input, input[type="text"], {
+    		border-color: darken($color-primary, 5%);
+    		border-right: none;
+    		padding-left: 15px;
+    		padding-right: 15px;
+    		
+    		&:hover {
+    			border-color: darken($color-primary, 10%);
+    		}
+    		
+    		&:focus {
+    			border-color: darken($color-primary, 15%);
+    		}
+    	}
+    	
+    	.btn, .cmApp_formSubmitButton {
+    		width: 35%;
+    		background-color: #0e1010 !important;
+    		
+    		&:hover {
+        		background-color: #94121f !important;
+    		}
+    	}
+    	
+    	@include bp(bp5) {
+    		float: right;
+    		width: 50%;
+    	}
+    }
+    
+    .cmApp_statusContainer {
+        .cmApp_successMsg {
+            color: #fff !important;
+        }
+        
+        img {
+            width: 50px;
+        }
+    }
+}
+
+#cmApp_signupForm {
+    .cmApp_fieldWrap {
+        margin: 0 !important;
+
+        .cmApp_errorMsg {
+            margin: 0 !important;
+        }
+    }
 }
 
 
@@ -374,7 +448,7 @@
 		color: $grey-darker;
 		
 		&:before {
-			background: $grey-darker url(../img/interface/icon-check.svg) no-repeat center center;
+			background: $grey-darker url(../assets/icon-check.svg) no-repeat center center;
 			border-color: $grey-darker;
 		}
 	}

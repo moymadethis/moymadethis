@@ -33,13 +33,7 @@ $color-primary 					: rgb(148,18,31);
 $color-success					: rgb(200,225,176);
 $color-error					: rgb(175,59,71);
 
-$brown-darkest: rgb(45,23,15);
-$brown-darker: rgb(65,44,36);
-$brown-dark: rgb(103,86,80);
-$brown: rgb(141,129,123);
-$brown-light: rgb(197,192,189);
-$brown-lighter: rgb(217,212,210);
-$brown-lightest: rgb(235,234,233);
+
 
 
 
@@ -172,7 +166,7 @@ $button-border-width 					: 2px;
 $button-border-radius 					: 0;
 
 $button-font-family						: $font-family;
-$button-font-size 						: 12;
+$button-font-size 						: 13;
 $button-font-color 						: $white;
 $button-font-weight 					: 700;
 $button-letter-spacing					: 0;
@@ -217,7 +211,7 @@ $form-font-color 				: $font-color;
 
 // Form-inputs
 
-$input-padding					: 8px 10px;
+$input-padding					: 10px;
 $input-bg 						: $white;
 
 $input-border-color				: darken($border-color,10%);
@@ -228,7 +222,7 @@ $input-border-width 			: 1px;
 $input-border-radius 			: 0;
 
 $input-font-family				: $font-family;
-$input-font-size 				: $font-size;
+$input-font-size 				: 13;
 $input-font-color 				: $font-color;
 $input-placeholder-color 		: $font-color;
 $input-placeholder-font-size 	: 13;

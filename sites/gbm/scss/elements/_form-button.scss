@@ -9,13 +9,15 @@
  *
  * 1. Addtional `:before` styling is included for when an `icon` is required.
  * 2. Add a left margin when to any `.btn` that follows another.
+ * 3. Added by Matt Wade to overwrite something.
  */
 
-.btn {
+.btn,
+.cmApp_formSubmitButton { /* [3] */
 	background-image: none;
 	background-color: $button-bg;
 	background-repeat: no-repeat;
-	border: none;
+	border: 1px solid transparent;
 	border-radius: $button-border-radius;
 	box-sizing: border-box;
 	color: $button-font-color;
@@ -23,15 +25,15 @@
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
-	font-family: $button-font-family;	
+	font-family: $button-font-family !important; /* [3] */	
 	@include font-size(10);
-	font-weight: $button-font-weight;
+	font-weight: $button-font-weight !important; /* [3] */
 	height: auto;
 	letter-spacing: $button-letter-spacing;
 	line-height: $font-lineheight;
 	margin-bottom: $vertical-spacing;
 	*margin-left: .3em;
-	padding: 8px $gutter / 2;
+	padding: 10px $gutter / 2;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
@@ -66,6 +68,7 @@
 		padding: 10px $gutter;
 	}
 }
+
 
 .btn--primary {
 	background: $button-primary-bg;

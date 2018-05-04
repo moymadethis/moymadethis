@@ -16,7 +16,7 @@
 		<link rel="canonical" href="http://www.greatbritishmeat.com">
 
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/theme.css">
 		
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800,800i|Roboto+Slab:400,700" rel="stylesheet">
@@ -146,12 +146,12 @@
 						<div class="grid__item two-thirds product__image">
 							
 							<div class="slick">
-								<li>
+								<div>
 									<img src="img/temp/product-images/thumbs/beef-sirloin-steak.jpg" alt="ALT TEXT" class="promo__image" />
-								</li>
-								<li>
+								</div>
+								<div>
 									<img src="img/temp/product-images/thumbs/beef-sirloin-steak.jpg" alt="ALT TEXT" class="promo__image" />
-								</li>
+								</div>
 							</div>
 	
 						</div>							
@@ -225,7 +225,7 @@
 								<button class="btn btn--large btn--wide">Add to Basket</button>
 								
 								<ul class="list-inline align-center">
-									<li><svg class="icon icon--snowflake"><use xlink:href="img/sprite/sprite.svg#icon-snowflake"></use></svg> <a href="#chilled-delivery">Chilled Delivery</a></li>
+									<li><svg class="icon icon--snowflake"><use xlink:href="img/sprite/sprite.svg#icon-snowflake"></use></svg> <a class="overlay-link" data-overlay="delivery">Chilled Delivery</a></li>
 									<li><svg class="icon icon--info"><use xlink:href="img/sprite/sprite.svg#icon-info"></use></svg> <a href="#nutritional-info">Nutritional Info</a></li>
 								</ul>
 								
@@ -234,7 +234,6 @@
 						</div>
 						
 						<div class="grid__item one-third product__info">
-								
 							<h4>Product Info</h4>
 							<p>A traditional British sirloin steak cut from the loin is a tender juicy treat. British sirloin steaks are natural friends with steak sauces, and even though the name comes from the french term "surlonge" meaning “over loin” they'll always be a Great British steak classic.</p>	
 						</div>
@@ -242,7 +241,6 @@
 						<div class="grid__item one-third product__reviews">
 							<h4>Customer Reviews</h4>
 							[ TrustPilot Reviews Go Here ]
-
 						</div>
 						
 					</div>					
@@ -482,8 +480,9 @@
 										
 			</footer>
 			
-			<div class="overylay hide" id="chilled-delivery">
+			<div class="overlay overlay--delivery" id="overlay-delivery">
 				<div class="overlay__box">
+					<a class="overlay__close"><svg class="icon"><use xlink:href="img/sprite/sprite.svg#icon-cross"></use></svg></a>
 					<h3>Chilled Delivery</h3>
 					<p>Your meat will be securely sealed and vacuum-packed individually and delivered in a temperature controlled polystyrene cool-box. Your meat will be kept beneath 4°C from the time we cut it, until you receive it, so it is always fresh and in perfect condition.</p>
 					<ul>
@@ -491,7 +490,7 @@
 						<li>Free delivery on orders over £50</li>
 						<li>Choose a delivery date that suits you</li>
 					</ul>
-					<figure class="align-center">
+					<figure class="diagram align-center">
 						<img src="img/content/chilled-delivery-diagram.png" alt="Chilled delivery packaging" />
 					</figure>
 				</div>

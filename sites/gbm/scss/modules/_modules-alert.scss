@@ -4,7 +4,7 @@
 
 
 .alert {
-	background: $alert-bg url(../img/interface/bg-tile-paper--beige.jpg) 0 0;
+	background: $alert-bg url(../assets/bg-tile-paper--beige.jpg) 0 0;
 	border: $border-width $border-style $alert-border-color;
 	box-sizing: border-box;
 	clear: both;
@@ -39,7 +39,7 @@
 }
 
 .alert--success {
-	background: $alert-success-bg url(../img/interface/bg-tile-paper--green.jpg) 0 0;
+	background: $alert-success-bg url(../assets/bg-tile-paper--green.jpg) 0 0;
 	border-color: $alert-success-border-color;
 	color: $alert-success-font-color;
 
@@ -53,7 +53,7 @@
 }
 
 .alert--error {
-	background: $alert-error-bg url(../img/interface/bg-tile-paper--red.jpg) 0 0;
+	background: $alert-error-bg url(../assets/bg-tile-paper--red.jpg) 0 0;
 	border-color: $alert-error-border-color;
 	color: $alert-error-font-color;
 	text-shadow: 0 1px 0 rgba(0,0,0,.20);

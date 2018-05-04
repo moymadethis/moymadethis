@@ -18,11 +18,12 @@
 	color: $input-font-color; 
 	display: block;
 	font-family : $input-font-family;
-	@include font-size($input-font-size);
+	@include font-size(10);
 	line-height: $font-lineheight;
 	margin-bottom: ($vertical-spacing / 2);
 	padding: $input-padding;
 	transition : all $transition-duration $transition-timing-function;
+	vertical-align: top;
 	width : 100%;
 	max-width : 100%;
 	-moz-appearance : none;  /* [1] */
@@ -35,6 +36,10 @@
 	&:focus {
 		border-color: $input-border-color-focus;
 		outline: none;
+	}
+	
+	@include bp(bp4) {
+		@include font-size($input-font-size);
 	}
 }
 

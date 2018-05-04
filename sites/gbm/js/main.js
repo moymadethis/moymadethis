@@ -105,43 +105,6 @@ $(".filter-toggle--desktop").click(function(){
 });
 
 
-/* 
- * Attempted using 1 button and using `mediaSize` to change the function of the
- * button. Works fine on desktop and when you scale the browser down ...but when
- * the browser is scaled back up to desktop the button triggers both the desktop
- * filters and MMENU.
- */
- 
-/*
-(function($) {
-	
-	function mediaSize() { 
-		// Set the matchMedia
-		if (window.matchMedia('(min-width: 768px)').matches) {
-			// Changes when we reach the min-width
-			$(".filter-toggle").click(function(){
-				$(this).toggleClass("active");
-				$(".grid").toggleClass("show-filters");
-			});
-		} else {
-			var API = $(".filters").data("mmenu");
-			var $icon = $(".filter-toggle");
-		      
-			$icon.on("click", function() {
-				API.open();
-			});
-		}
-	};
-	
-	// Call the function
-	mediaSize();
-	// Attach the function to the resize event listener
-	window.addEventListener('resize', mediaSize, false);  
-	
-})(jQuery);
-*/
-
-
 
 
 
@@ -160,6 +123,26 @@ $(document).ready(function(){
 		dots: true,
 		infinite: false
 	});
+});
+
+
+
+
+
+/* ==========================================================================
+   #Simple Overlays
+   ========================================================================== */
+   
+$(".overlay-link").click(function() {
+	target = "#overlay-"+$(this).data("overlay");
+	$(".overlay").hide();
+	$(target).show();
+	$( "body" ).css( "overflow" , "hidden" ); //disable the scroll
+});
+
+$(".overlay__close").click(function() {
+	$(".overlay").hide();
+	$( "body" ).css( "overflow" , "auto" );  //enables the scroll back
 });
 
 

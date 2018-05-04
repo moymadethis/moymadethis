@@ -67,7 +67,7 @@
 }
 
 .control--checkbox .control__input:after {
-	background: url(../img/interface/icon-check.svg) no-repeat center center;
+	background: url(../assets/icon-check.svg) no-repeat center center;
 	background-size: 100%;
 	height: 100%;
 	width: 100%;
@@ -92,11 +92,12 @@
 	display: inline-block;
 	position: relative;
 	margin-bottom: ($vertical-spacing / 2);
+	vertical-align: top;
 	width: 100%;
 	
 	select {
 		appearance: none;
-		background: $white url(../img/interface/icon-select-arrows.svg) no-repeat right 10px center;
+		background: $white url(../assets/icon-select-arrows.svg) no-repeat right 10px center;
 		border: $border-width $border-style $input-border-color;
 		background-size: 12px;
 		border-radius: 0;
@@ -108,7 +109,6 @@
 		font-weight: $button-font-weight;
 		letter-spacing: $button-letter-spacing;
 		line-height: $font-lineheight;
-		font-weight: 700;
 		outline: 0;
 		overflow: hidden;
 		margin: 0;
