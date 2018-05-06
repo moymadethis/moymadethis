@@ -74,7 +74,7 @@
 					<li class="user-nav__item user-nav__item--basket"><a href="#" class="user-nav__link user-nav__link--basket"><svg class="icon icon--basket"><use xlink:href="img/sprite/sprite.svg#icon-basket"></use></svg> £39.99 <span class="user-nav__qty">3</span></a></li>
 				</ul>
 				
-				<a href="index.html" class="site-nav__home-link"><img src="img/interface/logo.svg" alt="The Great British Meat Co." class="site-nav__logo" /></a>
+				<a href="index.html" class="site-nav__home-link"><img src="assets/logo.svg" alt="The Great British Meat Co." class="site-nav__logo" /></a>
 				
 				<nav class="site-nav">
 					<ul class="site-nav__list">					
@@ -240,6 +240,43 @@
 							</tfoot>
 						</table>
 						
+						<div class="grid">
+							
+							<div class="grid__item one-third">
+								
+								<div class="form-group">
+									<label class="form-group__title">Shipping Instructions</label>
+									<div class="form-group__controls">
+										<textarea class="text-input" rows="1" placeholder="Enter your message..."></textarea>
+									</div>
+								</div>
+								
+							</div>
+							
+							<div class="grid__item one-third">
+								
+								<div class="form-group">
+									<label class="form-group__title">Any special notes with your order?</label>
+									<div class="form-group__controls">
+										<textarea class="text-input" rows="1" placeholder="Enter your message..."></textarea>
+									</div>
+								</div>
+								
+							</div>
+							
+							<div class="grid__item one-third">
+								
+								<div class="form-group">
+									<label class="form-group__title">Select a delivery date</label>
+									<div class="form-group__controls">
+										<input class="text-input datepicker" type="text" data-toggle="datepicker" />
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>
+						
 						<button class="btn btn--primary btn--large">Checkout</button>
 						<a href="#" class="btn btn--neutral btn--large">Update Basket</a>
 						
@@ -373,6 +410,7 @@
         <script src="js/slick.min.js"></script>
 		<script src="js/svg4everybody.min.js"></script>
 		<script src="js/stickyfill.min.js"></script>
+		<script src="js/jquery.datepicker.min.js"></script>
 		<script src="js/main.js"></script>
 
 		<!-- Google Analytics -->
