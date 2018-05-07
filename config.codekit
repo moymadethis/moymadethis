@@ -1889,6 +1889,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/sites\/gbm\/basket-3.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/basket-3.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sites\/gbm\/basket-alt.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/basket-alt.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/sites\/gbm\/basket.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2251,6 +2269,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/sites\/gbm\/index-alt.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/index-alt.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/sites\/gbm\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2353,6 +2380,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sites\/gbm\/login.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/sites\/gbm\/product-detail-alt.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/product-detail-alt.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -3026,6 +3062,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sites\/gbm\/scss\/layout\/_layout-template.scss",
 		"outputAbbreviatedPath": "\/sites\/gbm\/scss\/css\/_layout-template.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sites\/gbm\/scss\/modules\/_modules-accordion.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sites\/gbm\/scss\/modules\/_modules-accordion.scss",
+		"outputAbbreviatedPath": "\/sites\/gbm\/scss\/css\/_modules-accordion.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
