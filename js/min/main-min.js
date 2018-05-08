@@ -90,13 +90,13 @@ $(function() {
         else $(this).on('loadeddata', initControl(this));
 
         $(this).on('ended', function() {
-            $(this).siblings('.player__btn--flow').removeClass('active');
+            $(this).next().find('.player__btn--flow').removeClass('active');
         });
     });
 
     $('.player__btn--audio').click(function() {
 
-        var media = $(this).siblings('video');
+        var media = $(this).parent().siblings('video');
 
         if (media[0].muted) {
             media[0].muted = false;
@@ -109,7 +109,7 @@ $(function() {
 
     $('.player__btn--flow').click(function() {
 
-        var media = $(this).siblings('video');
+        var media = $(this).parent().siblings('video');
 
         media.addClass('managed');
 
@@ -124,7 +124,7 @@ $(function() {
 
     function initControl(aim) {
 
-        $(aim).addClass('deft').siblings('button').show();
+        $(aim).addClass('deft').next().find('button').show();
     }
 
     function storeDimensions() {
@@ -150,7 +150,7 @@ $(function() {
 
             if (!$(this).hasClass('deft') || (!this.busy && $(this).hasClass('managed'))) return;
 
-            var interface = $(this).siblings('.player__btn--flow');
+            var interface = $(this).next().find('.player__btn--flow');
 
             if (spot > zenith[i] && spot < nadir[i]) {
                 if (this.busy) return;
