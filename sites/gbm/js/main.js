@@ -33,7 +33,7 @@ $(document).ready(function() {
 		// Configuration
 		clone: true,
 		offCanvas: {
-			pageSelector: "#my-page"
+			pageSelector: "#page"
 		},
 		classNames: {
 			selected: "active",

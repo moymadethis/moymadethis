@@ -210,17 +210,27 @@
 }
 
 
-.basket-form {
-	@include clearfix;
+
+
+
+/* ==========================================================================
+   #BASKET-TOTAL
+   ========================================================================== */
+   
+.basket-total {
 	
-	.btn {
-		margin-bottom: $vertical-spacing / 4;
-		width: 100%;
-		
-		@include bp(bp4) {
-			float: right;
-			margin: 0 0 0 $gutter / 2;
-			width: auto;
-		}
-	}	
+	th,
+	td {
+		border-bottom: $border;
+		padding: $vertical-spacing / 4 0;
+	}
+	
+	th {
+		padding-top: 0;
+	}
+	
+	td:last-child {
+		color: $grey-darker;
+		text-align: right;
+	}
 }

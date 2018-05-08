@@ -54,7 +54,7 @@
 
 	<body>
 		
-		<div class="page">
+		<div id="page" class="page">
 			
 			<div class="info-bar">
 				<h5 class="info-bar__text">Free Shipping on orders over £50 (standard delivery just £4.95)</h5>
@@ -147,138 +147,170 @@
 					
 					<form class="basket-form">
 						
-						<table class="basket">
-							<thead class="basket__head">
-								<tr>
-									<th colspan="2">Item</th>
-									<th>Qty</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody class="basket__body">
-								<tr class="h-product">
-									<td class="basket__image">
-										<img src="img/temp/product-images/thumbs/beef-sirloin-steak.jpg" alt="ALT TEXT" class="u-photo" />
-									</td>
-									<td class="basket__desc">
-										<h2 class="p-name">Sirloin Steaks</h2>
-										<p class="e-description">2 x 227g/8oz Steaks</p>
-										<p class="p-price">£11.60</p>
-									</td>
-									<td class="basket__qty">
-										<div class="qty qty--small">
-											<button class="qty__down"><svg class="icon icon--minus"><use xlink:href="img/sprite/sprite.svg#icon-minus"></use></svg></button>
-											<input type="text" value="2" class="text-input qty__input" />
-											<button class="qty__up"><svg class="icon icon--plus"><use xlink:href="img/sprite/sprite.svg#icon-plus"></use></svg></button>
-											<a href="#" class="qty__remove">Remove</a>
-										</div>
-									</td>
-									<td class="basket__price">
-										<p><strong>£23.20</strong></p>
-									</td>
-								</tr>
-								<tr class="h-product">
-									<td class="basket__image">
-										<img src="img/temp/product-images/thumbs/beef-silverside.jpg" alt="ALT TEXT" class="u-photo" />
-									</td>
-									<td class="basket__desc">
-										<h2 class="p-name">Silverside Joint</h2>
-										<p class="e-description">1kg (serves 2-4)</p>
-										<p class="p-price">£6.77</p>
-									</td>
-									<td class="basket__qty">
-										<div class="qty qty--small">
-											<button class="qty__down"><svg class="icon icon--minus"><use xlink:href="img/sprite/sprite.svg#icon-minus"></use></svg></button>
-											<input type="text" value="2" class="text-input qty__input" />
-											<button class="qty__up"><svg class="icon icon--plus"><use xlink:href="img/sprite/sprite.svg#icon-plus"></use></svg></button>
-											<a href="#" class="qty__remove">Remove</a>
-										</div>
-									</td>
-									<td class="basket__price">
-										<p><strong>£6.77</strong></p>
-									</td>
-								</tr>
-								<tr class="h-product">
-									<td class="basket__image">
-										<img src="img/temp/product-images/thumbs/lamb-rack.jpg" alt="ALT TEXT" class="u-photo" />
-									</td>
-									<td class="basket__desc">
-										<h2 class="p-name">Rack of Lamb</h2>
-										<p class="e-description">2 x 3-bone racks (170g/6oz)</p>
-										<p class="p-price">£12.99</p>
-									</td>
-									<td class="basket__qty">
-										<div class="qty qty--small">
-											<button class="qty__down"><svg class="icon icon--minus"><use xlink:href="img/sprite/sprite.svg#icon-minus"></use></svg></button>
-											<input type="text" value="2" class="text-input qty__input" />
-											<button class="qty__up"><svg class="icon icon--plus"><use xlink:href="img/sprite/sprite.svg#icon-plus"></use></svg></button>
-											<a href="#" class="qty__remove">Remove</a>
-										</div>
-									</td>
-									<td class="basket__price">
-										<p><strong>£12.99</strong></p>
-									</td>
-								</tr>
-							</tbody>
-							<tfoot class="basket__foot">
-								<tr>
-									<td colspan="3">
-										<p>Shipping</p>
-									</td>
-									<td>
-										<p><strong>FREE</strong></p>
-									</td>
-								</tr>
-								<tr>
-									<td colspan="3">
-										<p>Total</p>
-									</td>
-									<td>
-										<p><strong>£42.96</strong></p>
-									</td>
-								</tr>
-							</tfoot>
-						</table>
-						
 						<div class="grid">
 							
-							<div class="grid__item one-third">
+							<div class="grid__item two-thirds">
 								
-								<div class="form-group">
-									<label class="form-group__title">Shipping Instructions</label>
-									<div class="form-group__controls">
-										<textarea class="text-input" rows="1" placeholder="Enter your message..."></textarea>
-									</div>
-								</div>
+								<table class="basket">
+									<thead class="basket__head">
+										<tr>
+											<th colspan="2">Item</th>
+											<th>Qty</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody class="basket__body">
+										<tr class="h-product">
+											<td class="basket__image">
+												<img src="img/temp/product-images/thumbs/beef-sirloin-steak.jpg" alt="ALT TEXT" class="u-photo" />
+											</td>
+											<td class="basket__desc">
+												<h2 class="p-name">Sirloin Steaks</h2>
+												<p class="e-description">2 x 227g/8oz Steaks</p>
+												<p class="p-price">£11.60</p>
+											</td>
+											<td class="basket__qty">
+												<div class="qty qty--small">
+													<button class="qty__down"><svg class="icon icon--minus"><use xlink:href="img/sprite/sprite.svg#icon-minus"></use></svg></button>
+													<input type="text" value="2" class="text-input qty__input" />
+													<button class="qty__up"><svg class="icon icon--plus"><use xlink:href="img/sprite/sprite.svg#icon-plus"></use></svg></button>
+													<a href="#" class="qty__remove">Remove</a>
+												</div>
+											</td>
+											<td class="basket__price">
+												<p><strong>£23.20</strong></p>
+											</td>
+										</tr>
+										<tr class="h-product">
+											<td class="basket__image">
+												<img src="img/temp/product-images/thumbs/beef-silverside.jpg" alt="ALT TEXT" class="u-photo" />
+											</td>
+											<td class="basket__desc">
+												<h2 class="p-name">Silverside Joint</h2>
+												<p class="e-description">1kg (serves 2-4)</p>
+												<p class="p-price">£6.77</p>
+											</td>
+											<td class="basket__qty">
+												<div class="qty qty--small">
+													<button class="qty__down"><svg class="icon icon--minus"><use xlink:href="img/sprite/sprite.svg#icon-minus"></use></svg></button>
+													<input type="text" value="2" class="text-input qty__input" />
+													<button class="qty__up"><svg class="icon icon--plus"><use xlink:href="img/sprite/sprite.svg#icon-plus"></use></svg></button>
+													<a href="#" class="qty__remove">Remove</a>
+												</div>
+											</td>
+											<td class="basket__price">
+												<p><strong>£6.77</strong></p>
+											</td>
+										</tr>
+										<tr class="h-product">
+											<td class="basket__image">
+												<img src="img/temp/product-images/thumbs/lamb-rack.jpg" alt="ALT TEXT" class="u-photo" />
+											</td>
+											<td class="basket__desc">
+												<h2 class="p-name">Rack of Lamb</h2>
+												<p class="e-description">2 x 3-bone racks (170g/6oz)</p>
+												<p class="p-price">£12.99</p>
+											</td>
+											<td class="basket__qty">
+												<div class="qty qty--small">
+													<button class="qty__down"><svg class="icon icon--minus"><use xlink:href="img/sprite/sprite.svg#icon-minus"></use></svg></button>
+													<input type="text" value="2" class="text-input qty__input" />
+													<button class="qty__up"><svg class="icon icon--plus"><use xlink:href="img/sprite/sprite.svg#icon-plus"></use></svg></button>
+													<a href="#" class="qty__remove">Remove</a>
+												</div>
+											</td>
+											<td class="basket__price">
+												<p><strong>£12.99</strong></p>
+											</td>
+										</tr>
+									</tbody>
+<!--
+									<tfoot class="basket__foot">
+										<tr>
+											<td colspan="3">
+												<p>Shipping</p>
+											</td>
+											<td>
+												<p><strong>FREE</strong></p>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="3">
+												<p>Total</p>
+											</td>
+											<td>
+												<p><strong>£42.96</strong></p>
+											</td>
+										</tr>
+									</tfoot>
+-->
+								</table>
 								
 							</div>
 							
 							<div class="grid__item one-third">
 								
-								<div class="form-group">
-									<label class="form-group__title">Any special notes with your order?</label>
-									<div class="form-group__controls">
-										<textarea class="text-input" rows="1" placeholder="Enter your message..."></textarea>
+								<div class="box">
+									
+									<table class="basket-total">
+										<thead>
+											<tr>
+												<th colspan="2">Basket Total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<p>Shipping</p>
+												</td>
+												<td>
+													<p><strong>Free</strong></p>
+												</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td>
+													<p>Total</p>
+												</td>
+												<td>
+													<p><strong>£42.96</strong></p>
+												</td>
+											</tr>
+										</tfoot>
+									</table>	
+										
+									<div class="form-group">
+										<label class="form-group__title">Select a delivery date</label>
+										<div class="form-group__controls">
+											<input class="text-input datepicker" type="text" data-toggle="datepicker" />
+										</div>
 									</div>
+									
+									<div class="accordion">
+							            <div class="accordion__item">
+							                <label class="accordion__title">Add Shipping Instructions <span class="accordion__title-icon"></span></label>
+							                <div class="accordion__copy">
+								                <textarea class="text-input" rows="2" placeholder="Enter your message..."></textarea>
+							                </div>
+							            </div>
+							            <div class="accordion__item">
+							                <label class="accordion__title">Any special notes with your order? <span class="accordion__title-icon"></span></label>
+							                <div class="accordion__copy">
+								                <textarea class="text-input" rows="2" placeholder="Enter your message..."></textarea>
+							                </div>
+							            </div>
+								    </div>
+									
+									<div class="form-group form-group--btns">
+										<button class="btn btn--primary btn--wide">Checkout</button>
+										<a href="#" class="btn btn--neutral btn--wide">Update Basket</a>
+									</div>
+									
 								</div>
 								
 							</div>
-							
-							<div class="grid__item one-third">
-								
-								<div class="form-group">
-									<label class="form-group__title">Select a delivery date</label>
-									<div class="form-group__controls">
-										<input class="text-input datepicker" type="text" data-toggle="datepicker" />
-									</div>
-								</div>
-								
-							</div>
-							
 						</div>
-						
-						<button class="btn btn--primary btn--large">Checkout</button>
-						<a href="#" class="btn btn--neutral btn--large">Update Basket</a>
 						
 					</form>
 					

@@ -57,6 +57,16 @@ input[type="search"] {
 }
 
 /**
+ * Datepicker styling
+ */
+ 
+.datepicker {
+	background: url(../assets/icon-calendar.svg) no-repeat 10px center;
+	background-size: 20px;
+	padding-left: 40px;
+}
+
+/**
  * Placeholder text styles.
  */
 

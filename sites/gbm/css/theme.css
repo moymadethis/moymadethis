@@ -398,6 +398,14 @@ input[type="search"] {
   -webkit-appearance: none; }
 
 /**
+ * Datepicker styling
+ */
+.datepicker {
+  background: url(../assets/icon-calendar.svg) no-repeat 10px center;
+  background-size: 20px;
+  padding-left: 40px; }
+
+/**
  * Placeholder text styles.
  */
 .text-input::-webkit-input-placeholder {
@@ -1923,6 +1931,19 @@ blockquote {
   background-image: url(../assets/icon-chevron-right.svg); }
 
 /*------------------------------------*\
+    #BOX
+\*------------------------------------*/
+.box {
+  background: white;
+  border: 1px solid #eff1f1;
+  box-sizing: border-box;
+  padding: 30px 30px 0; }
+
+.box--clear {
+  background: none;
+  border: none; }
+
+/*------------------------------------*\
     #OVERLAYS
 \*------------------------------------*/
 .overlay-link {
@@ -2838,15 +2859,13 @@ blockquote {
   #ACCORDION
 \*------------------------------------*/
 .accordion {
-  margin-bottom: 30px;
+  margin: -7.5px 0 30px;
   overflow: hidden;
   text-align: left; }
-  .accordion + .form-group {
-    margin-top: -15px; }
 
 .accordion__item {
   overflow: hidden;
-  border-bottom: 1px solid #b3bcbc; }
+  border-bottom: 1px solid #d4d9d9; }
 
 .accordion__title {
   cursor: pointer;
@@ -2865,7 +2884,7 @@ blockquote {
   height: 13px;
   width: 13px;
   right: 0;
-  top: 10px; }
+  top: 12px; }
 
 .accordion__title-icon:before,
 .accordion__title-icon:after {
@@ -2901,7 +2920,9 @@ blockquote {
 
 .accordion__copy {
   display: none;
-  padding: 0 0 28px; }
+  padding: 0 0 15px; }
+  .accordion__copy *:last-child {
+    margin-bottom: 0; }
 
 .accordion__copy p {
   margin: 0;
@@ -5018,22 +5039,15 @@ a.flag {
     .basket__price {
       display: table-cell; } }
 
-.basket-form:before, .basket-form:after {
-  content: "";
-  display: table; }
-.basket-form:after {
-  clear: both; }
-.basket-form .btn {
-  margin-bottom: 7.5px;
-  width: 100%;
-  /* [1] */
-  /* [2] */
-  /* [3] */
-  /* [4] */
-  /* [5] */
-  /* [6] */ }
-  @media (min-width: 48em) {
-    .basket-form .btn {
-      float: right;
-      margin: 0 0 0 15px;
-      width: auto; } }
+/* ==========================================================================
+   #BASKET-TOTAL
+   ========================================================================== */
+.basket-total th,
+.basket-total td {
+  border-bottom: 1px solid #eff1f1;
+  padding: 7.5px 0; }
+.basket-total th {
+  padding-top: 0; }
+.basket-total td:last-child {
+  color: #0e1010;
+  text-align: right; }

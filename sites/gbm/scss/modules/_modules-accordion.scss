@@ -4,18 +4,14 @@
 
 
 .accordion {
-	margin-bottom: $vertical-spacing;
-  overflow: hidden;
-  text-align: left;
-  
-  + .form-group {
-	  margin-top: -$vertical-spacing / 2;
-  }
+	margin: -$vertical-spacing / 4 0 $vertical-spacing;
+	overflow: hidden;
+  	text-align: left;
 }
 
 .accordion__item {
   overflow: hidden;
-  border-bottom: 1px solid $grey-light;
+  border-bottom: 1px solid $input-border-color;
 }
 
 .accordion__title {
@@ -37,7 +33,7 @@
   height: 13px;
   width: 13px;
   right: 0;
-  top: 10px;
+  top: 12px;
 }
 
 .accordion__title-icon:before,
@@ -79,7 +75,11 @@
 
 .accordion__copy {
   display: none;
-  padding: 0 0 28px;
+  padding: 0 0 $vertical-spacing / 2;
+  
+  *:last-child {
+	  margin-bottom: 0;
+  }
 
   .accordion__item:first-child & {
     //display: block;

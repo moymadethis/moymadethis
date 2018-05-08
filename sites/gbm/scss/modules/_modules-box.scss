@@ -1,5 +1,25 @@
 
 /*------------------------------------*\
+    #BOX
+\*------------------------------------*/
+
+.box {
+	background: $white;
+	border: $border;
+	box-sizing: border-box;
+	padding: $vertical-spacing $gutter 0;
+}
+
+.box--clear {
+	background: none;
+	border: none;
+}
+
+
+
+
+
+/*------------------------------------*\
     #OVERLAYS
 \*------------------------------------*/
 
