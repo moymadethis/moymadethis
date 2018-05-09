@@ -555,6 +555,17 @@
 
 .product__info {
 	
+	h1,
+	h2,
+	h3,
+	h4 {
+		@include font-size(15);
+
+		@include bp(bp6) {
+			@include font-size(18);
+		}
+	}
+	
 	@include bp(bp5) {
 		clear: left;
 	}
