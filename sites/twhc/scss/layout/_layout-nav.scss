@@ -1,0 +1,140 @@
+
+
+
+/* ==========================================================================
+   #SITE-NAV
+   ========================================================================== */
+
+/**
+ * A class of `.show-nav` is added to the body tag once `.site-nav` is activated
+ * (visible) once the `.page-head__toggle` is clicked. `.page-head__toggle` is
+ * extended in _layout-banner.scss.
+ */
+ 
+ .show-nav {
+	 overflow: hidden;
+ }
+ 
+/**
+ * `.site-nav` is the main page navigation. It has 3 states:
+ */
+ 
+.site-nav {
+	background: $color-primary;
+	display: block;
+	height: 100%;
+	opacity: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	transform: scale(.90);
+	transition: opacity .10s .80s ease, transform .20s .80s ease, visibility .10s .80s;
+	user-select: none;
+	visibility: hidden;
+	width: 100%;
+	z-index: -1;
+	
+	@include bp(bp5) {
+		background: none;
+		float: right;
+		height: auto;
+		opacity: 1;
+		user-select: all;
+		visibility: visible;
+		position: relative;
+		top: auto;
+		left: auto;
+		transform: none;
+		z-index: 0;
+		width: auto;
+	}
+	
+	.show-nav & {
+		opacity: 1;
+		transition: opacity .10s ease-in, transform .20s ease-in;
+		visibility: visible;
+		transform: scale(1);
+		z-index: 1000;
+	}
+	
+	.hide-nav & {
+		transform: scale(1);
+		visibility: visible;
+		z-index: 1000;
+	}
+}
+
+.site-nav__list {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translateY(-50%);
+	width: 100%;
+	
+	@include bp(bp5) {
+		position: relative;
+		top: auto;
+		left: auto;
+		transform: none;
+		width: auto;
+	}
+}
+
+.site-nav__item {
+	background: none;
+	font-family: $heading-font-family;
+	@include font-size(20);
+	margin: 0;
+	padding-left: 0;
+	opacity: 0;
+	text-transform: uppercase;
+	transform: translateY(-150px);
+	transition: all .40s .40s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	
+	.show-nav & {
+	    opacity: 1;
+		transform: translateY(0);
+		transition-delay: .20s;
+		transition-duration: .80s;
+    }
+    
+    @include bp(bp5) {
+	    display: inline-block;
+	    @include font-size(14);
+	    opacity: 1;
+	    margin-left: $gutter;
+	    transform: none;
+	}
+}
+
+.site-nav__link {
+	background-image: none;
+	color: $color-primary-lighter;
+	display: block;
+	font-weight: 900;
+	padding: $vertical-spacing / 2;
+	text-shadow: none;
+	
+	&:visited {
+		background: transparent;
+		color: $color-primary-lighter;
+	}
+
+	&:hover,
+	&:focus {
+		color: $white;
+		outline: none;
+	}
+	
+	&.amp {
+		color: $white;
+	}
+
+	@include bp(bp5) {
+		padding: 0;
+	}
+}

@@ -1,0 +1,75 @@
+
+/*------------------------------------*\
+    #FEATURES
+\*------------------------------------*/
+
+/**
+ * Features/service panel. Each item has an icon, title and short text entry.
+ */
+
+.features {
+	@include clearfix;
+	margin: 0;
+	padding: 0;
+}
+
+.features__item {
+	background: none;
+	box-sizing: border-box;
+	@include clearfix;
+	margin: 0;
+	padding: 0 0 0 65px;
+	
+	@include bp(bp5) {
+		float: left;
+		text-align: center;
+		padding: 0 $gutter / 2;
+		width: 20%;
+	}
+}
+
+.features__icon-wrap {
+	background-color: $color-primary-light;
+	background-image: url(../img/interface/noise.png), linear-gradient(rgba($color-primary,0) 0%, $color-primary 100%);
+	border-radius: 100%;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 0 $vertical-spacing -65px;
+	float: left;
+	text-align: center;
+	width: 50px;
+	
+	.icon {
+		fill: $white;
+		height: 25px;
+		width: 25px;
+	}
+	
+	@include bp(bp5) {
+		float: none;
+		margin-left: 0;
+		height: 100px;
+		line-height: 100px;
+		width: 100px;
+		
+		.icon {
+			height: 50px;
+			width: 50px;
+		}
+	}
+}
+
+.features__title {
+	@include font-size(14);
+	margin-bottom: $vertical-spacing / 4;
+	
+	@include bp(bp5) {
+		@include font-size(16);
+	}
+}
+
+.features__text {
+	@include font-size(12);
+	line-height: 1.4;
+}

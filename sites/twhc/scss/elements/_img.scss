@@ -1,0 +1,137 @@
+
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+
+/**
+ * Base `img` styles.
+ */
+
+img {
+	
+	border-width : 0;
+	vertical-align : middle;
+	width: 100%;
+	max-width : 100%;
+	-ms-interpolation-mode : bicubic;
+}
+
+img[width],
+img[height] {
+	max-width: none;
+}
+
+
+/**
+ * Base `video` styles.
+ */
+ 
+video {
+	display: block;
+	height: auto;
+	width: 100%;
+	max-width: 100%;
+}
+
+
+/**
+ * Alignment options.
+ */
+
+.img-left {
+	float : left;
+	margin-right: ($gutter);
+	margin-bottom: ($vertical-spacing);
+	width : auto;
+}
+
+.img-right {
+	float: right;
+	margin-bottom: ($vertical-spacing);
+	margin-left: ($gutter);
+	width: auto;
+}
+
+.img-center {
+	display: block;
+	width: auto;
+	margin-right: auto;
+	margin-bottom: ($vertical-spacing);
+	margin-left: auto;
+}
+
+.img-left,
+.img-right,
+.img-center {
+	
+	img {
+		width: auto;
+	}
+}
+
+
+/**
+ * `figure` and `figcatpion` styles.
+ */
+
+figure {
+	display: block;
+	margin: 0 0 ($vertical-spacing) 0;
+
+	img {
+		margin-bottom: ($vertical-spacing);
+	}
+}
+
+figcaption {
+	color: $grey-darker;
+	font-family: $figcaption-font-family;
+	font-size: $figcaption-font-size;
+	font-style: $figcaption-font-style;
+	font-weight: $figcaption-font-weight;
+	margin-bottom: $vertical-spacing;
+	text-transform: $figcaption-text-transform;
+	
+	img + & {
+		margin-top: -$vertical-spacing / 2;
+	}
+	
+	.img-stroke + & {
+		padding: 0 8px;
+	}
+}
+
+
+	
+.pop {
+	margin-top: $vertical-spacing * 2;
+	transition: all .10s;
+	
+	@include bp(bp7) {
+		margin: ($vertical-spacing * 3) -100px ($vertical-spacing * 2);
+
+		img,
+		video {
+			width: 100%;
+		}
+		
+		figcaption {
+			margin: 0 100px $vertical-spacing;
+		}
+	}
+	
+	&:last-child {
+		margin-bottom: $vertical-spacing;
+	}
+}
+
+.pop--wide {
+	
+	@include bp(bp7) {
+		margin: ($vertical-spacing * 3) -150px ($vertical-spacing * 2);
+		
+		figcaption {
+			margin: 0 150px $vertical-spacing;
+		}
+	}
+}

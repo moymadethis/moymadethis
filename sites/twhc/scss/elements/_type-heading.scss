@@ -1,0 +1,94 @@
+
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/**
+ * Base styling for heading elements.
+ */
+ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $heading-font-color;
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
+	line-height: .90;
+	margin: 0 0 $vertical-spacing / 2;
+	transition: font-size .15s;
+	text-transform: uppercase;
+}
+
+h1 { 
+	@include font-size(40);
+
+	@include bp(bp5) {
+		@include font-size(50);
+	}
+}
+
+h2 { 
+	@include font-size(32);
+
+	@include bp(bp5) {
+		@include font-size(40);
+	}
+}
+
+h3 { 
+	@include font-size(24);
+	
+	@include bp(bp5) {
+		@include font-size(30);
+	}
+}
+
+h4 { 
+	@include font-size(16);
+
+	@include bp(bp5) {
+		@include font-size(20);
+	}
+}
+
+/**
+ * Oversized title styling, used on the homepage/masthead areas.
+ */
+
+.oversize {
+	
+	@include font-size(36);
+
+	@include bp(bp5) {
+		@include font-size(48);
+	}
+}
+
+
+/**
+ * The `.hgroup` class be used to group a title + lead paragraph styling, mainly
+ * to open a `.band` section.
+ */
+ 
+.hgroup {
+	margin: 0 auto $vertical-spacing * 2;
+	max-width: 890px;
+	
+	@include bp(bp5) {
+		margin-bottom: $vertical-spacing * 3;
+	}
+}
+
+.hgroup__lead {
+	color: lighten($font-color,10%);
+	@include font-size($font-size);
+	line-height: 1.4;
+
+	@include bp(bp5) {
+		@include font-size(16);
+		
+	}
+}

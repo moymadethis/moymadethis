@@ -1,0 +1,66 @@
+
+/*------------------------------------*\
+    #TESTIMONIALS
+\*------------------------------------*/
+
+/**
+ * A form used to gather details so they can be called back at a suitable time.
+ */
+ 
+.band--quotes {
+	
+	@include bp(bp5) {
+		padding-bottom: 0 !important;
+	}
+	
+	.slick-list {
+		margin-bottom: 0;
+	}
+	
+	.slick-dots {
+		position: absolute;
+		bottom: $vertical-spacing;
+	}
+}
+
+.testimonial {
+	display: flex;
+	align-items: center;
+}
+
+.testimonial__quote {
+	padding: 0;
+	opacity: 0;
+	text-align: right;
+	transition: all .15s .75s;
+	transform: translate(-90px,0);
+	
+	@include bp(bp5) {
+		width: 50%;
+	}
+	
+	.slick-current & {
+		opacity: 1;
+		transform: translate(0,0);
+	}
+}
+
+.testimonial__image {
+	display: none;
+	margin: 0 auto;
+	opacity: 0;
+	transition: all .15s .60s;
+	transform: translate(90px, 0);
+	max-width: 500px;
+	
+	@include bp(bp5) {
+		display: block;
+		position: relative;
+		width: 50%;
+	}
+	
+	.slick-current & {
+		opacity: 1;
+		transform: translate(0,0);
+	}
+}

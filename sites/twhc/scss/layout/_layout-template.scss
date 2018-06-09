@@ -1,0 +1,38 @@
+
+/* ==========================================================================
+   #BANDS
+   ========================================================================== */
+   
+/**
+ * Sections of content separated into 'bands', usually containing a `.wrap` div
+ * to center content.
+ */   
+
+.band {
+	padding: ($vertical-spacing * 2) 0 ($vertical-spacing);
+	width: 100%;
+	
+	@include bp(bp5) {
+		padding: ($vertical-spacing * 4) 0 ($vertical-spacing * 3);
+	}
+}
+
+
+/**
+ * The `.wrap` div is used for centering content on wider viewports and limiting
+ * how wide that content can get using a `max-width`.
+ */   
+
+.wrap {
+	margin: 0 auto;
+	padding: 0 ($gutter / 2);
+	max-width: 1350px;
+	
+	@include bp(bp5) {
+		padding: 0 $gutter;
+	}
+}
+
+.wrap--narrow {
+	max-width: 890px;
+}

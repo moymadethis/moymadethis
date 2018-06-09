@@ -1,0 +1,80 @@
+
+/* ==========================================================================
+   #MASTHEAD
+   ========================================================================== */
+
+/**
+ * An area found at the top of a page, below the header. Usually contains a
+ * title + short sentence with an image or video background.
+ */
+
+.masthead {
+	width: 100%;
+}
+
+/**
+ * Video masthead.
+ */
+
+.masthead--video {
+	color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	height: 75vh;
+	z-index: 1;
+	
+	&:before {
+		background: rgba($black,.45) url(../img/interface/interlacing.png) 0 0;
+		content: "";
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 5;
+	}
+	
+	.wrap {
+		position: relative;
+		z-index: 10;
+	}
+	
+	h1 {
+		color: $white;
+	}
+	
+	.lead {
+		color: $grey-lighter;
+	}
+	
+	.btn {
+		margin-bottom: 0;
+	}
+}
+
+/**
+ * Video element.
+ *
+ * 1. Overwrite base `video` element styles as it causes video not the fill the
+ *    height of it's container on narrower viewports.
+ */
+
+.hero-video {
+	background-size: cover;
+    display: block;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: auto;
+    min-width: 100%;
+    max-width: none; /* [1] */
+}
+
+

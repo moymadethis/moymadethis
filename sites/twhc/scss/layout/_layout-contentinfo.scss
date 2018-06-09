@@ -1,0 +1,161 @@
+
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+/**
+ * Website footer.
+ */
+ 
+.page-foot {
+	box-sizing: border-box;
+	padding: ($vertical-spacing * 2) ($gutter / 2) 0;
+	width: 100%;
+	
+	@include bp(bp5) {
+		padding: ($vertical-spacing * 3) $gutter 0;
+	}
+	
+	p {
+		@include font-size(12);
+	}
+	
+	ul {
+		@include font-size(12);
+		padding-left: 0;
+	}
+	
+	li {
+		background: none;
+		padding-left: 0;
+	}
+	
+	a {
+		background-image: none;
+		color: $font-color;
+		font-weight: 400;
+		padding: 0;
+		text-shadow: none;
+		
+		&:visited {
+			color: $font-color;
+		}
+		
+		&:hover,
+		&:focus {
+			color: $grey-darker;
+		}
+	}
+}
+
+.page-foot__logo {
+	display: block;
+	margin: 0 auto $vertical-spacing * 1.5;
+	opacity: .25;
+	max-width: 250px;
+	
+	@include bp(bp2) {
+		margin-bottom: 0;
+	}
+}
+
+.page-foot {
+	
+	.grid__item {
+		
+		&.one-quarter {
+			
+			@include bp(bp2) {
+				clear: none;
+				float: left;
+				width: 50%;
+			}
+			
+			@include bp(bp5) {
+				width: 25%;
+			}
+		}
+		
+		.one-half {
+			width: 50%;
+			float: left;
+		}
+	}
+}
+
+
+
+
+.page-foot__title {
+	@include font-size(12);
+	
+	@include bp(bp5) {
+		@include font-size(14);
+	}
+}
+
+
+
+
+/**
+ * Copyright + terms/privacy links at bottom of the page.
+ */
+
+.page-foot__legal {
+	background: $grey-lighter;
+	@include font-size(10);
+	clear: both;
+	margin: 0 0 0 (-$gutter / 2);
+	padding: ($vertical-spacing / 2) ($gutter / 2);
+	text-align: center;
+	width: 100%;
+	
+	@include bp(bp5) {
+		@include font-size(11);
+		margin-left: -$gutter;
+		padding: ($vertical-spacing /2) $gutter;
+		text-align: left;
+	}
+	
+	li {
+		background: none;
+		display: inline-block;
+		margin: 0 ($gutter / 4);
+		padding-left: 0;
+		
+		&:before {
+			color: darken($grey-lighter,15%);
+			content: "/";
+			margin-right: ($gutter / 2);
+		}
+		
+		&.copyright {
+			display: block;
+		}
+		
+		@include bp(bp5) {
+			margin: 0 ($gutter / 2) 0 0;
+			
+			&.copyright {
+				display: inline-block;
+			}
+		}
+	}
+	
+	a {
+		background-image: none;
+		color: $grey;
+		font-weight: 400;
+		padding: 0;
+		text-shadow: none;
+		
+		&:visited {
+			color: $grey;
+		}
+		
+		&:hover,
+		&:focus {
+			color: $grey-darker;
+		}
+	}
+}

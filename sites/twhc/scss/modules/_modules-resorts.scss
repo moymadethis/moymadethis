@@ -1,0 +1,67 @@
+
+/*------------------------------------*\
+    #RESORTS
+\*------------------------------------*/
+
+/**
+ * A form used to gather details so they can be called back at a suitable time.
+ */
+
+.band--resorts {
+	background: url(../img/interface/bg-sand-meets-the-sea.jpg) no-repeat center bottom;
+	background-size: cover;
+	
+	.hgroup__title {
+		color: $white;
+	}
+	
+	.hgroup__lead {
+		color: $color-primary-lighter;
+	}
+}
+
+.resort {
+	background: $white;
+	box-shadow: 0 0 15px rgba($black,.30);
+	margin: $vertical-spacing 0;
+	position: relative;
+	text-align: center;
+	transition: all .15s;
+	
+	.slick-center & {
+		transform: scale(1.05);
+		z-index: 10;
+	}
+	
+	p {
+		line-height: 1.4;
+	}
+}
+
+.resort__image {
+	margin: 0;
+	overflow: hidden;
+	
+	img {
+		margin: 0;
+		transition: all .15s;
+		
+		.resort:hover & {
+			transform: scale(1.10);
+		}
+	}
+}
+
+.resort__subtitle {
+	color: $color-primary;
+	@include font-size(14);
+	margin-bottom: $vertical-spacing / 6;
+	
+	@include bp(bp5) {
+		@include font-size(16);
+	}
+}
+
+.test {
+	padding: $vertical-spacing $gutter 0;
+}

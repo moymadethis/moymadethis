@@ -1,0 +1,93 @@
+
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * Default styling for buttons. Extend this object with a `.btn--*` skin class
+ * to change background-color, size or apply a relevant icon preceding the text.
+ *
+ * 1. Addtional `:before` styling is included for when an `icon` is required.
+ * 2. Add a left margin when to any `.btn` that follows another.
+ */
+
+.btn {
+	background-color: $button-bg;
+	background-image: url(../img/interface/noise.png), linear-gradient(rgba($grey-darker,0) 0%, $grey-darker 100%);
+	background-repeat: repeat;
+	background-size: auto;
+	border: 2px solid transparent;
+	border-radius: $button-border-radius;
+	box-sizing: border-box;
+	color: $button-font-color;
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	font-family: $button-font-family;	
+	@include font-size($button-font-size);
+	font-weight: $button-font-weight;
+	height: auto;
+	letter-spacing: $button-letter-spacing;
+	line-height: $font-lineheight;
+	margin-bottom: $vertical-spacing;
+	*margin-left: .3em;
+	padding: 12px $gutter 10px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none; /* [3] */
+	text-transform: $button-font-transform;
+	transition: all .15s;
+	vertical-align: middle;
+
+	&:visited {
+		background-color: $button-bg;
+		color: $button-font-color;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: $button-bg-hover;
+		color: $button-font-color-hover;
+		outline: 0;
+	}
+	
+	&:active {
+		top: 1px;
+	}
+}
+
+
+.btn--primary {
+	background-color: $button-primary-bg;
+	background-image: url(../img/interface/noise.png), linear-gradient(rgba($color-primary,0) 0%, $color-primary 100%);
+	
+	&:visited {
+		background-color: $button-primary-bg;
+	}
+	
+	&:focus,
+	&:hover {
+		background-color: $button-primary-bg-hover;
+	}
+}
+
+
+
+.btn--full {
+	width: 100%;
+}
+
+.icon {
+	display: inline-block;
+    fill: $color-primary;
+    height: 1.1em;
+    line-height: 40px;
+    position: relative;
+    top: -2px;
+    transition: all .20s;
+    vertical-align: middle;
+    width: 1.1em;
+}
+

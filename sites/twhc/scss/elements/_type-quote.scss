@@ -1,0 +1,81 @@
+
+/* ==========================================================================
+   #QUOTES
+   ========================================================================== */
+
+/**
+ * Base quote styles.
+ */
+
+blockquote {
+	color: $grey-darker;
+	font-family: $heading-font-family;
+	@include font-size(18);
+	font-weight: 900;
+	line-height: 1.2;
+	margin: ($vertical-spacing * 2) $gutter;
+	text-transform: uppercase;
+
+	@include bp(bp4) {
+		@include font-size(24);
+	}
+	
+	> p {
+		position: relative;
+		text-indent: 4px;
+		
+		&:first-child:before,
+		&:last-of-type:after {
+			color: $color-primary;
+			content: "\201c";
+			display: inline;
+			font-size: 50px;
+			font-family: "Georgia";
+			font-weight: bold;
+			line-height: 0;
+			//margin-left: -30px;
+			position: relative;
+			top: 20px;
+			left: -4px;
+			text-indent: 0;
+			
+			@include bp(bp5) {
+				font-size: 75px;
+				top: 30px;
+			}
+		}
+		
+		&:last-of-type:after {
+			content: "\201d";
+			top: 23px;
+			right: -4px;
+			left: auto;
+			
+			@include bp(bp5) {
+				top: 38px;
+			}
+		}
+	}
+	
+	footer {
+		color: $grey-light;
+		font-family: $font-family;
+		font-weight: 400;
+		@include font-size(14);
+		margin-top: -$vertical-spacing / 4;
+		
+		.amp {
+			color: $grey-light;
+			font-family: $heading-font-family;
+			font-weight: 900;
+		}
+		
+		@include bp(bp5) {
+			@include font-size(18);
+		}
+	}
+
+	cite {
+		font-style: normal;
+	}
+}
