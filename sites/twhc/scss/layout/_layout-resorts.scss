@@ -20,13 +20,33 @@
 	}
 }
 
+.resort-list {
+	@include clearfix;
+}
+
+.resort-list__item {
+	width: 100%;
+	
+	@include bp(bp3) {
+		float: left;
+		width: 50%;
+	}
+	
+	@include bp(bp5) {
+		width: 33.33333%;
+	}
+}
+
 .resort {
 	background: $white;
-	box-shadow: 0 0 15px rgba($black,.30);
-	margin: $vertical-spacing 0;
 	position: relative;
 	text-align: center;
 	transition: all .15s;
+	
+	.slick-slide & {
+		box-shadow: 0 0 15px rgba($black,.30);
+		margin: $vertical-spacing 0;
+	}
 	
 	.slick-center & {
 		transform: scale(1.05);
@@ -43,8 +63,12 @@
 }
 
 .resort__image {
+	background-image: none;
+	display: block;
 	margin: 0;
+	padding: 0;
 	overflow: hidden;
+	text-shadow: none;
 	
 	img {
 		margin: 0;
@@ -67,6 +91,16 @@
 	
 	@include bp(bp5) {
 		@include font-size(16);
+	}
+}
+
+.resort__title {
+	
+	a {
+		background-image: none;
+		font-weight: 900;
+		padding: 0;
+		text-shadow: none;
 	}
 }
 

@@ -84,7 +84,7 @@
 	}
 }
 
-.site-nav__item {
+.site-nav__list li {
 	background: none;
 	font-family: $heading-font-family;
 	@include font-size(20);
@@ -111,7 +111,7 @@
 	}
 }
 
-.site-nav__link {
+.site-nav__list a {
 	background-image: none;
 	color: $color-primary-lighter;
 	display: block;
