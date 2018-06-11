@@ -90,4 +90,20 @@ li > ol {
 		margin-right: ($gutter / 4);
 	}
 }
+
+
+/**
+ * Affiliate logos.
+ */
  
+.affiliates {
+	
+	li {
+		background: none;
+		padding-left: 0;
+	}
+	
+	img {
+		width: auto;
+	}
+}

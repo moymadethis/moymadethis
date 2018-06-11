@@ -44,8 +44,8 @@ $color-primary-lighter			: rgb(209,238,241);
  * Useful colours.
  */
 
-$color-success					: rgb(200,225,176);
-$color-error					: rgb(175,59,71);
+$color-success					: rgb(185,197,75);
+$color-error					: rgb(196,29,38);
 
 
 
@@ -150,11 +150,11 @@ $border							: $border-width $border-style $border-color;
  * Default/base.
  */
 
-$alert-bg							: rgb(231,214,204);
+$alert-bg							: $color-primary;
 $alert-border-color					: darken($alert-bg,10%);
-$alert-font-color					: darken($alert-bg, 45%);
-$alert-font-size					: 13;
-$alert-heading-font-color			: darken($alert-bg, 55%);
+$alert-font-color					: lighten($alert-bg, 50%);
+$alert-font-size					: 14;
+$alert-heading-font-color			: $white;
 $alert-heading-font-size			: 16;
 
 
@@ -164,8 +164,8 @@ $alert-heading-font-size			: 16;
 
 $alert-success-bg					: $color-success;
 $alert-success-border-color			: darken($alert-success-bg,10%);
-$alert-success-font-color			: darken($alert-success-bg, 45%);
-$alert-success-heading-font-color	: darken($alert-success-bg, 55%);
+$alert-success-font-color			: lighten($alert-success-bg, 50%);
+$alert-success-heading-font-color	: $alert-heading-font-color;
 
 
 /**
@@ -174,8 +174,8 @@ $alert-success-heading-font-color	: darken($alert-success-bg, 55%);
 
 $alert-error-bg						: $color-error;
 $alert-error-border-color			: darken($alert-error-bg, 10%);
-$alert-error-font-color				: lighten($alert-error-bg, 45%);
-$alert-error-heading-font-color		: $white;
+$alert-error-font-color				: lighten($alert-error-bg, 50%);
+$alert-error-heading-font-color		: $alert-heading-font-color;
 
 
 

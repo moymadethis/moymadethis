@@ -1,0 +1,40 @@
+
+/*------------------------------------*\
+    #PROMO BAR
+\*------------------------------------*/
+
+/**
+ * A form used to gather details so they can be called back at a suitable time.
+ */
+
+.promo-bar {
+	padding: ($vertical-spacing / 2) 0 0;
+	text-align: center;
+}
+
+.promo-bar__title {
+	color: $white;
+	@include font-size(14);
+	display: inline-block;
+	margin: 0 ($gutter / 4) ($vertical-spacing / 2);
+	
+	@include bp(bp5) {
+		@include font-size(16);
+	}
+}
+
+.promo-bar__cta {
+	display: inline-block;
+	margin: 0 ($gutter / 4) ($vertical-spacing / 2);
+	padding: 0;
+
+	.icon {
+		fill: $color-primary-lighter;
+		height: 20px;
+		width: 20px;
+		
+		&:hover {
+			fill: $white;
+		}
+	}
+}

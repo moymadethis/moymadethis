@@ -1,0 +1,125 @@
+/*------------------------------------*\
+  #ACCORDION
+\*------------------------------------*/
+
+
+.alert {
+	background: $alert-bg url(../img/interface/noise.png) 0 0;
+	border: $border-width $border-style $alert-border-color;
+	box-sizing: border-box;
+	clear: both;
+	@include clearfix;
+	color: $alert-font-color;
+	@include font-size($alert-font-size);
+	line-height: 1.4;
+	margin-bottom: $vertical-spacing;
+	padding: $vertical-spacing / 2 $gutter / 2 0;
+	
+	p {	
+		margin-bottom: $vertical-spacing / 2;
+	}
+	
+	a {
+		background-image: none;
+		color: inherit;
+		padding: 0;
+		text-decoration: underline;
+		text-shadow: none;
+		
+		&:visited {
+			color: inherit;
+		}
+		
+		&:focus,
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+.alert--success {
+	background-color: $alert-success-bg;
+	border-color: $alert-success-border-color;
+	color: $alert-success-font-color;
+}
+
+.alert--error {
+	background-color: $alert-error-bg;
+	border-color: $alert-error-border-color;
+	color: $alert-error-font-color;
+}
+
+.alert__close {
+	background-image: none;
+	float: right;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	text-shadow: none;
+	transform-origin: center;
+	
+	.icon {
+		fill: $alert-font-color;
+		height: 15px;
+		top: 0; // Overwrite `.icon` default `top` value.
+		width: 15px;
+		
+		.alert--success & {
+			fill: $alert-success-font-color;
+		}
+		
+		.alert--error & {
+			fill: $alert-error-font-color;
+		}
+	}
+	
+	&:hover,
+	&:focus {
+		transform: rotate(90deg);
+		
+		.icon {
+			fill: $alert-heading-font-color;
+			
+			.alert--success & {
+				fill: $alert-success-heading-font-color;
+			}
+			
+			.alert--error & {
+				fill: $alert-error-heading-font-color;
+			}
+		}
+	}	
+}
+
+.alert__title {
+	color: $alert-heading-font-color;
+	@include font-size($alert-heading-font-size);
+	margin-bottom: $vertical-spacing / 4;
+	
+	.alert--success & {
+		color: $alert-success-heading-font-color;
+	}
+	
+	.alert--error & {
+		color: $alert-error-heading-font-color;
+	}
+	
+	&:last-child {
+		margin-bottom: $vertical-spacing / 2;
+	}
+	
+	.icon {
+		fill: $alert-font-color;
+		margin-right: $gutter / 4;
+		position: relative;
+		top: -1px;
+		
+		.alert--success & {
+			fill: $alert-success-font-color;
+		}
+		
+		.alert--error & {
+			fill: $alert-error-font-color;
+		}
+	}
+}

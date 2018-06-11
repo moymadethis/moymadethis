@@ -61,15 +61,19 @@ form {
  */
 
 fieldset {
-	background: $white;
+	background: lighten($grey-lighter,2.5%);
 	border: $border;
 	box-sizing: border-box;
 	margin-bottom: $vertical-spacing / 2;
-	padding: $vertical-spacing $gutter 0;
+	padding: $vertical-spacing ($gutter / 2) 0;
 	min-width: 0; 
 
 	&:last-of-type {
 		margin-bottom: 0;
+	}
+	
+	@include bp(bp5) {
+		padding: $vertical-spacing $gutter 0;
 	}
 }
 

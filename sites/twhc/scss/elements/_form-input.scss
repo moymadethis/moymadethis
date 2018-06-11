@@ -85,23 +85,44 @@ textarea.text-input {
 	&::-webkit-input-placeholder {
 		color: $input-placeholder-color; 
 		font-family : $input-font-family;
-		@include font-size($input-placeholder-font-size);
+		@include font-size(10);
+		
+		@include bp(bp5) {
+			@include font-size($input-placeholder-font-size);
+		}
 	}
 
 	&:-moz-placeholder {
 		color: $input-placeholder-color;
 		font-family: $input-font-family;
-		@include font-size($input-placeholder-font-size);
+		@include font-size(10);
 		opacity: 1;
+
+		@include bp(bp5) {
+			@include font-size($input-placeholder-font-size);
+		}
 	}
 	
 	&::-moz-placeholder {
 		color: $input-placeholder-color;
+		font-family: $input-font-family;
+		@include font-size(10);
 		opacity: 1;
+
+		@include bp(bp5) {
+			@include font-size($input-placeholder-font-size);
+		}
 	}
 	
 	&:-ms-input-placeholder {
 		color: $input-placeholder-color;
+		font-family: $input-font-family;
+		@include font-size(10);
+		opacity: 1;
+
+		@include bp(bp5) {
+			@include font-size($input-placeholder-font-size);
+		}
 	}
 }
 

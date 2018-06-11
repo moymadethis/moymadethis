@@ -17,6 +17,10 @@
 	}
 }
 
+.band--primary {
+	background: $color-primary url(../img/interface/noise.png) 0 0;
+}
+
 
 /**
  * The `.wrap` div is used for centering content on wider viewports and limiting

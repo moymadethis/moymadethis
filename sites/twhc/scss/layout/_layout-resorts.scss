@@ -36,6 +36,10 @@
 	p {
 		line-height: 1.4;
 	}
+	
+	.btn {
+		-webkit-backface-visibility: hidden;
+	}
 }
 
 .resort__image {
@@ -52,6 +56,10 @@
 	}
 }
 
+.resort__wrap {
+	padding: $vertical-spacing $gutter 0;
+}
+
 .resort__subtitle {
 	color: $color-primary;
 	@include font-size(14);
@@ -62,6 +70,3 @@
 	}
 }
 
-.test {
-	padding: $vertical-spacing $gutter 0;
-}

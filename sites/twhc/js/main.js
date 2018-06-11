@@ -42,7 +42,8 @@ $(document).ready(function(){
 	$('.slick-slider').slick({
 		adaptiveHeight: true,
 		arrows: false,
-		dots: true
+		dots: true,
+		infinite: false
 	});
 });
 

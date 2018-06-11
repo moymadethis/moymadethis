@@ -9,11 +9,11 @@
  
 .page-foot {
 	box-sizing: border-box;
-	padding: ($vertical-spacing * 2) ($gutter / 2) 0;
+	padding-top: ($vertical-spacing * 2);
 	width: 100%;
 	
 	@include bp(bp5) {
-		padding: ($vertical-spacing * 3) $gutter 0;
+		padding: ($vertical-spacing * 3) ($gutter / 2) 0;
 	}
 	
 	p {
@@ -48,49 +48,117 @@
 	}
 }
 
-.page-foot__logo {
-	display: block;
-	margin: 0 auto $vertical-spacing * 1.5;
-	opacity: .25;
-	max-width: 250px;
-	
-	@include bp(bp2) {
-		margin-bottom: 0;
-	}
-}
-
-.page-foot {
-	
-	.grid__item {
-		
-		&.one-quarter {
-			
-			@include bp(bp2) {
-				clear: none;
-				float: left;
-				width: 50%;
-			}
-			
-			@include bp(bp5) {
-				width: 25%;
-			}
-		}
-		
-		.one-half {
-			width: 50%;
-			float: left;
-		}
-	}
-}
-
-
-
-
 .page-foot__title {
 	@include font-size(12);
 	
 	@include bp(bp5) {
 		@include font-size(14);
+	}
+}
+
+.page-foot__logo {
+	display: block;
+	margin: 0 auto $vertical-spacing;
+	opacity: .25;
+	max-width: 150px;
+	
+	@include bp(bp3) {
+		margin-top: $vertical-spacing / 2;
+	}
+}
+
+
+
+.page-foot__item {
+	@include clearfix;
+	margin-bottom: $vertical-spacing;
+}
+
+.page-foot__sub-item {
+	box-sizing: border-box;
+	padding: 0 ($gutter / 2);
+}
+
+.page-foot__item--about {
+	clear: both;
+	width: 100%;
+	
+	@include bp(bp5) {
+		float: left;
+		width: 50%;
+	}
+	
+	.affiliates {
+		margin-top: (-$vertical-spacing / 2);
+	}
+	
+	.page-foot__sub-item {
+		width: 100%;
+		
+		@include bp(bp3) {
+			float: left;
+		}
+	}
+			
+	.page-foot__sub-item--logo {
+		
+		@include bp(bp3) {
+			width: 25%;
+		}
+		
+		@include bp(bp5) {
+			width: 35%;
+		}
+	}
+			
+	.page-foot__sub-item--text {
+		
+		@include bp(bp3) {
+			width: 75%;
+		}
+		
+		@include bp(bp5) {
+			padding-right: $gutter;
+			width: 65%;
+		}		
+	}
+}
+
+
+.page-foot__item--links,
+.page-foot__item--contact {
+	clear: both;
+	width: 100%;
+	
+	@include bp(bp3) {
+		clear: none;
+		float: left;
+		width: 50%;
+	}
+	
+	@include bp(bp5) {
+		width: 25%;
+	}
+	
+	.page-foot__sub-item {
+		float: left;
+		width: 50%;
+	}
+}
+
+.page-foot__item--contact {
+	
+	.page-foot__sub-item {
+		
+		@include bp(bp5) {
+			float: none;
+			width: 100%;
+		}
+		
+		@include bp(bp7) {
+			float: left;
+			width: 50%;
+		}	
 	}
 }
 
@@ -112,7 +180,6 @@
 	
 	@include bp(bp5) {
 		@include font-size(11);
-		margin-left: -$gutter;
 		padding: ($vertical-spacing /2) $gutter;
 		text-align: left;
 	}
