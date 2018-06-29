@@ -9,7 +9,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	font-family: $table-font-family;
-	margin-bottom: ($vertical-spacing);
+	margin-bottom: ($vertical-spacing * 1.5);
 	text-align: left;
 	width: 100%;
 	max-width: 100%;
@@ -30,7 +30,7 @@ td {
 }
 
 th {
-	border-top: 0;
+	border: none;
 	color: $grey-darker;
 	font-family: $table-font-family;
 	@include font-size($table-font-size);
@@ -47,6 +47,11 @@ th {
 }
 
 .table-stripe {
+	
+	th,
+	td {
+		border: none;
+	}
 
 	tbody tr:nth-child(odd) th,
 	tbody tr:nth-child(odd) td {

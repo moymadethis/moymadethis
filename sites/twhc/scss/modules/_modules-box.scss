@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #BOX
+   ========================================================================== */
+
+/**
+ * Basic boxout styling.
+ */
+
+.box {
+	background: lighten($grey-lighter,2.5%);
+	border: $border;
+	box-sizing: border-box;
+	margin-bottom: $vertical-spacing;
+	padding: $vertical-spacing ($gutter / 2) 0;
+}
+
+/**
+ * A clear (no background/border) box. Maintains the same padding and spacing as
+ * the default `.box` style.
+ */
+
+.box--clear {
+	background: transparent;
+	border: none;
+	box-sizing: border-box;
+	margin-bottom: $vertical-spacing;
+	padding: $vertical-spacing ($gutter / 2) 0;
+}

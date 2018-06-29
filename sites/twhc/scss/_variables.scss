@@ -278,9 +278,9 @@ $label-font-size 				: $font-size;
  */
 
 $figcaption-font-family			: $font-family;
-$figcaption-font-size			: 1.6rem;
+$figcaption-font-size			: 1.4rem;
 $figcaption-font-style			: normal;
-$figcaption-font-weight			: 600;
+$figcaption-font-weight			: 400;
 $figcaption-text-transform		: none;
 
 
@@ -307,7 +307,7 @@ $table-bg						: transparent;
  * Table stripes.
  */
 
-$table-stripe-bg 				: $base-bg;
+$table-stripe-bg 				: $grey-lighter;
 $table-stripe-font-color 		: $font-color;
 
 /**

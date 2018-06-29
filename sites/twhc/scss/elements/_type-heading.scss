@@ -74,16 +74,16 @@ h4 {
  */
  
 .hgroup {
-	margin: 0 auto $vertical-spacing * 2;
+	margin: 0 auto $vertical-spacing;
 	max-width: 890px;
 	
 	@include bp(bp5) {
-		margin-bottom: $vertical-spacing * 3;
+		margin-bottom: $vertical-spacing * 2;
 	}
 }
 
 .hgroup__lead {
-	color: lighten($font-color,10%);
+	color: $grey-light;
 	@include font-size($font-size);
 	line-height: 1.4;
 

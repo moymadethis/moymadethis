@@ -30,6 +30,22 @@ $(function() {
 });
 
 
+
+
+
+/* ==========================================================================
+   #Simple Accordion
+   ========================================================================== */
+
+$('.accordion').find('.accordion__title').click(function(){
+	$(this).toggleClass('open');
+	$(this).next().slideToggle('fast');
+});
+
+
+
+
+
 /* ==========================================================================
    #SLICK
    ========================================================================== */
@@ -84,5 +100,20 @@ $(document).ready(function(){
 	      }
 	    }
 	  ]
+	});
+});
+
+/* 
+ * Slideshow form (for apply page)
+ */
+
+$(document).ready(function(){
+	$('.slick-form').slick({
+		adaptiveHeight: false,
+		arrows: false,
+		dots: true,
+		infinite: false,
+		prevArrow: '<a class="slide-form__prev">Prev</a>',
+		nextArrow: '<a class="slick-form__next">Next</a>'
 	});
 });

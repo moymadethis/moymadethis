@@ -16,7 +16,7 @@ p {
  */
 
 .lead {
-	color: lighten($font-color,10%);
+	color: $grey-light;
 	@include font-size($font-size);
 	line-height: 1.4;
 
