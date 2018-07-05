@@ -1624,6 +1624,13 @@ blockquote {
  * A clear (no background/border) box. Maintains the same padding and spacing as
  * the default `.box` style.
  */
+.box--white {
+  background-color: white; }
+
+/**
+ * A clear (no background/border) box. Maintains the same padding and spacing as
+ * the default `.box` style.
+ */
 .box--clear {
   background: transparent;
   border: none;
@@ -1828,6 +1835,8 @@ blockquote {
   margin: -7.5px 0 30px;
   overflow: hidden;
   text-align: left; }
+  h1 + .accordion, h2 + .accordion, h3 + .accordion, h4 + .accordion {
+    margin-top: 10px; }
 
 .accordion__item {
   overflow: hidden;
@@ -2641,20 +2650,14 @@ blockquote {
   .band--resorts .hgroup__lead {
     color: #d1eef1; }
 
-.resort-list:before, .resort-list:after {
+.mosaic:before, .mosaic:after {
   content: "";
   display: table; }
-.resort-list:after {
+.mosaic:after {
   clear: both; }
 
-.resort-list__item {
+.mosaic__item {
   width: 100%;
-  /* [1] */
-  /* [2] */
-  /* [3] */
-  /* [4] */
-  /* [5] */
-  /* [6] */
   /* [1] */
   /* [2] */
   /* [3] */
@@ -2662,46 +2665,59 @@ blockquote {
   /* [5] */
   /* [6] */ }
   @media (min-width: 37.5em) {
-    .resort-list__item {
+    .mosaic__item {
       float: left;
-      width: 50%; } }
-  @media (min-width: 64em) {
-    .resort-list__item {
-      width: 33.33333%; } }
+      width: 50%; }
+      .mosaic__item:nth-child(odd) {
+        clear: left; } }
+  .mosaic--3x3 .mosaic__item {
+    /* [1] */
+    /* [2] */
+    /* [3] */
+    /* [4] */
+    /* [5] */
+    /* [6] */ }
+    @media (min-width: 64em) {
+      .mosaic--3x3 .mosaic__item {
+        width: 33.33333%; }
+        .mosaic--3x3 .mosaic__item:nth-child(odd) {
+          clear: none; }
+        .mosaic--3x3 .mosaic__item:nth-child(3n+1) {
+          clear: left; } }
 
-.resort {
+.tile {
   background: white;
   position: relative;
   text-align: center;
   transition: all .15s; }
-  .slick-slide .resort {
+  .slick-slide .tile {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     margin: 30px 0; }
-  .slick-center .resort {
+  .slick-center .tile {
     transform: scale(1.05);
     z-index: 10; }
-  .resort p {
+  .tile p {
     line-height: 1.4; }
-  .resort .btn {
+  .tile .btn {
     -webkit-backface-visibility: hidden; }
 
-.resort__image {
+.tile__image {
   background-image: none;
   display: block;
   margin: 0;
   padding: 0;
   overflow: hidden;
   text-shadow: none; }
-  .resort__image img {
+  .tile__image img {
     margin: 0;
     transition: all .15s; }
-    .resort:hover .resort__image img {
+    .tile:hover .tile__image img {
       transform: scale(1.1); }
 
-.resort__wrap {
+.tile__wrap {
   padding: 30px 30px 0; }
 
-.resort__subtitle {
+.tile__subtitle {
   color: #1aacbb;
   font-size: 14px;
   font-size: 1.4rem;
@@ -2713,11 +2729,11 @@ blockquote {
   /* [5] */
   /* [6] */ }
   @media (min-width: 64em) {
-    .resort__subtitle {
+    .tile__subtitle {
       font-size: 16px;
       font-size: 1.6rem; } }
 
-.resort__title a {
+.tile__title a {
   background-image: none;
   font-weight: 900;
   padding: 0;

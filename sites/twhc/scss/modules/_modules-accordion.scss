@@ -5,7 +5,14 @@
 .accordion {
 	margin: -$vertical-spacing / 4 0 $vertical-spacing;
 	overflow: hidden;
-		text-align: left;
+	text-align: left;
+	
+	h1 + &,
+	h2 + &,
+	h3 + &,
+	h4 + & {
+		margin-top: $vertical-spacing / 3;
+	}
 }
 
 .accordion__item {

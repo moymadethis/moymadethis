@@ -20,24 +20,39 @@
 	}
 }
 
-.resort-list {
+.mosaic {
 	@include clearfix;
 }
 
-.resort-list__item {
+.mosaic__item {
 	width: 100%;
 	
 	@include bp(bp3) {
 		float: left;
 		width: 50%;
+		
+		&:nth-child(odd) {
+			clear: left;
+		}
 	}
 	
-	@include bp(bp5) {
-		width: 33.33333%;
+	.mosaic--3x3 & {
+		
+		@include bp(bp5) {
+			width: 33.33333%;
+			
+			&:nth-child(odd) {
+				clear: none;
+			}
+			
+			&:nth-child(3n+1) {
+				clear: left;
+			}
+		}
 	}
 }
 
-.resort {
+.tile {
 	background: $white;
 	position: relative;
 	text-align: center;
@@ -62,7 +77,7 @@
 	}
 }
 
-.resort__image {
+.tile__image {
 	background-image: none;
 	display: block;
 	margin: 0;
@@ -74,17 +89,17 @@
 		margin: 0;
 		transition: all .15s;
 		
-		.resort:hover & {
+		.tile:hover & {
 			transform: scale(1.10);
 		}
 	}
 }
 
-.resort__wrap {
+.tile__wrap {
 	padding: $vertical-spacing $gutter 0;
 }
 
-.resort__subtitle {
+.tile__subtitle {
 	color: $color-primary;
 	@include font-size(14);
 	margin-bottom: $vertical-spacing / 6;
@@ -94,7 +109,7 @@
 	}
 }
 
-.resort__title {
+.tile__title {
 	
 	a {
 		background-image: none;

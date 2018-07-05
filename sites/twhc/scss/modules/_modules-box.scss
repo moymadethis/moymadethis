@@ -19,6 +19,15 @@
  * the default `.box` style.
  */
 
+.box--white {
+	background-color: $white;
+}
+
+/**
+ * A clear (no background/border) box. Maintains the same padding and spacing as
+ * the default `.box` style.
+ */
+
 .box--clear {
 	background: transparent;
 	border: none;

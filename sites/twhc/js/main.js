@@ -109,11 +109,9 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$('.slick-form').slick({
-		adaptiveHeight: false,
-		arrows: false,
-		dots: true,
-		infinite: false,
-		prevArrow: '<a class="slide-form__prev">Prev</a>',
-		nextArrow: '<a class="slick-form__next">Next</a>'
+		adaptiveHeight: true,
+		arrows: true,
+		dots: false,
+		infinite: false
 	});
 });
