@@ -663,7 +663,7 @@ select {
 form {
   border: 0;
   font-family: "Roboto", sans-serif;
-  margin: 0 0 30px 0;
+  margin: 0;
   padding: 0; }
   form p {
     margin-bottom: 15px; }
@@ -1738,6 +1738,9 @@ blockquote {
     background: #1aacbb;
     cursor: default; }
 
+.slick-disabled {
+  opacity: .15; }
+
 /* ==========================================================================
    #FEATURES
    ========================================================================== */
@@ -1956,6 +1959,7 @@ blockquote {
  */
 .infobar {
   background: white;
+  border-bottom: 2px solid #eff1f1;
   box-sizing: border-box;
   padding: 10px 15px 8px;
   width: 100%;
@@ -2026,7 +2030,7 @@ blockquote {
  * 6. Bottom line specific styling.
  */
 .page-head {
-  background: #1aacbb url(../img/interface/noise.png) 0 0;
+  background: white;
   box-sizing: border-box;
   padding: 15px 15px;
   width: 100%;
@@ -2566,7 +2570,18 @@ blockquote {
     color: white; }
   @media (min-width: 64em) {
     .site-nav__list a {
-      padding: 0; } }
+      color: #424b4b;
+      padding: 0; }
+      .site-nav__list a:visited {
+        color: #424b4b; }
+      .site-nav__list a:hover, .site-nav__list a:focus {
+        color: #0e1010; }
+      .site-nav__list a.amp {
+        color: #1aacbb; }
+        .site-nav__list a.amp:visited {
+          color: #1aacbb; }
+        .site-nav__list a.amp:hover, .site-nav__list a.amp:focus {
+          color: #0e1010; } }
 
 /* ==========================================================================
    #PAGE
@@ -2582,39 +2597,48 @@ blockquote {
  * title + short sentence with an image or video background.
  */
 .masthead {
-  width: 100%; }
-
-/**
- * Video masthead.
- */
-.masthead--video {
+  box-sizing: border-box;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 300px;
+  padding: 60px 0 30px;
   position: relative;
-  overflow: hidden;
-  height: 75vh;
-  z-index: 1; }
-  .masthead--video:before {
-    background: rgba(0, 0, 0, 0.45) url(../img/interface/interlacing.png) 0 0;
+  width: 100%; }
+  .masthead:before {
+    background: rgba(0, 0, 0, 0.45);
     content: "";
     display: block;
     height: 100%;
+    padding: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 5; }
-  .masthead--video .wrap {
+  .masthead .wrap {
     position: relative;
     z-index: 10; }
-  .masthead--video h1 {
+  .masthead h1 {
     color: white; }
-  .masthead--video .lead {
+  .masthead .lead {
     color: #eff1f1; }
-  .masthead--video .btn {
+  .masthead .btn {
     margin-bottom: 0; }
+
+/**
+ * Video masthead.
+ */
+.masthead--video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 75vh;
+  z-index: 1; }
+  .masthead--video:before {
+    background: rgba(0, 0, 0, 0.45) url(../img/interface/interlacing.png) 0 0; }
 
 /**
  * Video element.
@@ -2886,6 +2910,20 @@ blockquote {
     width: 20px; }
     .promo-bar__cta .icon:hover {
       fill: white; }
+
+/*------------------------------------*\
+    #APPLY
+\*------------------------------------*/
+/**
+ * A form used to gather details so they can be called back at a suitable time.
+ */
+.slick-form .box {
+  margin-bottom: 0; }
+
+.slick-form-arrows .btn:first-child {
+  float: left; }
+.slick-form-arrows .btn:last-child {
+  float: right; }
 
 /*------------------------------------*\
     #INSTAGRAM

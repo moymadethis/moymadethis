@@ -9,28 +9,22 @@
  */
 
 .masthead {
-	width: 100%;
-}
-
-/**
- * Video masthead.
- */
-
-.masthead--video {
+	box-sizing: border-box;
 	color: $white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	min-height: 300px;
+	padding: ($vertical-spacing * 2) 0 ($vertical-spacing);
 	position: relative;
-	overflow: hidden;
-	height: 75vh;
-	z-index: 1;
+	width: 100%;
 	
 	&:before {
-		background: rgba($black,.45) url(../img/interface/interlacing.png) 0 0;
+		background: rgba($black,.45);
 		content: "";
 		display: block;
 		height: 100%;
+		padding: 0;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -53,6 +47,23 @@
 	
 	.btn {
 		margin-bottom: 0;
+	}
+}
+
+/**
+ * Video masthead.
+ */
+
+.masthead--video {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	height: 75vh;
+	z-index: 1;
+	
+	&:before {
+		background: rgba($black,.45) url(../img/interface/interlacing.png) 0 0;
 	}
 }
 

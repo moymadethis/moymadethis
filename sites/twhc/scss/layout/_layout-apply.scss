@@ -1,0 +1,25 @@
+
+/*------------------------------------*\
+    #APPLY
+\*------------------------------------*/
+
+/**
+ * A form used to gather details so they can be called back at a suitable time.
+ */
+ 
+.slick-form {
+	.box {
+		margin-bottom: 0;
+	}
+}
+
+.slick-form-arrows {
+	
+	.btn:first-child {
+		float: left;
+	}
+	
+	.btn:last-child {
+		float: right;
+	}
+}

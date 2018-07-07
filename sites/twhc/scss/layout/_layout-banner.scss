@@ -11,6 +11,7 @@
 .infobar {
 	@include clearfix;
 	background: $white;
+	border-bottom: $border;
 	box-sizing: border-box;
 	padding: 10px ($gutter / 2) 8px;
 	width: 100%;
@@ -97,7 +98,8 @@
  */
 
 .page-head {
-	background: $color-primary url(../img/interface/noise.png) 0 0;
+	//background: $color-primary url(../img/interface/noise.png) 0 0;
+	background: $white;
 	box-sizing: border-box;
 	@include clearfix;
 	padding: ($vertical-spacing / 2) ($gutter / 2);

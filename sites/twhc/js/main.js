@@ -111,6 +111,9 @@ $(document).ready(function(){
 	$('.slick-form').slick({
 		adaptiveHeight: true,
 		arrows: true,
+		appendArrows: $('.slick-form-arrows'),
+		prevArrow: '<span class="btn">Go Back</span>',
+		nextArrow: '<span class="btn">Next Slide</span>',
 		dots: false,
 		infinite: false
 	});

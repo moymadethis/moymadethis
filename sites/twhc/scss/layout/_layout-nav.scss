@@ -135,6 +135,29 @@
 	}
 
 	@include bp(bp5) {
+		color: $grey-dark;
 		padding: 0;
+		
+		&:visited {
+			color: $grey-dark;
+		}
+		
+		&:hover,
+		&:focus {
+			color: $grey-darker;
+		}
+		
+		&.amp {
+			color: $color-primary;
+			
+			&:visited {
+				color: $color-primary;
+			}
+			
+			&:hover,
+			&:focus {
+				color: $grey-darker;
+			}
+		}
 	}
 }
