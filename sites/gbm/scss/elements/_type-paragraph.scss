@@ -1,0 +1,26 @@
+
+/* ==========================================================================
+   #PARAGRAPHS
+   ========================================================================== */
+
+/**
+ * Base paragraph styles.
+ */
+
+p { 
+	margin-bottom: ($vertical-spacing);
+}
+
+/**
+ * Classified paragraphs for lead, secondary, tertiary and milli statements.
+ */
+
+.lead {
+	@include font-size(15);
+	line-height: 1.4;
+
+	@include bp(bp5) {
+		@include font-size(18);
+		
+	}
+}

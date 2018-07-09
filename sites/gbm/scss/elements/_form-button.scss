@@ -1,0 +1,168 @@
+
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * Default styling for buttons. Extend this object with a `.btn--*` skin class
+ * to modify a buttons appearance.
+ *
+ * 1. Added by Matt Wade to overwrite styling on 3rd party form/sign up plugin.
+ * 2. As some buttons in Shopify are `input` elements default iOS styling can be
+ *    inherited. To prevent this we target `-webkit-appearence`.
+ */
+
+.btn,
+.cmApp_formSubmitButton { /* [1] */
+	background-image: none;
+	background-color: $button-bg;
+	background-repeat: no-repeat;
+	border: 1px solid transparent;
+	border-radius: $button-border-radius;
+	box-sizing: border-box;
+	color: $button-font-color;
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	font-family: $button-font-family !important; /* [1] */	
+	@include font-size(10);
+	font-weight: $button-font-weight !important; /* [1] */
+	height: auto;
+	letter-spacing: $button-letter-spacing;
+	line-height: $font-lineheight;
+	margin-bottom: $vertical-spacing;
+	*margin-left: .3em;
+	padding: 10px $gutter / 2;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: $button-font-transform;
+	-webkit-transition: all .20s;
+	transition: all .20s;
+	vertical-align: top;
+	-webkit-appearance: none; /* [2] */
+	
+	&:visited {
+		background-color: $button-bg;
+		color: $button-font-color;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: $button-bg-hover;
+		color: $button-font-color-hover;
+		outline: 0;
+	}
+	
+	&:active {
+		top: 1px;
+	}
+	
+	@include bp(bp4) {
+		@include font-size($button-font-size);
+		padding: 10px $gutter;
+	}
+}
+
+/**
+ * Primary buttons.
+ */
+
+.btn--primary {
+	background-color: $button-primary-bg;
+	color: $button-primary-font-color;
+	
+	&:visited {
+		background-color: $button-primary-bg;
+		color: $button-primary-font-color;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: $button-primary-bg-hover;
+		color: $button-primary-font-color-hover;
+	}
+}
+
+/**
+ * Neutral buttons.
+ */
+
+.btn--neutral {
+	background-color: $button-neutral-bg;
+	border: $border-width $border-style $input-border-color;
+	color: $button-neutral-font-color;
+	
+	.icon {
+		fill: $grey-dark;
+	}
+	
+	&:visited {
+		background-color: $button-neutral-bg;
+		color: $button-neutral-font-color;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: $button-neutral-bg-hover;
+		color: $button-neutral-font-color-hover;
+	}
+}
+
+/**
+ * For larger, more prominent buttons we increase the padding.
+ */
+
+.btn--large {
+	padding: 15px 30px;
+}
+
+/**
+ * Full width buttons.
+ */
+ 
+.btn--wide {
+	width: 100%;
+}
+
+
+
+
+
+/* ==========================================================================
+   #ICONS
+   ========================================================================== */
+
+/**
+ * Icons are used as part of an SVG sprite and they should always have a class
+ * of `.icon` as well as a modifier class relative to the icon being displayed.
+ *
+ * 1. Set styling for when an `.icon` is within a `.btn` element. This can be
+ *    overwritten within a `.btn--*` modifer, for example when inside a light
+ *    button the default white background will not show, so you might want to
+ *    adjust it to be darker.
+ */
+
+.icon {
+	display: inline-block;
+    fill: $grey-darker;
+    height: 20px;
+    position: relative;
+    -webkit-transition: all .20s;
+    transition: all .20s;
+    vertical-align: top;
+    width: 20px;
+    
+    a:hover & {
+	    fill: $color-primary;
+    }
+    
+    .btn & { /* [1] */
+	    fill: $white;	
+	    height: 20px;
+	    margin-right: 5px;
+		width: 20px;
+    }
+}

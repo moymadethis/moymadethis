@@ -1,0 +1,38 @@
+
+/*------------------------------------*\
+    #PROMOS
+\*------------------------------------*/
+
+/**
+ * Rules for promo modules.
+ *
+ * 1. Overwrite `figure` and `figcaption` margins if the class `.promo` is used
+ *    on those elements and the image.
+ * 2. Overwrite `.btn` margins. NOTE: This can be a `span` element if the entire
+ *    promo is wrapped in an anchor.
+ */
+ 
+.promo {
+	background-image: none;
+	display: block;
+	margin-bottom: $vertical-spacing;
+	overflow: hidden;
+	position: relative;
+	text-shadow: none;
+}
+
+.promo--desktop {
+	display: none;
+	
+	@include bp(bp5) {
+		display: block;
+	}
+}
+
+.promo--mobile {
+	display: block;
+	
+	@include bp(bp5) {
+		display: none;
+	}
+}

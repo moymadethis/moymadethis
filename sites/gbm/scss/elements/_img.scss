@@ -1,0 +1,132 @@
+
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+
+/**
+ * Base `img` styles.
+ */
+
+img {
+	border-width : 0;
+	vertical-align : middle;
+	width: 100%;
+	max-width : 100%;
+	-ms-interpolation-mode : bicubic;
+}
+
+img[width],
+img[height] {
+	max-width: none;
+}
+
+
+/**
+ * Base `video` styles.
+ */
+ 
+video {
+	display: block;
+	height:auto;
+	width:100%;
+	max-width: 100%;
+}
+
+
+/**
+ * Add border to image.
+ */
+ 
+.img-stroke {
+	border: $border-width $border-style $border-color;
+	box-sizing: border-box;
+}
+
+
+/**
+ * Alignment options.
+ */
+
+.img-left {
+	float : left;
+	margin-right: ($gutter);
+	margin-bottom: ($vertical-spacing);
+	width : auto;
+}
+
+.img-right {
+	float: right;
+	margin-bottom: ($vertical-spacing);
+	margin-left: ($gutter);
+	width: auto;
+}
+
+.img-center {
+	display: block;
+	width: auto;
+	margin-right: auto;
+	margin-bottom: ($vertical-spacing);
+	margin-left: auto;
+}
+
+.img-left,
+.img-right,
+.img-center {
+	
+	img {
+		width: auto;
+	}
+}
+
+
+/**
+ * `figure` and `figcatpion` styles.
+ */
+
+figure {
+	display: block;
+	margin: 0 0 ($vertical-spacing) 0;
+
+	img {
+		margin-bottom: 0;
+	}
+}
+
+figcaption {
+	color: $grey-darker;
+	font-family: $figcaption-font-family;
+	font-size: $figcaption-font-size;
+	font-style: $figcaption-font-style;
+	font-weight: $figcaption-font-weight;
+	margin-bottom: $vertical-spacing;
+	text-transform: $figcaption-text-transform;
+	
+	img + & {
+		padding-top: $vertical-spacing / 4;
+	}
+}
+
+
+	
+.pop {
+	margin-top: $vertical-spacing * 2;
+	-webkit-transition: all .10s;
+	transition: all .10s;
+	
+	@include bp(bp7) {
+		margin: ($vertical-spacing * 2) -90px ($vertical-spacing);
+
+		img,
+		video {
+			width: 100%;
+		}
+		
+		figcaption {
+			margin: 0 90px $vertical-spacing;
+		}
+	}
+	
+	&:last-child {
+		margin-bottom: $vertical-spacing;
+	}
+}
