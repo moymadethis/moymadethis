@@ -16,15 +16,11 @@
 
 /**
  * Base `html` styling.
- *
- * 1. Prevents content jumping when `.show-nav` is applied to `body` which is
- *    caused because `overflow: hidden;` is applied, which hides any scrollbar. 
  */
  
 html {
 	background: $body-background;
 	font-size: 62.5%;
-	//margin-left: calc(100vw - 100%); /* [1] */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-overflow-scrolling: touch;
@@ -34,10 +30,13 @@ html {
 
 /**
  * Base `body` styling.
+ *
+ * 1. Added `background-color` to both `html` and `body` elements to hide nav
+ *    on resize as it animates/shows background colour behind content.
  */
 
 body {
-	background-color: transparent;
+	background-color: $body-background; /* [1] */
 	color: $font-color;
 	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
 	font-family: $font-family;

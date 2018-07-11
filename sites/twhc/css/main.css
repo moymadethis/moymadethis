@@ -904,9 +904,6 @@ figcaption {
   width: device-width; }
 /**
  * Base `html` styling.
- *
- * 1. Prevents content jumping when `.show-nav` is applied to `body` which is
- *    caused because `overflow: hidden;` is applied, which hides any scrollbar. 
  */
 html {
   background: white;
@@ -919,9 +916,13 @@ html {
 
 /**
  * Base `body` styling.
+ *
+ * 1. Added `background-color` to both `html` and `body` elements to hide nav
+ *    on resize as it animates/shows background colour behind content.
  */
 body {
-  background-color: transparent;
+  background-color: white;
+  /* [1] */
   color: #778586;
   font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
   font-family: "Roboto", sans-serif;
@@ -1453,6 +1454,11 @@ blockquote {
   padding-left: 30px;
   width: 100%;
   /* [1] */ }
+
+.grid--gutter-small {
+  margin-left: -15px; }
+  .grid--gutter-small .grid__item {
+    padding-left: 15px; }
 
 /*------------------------------------*\
     #WIDTHS
@@ -2033,6 +2039,7 @@ blockquote {
   background: white;
   box-sizing: border-box;
   padding: 15px 15px;
+  position: relative;
   width: 100%;
   /* [1] */
   /* [2] */
@@ -2051,14 +2058,23 @@ blockquote {
     z-index: 10; }
   @media (min-width: 64em) {
     .page-head {
-      padding: 30px 60px; } }
+      padding: 0 60px; } }
 
 .page-head__logo {
   background-image: none;
   float: left;
   padding: 0;
   text-shadow: none;
-  width: 200px; }
+  width: 200px;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 64em) {
+    .page-head__logo {
+      margin-top: 30px; } }
 
 /* ==========================================================================
    #TOGGLE
@@ -2481,6 +2497,7 @@ blockquote {
       top: auto;
       left: auto;
       transform: none;
+      transition: none;
       z-index: 0;
       width: auto; } }
   .show-nav .site-nav {
@@ -2510,6 +2527,7 @@ blockquote {
   /* [6] */ }
   @media (min-width: 64em) {
     .site-nav__list {
+      margin-right: -15px;
       position: relative;
       top: auto;
       left: auto;
@@ -2524,6 +2542,7 @@ blockquote {
   margin: 0;
   padding-left: 0;
   opacity: 0;
+  position: relative;
   text-transform: uppercase;
   transform: translateY(-150px);
   transition: all 0.4s 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -2544,15 +2563,17 @@ blockquote {
       font-size: 14px;
       font-size: 1.4rem;
       opacity: 1;
-      margin-left: 30px;
-      transform: none; } }
+      transform: none;
+      transition: none; } }
 
 .site-nav__list a {
   background-image: none;
   color: #d1eef1;
+  box-sizing: border-box;
   display: block;
   font-weight: 900;
   padding: 15px;
+  transition: color .15s;
   text-shadow: none;
   /* [1] */
   /* [2] */
@@ -2570,12 +2591,12 @@ blockquote {
     color: white; }
   @media (min-width: 64em) {
     .site-nav__list a {
-      color: #424b4b;
-      padding: 0; }
+      color: #0e1010;
+      padding: 30px 15px; }
       .site-nav__list a:visited {
-        color: #424b4b; }
-      .site-nav__list a:hover, .site-nav__list a:focus {
         color: #0e1010; }
+      .site-nav__list a:hover, .site-nav__list a:focus {
+        color: #1aacbb; }
       .site-nav__list a.amp {
         color: #1aacbb; }
         .site-nav__list a.amp:visited {

@@ -103,6 +103,7 @@
 	box-sizing: border-box;
 	@include clearfix;
 	padding: ($vertical-spacing / 2) ($gutter / 2);
+	position: relative;
 	width: 100%;
 	
 	.home & {
@@ -112,7 +113,7 @@
 	}
 	
 	@include bp(bp5) {
-		padding: $vertical-spacing $gutter * 2;
+		padding: 0 $gutter * 2;
 	}
 }
 
@@ -122,6 +123,10 @@
 	padding: 0;
 	text-shadow: none;
 	width: 200px;
+	
+	@include bp(bp5) {
+		margin-top: $vertical-spacing;
+	}
 }
 
 /* ==========================================================================

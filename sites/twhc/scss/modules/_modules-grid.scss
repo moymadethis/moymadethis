@@ -28,6 +28,13 @@
 }
 
 
+.grid--gutter-small {
+	margin-left: -$gutter / 2;
+	
+	.grid__item {
+		padding-left: $gutter / 2;
+	}
+}
 
 
 
