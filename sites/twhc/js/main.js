@@ -29,6 +29,40 @@ $(function() {
 	});
 });
 
+/* 
+ * Sliding Line.
+ */
+
+$(function() {
+
+    var $el, leftPos, newWidth,
+        $mainNav = $(".site-nav");
+    
+    $mainNav.append("<div class='site-nav__line'></div>");
+    var $magicLine = $(".site-nav__line");
+    
+    $magicLine
+        .width($(".current-menu-item").width())
+        .css("left", $(".current-menu-item").position().left)
+        .data("origLeft", $magicLine.position().left)
+        .data("origWidth", $magicLine.width());
+        
+    $(".site-nav__list li a").hover(function() {
+        $el = $(this);
+        leftPos = $el.position().left;
+        newWidth = $el.parent().width();
+        $magicLine.stop().animate({
+            left: leftPos,
+            width: newWidth
+        });
+    }, function() {
+        $magicLine.stop().animate({
+            left: $magicLine.data("origLeft"),
+            width: $magicLine.data("origWidth")
+        });    
+    });
+});
+
 
 
 

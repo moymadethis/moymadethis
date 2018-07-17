@@ -15,6 +15,7 @@
 	align-items: center;
 	justify-content: center;
 	min-height: 300px;
+	overflow: hidden;
 	padding: ($vertical-spacing * 2) 0 ($vertical-spacing);
 	position: relative;
 	width: 100%;
@@ -29,24 +30,49 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		z-index: 5;
+		z-index: 4;
+	}
+	
+	&:after {
+		background: url(../img/interface/paint-top.svg) no-repeat left bottom;
+		background-size: cover;
+		content: "";
+		display: block;
+		height: 30px;
+		padding: 0 $gutter / 2;
+		position: absolute;
+		bottom: 0;
+		left: -$gutter / 2;
+		transform: rotate(180deg);
+		width: 100%;
+		z-index: 8;
 	}
 	
 	.wrap {
 		position: relative;
-		z-index: 10;
+		z-index: 12;
 	}
 	
-	h1 {
+	.hgroup {
+		margin-bottom :0;
+	}
+	
+	.hgroup__title {
 		color: $white;
 	}
 	
-	.lead {
+	.hgroup__lead {
 		color: $grey-lighter;
 	}
 	
-	.btn {
-		margin-bottom: 0;
+	.meta {
+		color: $grey-lighter;
+		@include font-size(14);
+		margin-bottom: $vertical-spacing / 4;
+		
+		@include bp(bp5) {
+			@include font-size(16);
+		}
 	}
 }
 
@@ -59,7 +85,7 @@
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	height: 75vh;
+	height: 60vh;
 	z-index: 1;
 	
 	&:before {

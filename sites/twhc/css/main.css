@@ -176,6 +176,32 @@ a {
     outline: 0; }
 
 /* ==========================================================================
+   #ARROW LINKS
+   ========================================================================== */
+/**
+ * A simple link style that displays an arrow to the right of the text when the
+ * anchor is hovered over.
+ */
+.arrow-link {
+  position: relative; }
+  .arrow-link:after {
+    color: #0e1010;
+    content: "\203a\00fe0e";
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    right: 7.5px;
+    transition: all .20s; }
+  .arrow-link:hover:after {
+    opacity: 1;
+    right: -10px; }
+
+/* ==========================================================================
    #BUTTONS
    ========================================================================== */
 /**
@@ -1614,6 +1640,41 @@ blockquote {
       fill: #fbe5e6; }
 
 /* ==========================================================================
+   #FLAGS
+   ========================================================================== */
+.flag {
+  background: #1aacbb url(../img/interface/noise.png) 0 0;
+  color: white;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  line-height: 14px;
+  margin-right: 5px;
+  padding: 3px 10px;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-transition: background .25s;
+  transition: background .25s;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  .flag:hover {
+    background-color: #179ba8;
+    cursor: pointer; }
+  .meta .flag {
+    top: -2px; }
+  @media (min-width: 64em) {
+    .flag {
+      font-size: 11px;
+      font-size: 1.1rem;
+      padding: 5px 10px; } }
+
+/* ==========================================================================
    #BOX
    ========================================================================== */
 /**
@@ -2052,13 +2113,9 @@ blockquote {
     display: table; }
   .page-head:after {
     clear: both; }
-  .home .page-head {
-    background: transparent;
-    position: absolute;
-    z-index: 10; }
   @media (min-width: 64em) {
     .page-head {
-      padding: 0 60px; } }
+      padding: 0 30px; } }
 
 .page-head__logo {
   background-image: none;
@@ -2396,7 +2453,7 @@ blockquote {
  * Copyright + terms/privacy links at bottom of the page.
  */
 .page-foot__legal {
-  background: #eff1f1;
+  border-top: 2px solid #eff1f1;
   font-size: 10px;
   font-size: 1rem;
   clear: both;
@@ -2491,7 +2548,8 @@ blockquote {
       float: right;
       height: auto;
       opacity: 1;
-      user-select: all;
+      overflow: visible;
+      user-select: auto;
       visibility: visible;
       position: relative;
       top: auto;
@@ -2542,7 +2600,6 @@ blockquote {
   margin: 0;
   padding-left: 0;
   opacity: 0;
-  position: relative;
   text-transform: uppercase;
   transform: translateY(-150px);
   transition: all 0.4s 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -2565,6 +2622,16 @@ blockquote {
       opacity: 1;
       transform: none;
       transition: none; } }
+
+.site-nav__line {
+  background: #1aacbb;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%; }
 
 .site-nav__list a {
   background-image: none;
@@ -2624,6 +2691,7 @@ blockquote {
   align-items: center;
   justify-content: center;
   min-height: 300px;
+  overflow: hidden;
   padding: 60px 0 30px;
   position: relative;
   width: 100%; }
@@ -2637,16 +2705,44 @@ blockquote {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 5; }
+    z-index: 4; }
+  .masthead:after {
+    background: url(../img/interface/paint-top.svg) no-repeat left bottom;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 30px;
+    padding: 0 15px;
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    transform: rotate(180deg);
+    width: 100%;
+    z-index: 8; }
   .masthead .wrap {
     position: relative;
-    z-index: 10; }
-  .masthead h1 {
-    color: white; }
-  .masthead .lead {
-    color: #eff1f1; }
-  .masthead .btn {
+    z-index: 12; }
+  .masthead .hgroup {
     margin-bottom: 0; }
+  .masthead .hgroup__title {
+    color: white; }
+  .masthead .hgroup__lead {
+    color: #eff1f1; }
+  .masthead .meta {
+    color: #eff1f1;
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 7.5px;
+    /* [1] */
+    /* [2] */
+    /* [3] */
+    /* [4] */
+    /* [5] */
+    /* [6] */ }
+    @media (min-width: 64em) {
+      .masthead .meta {
+        font-size: 16px;
+        font-size: 1.6rem; } }
 
 /**
  * Video masthead.
@@ -2656,7 +2752,7 @@ blockquote {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  height: 75vh;
+  height: 60vh;
   z-index: 1; }
   .masthead--video:before {
     background: rgba(0, 0, 0, 0.45) url(../img/interface/interlacing.png) 0 0; }
@@ -2695,11 +2791,14 @@ blockquote {
   .band--resorts .hgroup__lead {
     color: #d1eef1; }
 
-.mosaic:before, .mosaic:after {
-  content: "";
-  display: table; }
-.mosaic:after {
-  clear: both; }
+.mosaic {
+  display: flex;
+  flex-wrap: wrap; }
+  .mosaic:before, .mosaic:after {
+    content: "";
+    display: table; }
+  .mosaic:after {
+    clear: both; }
 
 .mosaic__item {
   width: 100%;
@@ -2732,6 +2831,9 @@ blockquote {
 
 .tile {
   background: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   position: relative;
   text-align: center;
   transition: all .15s; }
@@ -2760,7 +2862,19 @@ blockquote {
       transform: scale(1.1); }
 
 .tile__wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
   padding: 30px 30px 0; }
+  .tile__wrap p {
+    margin-bottom: 15px; }
+  .tile__wrap .btn {
+    margin-top: 15px; }
+
+.tile__footer {
+  margin-bottom: 30px;
+  margin-top: auto; }
 
 .tile__subtitle {
   color: #1aacbb;
@@ -2773,6 +2887,8 @@ blockquote {
   /* [4] */
   /* [5] */
   /* [6] */ }
+  .tile__subtitle .dt-published {
+    color: #b3bcbc; }
   @media (min-width: 64em) {
     .tile__subtitle {
       font-size: 16px;
@@ -2783,6 +2899,19 @@ blockquote {
   font-weight: 900;
   padding: 0;
   text-shadow: none; }
+.tile__title.p-name {
+  font-size: 24px;
+  font-size: 2.4rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */ }
+  @media (min-width: 64em) {
+    .tile__title.p-name {
+      font-size: 30px;
+      font-size: 3rem; } }
 
 /*------------------------------------*\
     #TESTIMONIALS

@@ -122,3 +122,41 @@
 		}
 	}
 }
+
+
+/* ==========================================================================
+   #FLAGS
+   ========================================================================== */
+   
+.flag {
+	background: $color-primary url(../img/interface/noise.png) 0 0;
+	color: $white;
+	display: inline-block;
+	font-family: $heading-font-family;
+	@include font-size(8);
+	font-weight: 900;
+	line-height: 14px;
+	margin-right: 5px;
+	padding: 3px 10px;
+	position: relative;
+	text-transform: uppercase;
+	-webkit-transition: background .25s;
+	transition: background .25s;
+	
+	&:hover {
+		background-color: $color-primary-dark;
+		cursor: pointer;
+	}
+	
+	.meta & {
+		top: -2px;
+	}
+	
+	@include bp(bp5) {
+		@include font-size(11);
+		padding: 5px 10px;
+	}
+}
+
+
+

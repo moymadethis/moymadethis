@@ -98,7 +98,6 @@
  */
 
 .page-head {
-	//background: $color-primary url(../img/interface/noise.png) 0 0;
 	background: $white;
 	box-sizing: border-box;
 	@include clearfix;
@@ -106,14 +105,8 @@
 	position: relative;
 	width: 100%;
 	
-	.home & {
-		background: transparent;
-		position: absolute;
-		z-index: 10;
-	}
-	
 	@include bp(bp5) {
-		padding: 0 $gutter * 2;
+		padding: 0 $gutter;
 	}
 }
 

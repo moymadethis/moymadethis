@@ -171,7 +171,7 @@
  */
 
 .page-foot__legal {
-	background: $grey-lighter;
+	border-top: $border;
 	@include font-size(10);
 	clear: both;
 	margin: 0 0 0 (-$gutter / 2);
