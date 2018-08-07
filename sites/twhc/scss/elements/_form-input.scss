@@ -7,6 +7,9 @@
  * Input and textarea styles.
  *
  * 1. Removes default iOS input shadow.
+ *
+ * NOTE: I've tried to match `.select`, `.btn` and `.text-input` border-size,
+ * font-size, line-height and padding so they're all consistant heights.
  */
  
 .text-input {
@@ -44,11 +47,6 @@
 	}
 }
 
-textarea.text-input {
-	//height: $textarea-min-height;
-	resize: vertical;
-}
-
 /**
  * Remove -webkit- styling on `<input type="search" />`. It changes where text
  * cuts off on the search form if it's left on.
@@ -66,15 +64,12 @@ textarea.text-input {
 }
 
 /**
- * Add a calendar icon to an input when it triggers a datepicker.
+ * `textarea specific rules.
  */
- 
-.datepicker {
-	background: url(../assets/icon-calendar.svg) no-repeat 10px center;
-	background-size: 20px;
-	padding-left: 40px;
-}
 
+textarea.text-input {
+	resize: vertical;
+}
 
 /**
  * Placeholder text.
@@ -127,7 +122,7 @@ textarea.text-input {
 }
 
 /**
- * Fade out placeholder text when an input is in `:focus`.
+ * Effect to fade out placeholder text when an input is in `:focus`.
  */
 
 [placeholder]:focus::-webkit-input-placeholder {
@@ -144,12 +139,194 @@ textarea.text-input {
    #SELECT
    ========================================================================== */
 
+/**
+ * Default `select` styling (basic rules).
+ */
+
 select {
 	margin-bottom: $vertical-spacing;
 	width: auto;
 	max-width : 100%;
 	-moz-appearance: menulist;
 	-webkit-appearance: menulist;
+}
+
+/**
+ * To make `select` elements look 'on brand' we wrap them in a `div` with a
+ * class of `.select` to allow custom styling.
+ *
+ * NOTE: I've tried to match `.select`, `.btn` and `.text-input` border-size,
+ * font-size, line-height and padding so they're all consistant heights.
+ */
+
+.select {
+	display: inline-block;
+	position: relative;
+	margin-bottom: ($vertical-spacing / 2);
+	vertical-align: top;
+	width: 100%;
+	
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		background: $white url(../img/interface/icon-select-arrows.svg) no-repeat right 10px center;
+		border: $border-width $border-style $input-border-color;
+		background-size: 12px;
+		border-radius: 0;
+		color: $font-color;
+		cursor: pointer;
+		display: inline-block;
+		font-family: $font-family;	
+		@include font-size(10);
+		font-weight: 400;
+		line-height: $font-lineheight;
+		outline: 0;
+		overflow: hidden;
+		margin: 0;
+		padding: 6px $gutter 6px $gutter / 2;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		text-transform: capitalize;
+		-webkit-transition: all .20s;
+		transition: all .15s;
+		white-space: nowrap;
+		width: 100%;
+		
+		&::-ms-expand {
+			display: none;
+		}
+		
+		&:hover,
+		&:focus {
+			border-color: darken($grey-lighter,10%);
+			color: $grey-darker;
+		}
+		
+		&:disabled {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+		
+		@include bp(bp4) {
+			@include font-size($button-font-size);
+		}
+	}
+}
+
+
+
+
+
+/* ==========================================================================
+   #CHECKBOX + RADIO BUTTONS
+   ========================================================================== */
+   
+/**
+ * To apply custom styles to `checkbox` and `radio` inputs we wrap them in a
+ * `label` with a class of `.control`. This contains the input and also an empty
+ * div called `.control__input` which we use for the styling. `.control` is
+ * extended with `*--check` or `*--radio` so we can differentiate the two types
+ * of input.
+ *
+ * 1. The `input` element is hidden...
+ * 2. But on click it can still be `checked`. So we can toggle `.control__input`
+ *    to show/hide as it directly follows the `input` in the markup.
+ */
+
+.control {
+	@include clearfix;
+	color: $font-color;
+	cursor: pointer;
+	display: block;
+	@include font-size(13);
+	margin-bottom: $vertical-spacing / 4;
+	padding-left: 25px;
+	position: relative;
+	
+	input { /* [1] */
+		height: 15px;
+		margin: 0;
+		opacity: 0;
+		padding: 0;
+		position: absolute;
+		top: 3px;
+		left: 0;
+		width: 15px;
+		z-index: -1;
+		
+		&:checked { /* [2] */
+
+			~ .control__input:after {
+				display: block;
+			}
+		}
+	}
+}
+
+/**
+ * We then style the empty div how we'd ideally like the input to look.
+ *
+ * 1. Add `checked` styling.
+ * 2. Disabled styling.
+ * 3. Use the `:after` element to show/hide a tick or disc icon when `checked`.
+ * 4. `checkbox` specific styling.
+ * 5. `radio` specific styling.
+ */
+
+.control__input {
+	background: $white;
+	border: $input-border-width $input-border-style $input-border-color;
+	box-sizing: border-box;
+	float: left;
+	height: 15px;
+	margin-left: -25px;
+	position: relative;
+	top: 3px;
+	width: 15px;
+	
+	//.control:hover input ~ &,
+	//.control input:focus ~ &,
+	.control input:checked ~ & { /* [1] */
+		background: $color-primary;
+		border-color: $color-primary-dark;
+		box-shadow: none;
+	}
+	
+	.control input:disabled ~ & { /* [2] */
+		opacity: 0.5;
+		pointer-events: none;
+	}
+	
+	&:after { /* [3] */
+		content: '';
+		display: none;
+		position: absolute;
+	}
+	
+	.control--checkbox & { /* [4] */
+		
+		&:after {
+			background: url(../img/interface/icon-check.svg) no-repeat center center;
+			background-size: 100%;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	
+	.control--radio & { /* [5] */
+		border-radius: 100%;
+		
+		&:after {
+			background: $white;
+			border-radius: 100%;
+			box-shadow: 1px 1px rgba($black,.20);
+			height: 5px;
+			top: 3px;
+			left: 3px;
+			width: 5px;
+		}
+	}
 }
 
 

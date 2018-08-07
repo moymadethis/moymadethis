@@ -75,14 +75,15 @@
 					<li class="site-nav__item"><a href="#" class="site-nav__link">Resorts</a></li>
 					<li class="site-nav__item"><a href="#" class="site-nav__link">Packages</a></li>
 					<li class="site-nav__item"><a href="#" class="site-nav__link">Jobs</a></li>
+					<li class="site-nav__item"><a href="#" class="site-nav__link">Blog</a></li>
 					<li class="site-nav__item"><a href="#" class="site-nav__link">Login</a></li>
-					<li class="site-nav__item"><a href="#" class="site-nav__link amp">Apply Now</a></li>
+					<li class="site-nav__item"><a href="#" class="site-nav__link">Apply Now</a></li>
 				</ul>
 			</nav>
 
 		</header>
 		
-		<div class="masthead" style="background: url(img/content/placeholders/zante.jpg) center center; background-size: cover;">
+		<div class="masthead" style="background-image: url(img/content/placeholders/zante.jpg)">
 			<div class="wrap wrap--narrow align-center">
 				<div class="hgroup">
 					<h1 class="hgroup__title">Style Guide</h1>
@@ -253,7 +254,7 @@
 			    <h2>Tables</h2>
 			    <p>Tables should be used when displaying tabular data. The <code>thead</code>, <code>tfoot</code> and <code>tbody</code> elements enable you to group rows within each a table.</p>
 			    <p>If you use these elements, you must use every element. They should appear in this order: <code>thead</code>, <code>tfoot</code> and <code>tbody</code>, so that browsers can render the foot before receiving all the data. You must use these tags within the table element.</p>
-			    <table class="table-striped">
+			    <table class="table-stripe">
 			        <thead>
 			            <tr>
 			                <th scope="col">Ingredients</th>
@@ -361,7 +362,14 @@
 							<textarea rows="4" class="text-input" placeholder="Type your message here..."></textarea>
 						</div>
 					</div>
-					<div class="form-group error">
+					<div class="form-group">
+						<label class="label form-group__title">RangeSlider (plugin) <span class="required">*</span></label>
+						<div class="form-group__controls">
+							<input type="range" min="0" max="500" value="250" step="20" class="input-slider" id="deposit-input" />
+							<p class="input-slider-value">Amount: <strong>£<span id="deposit-value"></span></strong></p>
+						</div>
+					</div>
+					<div class="form-group">
 						<label class="label form-group__title">Select</label>
 						<div class="form-group__controls">
 							<div class="select">
@@ -539,15 +547,15 @@
 
 				<div class="page-foot__sub-item page-foot__sub-item--logo">
 					<a href="#" class="page-foot__logo">
-						<img src="img/interface/logo-dark-full.svg" alt="The Working Holiday Company" />
+						<img src="img/interface/logo-globe.svg" alt="The Working Holiday Company" />
 					</a>
 				</div>
 
 				<div class="page-foot__sub-item page-foot__sub-item--text">
 					<h4 class="page-foot__title">About</h4>
-					<p>Wireforce is a Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+					<p>The Working Holiday Company are the summer recruitment professionals. Helping young people all over the UK and Ireland take their first steps into the world of working abroad.</p>
 					<ul class="affiliates">
-						<li><a href="https://www.gov.uk/knowbeforeyougo" target="_blank"><img src="img/content/affiliates/fco-travel-advice.png" alt="FCO Travel Advice" /></a></li>
+						<li><a href="https://travelaware.campaign.gov.uk" target="_blank"><img src="img/content/affiliates/travel-aware.jpg" srcset="img/content/affiliates/travel-aware@2x.jpg 2x" alt="Travel Aware" /></a></li>
 					</ul>
 				</div>
 
@@ -562,16 +570,16 @@
 						<li><a href="#">Resorts</a></li>
 						<li><a href="#">Packages</a></li>
 						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="#">Blog</a></li>
 					</ul>
 				</div>
 
 				<div class="page-foot__sub-item">
 					<h4 class="page-foot__title">Customer</h4>
 					<ul>
+						<li><a href="#">Apply Now</a></li>
+						<li><a href="#">Account</a></li>
 						<li><a href="#">Login</a></li>
-						<li><a href="#">Register</a></li>
-						<li><a href="#">FAQ</a></li>
 					</ul>
 				</div>
 
@@ -609,9 +617,24 @@
 		<script src="js/jquery-1.12.0.min.js"></script>
 		<script src="js/slick.min.js"></script>
 		<script src="https://vjs.zencdn.net/7.0.3/video.js"></script>
+		<script src="js/rangeslider.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
-
+		
+		<!-- Form range input value output -->
+		<script>
+		
+			$(document).ready(function(){
+				var slider = document.getElementById("deposit-input");
+				var output = document.getElementById("deposit-value");
+				output.innerHTML = slider.value;
+				
+				slider.oninput = function() {
+				  output.innerHTML = this.value;
+				}
+			});
+			
+		</script>
 
 	</body>
 

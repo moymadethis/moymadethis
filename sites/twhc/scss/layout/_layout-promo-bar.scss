@@ -1,16 +1,21 @@
 
-/*------------------------------------*\
-    #PROMO BAR
-\*------------------------------------*/
+/* ==========================================================================
+   #PROMO BAR
+   ========================================================================== */
 
 /**
- * A form used to gather details so they can be called back at a suitable time.
+ * A thin bar  to draw attention to certain elements. For example "Watch the
+ * Video" or a list of social icons.
  */
 
 .promo-bar {
 	padding: ($vertical-spacing / 2) 0 0;
 	text-align: center;
 }
+
+/**
+ * Title of the promo bar.
+ */
 
 .promo-bar__title {
 	color: $white;
@@ -22,6 +27,10 @@
 		@include font-size(16);
 	}
 }
+
+/**
+ * List or paragraph to be displayed inline with the title.
+ */
 
 .promo-bar__cta {
 	display: inline-block;

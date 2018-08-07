@@ -29,38 +29,67 @@ $(function() {
 	});
 });
 
+
 /* 
  * Sliding Line.
  */
-
+ 
 $(function() {
+  var $el,
+    leftPos,
+    newWidth,
+    $mainNav = $(".site-nav__list");
 
-    var $el, leftPos, newWidth,
-        $mainNav = $(".site-nav");
+  $mainNav.append("<div class='site-nav__line'></div>");
+  var $magicLine = $(".site-nav__line"),
+    $currentMenu = $(".current-menu-item");
+
+  $magicLine
+    .width($currentMenu.length ? $currentMenu.width() : 0)
+    .css("left", $currentMenu.length ? $currentMenu.find("a").position().left : 0)
+    .data("origLeft", $magicLine.position().left)
+    .data("origWidth", $magicLine.width());
+
+  var hoverOut;
+
+  $(".site-nav__list li a").hover(function() {
+      clearTimeout(hoverOut);
     
-    $mainNav.append("<div class='site-nav__line'></div>");
-    var $magicLine = $(".site-nav__line");
-    
-    $magicLine
-        .width($(".current-menu-item").width())
-        .css("left", $(".current-menu-item").position().left)
-        .data("origLeft", $magicLine.position().left)
-        .data("origWidth", $magicLine.width());
-        
-    $(".site-nav__list li a").hover(function() {
-        $el = $(this);
-        leftPos = $el.position().left;
-        newWidth = $el.parent().width();
-        $magicLine.stop().animate({
+      $el = $(this);
+      leftPos = $el.position().left;
+      newWidth = $el.parent().width();
+
+      if (!$magicLine.width()) {
+        $magicLine.stop().hide().css({
             left: leftPos,
             width: newWidth
-        });
-    }, function() {
+          }).fadeIn(100);
+      } else {
         $magicLine.stop().animate({
+          opacity: 1,
+          left: leftPos,
+          width: newWidth
+        });
+      }
+    },
+    function() {
+      hoverOut = setTimeout(function() {
+        if (!$currentMenu.length) {
+          $magicLine.fadeOut(100, function() {
+            $magicLine.css({
+              left: $magicLine.data("origLeft"),
+              width: $magicLine.data("origWidth")
+            });
+          });
+        } else {
+          $magicLine.stop().animate({
             left: $magicLine.data("origLeft"),
             width: $magicLine.data("origWidth")
-        });    
-    });
+          });
+        }
+      }, 100);
+    }
+  );
 });
 
 
@@ -81,6 +110,22 @@ $('.accordion').find('.accordion__title').click(function(){
 
 
 /* ==========================================================================
+   #RANGE SLIDER
+   ========================================================================== */
+   
+/* 
+ * RangeSlider.JS
+ */
+ 
+$('.input-slider').rangeslider({
+    polyfill : false
+});
+
+
+
+
+
+/* ==========================================================================
    #SLICK
    ========================================================================== */
  
@@ -93,7 +138,10 @@ $(document).ready(function(){
 		adaptiveHeight: true,
 		arrows: false,
 		dots: true,
-		infinite: false
+		infinite: false,
+		fade: true,
+		cssEase: 'ease-out',
+		speed: 300
 	});
 });
 
@@ -101,41 +149,45 @@ $(document).ready(function(){
  * Creates classes to enable responsive navigation.
  */
  
-$(document).ready(function(){
-	$('.slick-carousel').slick({
-	  centerMode: true,
-	  centerPadding: '0',
-	  slidesToShow: 3,
-	  arrows: false,
-	  dots: true,
-	  responsive: [
-	    {
-	      breakpoint: 960,
-	      settings: {
-	        centerMode: true,
-	        centerPadding: '120px',
-	        slidesToShow: 1
-	      }
-	    },
-	    {
-	      breakpoint: 600,
-	      settings: {
-	        centerMode: true,
-	        centerPadding: '60px',
-	        slidesToShow: 1
-	      }
-	    },
-	    {
-	      breakpoint: 480,
-	      settings: {
-	        centerMode: true,
-	        centerPadding: '30px',
-	        slidesToShow: 1
-	      }
-	    }
-	  ]
-	});
+$(document).ready(function() {
+  $('.slick-carousel').slick({
+      centerMode: true,
+      centerPadding: '0',
+      slidesToShow: 3,
+      arrows: false,
+      dots: true,
+      responsive: [{
+          breakpoint: 960,
+          settings: {
+            centerMode: true,
+            centerPadding: '120px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            centerMode: true,
+            centerPadding: '30px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    })
+    // Additional code to make each slide the same height (`- 30` relates to the `margin: 15px 0` set on the slideTrack.
+    .on('setPosition', function(event, slick) {
+		slick.$slider.find(".slick-slide .tile:not(.position-set)").addClass('position-set').css('height', slick.$slideTrack.height() - 30 + 'px');
+    });
 });
+
 
 /* 
  * Slideshow form (for apply page)

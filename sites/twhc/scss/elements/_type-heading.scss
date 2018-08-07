@@ -54,23 +54,16 @@ h4 {
 	}
 }
 
-/**
- * Oversized title styling, used on the homepage/masthead areas.
- */
-
-.oversize {
-	
-	@include font-size(36);
-
-	@include bp(bp5) {
-		@include font-size(48);
-	}
-}
-
 
 /**
  * The `.hgroup` class be used to group a title + lead paragraph styling, mainly
  * to open a `.band` section.
+ *
+ * 1. Paragraph used to have a class of `.hgroup__lead` but now we just target
+ *    the `p` tag to make life easier when integrating to Wordpress.
+ * 2. The `margin-bottom` on the `hgroup__title` is increased just incase a
+ *    paragraph isn't added, it helps with spacing. So we need to use a negative
+ *    margin to nudge the paragraph up to reduce the space when it's added.
  */
  
 .hgroup {
@@ -80,15 +73,25 @@ h4 {
 	@include bp(bp5) {
 		margin-bottom: $vertical-spacing * 2;
 	}
+	
+	p { /* [1] */
+		color: $grey-light;
+		@include font-size($font-size);
+		line-height: 1.4;
+		margin-top: -$vertical-spacing / 2; /* [2] */
+	
+		@include bp(bp5) {
+			@include font-size(16);
+			
+		}
+	}
 }
 
-.hgroup__lead {
-	color: $grey-light;
-	@include font-size($font-size);
-	line-height: 1.4;
+/**
+ * The `margin-bottom` is increased on the title just incase a paragraph isn't
+ *  added to the `.hgroup` for consistent spacing.
+ */
 
-	@include bp(bp5) {
-		@include font-size(16);
-		
-	}
+.hgroup__title {
+	margin-bottom: $vertical-spacing;
 }

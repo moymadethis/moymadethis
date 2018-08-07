@@ -5,6 +5,9 @@
 
 /**
  * Base quote styles.
+ *
+ * 1. Add open/close quotemarks using the `:before` and `:after` classes.
+ * 2. Footer content, for citations.
  */
 
 blockquote {
@@ -25,7 +28,7 @@ blockquote {
 		text-indent: 4px;
 		
 		&:first-child:before,
-		&:last-of-type:after {
+		&:last-of-type:after { /* [1] */
 			color: $color-primary;
 			content: "\201c";
 			display: inline;
@@ -57,7 +60,7 @@ blockquote {
 		}
 	}
 	
-	footer {
+	footer { /* [2] */
 		color: $grey-light;
 		font-family: $font-family;
 		font-weight: 400;

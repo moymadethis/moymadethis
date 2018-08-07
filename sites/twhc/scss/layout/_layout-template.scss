@@ -6,22 +6,146 @@
 /**
  * Sections of content separated into 'bands', usually containing a `.wrap` div
  * to center content.
+ *
+ * 1. When a `.masthead` the top padding is too much. So we reduce the vertical
+ *    space and add a border to define the header more.
  */   
 
 .band {
 	padding: ($vertical-spacing * 2) 0 ($vertical-spacing);
+	position: relative;
 	width: 100%;
 	
 	@include bp(bp5) {
 		padding: ($vertical-spacing * 4) 0 ($vertical-spacing * 3);
 	}
+	
+	.page-head + & { /* [1] */
+		border-top: $border;
+		padding-top: $vertical-spacing;
+		
+		@include bp(bp5) {
+			padding-top: $vertical-spacing * 2;
+		}
+	}
 }
 
+/**
+ * Brand colour `.band` section.
+ */ 
+ 
 .band--primary {
 	background: $color-primary url(../img/interface/noise.png) 0 0;
 }
 
+/**
+ * Add paint effect to bottom of `.band` element using the `:before` class.
+ *
+ * 1. Adjust the height of the paint effect on mobile/desktop. 25px on mobile is
+ *    a bit too taller and not as subtle.
+ */ 
 
+.paint-bottom {
+	
+	&:before {
+		background: url(../img/interface/paint-bottom.svg) no-repeat left bottom;
+		background-size: cover;
+		content: "";
+		display: block;
+		height: 15px; /* [1] */
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 8;
+		
+		@include bp(bp5) {
+			height: 25px; /* [1] */
+		}
+	}
+}
+
+
+
+
+
+/* ==========================================================================
+   #MODIFIED BANDS
+   ========================================================================== */
+   
+/**
+ * The `.band` that displays resorts in a carousel has a unique background image
+ * applied to it.
+ *
+ * 1. Because of this, we need to overwrite the `.hgroup` text colouring so it
+ *    is readable.
+ */
+ 
+.band--resorts {
+	background: url(../img/interface/bg-sand-meets-the-sea.jpg) no-repeat center bottom;
+	background-size: cover;
+	
+	.hgroup {
+		
+		p {
+			color: $color-primary-lighter; /* [1] */
+		}
+	}
+	
+	.hgroup__title {
+		color: $white; /* [1] */
+	}
+}
+
+/**
+ * A `.band` that displays a slideshow of testimonial quotes needs some custom
+ * padding applied to it, as I want the images to sit flush with the bottom of
+ * the `.band` container. We also reduce the top padding value - looks better!
+ *
+ * 1. We also adjust the position of the Slick Slider pagination.
+ */
+ 
+.band--testimonials {
+	
+	@include bp(bp5) {
+		padding: ($vertical-spacing * 2) 0 0;
+	}
+	
+	.slick-list {
+		margin-bottom: 0;
+	}
+	
+	.slick-dots { /* [1] */
+		position: absolute;
+		bottom: $vertical-spacing;
+	}
+}
+
+/**
+ * The callback form has a light greyscale background image applied to this.
+ *
+ * 1. This makes the text slightly harder to read, so we just darken the text
+ *    slightly to make it more legible.
+ */
+
+.band--callback {
+	background: url(../img/interface/bg-palmtree-and-loungers--large.jpg) no-repeat left bottom;
+	background-size: cover;
+	color: lighten($font-color,10%); /* 1] */
+	
+	.hgroup__lead {
+		color: inherit; /* [1] */
+	}
+}
+
+
+
+
+
+/* ==========================================================================
+   #WRAP
+   ========================================================================== */
+   
 /**
  * The `.wrap` div is used for centering content on wider viewports and limiting
  * how wide that content can get using a `max-width`.

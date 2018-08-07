@@ -1,9 +1,13 @@
+
 /* ==========================================================================
    #BOX
    ========================================================================== */
 
 /**
  * Basic boxout styling.
+ *
+ * 1. Adjust anchor `text-shadow` (normally white) incase a link is displayed
+ *    on a coloured background.
  */
 
 .box {
@@ -12,6 +16,10 @@
 	box-sizing: border-box;
 	margin-bottom: $vertical-spacing;
 	padding: $vertical-spacing ($gutter / 2) 0;
+	
+	a {
+		text-shadow: 3px 0 lighten($grey-lighter,2.5%), 2px 0 lighten($grey-lighter,2.5%), 1px 0 lighten($grey-lighter,2.5%), -3px 0 lighten($grey-lighter,2.5%), -2px 0 lighten($grey-lighter,2.5%), -1px 0 lighten($grey-lighter,2.5%); /* [1] */
+	}
 }
 
 /**

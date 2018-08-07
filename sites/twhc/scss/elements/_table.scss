@@ -2,6 +2,10 @@
 /* ==========================================================================
    #TABLE
    ========================================================================== */
+   
+/**
+ * Base `table` styles.
+ */
 
 table {
 	background-color: $table-bg;
@@ -30,12 +34,16 @@ td {
 }
 
 th {
-	border: none;
 	color: $grey-darker;
 	font-family: $table-font-family;
-	@include font-size($table-font-size);
+	@include font-size(15);
 	font-weight: $table-header-font-weight;
 }
+
+
+/**
+ * Condensed tables (reduced padding).
+ */
 
 .table-condensed {
 
@@ -45,6 +53,14 @@ th {
 		@include font-size($table-condensed-font-size);
 	}
 }
+
+
+/**
+ * Add a stripe to alternating table rows.
+ *
+ * 1. Adjust anchor `text-shadow` (normally white) incase a link is displayed
+ *    within a coloured table row.
+ */
 
 .table-stripe {
 	
@@ -57,13 +73,30 @@ th {
 	tbody tr:nth-child(odd) td {
 		background-color: $table-stripe-bg;
 		color: $table-stripe-font-color;
+		
+		a {
+			text-shadow: 3px 0 $table-stripe-bg, 2px 0 $table-stripe-bg, 1px 0 $table-stripe-bg, -3px 0 $table-stripe-bg, -2px 0 $table-stripe-bg, -1px 0 $table-stripe-bg; /* [1] */
+		}
 	}
 }
+
+
+/**
+ * A table with solid coloured rows with a gap between each.
+ *
+ * 1. Adjust anchor `text-shadow` (normally white) incase a link is displayed
+ *    within a coloured table row.
+ */
 
 .table-solid {
 	border-collapse: separate;
     border-spacing: 0 2px;
     margin: -2px -2px $vertical-spacing;
+    
+    th,
+    td {
+	    border: none;
+    }
 	
 	thead th,
 	thead td {
@@ -73,5 +106,9 @@ th {
 	tbody th,
 	tbody td {
 		background-color: $grey-lighter;
+		
+		a {
+			text-shadow: 3px 0 $table-stripe-bg, 2px 0 $table-stripe-bg, 1px 0 $table-stripe-bg, -3px 0 $table-stripe-bg, -2px 0 $table-stripe-bg, -1px 0 $table-stripe-bg; /* [1] */
+		}
 	}
 }

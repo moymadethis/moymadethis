@@ -5,22 +5,39 @@
 
 /**
  * An area found at the top of a page, below the header. Usually contains a
- * title + short sentence with an image or video background.
+ * title + short sentence with an image or video background. When a background
+ * image is specified it is added inline as it's controlled in the CMS. THough I
+ * have added a 'default' image incase the client doesn't want to add a custom
+ * image to every page.
+ *
+ * 1. Using a `min-height` to keep the size of the `.masthead` area consistent.
+ * 2. Ensure content is vertically centred.
+ * 3. Add a subtle overlay over the background so text is more legible.
+ * 4. The bottom of each `.masthead` has a paint stroke effect.
+ * 5. Adjust the height of the paint effect on mobile/desktop. 25px on mobile is
+ *    a bit too taller and not as subtle.
+ * 6. Add a `z-index` to any `.wrap` container so it always displays above the
+ *    overlay.
  */
 
 .masthead {
+	background-color: $color-primary;
+	background-image: url(../img/interface/bg-masthead.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	box-sizing: border-box;
 	color: $white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 300px;
+	display: flex; /* [2] */
+	align-items: center; /* [2] */
+	justify-content: center; /* [2] */
+	min-height: 300px; /* [1] */
 	overflow: hidden;
 	padding: ($vertical-spacing * 2) 0 ($vertical-spacing);
 	position: relative;
 	width: 100%;
 	
-	&:before {
+	&:before { /* [3] */
 		background: rgba($black,.45);
 		content: "";
 		display: block;
@@ -33,36 +50,42 @@
 		z-index: 4;
 	}
 	
-	&:after {
-		background: url(../img/interface/paint-top.svg) no-repeat left bottom;
+	&:after { /* [4] */
+		background: url(../img/interface/paint-bottom.svg) no-repeat left bottom;
 		background-size: cover;
 		content: "";
 		display: block;
-		height: 30px;
-		padding: 0 $gutter / 2;
+		height: 15px; /* [5] */
 		position: absolute;
 		bottom: 0;
-		left: -$gutter / 2;
-		transform: rotate(180deg);
+		left: 0;
 		width: 100%;
 		z-index: 8;
+		
+		@include bp(bp5) {
+			height: 25px; /* [5] */
+		}
 	}
 	
 	.wrap {
 		position: relative;
-		z-index: 12;
+		z-index: 12; /* [6] */
 	}
+	
+	/**
+	 * Styling of text-level elements within a `.masthead`.
+	 */
 	
 	.hgroup {
 		margin-bottom :0;
+		
+		p {
+			color: $grey-lighter;
+		}
 	}
 	
 	.hgroup__title {
 		color: $white;
-	}
-	
-	.hgroup__lead {
-		color: $grey-lighter;
 	}
 	
 	.meta {
@@ -76,8 +99,11 @@
 	}
 }
 
+
 /**
- * Video masthead.
+ * Specific styling of a `.masthead` that has a video background.
+ *
+ * 1. Add interlacing effect over the top of the video.
  */
 
 .masthead--video {
@@ -89,12 +115,12 @@
 	z-index: 1;
 	
 	&:before {
-		background: rgba($black,.45) url(../img/interface/interlacing.png) 0 0;
+		background: rgba($black,.45) url(../img/interface/interlacing.png) 0 0; /* [1] */
 	}
 }
 
 /**
- * Video element.
+ * The actual `video` element within `.masthead--video`.
  *
  * 1. Overwrite base `video` element styles as it causes video not the fill the
  *    height of it's container on narrower viewports.
@@ -113,5 +139,3 @@
     min-width: 100%;
     max-width: none; /* [1] */
 }
-
-

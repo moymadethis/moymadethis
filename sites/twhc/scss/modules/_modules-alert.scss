@@ -1,6 +1,12 @@
+
 /* ==========================================================================
    #ALERTS
    ========================================================================== */
+
+/**
+ * Alerts, mainly used for success/error messages when submitting forms. Extend 
+ * this object with a `.alert--*` skin class to change the appearance.
+ */
 
 .alert {
 	background: $alert-bg url(../img/interface/noise.png) 0 0;
@@ -36,17 +42,34 @@
 	}
 }
 
+/**
+ * Success (green) specific styling.
+ */
+
 .alert--success {
 	background-color: $alert-success-bg;
 	border-color: $alert-success-border-color;
 	color: $alert-success-font-color;
 }
 
+/**
+ * Error (red) specific styling.
+ */
+
 .alert--error {
 	background-color: $alert-error-bg;
 	border-color: $alert-error-border-color;
 	color: $alert-error-font-color;
 }
+
+/**
+ * The alert close button.
+ *
+ * 1. Overwrite `.icon` default `top` value.
+ * 2. Specific styling for 'success' close button.
+ * 3. Specific styling for 'error' close button.
+ * 4. On hover we spin the icon 90degees.
+ */
 
 .alert__close {
 	background-image: none;
@@ -60,7 +83,7 @@
 	.icon {
 		fill: $alert-font-color;
 		height: 15px;
-		top: 0; // Overwrite `.icon` default `top` value.
+		top: 0; /* [1] */
 		width: 15px;
 		
 		.alert--success & {
@@ -74,7 +97,7 @@
 	
 	&:hover,
 	&:focus {
-		transform: rotate(90deg);
+		transform: rotate(90deg); /* [4] */
 		
 		.icon {
 			fill: $alert-heading-font-color;
@@ -90,24 +113,36 @@
 	}	
 }
 
+/**
+ * Main title of an `.alert` element.
+ *
+ * 1. Specific styling for 'success' title.
+ * 2. Specific styling for 'error' title.
+ * 3. If the alert only has a title (so it's the `:last-child) we increase the
+ *    `margin-bottom` for consistent spacing.
+ * 4. A title can include a title alongside it. If it does, we adjust the
+ *    styling depending on what type of `.alert` it is.
+ */
+
+
 .alert__title {
 	color: $alert-heading-font-color;
 	@include font-size($alert-heading-font-size);
 	margin-bottom: $vertical-spacing / 4;
 	
 	.alert--success & {
-		color: $alert-success-heading-font-color;
+		color: $alert-success-heading-font-color; /* [1] */
 	}
 	
 	.alert--error & {
-		color: $alert-error-heading-font-color;
+		color: $alert-error-heading-font-color; /* [2] */
 	}
 	
 	&:last-child {
 		margin-bottom: $vertical-spacing / 2;
 	}
 	
-	.icon {
+	.icon { /* [4] */
 		fill: $alert-font-color;
 		margin-right: $gutter / 4;
 		position: relative;
@@ -124,16 +159,24 @@
 }
 
 
+
+
+
 /* ==========================================================================
    #FLAGS
    ========================================================================== */
+   
+/**
+ * Mainly used to display categories on the blog index but can be used to draw
+ * attention to over small bits of text if needed.
+ */
    
 .flag {
 	background: $color-primary url(../img/interface/noise.png) 0 0;
 	color: $white;
 	display: inline-block;
 	font-family: $heading-font-family;
-	@include font-size(8);
+	@include font-size(11);
 	font-weight: 900;
 	line-height: 14px;
 	margin-right: 5px;
@@ -143,20 +186,11 @@
 	-webkit-transition: background .25s;
 	transition: background .25s;
 	
-	&:hover {
-		background-color: $color-primary-dark;
-		cursor: pointer;
-	}
-	
 	.meta & {
 		top: -2px;
 	}
 	
 	@include bp(bp5) {
-		@include font-size(11);
 		padding: 5px 10px;
 	}
 }
-
-
-

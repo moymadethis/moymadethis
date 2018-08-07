@@ -4,22 +4,28 @@
 \*------------------------------------*/
 
 /**
- * A form used to gather details so they can be called back at a suitable time.
+ * A form used to gather customer details to generate a lead so user accounts
+ * can be created.
+ *
+ * 1. Overwrite default `.box` margin.
+ * 2. As we use custom prev/next buttons to navigate through the slide on the
+ *    form, we float them left and right respectively.
  */
  
 .slick-form {
+	
 	.box {
-		margin-bottom: 0;
+		margin-bottom: 0; /* [1] */
 	}
 }
 
 .slick-form-arrows {
 	
 	.btn:first-child {
-		float: left;
+		float: left; /* [2] */
 	}
 	
 	.btn:last-child {
-		float: right;
+		float: right; /* [2] */
 	}
 }

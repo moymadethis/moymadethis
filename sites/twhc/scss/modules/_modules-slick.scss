@@ -1,20 +1,33 @@
-/* Slider */
+
+/* ==========================================================================
+   #SLICK SLIDER
+   ========================================================================== */
+
+/**
+ * The core/base Slick Slider styles.
+ */
 
 .slick-slider {
-    position: relative;
-    display: block;
     box-sizing: border-box;
+    display: block;
+    position: relative;
     user-select: none;
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+    
+    .slick-track,
+    .slick-list {
+	    transform: translate3d(0, 0, 0);
+    }
 }
+
 .slick-list {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    margin: 0 0 $vertical-spacing;
+	display: block;
+	overflow: hidden;
+	margin: 0 0 $vertical-spacing;
     padding: 0;
+    position: relative;
 
     &:focus {
         outline: none;
@@ -24,14 +37,6 @@
         cursor: pointer;
         cursor: hand;
     }
-}
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
 }
 
 .slick-track {
@@ -56,21 +61,24 @@
         visibility: hidden;
     }
 }
+
 .slick-slide {
+	display: none;
     float: left;
     height: 100%;
     min-height: 1px;
+    
     [dir="rtl"] & {
         float: right;
     }
+    
     img {
         display: block;
     }
+    
     &.slick-loading img {
         display: none;
     }
-
-    display: none;
 
     &.dragging img {
         pointer-events: none;
@@ -90,11 +98,20 @@
         border: 1px solid transparent;
     }
 }
+
+.slick-disabled {
+	opacity: .15;
+}
+
 .slick-arrow.slick-hidden {
     display: none;
 }
 
 
+/**
+ * Pagination (dots) to navigate through a slideshow/carousel.
+ */
+ 
 .slick-dots {
 	line-height: 10px;
 	margin: 0;
@@ -132,9 +149,4 @@
 		background: $color-primary;
 		cursor: default;
 	}
-}
-
-
-.slick-disabled {
-	opacity: .15;
 }

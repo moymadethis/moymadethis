@@ -40,7 +40,7 @@ body {
 	color: $font-color;
 	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
 	font-family: $font-family;
-	@include font-size(12);
+	@include font-size(13);
 	font-weight: $font-weight;
 	line-height: $font-lineheight;
 	margin: 0;

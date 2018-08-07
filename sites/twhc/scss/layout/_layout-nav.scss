@@ -1,6 +1,4 @@
 
-
-
 /* ==========================================================================
    #SITE-NAV
    ========================================================================== */
@@ -8,7 +6,9 @@
 /**
  * A class of `.show-nav` is added to the body tag once `.site-nav` is activated
  * (visible) once the `.page-head__toggle` is clicked. `.page-head__toggle` is
- * extended in _layout-banner.scss.
+ * extended in _layout-banner.scss. On desktop, the nav is displayed in a more
+ * standard row. This occurs on the `bp5` breakpoint so a lot of styles are
+ * reset there.
  */
  
  .show-nav {
@@ -16,7 +16,20 @@
  }
  
 /**
- * `.site-nav` is the main page navigation. It has 3 states:
+ * On mobile devices the main navigation is hidden. Once it's triggered several
+ * properties use CSS transitions to fade/bounce the nav into view.
+ *
+ * 1. A class of `.show-nav` is added to the `body` tag to the navigation can be
+ *    transitioned into view.
+ * 2. `.hide-nav` is applied to the `body` tag while the navigation is closing
+ *    and is stripped after a specified amount of time (this is specified in the
+ *    `main.js` javascript file. The benefit of this is it gives great control
+ *    over the transition when closing the navigation.
+ * 3. For example, if `z-index: 0;` was applied as soon as nav started to close,
+ *    we wouldn't see an animation as `z-index` can't be transitioned. So this
+ *    allows us to keep a higher value until all transitions have finished.
+ * 4. The styling on mobile to desktop differs A LOT. So there's a lot of CSS
+ *    overwrites needed.
  */
  
 .site-nav {
@@ -34,9 +47,9 @@
 	user-select: none;
 	visibility: hidden;
 	width: 100%;
-	z-index: -1;
+	z-index: -1; 
 
-	@include bp(bp5) {
+	@include bp(bp5) { /* [5] */
 		background: none;
 		float: right;
 		height: auto;
@@ -53,7 +66,7 @@
 		width: auto;
 	}
 	
-	.show-nav & {
+	.show-nav & { /* [1] */
 		opacity: 1;
 		transition: opacity .10s ease-in, transform .20s ease-in;
 		visibility: visible;
@@ -61,24 +74,37 @@
 		z-index: 1000;
 	}
 	
-	.hide-nav & {
+	.hide-nav & { /* [2] */
 		transform: scale(1);
 		visibility: visible;
-		z-index: 1000;
+		z-index: 1000; /* [3] */
 	}
 }
+
+/**
+ * The main list within the navigation.
+ *
+ * 1. Vertically align the list in the center of the screen.
+ * 2. Resets to overwrite mobile specific styles.
+ * 3. On desktop, take into account the right padding on `.site-nav__list a` so
+ *    navigation aligns with the social icons above it.
+ *
+ * It's also worth nothing that this section doesn't strictly follow the BEM
+ * convention (which is originally did) but has been adapted for ease as these
+ * templates/styles will be integrated onto Wordpress.
+ */
 
 .site-nav__list {
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	top: 50%;
+	top: 50%; /* [1] */
 	left: 0%;
-	transform: translateY(-50%);
+	transform: translateY(-50%); /* [1] */
 	width: 100%;
 	
-	@include bp(bp5) {
-		margin-right: -$gutter / 2; // Take into account padding on `a`.
+	@include bp(bp5) { /* [2] */
+		margin-right: -$gutter / 2; /* [3] */
 		position: relative;
 		top: auto;
 		left: auto;
@@ -86,6 +112,24 @@
 		width: auto;
 	}
 }
+
+/**
+ * The list-items for the navigation.
+ *
+ * 1. Transitions to make the menu 'bounce' into view.
+ * 2. Desktop style resets.
+ * 3. Draw attention to the "Apply Now" link. Originally we used a class to
+ *    style this but due to complications with Wordpress I had to target the
+ *    `:last-of-type`. This link should always be last, as a different styled
+ *    link would look odd in the middle of the nav so it shouldn't be a problem.
+ * 4. Worth noting that I've used `:last-of-type` and not `:last-child` because
+ *    the selected style uses a div injected by Javascript, which means that is
+ *    the last child after load.
+ * 5. Changed from `inline-block` to `block` and then floated the list-items.
+ *    This was just to remove the 1px gap between items as occassionally it
+ *    caused the sliding line when hovering over items to fade out before fading
+ *    in again when the cursor was inbetween two items.
+ */
 
 .site-nav__list li {
 	background: none;
@@ -95,37 +139,47 @@
 	padding-left: 0;
 	opacity: 0;
 	text-transform: uppercase;
-	transform: translateY(-150px);
-	transition: all .40s .40s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transform: translateY(-150px); /* [1] */
+	transition: all .40s .40s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* [1] */
 	
 	.show-nav & {
 	    opacity: 1;
-		transform: translateY(0);
-		transition-delay: .20s;
-		transition-duration: .80s;
+		transform: translateY(0); /* [1] */
+		transition-delay: .20s; /* [1] */
+		transition-duration: .80s; /* [1] */
     }
     
-    @include bp(bp5) {
-	    display: inline-block;
+    @include bp(bp5) { /* [2] */
+	    display: block;
+	    float: left;
 	    @include font-size(14);
 	    opacity: 1;
 	    transform: none;
 	    transition: none;
+	    
+	    &:last-of-type { /* [4] */
+			
+			a { /* [3] */
+				color: $color-primary;
+			
+				&:visited {
+					color: $color-primary;
+				}
+				
+				&:hover,
+				&:focus {
+					color: $grey-darker;
+				}
+			}
+		}
 	}
-	
-	&.current-menu-item {}
 }
 
-.site-nav__line {
-	background: $color-primary;
-	content: "";
-	display: block;
-	height: 2px;
-	position: absolute;
-	top: -2px;
-	left: 0;
-	width: 100%;
-}
+/**
+ * Link styling for the main navigation.
+ *
+ * 1. Desktop style overwrites.
+ */
 
 .site-nav__list a {
 	background-image: none;
@@ -133,7 +187,7 @@
 	box-sizing: border-box;
 	display: block;
 	font-weight: 900;
-	padding: $vertical-spacing / 2;
+	padding: ($vertical-spacing / 4) 0;
 	transition: color .15s;
 	text-shadow: none;
 	
@@ -147,14 +201,10 @@
 		color: $white;
 		outline: none;
 	}
-	
-	&.amp {
-		color: $white;
-	}
 
-	@include bp(bp5) {
+	@include bp(bp5) { /* [1] */
 		color: $grey-darker;
-		padding: $vertical-spacing $gutter / 2;
+		padding: $vertical-spacing ($gutter / 2);
 		
 		&:visited {
 			color: $grey-darker;
@@ -164,19 +214,25 @@
 		&:focus {
 			color: $color-primary;
 		}
-		
-		&.amp {
-			color: $color-primary;
-			
-			&:visited {
-				color: $color-primary;
-			}
-			
-			&:hover,
-			&:focus {
-				color: $grey-darker;
-			}
-		}
 	}
 }
 
+/**
+ * The 'selected' styling for the navigation is controlled by javascript. When
+ * hovering other other menu items a line will slide along the menu to the
+ * relevant item. If the user leaves the menu without clicking on a page link
+ * the line will either slide back to the current page, or if the current page
+ * doesn't have a link in the main navigation it will fade out (and in again if
+ * the menu is engaged with once again).
+ */
+
+.site-nav__line {
+	background: $color-primary;
+	content: "";
+	display: block;
+	height: 2px;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	width: 100%;
+}
