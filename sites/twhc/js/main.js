@@ -33,64 +33,7 @@ $(function() {
 /* 
  * Sliding Line.
  */
- 
-$(function() {
-  var $el,
-    leftPos,
-    newWidth,
-    $mainNav = $(".site-nav__list");
 
-  $mainNav.append("<div class='site-nav__line'></div>");
-  var $magicLine = $(".site-nav__line"),
-    $currentMenu = $(".current-menu-item");
-
-  $magicLine
-    .width($currentMenu.length ? $currentMenu.width() : 0)
-    .css("left", $currentMenu.length ? $currentMenu.find("a").position().left : 0)
-    .data("origLeft", $magicLine.position().left)
-    .data("origWidth", $magicLine.width());
-
-  var hoverOut;
-
-  $(".site-nav__list li a").hover(function() {
-      clearTimeout(hoverOut);
-    
-      $el = $(this);
-      leftPos = $el.position().left;
-      newWidth = $el.parent().width();
-
-      if (!$magicLine.width()) {
-        $magicLine.stop().hide().css({
-            left: leftPos,
-            width: newWidth
-          }).fadeIn(100);
-      } else {
-        $magicLine.stop().animate({
-          opacity: 1,
-          left: leftPos,
-          width: newWidth
-        });
-      }
-    },
-    function() {
-      hoverOut = setTimeout(function() {
-        if (!$currentMenu.length) {
-          $magicLine.fadeOut(100, function() {
-            $magicLine.css({
-              left: $magicLine.data("origLeft"),
-              width: $magicLine.data("origWidth")
-            });
-          });
-        } else {
-          $magicLine.stop().animate({
-            left: $magicLine.data("origLeft"),
-            width: $magicLine.data("origWidth")
-          });
-        }
-      }, 100);
-    }
-  );
-});
 
 
 
