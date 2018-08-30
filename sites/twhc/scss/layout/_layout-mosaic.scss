@@ -107,6 +107,24 @@
 }
 
 /**
+ * When `centerMode` is active, Slick Slider takes the first item in the list
+ * and moves it to the middle to be the 'active' item. It when positions the
+ * last item in the list to the left of the middle item. The client wanted the
+ * exact same order in the carousel as on the index page. So we had to turn off
+ * `centerMode` but this meant there was no class to target the middle (2nd)
+ * item to enlarge it. As we only display 3 items in the carousel and the 1st
+ * (leftmost) item has a class of `.slick-current` I used the `+` selector to
+ * target the panel that follows it. It's a bit hacky and I thought the
+ * transitions would look off depending on how/when classes were added/removed
+ * from the carousel items but it actually runs pretty smoothly!
+ */
+
+.slick-current + .slick-active .tile {
+	transform: scale(1.05);
+	z-index: 10;
+}
+
+/**
  * Any item that is placed within a `.tile` element.
  *
  * 1. Remove default `a` styling incase this element is a link.

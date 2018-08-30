@@ -47,6 +47,15 @@ a {
 	}
 }
 
+/**
+ * Remove default link styling (underline/text-shadow) from these links...
+ */
+
+.addthis_tool a {
+	background: none;
+	text-shadow: none;
+}
+
 
 
 

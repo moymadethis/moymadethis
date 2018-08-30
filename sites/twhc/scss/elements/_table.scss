@@ -4,6 +4,16 @@
    ========================================================================== */
    
 /**
+ * Wrapping a table with a div with a class of `.table-overflow` allows the
+ * table to scroll when the content is too large and the viewport is narrow.
+ */
+
+.table-overflow {
+	overflow-x: auto;
+}
+
+
+/**
  * Base `table` styles.
  */
 

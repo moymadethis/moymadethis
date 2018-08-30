@@ -31,6 +31,14 @@
 }
 
 /**
+ * Light grey  `.band` section.
+ */ 
+ 
+.band--tint {
+	background: lighten($grey-lighter,2.5%);
+}
+
+/**
  * Brand colour `.band` section.
  */ 
  
@@ -79,6 +87,10 @@
  *
  * 1. Because of this, we need to overwrite the `.hgroup` text colouring so it
  *    is readable.
+ * 2. As default link styling doesn't work well in this section due to the
+ *    background image (the text-shadow 'crop' doesn't work, it just looks like
+ *    a white glow) we adjust the styling slightly so it's more legible - but
+ *    only target links within the `p` element so `.btn`s aren't affected.
  */
  
 .band--resorts {
@@ -94,6 +106,24 @@
 	
 	.hgroup__title {
 		color: $white; /* [1] */
+	}
+	
+	p a { /* [2] */
+		background: none;
+		border-bottom: 1px solid $color-primary;
+		color: $white;
+		padding: 0;
+		text-shadow: none;
+		
+		&:visited {
+			color: $white;
+		}
+		
+		&:hover,
+		&:focus {
+			border-color: $white;
+			color: $white;
+		}
 	}
 }
 
