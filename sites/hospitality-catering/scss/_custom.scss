@@ -1,0 +1,400 @@
+
+/**
+ * For any 'unique' elements that appear withnin course materials. Although each
+ * 'app' will be made up of the same components (mark-up) and just styled/themed
+ * differently, there will be some exceptions. These will mainly be custom 
+ * diagrams/illustration with clickable hotspots.
+ *
+ * NOTE: Any @2x images that are required for elements in this file should be
+ *       specified at the bottom of this document, NOT _2x.scss.
+ */
+ 
+ 
+/*------------------------------------*\
+    #CUSTOM
+\*------------------------------------*/
+
+/**
+ * To style text in a speech bubble wrap with a class of `.speech-bubble`.
+ *
+ * 1. If there is more than one `.speech-bubble` you may want to wrap them in a
+ *    `.speech-bubble-group` div which will alternate the horizontal position of
+ *    the speech bubble 'tail'.
+ */
+ 
+.speech-bubble-group {
+	margin-bottom: $baseline*2;
+}
+
+.speech-bubble {
+	background: $white;
+	box-sizing: border-box;
+	border-radius: 50%;
+	box-shadow: inset -8px -4px 0 $grey-lite, 4px 4px rgba($black,.05);
+	color: $grey-l;
+	display: inline-block;
+	font-family: $alt-font-family;
+	@include font-size(18);
+	margin-bottom: $baseline;
+	margin: $baseline;
+	padding: $baseline*2.5;
+	position: relative;
+	text-shadow: none !important;
+	transition: all .20s;
+	max-width: 50%;
+	-webkit-backface-visibility: hidden;
+	
+	&:after {
+		background: url(../img/interface/speech-bubble-tail.png) no-repeat 0 0;
+		content: "";
+		display: block;
+		height: 20px;
+		margin-left: -10px;
+		position: absolute;
+		left: 50%;
+		bottom: -18px;
+		width: 40px;
+	}
+	
+	.speech-bubble-group & { /* [1] */
+	
+		&:nth-child(even) {
+			
+			&:after {
+				margin-left: -20px;
+				transform: rotateY(180deg);
+			}
+		}
+	}
+}
+
+/**
+ * Styles only used if the `.speech-bubble` is a link.
+ */
+ 
+a.speech-bubble {
+	color: $grey;
+	
+	&:visited {
+		color: $grey;
+	}
+	
+	&:hover,
+	&:focus {
+		color: $black;
+		transform: rotate(2deg);
+		
+		.speech-bubble-group & { /* [1] */
+	
+			&:nth-child(even) {
+				transform: rotate(-2deg);
+			}
+		}
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    #CLICKABLE IMAGES/DIAGRAMS
+\*------------------------------------*/
+
+/**
+ * Clickable diagram - U2/S1/S3.
+ * When hotspot's are clicked a fancybox overlay is launched.
+ */
+
+.diagram-holistic-dev {
+	margin: 0 auto $baseline;
+	position: relative;
+	max-width: 800px;
+	
+	img {
+		margin-bottom: 0;
+	}
+	
+	.hotspot {
+		background: transparent;
+		border-radius: 100%;
+		height: 26.3157894737%; // (100/380) x 100
+		overflow: hidden;
+		position: absolute;
+		text-indent: -9999px;
+		transition: box-shadow .10s ease-out;
+		width: 30%; // (240/800) x 100
+		
+		&:hover {
+			box-shadow: 0 0 0 5px $white;
+		}
+	}
+	
+	.hotspot--physical		{top: 	 2.63157894737%; 	left:  35%;}
+	.hotspot--social		{top: 	 28.9473684211%; 	right: 1.25%;}
+	.hotspot--cognitive	 	{top: 	 28.9473684211%; 	left:  1.25%;}
+	.hotspot--emotional 	{bottom: 2.63157894737%; 	right: 13.75%;}
+	.hotspot--behavioural 	{bottom: 2.63157894737%; 	left:  13.75%;}
+}
+
+/**
+ * Clickable diagram - U2/S1/S7.
+ * When hotspot's are clicked a fancybox overlay is launched.
+ */
+
+.supporting-various-dev {
+	margin: 0 auto $baseline;
+	position: relative;
+	max-width: 600px;
+	
+	img {
+		margin-bottom: 0;
+	}
+	
+	.hotspot {
+		background: transparent;
+		border-radius: 100%;
+		height: 26.3157894737%; // (100/380) x 100
+		overflow: hidden;
+		position: absolute;
+		text-indent: -9999px;
+		transition: box-shadow .10s ease-out;
+		width: 16.6666666667%; // (100/600) x 100
+		
+		&:hover {
+			box-shadow: 0 0 0 5px $white;
+		}
+	}
+	
+	.hotspot--hugging		{top:    2.7397260274%; 	left:  41.6666666667%;}
+	.hotspot--high-5		{top:    26.3157894737%; 	right: 1.66666666667%;}
+	.hotspot--talking	 	{top: 	 26.3157894737%; 	left:  1.66666666667%;}
+	.hotspot--group 		{bottom: 2.7397260274%;		right: 15.8333333333%;}
+	.hotspot--sharing 		{bottom: 2.7397260274%; 	left:  15.8333333333%;}
+}
+
+/**
+ * Clickable diagram - U2/S2/S6.
+ * When hotspot's are clicked a fancybox overlay is launched.
+ */
+
+.supporting-dev {
+	margin: 0 auto $baseline;
+	position: relative;
+	max-width: 600px;
+	
+	img {
+		margin-bottom: 0;
+	}
+	
+	.hotspot {
+		background: transparent;
+		border-radius: 100%;
+		height: 26.3157894737%; // (100/380) x 100
+		overflow: hidden;
+		position: absolute;
+		text-indent: -9999px;
+		transition: box-shadow .10s ease-out;
+		width: 40%; // (240/600) x 100
+		
+		&:hover {
+			box-shadow: 0 0 0 5px $white;
+		}
+	}
+	
+	.hotspot--physical		{top: 	 2.7397260274%; 	left:  30%;}
+	.hotspot--social 		{bottom: 2.7397260274%; 	right: 1.66666666667%;}
+	.hotspot--intellectual 	{bottom: 2.7397260274%; 	left:  1.66666666667%;}
+}
+
+/**
+ * Clickable diagram - U2/S3/S7.
+ * When hotspot's are clicked a fancybox overlay is launched.
+ */
+
+.hygiene-routines {
+	margin: 0 auto $baseline;
+	position: relative;
+	max-width: 830px;
+	
+	img {
+		margin-bottom: 0;
+	}
+	
+	.hotspot {
+		background: transparent;
+		border-radius: 100%;
+		height: 26.3157894737%; // (100/380) x 100
+		overflow: hidden;
+		position: absolute;
+		text-indent: -9999px;
+		transition: box-shadow .10s ease-out;
+		width: 28.9156626506%; // (240/830) x 100
+		
+		&:hover {
+			box-shadow: 0 0 0 5px $white;
+		}
+	}
+	
+	.hotspot--washing		{top: 	 2.63157894737%; 	right: 17.4698795181%;}
+	.hotspot--sterilising	{top: 	 36.8421052632%; 	right: 1.20481927711%;}
+	.hotspot--teeth	 		{bottom: 2.63157894737%; 	right: 17.4698795181%;}
+	.hotspot--babies		{bottom: 2.63157894737%; 	left:  17.4698795181%;}
+	.hotspot--children 		{top: 	 36.8421052632%; 	left:  1.20481927711%;}
+	.hotspot--hair 			{top: 	 2.63157894737%; 	left:  17.4698795181%;}
+}
+
+/**
+ * Clickable diagram - U2/S3/S9.
+ * When hotspot's are clicked a fancybox overlay is launched.
+ */
+
+.promoting-independence {
+	margin: 0 auto $baseline;
+	position: relative;
+	max-width: 600px;
+	
+	img {
+		margin-bottom: 0;
+	}
+	
+	.hotspot {
+		background: transparent;
+		border-radius: 100%;
+		height: 26.3157894737%; // (100/380) x 100
+		overflow: hidden;
+		position: absolute;
+		text-indent: -9999px;
+		transition: box-shadow .10s ease-out;
+		width: 40%; // (240/600) x 100
+		
+		&:hover {
+			box-shadow: 0 0 0 5px $white;
+		}
+	}
+	
+	.hotspot--security		{top: 	 2.63157894737%; 	right:  1.66666666667%;}
+	.hotspot--growth 		{bottom: 2.63157894737%; 	right: 1.66666666667%;}
+	.hotspot--cognitive 	{bottom: 2.63157894737%; 	left:  1.66666666667%;}
+	.hotspot--confidence 	{top: 	 2.63157894737%; 	left:  1.66666666667%;}
+}
+
+/**
+ * Clickable diagram - U2/S4/S4.
+ * When hotspot's are clicked a fancybox overlay is launched.
+ */
+
+.common-transitions-2 {
+	margin: 0 auto $baseline;
+	position: relative;
+	max-width: 600px;
+	
+	img {
+		margin-bottom: 0;
+	}
+	
+	.hotspot {
+		background: transparent;
+		border-radius: 100%;
+		height: 26.3157894737%; // (100/380) x 100
+		overflow: hidden;
+		position: absolute;
+		text-indent: -9999px;
+		transition: box-shadow .10s ease-out;
+		width: 40%; // (240/600) x 100
+		
+		&:hover {
+			box-shadow: 0 0 0 5px $white;
+		}
+	}
+	
+	.hotspot--weaning		{top: 	 2.7397260274%; 	left:  30%;}
+	.hotspot--walk	 		{bottom: 2.7397260274%; 	right: 1.66666666667%;}
+	.hotspot--nursery	 	{bottom: 2.7397260274%; 	left:  1.66666666667%;}
+}
+
+/**
+ * Clickable diagram - U3/S4/S3.
+ * When hotspot's are clicked a fancybox overlay is launched.
+ */
+
+.reading-tips {
+	margin: 0 auto $baseline;
+	position: relative;
+	max-width: 600px;
+	
+	img {
+		margin-bottom: 0;
+	}
+	
+	.hotspot {
+		background: transparent;
+		border-radius: 100%;
+		height: 26.3157894737%; // (100/380) x 100
+		overflow: hidden;
+		position: absolute;
+		text-indent: -9999px;
+		transition: box-shadow .10s ease-out;
+		width: 40%; // (240/600) x 100
+		
+		&:hover {
+			box-shadow: 0 0 0 5px $white;
+		}
+	}
+	
+	.hotspot--finding		{top: 	 2.7397260274%; 	left:  30%;}
+	.hotspot--developing 	{bottom: 2.7397260274%; 	right: 1.66666666667%;}
+	.hotspot--summarising	 {bottom: 2.7397260274%; 	left:  1.66666666667%;}
+}
+
+
+/**
+ * Clickable diagram - U2/S3/S5.
+ * An SVG layout which has clickable paths + circles (`.fancybox`) which when
+ * clicked open up the relevant FancyBox styles content.
+ */
+ 
+.eatwell-plate {
+	width: 100%;
+	max-width: 760px;
+	
+	.fancybox {
+		cursor: pointer;
+		fill: transparent;
+		pointer-events: all;
+		transition: all .25s;
+		fill: rgba($white,.05);
+
+		&:hover {
+			fill: rgba($black,.05);
+		}
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    #CUSTOM @2x IMAGES
+\*------------------------------------*/
+
+/**
+ * Specify any @2x images that are required for custom elements here.
+ */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+	
+	/**
+	 * `.speech-bubble` styling.
+	 */
+	
+	.speech-bubble:after {
+		background: url(../img/interface/speech-bubble-tail@2x.png) no-repeat 0 0;
+		background-size: 40px 20px;
+	}
+}
+

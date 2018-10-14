@@ -1,0 +1,583 @@
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+
+/**
+ * Base styling for heading elements.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $heading-font-color;
+	font-family: $heading-font-family;
+	font-variant-ligatures: none;
+	font-weight: $heading-font-weight;
+	margin: 0 0 $baseline/2;
+	text-rendering: optimizelegibility;
+	
+	+ ol,
+	+ ul {
+		margin-top: $baseline;
+	}
+}
+
+h1 small,
+h2 small {
+	color: $grey;
+	font-weight: normal;
+}
+
+h1,
+.h1 {
+	@include font-size(45);
+	line-height: 1.2;
+}
+
+h2,
+.h2 {
+	@include font-size(35);
+	line-height: 1.2;
+}
+
+h3,
+.h3 {
+	@include font-size(25);
+	line-height: 1.3;
+}
+
+h4,
+.h4 {
+	@include font-size(20);
+	line-height: 1.25;
+}
+
+h5,
+.h5 {
+	@include font-size(15);
+}
+
+h6,
+.h6 {
+	@include font-size(13);
+	font-weight: normal;
+	letter-spacing: 1px;
+	margin-bottom: $font-lineheight;
+	text-transform: uppercase;
+}
+
+
+/**
+ * A class of `hgroup` can be used to group a title + supporting text. To be
+ * used as the opening title/text of the page.
+ */
+
+.hgroup {
+	font-weight: 300;
+	margin: 0 auto $baseline;
+}
+
+.hgroup__title {
+	margin-bottom: $baseline;
+}
+
+.hgroup__text {
+	@include font-size(25);
+	margin-top: -$baseline;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #PARAGRAPH
+\*------------------------------------*/
+
+/**
+ * Base paragraph rules. In this instance `font-size` & `line-height` are
+ * inherited from _site.scss.
+ */
+
+p {
+	margin-bottom: $baseline;
+}
+
+/**
+ * Styling for a leading paragraphs.
+ */
+
+.lead {
+	@include font-size(25);
+	font-weight: 300;
+}
+
+
+/**
+ * Alternative font can be used for paragraphs. This doesn't need to be applied
+ * to a `p` element, it can be set on a parent element instead - providing that
+ * doesn't have different/unique type rules set on it.
+ *
+ * 1. Headings aren't really used unless they're small (h4) but I've adjusted
+ *    the sizes so they look a bit better and not too large just incase.
+ */
+
+.handwritten {
+	font-family: $alt-font-family;
+	@include font-size(16);
+	
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: inherit;
+	}
+	
+	h1 {@include font-size(36);} /* [1] */
+	h2 {@include font-size(28);} /* [1] */
+	h3 {@include font-size(22);} /* [1] */
+	h4 {@include font-size(18);} /* [1] */
+}
+
+
+
+
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+
+/**
+ * Base styling for ordered/unordered lists. The `font-size` & `line-height` are
+ * inherited from _site.scss.
+ */
+
+ul,
+ol {
+	list-style-position: inside;
+	margin: 0 0 $baseline 0;
+	padding: 0 0 0 $baseline;
+}
+
+li {
+	margin-bottom: $baseline/4;
+}
+
+ul {
+	list-style: none;
+	
+	> li {
+		background: url(../img/interface/bullet.png) no-repeat left 7px;
+		padding-left: 22px;
+	}
+}
+
+li ul,
+li ol {
+	margin: 0;
+	padding: $baseline/4 0 0 $baseline/2;
+}
+
+/**
+ * Adds a bottom border as horizontal rule between each list-item.
+ */
+
+.list-bordered {
+	list-style-type: none;
+	margin: 0 0 $font-lineheight 0;
+	padding: 0;
+
+	li {
+		background: none;
+		border-bottom: 2px solid $border-color;
+		box-shadow: 0 1px 0 rgba($white,.10);
+		margin-bottom: $baseline/2;
+		padding: 0 0 $baseline/2;
+		
+		&:last-child {
+			border-bottom-width: 0;
+			box-shadow: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+/**
+ * Display list-items inline.
+ *
+ * 1. It's worth noting that `inline-block` will prevent `list-style-type` from
+ *    displaying. This isn't a problem for `ul` elements as we use a background
+ *    image but it will effect the `ol` elements. Could use a `float` instead
+ *    but will monitor how/if this actually causes an issue first. `.list-alpha`
+ *    can always be used along with this access to use `:before` to display an
+ *    alphabetical 'list-style'. Example; a), b), c) etc.
+ */
+
+.list-inline {
+	padding-left: 0;
+	
+	li {
+		display: inline-block; /* [1] */
+		margin-right: $baseline;
+	}
+}
+
+/**
+ * Display an ordered-list with an alpha 'list-style'. Example; a), b), c) etc.
+ *
+ * 1. We're not supporting browsers below IE8 but just incase I've added a
+ *    `list-style-type` as the pseudo `:before` class will not display.
+ */
+
+.list-alpha {
+	
+	li {
+		background: none;
+		counter-increment: mycounter;
+		padding-left: 0;
+		
+		&:before {
+			content: counter(mycounter,upper-alpha) ") ";
+		}
+	}
+	
+	.lt-ie8 & { /* [1] */
+		list-style-type: upper-alpha;
+	}
+}
+
+/**
+ * Displays a list of anchors styled with a class of `.btn`. This list uses
+ * `display: table;` to make all list-item/button widths equal (client request).
+ * Rules for `.btn {}` extend those in _buttons.scss. 
+ *
+ * 1. Due to the display attribute this list type doesn't work when used in
+ *    conjunction with `list-inline` so we have to overwrite `display: table;`
+ *    and `display: table-row;` for list-items to display inline.
+ */
+
+.list-btns {
+	display: table;
+	padding-left: 0;
+	
+	li {
+		background: none;
+		display: table-row;
+		padding-left: 0;
+	}
+	
+	.btn {
+		margin-bottom: $baseline/2;
+		width: 100%;
+	}
+	
+	&.list-inline { /* [1] */
+		display: block;
+		
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+/**
+ * Displays a list of anchors styled with a class of `.btn`. This list uses
+ *
+ * 1. Initiate a counter.
+ * 2. Remove default numbering.
+ */
+
+.list-numbers {
+	counter-reset: li; /* [1] */
+	line-height: $font-lineheight/1.25;
+    list-style: none; /* [2] */
+    margin-bottom: $baseline/2; 
+    
+	> li {
+		display: block;
+		min-height: 35px;
+		margin-bottom: $baseline/2;
+		padding-left: 45px;
+		position: relative;
+		text-decoration: none;
+		text-shadow: none;
+	    
+		&:before {
+		    background: $button-bg;
+		    border-radius: 100%;
+			box-shadow: inset -4px -4px 0 $button-border-color, 3px 3px rgba($black,.05);
+			color: $white;
+			content: counter(li);
+			counter-increment: li;	
+			display: inline-block;
+			font-family: $alt-font-family;
+			@include font-size(18);
+			float: left;
+			height: 35px;
+			line-height: 40px;
+			margin: -7px 10px 0 -45px;
+			text-align: center;
+			width: 35px;	
+		}
+	}
+	
+	ul,
+	ol {
+		line-height: $font-lineheight;
+		padding-top: $baseline/2;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    #DEFINITION LISTS
+\*------------------------------------*/
+
+/**
+ * Base styling for definition lists. The `font-size` & `line-height` are
+ * inherited from _site.scss.
+ */
+
+dl,
+dd {
+	margin-bottom: $baseline;
+}
+
+dt {
+	color: $heading-font-color;
+	font-weight: bold;
+}
+
+/**
+ * Inline definition list.
+ */
+
+.dl-inline {
+	@include clearfix;
+	margin-bottom: 15px;
+
+	dt {
+		clear: left;
+		float: left;
+		margin: 0 $baseline/2 $baseline/4 0;
+	}
+	
+	dd {
+		margin-bottom: $baseline/4;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    #QUOTES
+\*------------------------------------*/
+
+/*
+ * Resets for `blockquote` and inline paragraph `q` element.
+ */
+ 
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+cite {
+	font-style: normal;
+}
+
+
+/**
+ * Base styling for `blockquote` element.
+ */
+
+blockquote {
+	color: $quote-font-color;
+	font-family: $quote-font-family;
+	margin: 0 $baseline $baseline;
+	overflow: hidden;	// Fixes bug when inside flexslider when open/close quote-marks duplicate.
+	padding: $baseline $baseline*2 0;
+	
+	p {
+		margin-bottom: $baseline;
+	}
+	
+	> p {
+		@include font-size(25);
+		font-weight: 600;
+		letter-spacing: 1px;
+		line-height: $font-lineheight;
+		position: relative;
+		-webkit-font-smoothing: antialiased;
+		
+		&:first-child:before,
+		&:last-of-type:after  {
+			color: $quote-mark-color;
+			content: '\201C';
+			display: inline-block;
+			font-family: "Georgia", Times, serif;
+			font-size: 60px;
+			line-height: 0;
+			margin: 0 5px 0 0;
+			position: relative;
+			top: 18px;
+			text-indent: 0;
+		}
+		
+		&:last-of-type:after {
+			content: '\201D';
+			margin: 25px 0 0 2px;
+			position: absolute;
+			top: auto;
+		}
+	}
+	
+	footer {
+		color: $quote-cite-color;
+		margin-top: -$baseline/2;
+	}
+}
+
+/**
+ * Reduced font-size `blockquote`. Note opening/closing quotation marks position
+ * has been adjusted accordingly as well.
+ */
+
+.blockquote-small {
+	
+	> p {
+		@include font-size(18);
+		
+		&:first-child:before,
+		&:last-of-type:after {
+			font-size: 40px;
+			top: 10px;
+		}
+		
+		&:last-of-type:after {
+			margin-top: 15px;
+			top: auto;
+		}
+	}	
+}
+
+
+
+
+
+/*------------------------------------*\
+    #MISC
+\*------------------------------------*/
+
+/*
+ * Text-level.
+ */
+
+address {
+	margin-bottom: $baseline;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted $border-color;
+	cursor: help;
+}
+
+.amp {
+	color: $white;
+}
+
+dfn {
+	font-style: italic;
+}
+
+ins {
+	background-color: $base-color;
+	color: $text-color;
+	text-decoration: none;
+}
+
+mark {
+	background-color: lighten($base-color, 75%);
+	color: $text-color;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+/*
+ * Strong (bold), emphasized (italic) and small text.
+ */
+
+b,
+strong {
+	color: $heading-font-color;
+	font-weight: bold;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+small {
+	font-size: .8em;
+}
+
+
+/*
+ * Code.
+ */
+ 
+pre,
+code {
+	font-family: $code-font-family;
+	line-height: $font-lineheight;
+}
+
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+code {
+	color: $code-font-color;
+}
+
+
+/*
+ * Superscript/subscript.
+ */
+
+sub,
+sup {
+	@include font-size(12);
+	line-height: 0;
+	position: relative;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}
+

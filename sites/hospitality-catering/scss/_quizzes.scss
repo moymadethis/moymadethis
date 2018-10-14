@@ -1,0 +1,287 @@
+
+/*------------------------------------*\
+    #QUIZZES
+\*------------------------------------*/
+
+/*
+ * General multiple choice quiz
+ */
+
+.quiz {
+	@include clearfix;
+}
+
+/*
+ * 1. Applied greater bottom margin to `:nth-last-child(3)` to add some space
+ *    between the quiz score/buttons. Would adjust mark-up ideally but we're too
+ *    far down the line now and have populated all the content across 4 'apps'!
+ * 2. Due to the rounded corners at the bottm of the last `.quiz__item` I set
+ *    overflow hidden so the child div `.quiz__answers background-color doesn't
+ *    overlap it. 
+ */
+
+.quiz__item {
+	background: lighten($grey-lite,2%);
+	margin-bottom: 2px;
+	overflow: hidden; /* [2] */
+	padding: $baseline $baseline 0;
+	
+	&:first-child {
+		border-radius: 4px 4px 0 0;
+	}
+	
+	&:nth-last-child(3) { /* [1] */
+		border-radius: 0 0 4px 4px;
+		margin-bottom: $baseline;
+	}
+}
+
+.quiz__question {
+	@include font-size(20);
+	margin-bottom: $baseline;
+	padding-left: 50px;
+}
+
+.quiz__question-number {
+	display: block;
+	float: left;
+	margin-left: -50px;
+	width: 50px;
+}
+
+.quiz__quote {
+	margin: 0;
+	padding: $baseline/4 50px 0;
+	text-align: left;
+}
+
+.quiz__answers {
+	background: $grey-lite;
+	margin: 0 0 0 -20px;
+	padding: $baseline $baseline $baseline/2;
+	width: 100%;
+	
+	.inner {
+		margin-left: 50px
+	}
+	
+	.radiobtn {
+		cursor: pointer;
+		display: inline-block;
+		margin: 0 $baseline $baseline/2 0;
+	}
+}
+
+.quiz__score {
+	color: $grey-da;
+	@include font-size(20);
+	font-weight: 600;
+	margin-left: $baseline;
+	padding-top: $baseline/4;
+}
+
+.quiz__btns {
+	float: right;
+	margin-bottom: 0;
+}
+
+
+/*
+ * 'Missing Word' quiz.
+ */
+
+.missing-words {
+	position: relative;
+}
+
+/**
+ * `ul` containing quiz draggable answers.
+ */
+
+.missing-words__answers {
+	background: $grey-lite;
+	border-radius: 4px;
+	margin-bottom: $baseline*2;
+	padding: $baseline $baseline $baseline/2;
+	text-shadow: none;
+	transform: translateZ(0); // Fixes blurry text
+}
+
+/**
+ * `li` that contain draggable components `missing-words__draggable`
+ * Items are rotated for a more random/scattered paper look.
+ */
+
+.missing-words__answers-item {
+	background: none;
+	display: inline-block;
+	min-height: 40px;
+	margin: 0 $baseline/2 $baseline/2 0;
+	padding: 0;
+	transition: transform .25s ease-in;
+	vertical-align: top;
+	
+	&:nth-child(3n+1) {
+		transform: rotate(-2deg);
+		
+		&:hover {
+			transform: rotate(0);
+		}
+	}
+	
+	&:nth-child(3n+2) {
+		transform: rotate(2deg);
+		
+		&:hover {
+			transform: rotate(0);
+		}
+	}
+}
+
+/**
+ * Quiz draggable items.
+ */
+	
+.missing-words__draggable {
+	background: lighten($yellow,35%);
+	box-shadow: inset 1px 1px 0 rgba($white,.75), 1px 1px 2px rgba($black,.20);
+	color: darken($yellow,20%);
+	cursor: grab;
+	display: block;
+	font-family: $alt-font-family;
+	@include font-size(16);
+	font-weight: 600;
+	line-height: 16px;
+	padding: $baseline/2 $baseline;
+	position: relative;
+	white-space: nowrap;
+	
+	&:after {
+		background: url(../img/interface/btn-shadow.png) no-repeat right bottom;
+		content: "";
+		display: block;
+		height: 9px;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		transition: all .50s;
+		width: 100%;
+	}
+	
+	&:hover {
+		cursor: hand;
+		
+		&:after {
+			height: 3px;
+			opacity: .5;
+			bottom: -3px;
+		}
+	}
+	
+	&:active {
+		cursor: grabbing;
+	}
+}
+
+/**
+ * Droppable area items can be dragged over.
+ * Class of `.answered` is added when answer is correct/matches so styling can
+ * be changed/overwritten.
+ *
+ * 1. `!important` is used to accommodate `outline` + overwrite
+ *    `table *:last-child: margin-bottom: 0;`.
+ * 2. `!important` is used to overwrite [1] ...dirty! Just incase 2+ blanks are
+ *    stacked. Most likely in a table layout.
+ */
+
+.missing-words__blank {
+	background: $white;
+	outline: 4px solid $input-border;
+	box-shadow: inset 3px 3px 0 rgba($black,.10);
+	box-sizing: border-box;
+	display: inline-block;
+	min-height: 32px;
+	letter-spacing: 1px;
+	margin: 4px 0 !important; /* [1] */
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+	
+	+ .missing-words__blank {
+		margin-top: $baseline/2 !important;  /* [2] */
+	}
+	
+	&.answered {
+		background: $green;
+		outline-color: darken($green,10%);
+		transition: all .25s;
+		
+		.missing-words__draggable {
+			background: none;
+			box-shadow: none;
+			color: $white;
+			cursor: default;
+			height: auto !important;
+			padding: 10px $baseline/4 5px;
+			white-space: normal;
+			width: auto !important; // To center text
+			vertical-align: middle;
+			
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+/**
+ * Depending on if the quiz is in a `table` or a `ul` there's some specific
+ * styling for each.
+ */
+
+.missing-words__table,
+.missing-words__list {
+	font-family: $alt-font-family;
+	@include font-size(16);
+	letter-spacing: 1px;
+}
+
+/**
+ * Quiz `table` specific styling.
+ */
+ 
+.missing-words__table {
+	
+	tbody th,
+	tbody td {
+		vertical-align: middle;
+	}
+}
+
+/**
+ * Quiz `ul` specific styling.
+ *
+ * 1. Reduced `padding-bottom`, it just looks a bit better/even.
+ * 2. Adjusted `margin-bottom` It gives any text that wraps a bit (2px) more
+ *    space and the alignment looks better. `!important` is needed to overwrite
+ *    the default `.missing-words__blank` margin, which also has `!important` on
+ *    it ...so, so naughty.
+ */
+
+.missing-words__list {
+	border-radius: 4px;
+	color: $grey;
+	overflow: hidden;
+	padding-left: 0;
+	
+	li {
+		background: $grey-lite;
+		margin-bottom: 2px;
+		padding: $baseline $baseline 15px;  /* [1] */
+	}
+	
+	.missing-words__blank {
+		margin-bottom: 6px !important; /* [2] */
+	}
+}
+

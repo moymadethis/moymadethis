@@ -1,0 +1,225 @@
+
+/*------------------------------------*\
+    #SITE
+\*------------------------------------*/
+
+/**
+ * Base `html` styling.
+ */
+
+html {
+	background-image: url(../img/interface/html-bg@2x.png);
+	background-size: 400px 400px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+/**
+ * Boxout icons with different size specified for `h3` element.
+ */
+
+.assessment__title:before,
+.handy-hint__title:before,
+.think-first__title:before,
+.did-you-know__title:before,
+.key-point__title:before,
+.exam__title:before {
+	background-image: url(../img/sprite/title-icons@2x.png);
+	background-size: 40px 280px;
+}
+
+h3.assessment__title:before,
+h3.handy-hint__title:before,
+h3.think-first__title:before,
+h3.did-you-know__title:before,
+h3.key-point__title:before,
+h3.exam__title:before {
+	background-size: 30px 120px;
+}
+
+
+/**
+ * List-item bullet points
+ */
+
+ul > li {
+	background-image: url(../img/interface/bullet@2x.png);
+	background-size: 13px 13px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #UNIFORM
+\*------------------------------------*/
+
+/**
+ * uniform.js form element replacements.
+ */
+ 
+.selector,
+.radio span,
+.checker span {
+	background-image: url(../img/sprite/form-inputs@2x.png);
+	background-size: 40px 88px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * Classes when buttons include an icon before text. Extends `.btn`.
+ */
+
+.btn--reset:before,
+.btn--save:before,
+.btn--submit:before {
+	background-image: url(../img/sprite/btn-icons@2x.png);
+	background-size: 40px 280px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #TABLES
+\*------------------------------------*/
+
+/**
+ * 'rip' effect on table-cells. Almost always used on drag 'n' drop quizzes.
+ *
+ * 1. Alternative image replacement for when table is on a white background.
+ */
+
+.table-solid tbody td.has-rip,
+.table-solid tbody th.has-rip  {
+	background-image: url(../img/interface/zig-zag@2x.png);
+	background-size: 26px 75px;
+	
+	.boxout &,
+	.flexslider &,
+	.fancybox-inner &,
+	.ui-tabs-panel & { /* [1] */
+		background-image: url(../img/interface/zig-zag-alt@2x.png);
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    #FANCYBOX
+\*------------------------------------*/
+
+/**
+ * Loading gif.
+ */
+
+#fancybox-loading div {
+	background-image: url(../img/interface/ajax-loader@2x.gif);
+	background-size: 50px 50px;
+}
+
+/**
+ * Close button and Prev/Next buttons.
+ */
+
+.fancybox-close,
+.fancybox-nav span {
+	background-image: url(../img/sprite/btn-icons@2x.png);
+	background-size: 40px 280px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #FLEXSLIDER
+\*------------------------------------*/
+
+/**
+ * Loading gif.
+ */
+
+.flexslider.loading {
+	background-image: url(../img/interface/ajax-loader@2x.gif);
+	background-size: 50px 50px;
+}
+
+/**
+ * Previous/Next buttons. Can be turned off/on in main.js.
+ */
+
+.flex-prev,
+.flex-next {
+	background-image: url(../img/interface/flexslider-arrows@2x.png);
+	background-size: 100px 50px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+/**
+ * Container.
+ */
+
+.container {
+	background-image: $container-bg-2x;
+	background-size: $container-bg-size;
+}
+
+.container .wrap:before {
+	background-image: url(../img/interface/container-bg-left@2x.png);
+	background-size: $container-left-width $container-left-height;
+}
+
+.container .wrap:after {
+	background-image: url(../img/interface/container-bg-right@2x.png);
+	background-size: $container-right-width $container-right-height;
+}
+
+
+/**
+ * Site navigation (pagination).
+ */
+
+.site-nav__prev a,
+.site-nav__next a {
+	background-image: url(../img/sprite/btn-icons@2x.png);
+	background-size: 40px 280px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #QUIZZES
+\*------------------------------------*/
+	
+.missing-words__draggable:after {
+	background-image: url(../img/interface/btn-shadow@2x.png);
+	background-size: 80px 9px;
+}
+

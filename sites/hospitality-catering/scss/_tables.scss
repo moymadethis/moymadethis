@@ -1,0 +1,169 @@
+
+/*------------------------------------*\
+    #TABLES
+\*------------------------------------*/
+
+/**
+ * Wrapping a table with a div with a class of `.table-overflow` allows the
+ * table to scroll when the content is too large and the viewport is narrow.
+ */
+
+
+.table-overflow {
+	overflow-x: auto;
+}
+
+/**
+ * Default `table` styling. These default rules can be extended with a
+ * `.table-*` skin class.
+ *
+ * 1. To ensure even spacing in each table-cell margin-bottom is remove from any
+ *    last element.
+ */
+
+table {
+	background: $table-bg;
+	border-collapse: collapse;
+	line-height: $font-lineheight;
+	margin-bottom: $baseline;
+	width: 100%;
+	max-width: 100%;
+	
+	:last-child { /* [1] */
+		margin-bottom: 0;
+	}
+}
+
+th,
+td {
+	border-bottom: $table-border-width $table-border-style $table-border;
+	padding: $baseline/2 $baseline;
+	text-align: left;
+	vertical-align: top;
+}
+
+/**
+ * 1. Align `th` text to the bottom but only when in the `thead`.
+ */
+
+th {
+	color: $heading-font-color;
+	font-family: $heading-font-family;
+	@include font-size(20);
+	
+	thead & {
+		vertical-align: bottom; /* [1] */
+	}
+}
+
+thead th {
+	vertical-align: bottom;
+}
+
+colgroup + thead tr:first-child th,
+colgroup + thead tr:first-child td,
+thead:first-child tr:first-child th,
+thead:first-child tr:first-child td {
+	border-top: 0;
+}
+
+tbody + tbody {
+	border-top: $table-border-width*2 $table-border-style $table-border;
+}
+
+
+/**
+ * Reduce the padding on table cells.
+ */
+
+.table-condensed {
+
+	th,
+	td {
+		padding: 4px 5px;
+	}
+}
+
+
+/**
+ * Add a border around every edge of the table/table-cells.
+ */
+
+.table-bordered {
+	border: $table-border-width $table-border-style $table-border;
+	
+	th,
+	td {
+		border-left: $table-border-width $table-border-style $table-border;
+	}
+}
+
+
+/**
+ * Add a `background-color` to the table-cells in 'odd' table-rows.
+ */
+
+.table-striped {
+	
+	th,
+	td {
+		border: none;
+	}
+
+	tbody tr:nth-child(odd) td,
+	tbody tr:nth-child(odd) th {
+		background-color: $table-stripe;
+	}
+}
+
+
+/**
+ * Add a background-color to every `tbody` table-cell with 2px vertical spacing 
+ * between each table-row.
+ *
+ * 1. A class of `.has-rip` adds a vertically tiled zig-zag background to table
+ *    calls. Mainly used for quizzes but could be used elsewhere as it's generic
+ *    enough.
+ */
+
+.table-solid {
+	border-collapse: separate;
+	border-spacing: 0 2px;
+	
+	tr:first-child {
+		
+		td:first-child 	{border-radius: 4px 0 0 0;}
+		td:last-child 	{border-radius: 0 4px 0 0;}
+	}
+	
+	tr:last-child {
+		
+		td:first-child 	{border-radius: 0 0 0 4px;}
+		td:last-child 	{border-radius: 0 0 4px 0;}
+	}
+	
+	th,
+	td {
+		border: none;
+		
+		&.has-rip { /* [1] */
+			padding-left: $baseline*2;
+		}
+	}
+	
+	tbody td,
+	tbody th {
+		background-color: $table-stripe;
+		
+		&.has-rip { /* [1] */
+			background-image: url(../img/interface/zig-zag.png);
+			background-position: left top;
+			background-repeat: repeat-y;
+		}
+	}
+	
+	input[type="text"] {
+		background-color: $white;
+	}
+}
+

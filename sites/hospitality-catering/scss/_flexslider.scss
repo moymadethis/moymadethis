@@ -1,0 +1,310 @@
+
+/*------------------------------------*\
+    #FLEXSLIDER
+\*------------------------------------*/
+
+/**
+ * Resets.
+ */
+
+.flex-container a:hover,
+.flex-slider a:hover {
+	outline: none;
+}
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.flex-pauseplay span {
+	text-transform: capitalize;
+}
+
+
+/**
+ * Base styles from flexsliders CSS. Assuming it's there for a reason so leaving
+ * mostly untouched as to not break anything! Did adjust `li` and `img` to only
+ * target direct childern as often text based content is used within slideshows.
+ */
+ 
+.flexslider {
+	margin: 0;
+	padding: 0;
+
+	.slides {
+	
+		&:after {
+			clear: both;
+			content: "\0020";
+			display: block;
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+		}
+		
+		> li {
+			background: none;
+			display: none;
+			-webkit-backface-visibility: hidden;
+		}
+		
+		> li > img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+html[xmlns] .flexslider .slides {
+	display: block;
+}
+
+* html .flexslider .slides {
+	height: 1%;
+}
+
+.no-js .flexslider .slides > li:first-child {
+	display: block;
+}
+
+
+/**
+ * Theme styles.
+ *
+ * 1. Flexslider uses a ul (.slides) and li for each slideshow and it's slides.
+ *    This overwrites the styles extended in _typography.scss for base ul/ol/li
+ *    elements, as well as `.list-inline`, so they are reset below.
+ *    
+ */
+ 
+.flexslider {
+	background: $white;
+	border-radius: 8px;
+	box-shadow: inset -3px -3px 0 rgba($black,.05), 3px 3px rgba($black,.05);
+	color: $grey-l;
+	margin: $baseline*2 0 $baseline*3; // Extra padding to accommodate pagination
+	padding: 50px 50px 20px;
+	position: relative;
+	zoom: 1;
+	
+	&.loading {
+		background: $white url(../img/interface/ajax-loader.gif) no-repeat center center;
+		max-height: 50px;
+	}
+	
+	.slides {
+		zoom: 1;
+		
+		img {
+			height: auto;
+			-moz-user-select: none;
+		}
+		
+		ul,
+		ol { /* [1] */
+			margin: 0 0 $baseline 0;
+			padding-left: $baseline;
+			
+			ul,
+			ol {
+				margin: 0;
+				padding: $baseline/4 0 0 $baseline/2;
+			}
+		}
+		
+		.list-inline { /* [1] */
+			padding-left: 0;
+		}
+	}
+}
+
+.flex-viewport {
+	transition: all 1s ease;
+	max-height: 2000px;
+	
+	&.loading {
+		max-height: 300px;
+	}
+}
+
+.carousel li {
+	margin-right: 5px;
+}
+
+.flex-direction-nav {
+	*height: 0;
+	
+	.flex-disabled {
+		cursor: default;
+		filter: alpha(opacity=0);
+		opacity: 0 !important;
+		z-index: -1;
+	}
+}
+
+
+/**
+ * Previous/Next buttons. Can be turned off/on in main.js.
+ *
+ * 1. Prevents border/background-color bleed.
+ */
+
+.flex-prev,
+.flex-next {
+	background: $button-bg url(../img/interface/flexslider-arrows.png) left top;
+	background-clip: padding-box; /* [1] */
+	border: 8px solid $white;
+	border-radius: 100%;
+	box-shadow: inset -6px -6px 0 darken($button-bg,2.5%), -3px 2px 0 rgba($black,.05);
+	cursor: pointer;
+	display: block;
+	height: 50px;
+	margin: -25px 0 0;
+	overflow: hidden;
+	position: absolute;
+	text-indent: -9999px;
+	top: 50%;
+	left: -33px;
+	transition: all .25s;
+	width: 50px;
+	z-index: 10;
+	
+	&:hover {
+		background-color: $button-bg-hover;
+	}
+	
+	&:focus {
+		outline: 0;
+	}
+}
+
+.flex-next {
+	background-position: right top;
+	box-shadow: inset -6px -6px 0 darken($button-bg,2.5%), 3px 2px 0 rgba($black,.05);
+	left: auto;
+	right: -33px;
+}
+
+
+/**
+ * Pagination controls. Can be turned off/on in main.js.
+ */
+
+.flex-control-nav {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	
+	li {
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+		margin: 0 4px;
+	}
+}
+
+.flex-control-paging {
+	
+	a {
+		background: $button-bg;
+		border-radius: 12px;
+		box-shadow: inset -4px -4px 0 darken($button-bg,5%), 2px 2px rgba($black,.05);
+		cursor: pointer;
+		display: block;
+		height: 15px;
+		text-indent: -9999px;
+		transition: all .25s;
+		width: 15px;
+		
+		&:hover {
+			background: $white;
+			box-shadow: inset -4px -4px 0 rgba($black,.06), 2px 2px rgba($black,.05);
+		}
+		
+		&.flex-active {
+			background: $white;
+			box-shadow: inset -4px -4px 0 rgba($black,.06), 2px 2px rgba($black,.05);
+			cursor: default;
+		}
+	}
+  
+}
+
+
+/**
+ * Slideshow/carousel thumbnails.
+ */
+ 
+.flex-control-thumbs {
+	margin: 5px 0 0;
+	overflow: hidden;
+	position: static;
+	
+	li {
+		float: left;
+		margin: 0;
+		width: 25%;
+	}
+	
+	img {
+		cursor: pointer;
+		display: block;
+		height: auto;
+		opacity: .75;
+		transition: all 1s ease;
+		width: 100%;
+		-moz-user-select: none;
+		
+		&:hover {
+			opacity: 1;
+		}
+	}
+	
+	.flex-active {
+		cursor: default;
+		opacity: 1;
+	}
+}
+
+
+/**
+ * Pause button (if active).
+ */
+
+.flex-pauseplay a {
+	color: $black;
+	cursor: pointer;
+	display: block;
+	height: 20px;
+	opacity: 0.75;
+	overflow: hidden;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+	width: 20px;
+	z-index: 10;
+	
+	&:before {
+		content: '\f004';
+		display: inline-block;
+		font-family: "flexslider-icon";
+		font-size: 20px;
+	}
+	
+	&:hover {
+		opacity: 1;
+	}
+	
+	&.flex-play:before {
+		content: '\f003';
+	}	
+}
+

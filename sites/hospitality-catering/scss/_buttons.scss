@@ -1,0 +1,163 @@
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * Default styling for buttons. Extend this object with a `.btn--*` skin class
+ * to change background-color or apply a relevant icon infront of the text.
+ * Addtional `:before` styling is included for when an `icon` is required.
+ */
+
+.btn {
+	background: $button-bg;
+	border: none;
+	border-radius: 4px;
+	box-sizing: border-box;
+	box-shadow: inset -2px -2px 0 rgba($black,.05), 1px 1px 0 rgba($black,.05);
+	color: $button-color;
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	font: {
+		family: $font-family;
+		weight: 700;
+	}
+	@include font-size(20);
+	height: 40px;
+	letter-spacing: 1px;
+	line-height: 40px;
+	margin-bottom: $baseline;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	text-shadow: 1px 1px 0 rgba($black,.10);
+	text-transform: uppercase;
+	transition: all .25s;
+	vertical-align: middle;
+	
+	&:before {
+		background-color: $button-border-color;
+		background-repeat: no-repeat;
+		transition: all .25s;
+	}
+	
+	span {
+		padding: 0 $baseline;
+	}
+
+	&:visited {
+		color: $button-color;
+	}
+	
+	&:hover,
+	&:focus {
+		color: $button-color;
+		background-color: $button-bg-hover;
+		outline: 0;
+		text-decoration: none;
+		
+		&:before {
+			background-color: $button-border-color-hover;
+		}
+	}
+	
+	&:active {
+		top: 1px;
+	}
+}
+
+.btn + .btn {
+	margin-left: $baseline/4;
+}
+
+
+/**
+ * Complementary button skin. Extends `.btn`.
+ */
+
+.btn--primary {
+	background-color: $button-primary-bg;
+
+	&:before {
+		background-color: $button-primary-border-color;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: $button-primary-bg-hover;
+		
+		&:before {
+			background-color: $button-primary-border-color-hover;
+		}
+	}
+}
+
+
+/**
+ * Classes when buttons include an icon before text. Extends `.btn`.
+ *
+ * 1. Reduce `padding-left` when button has an icon, just looks more balanced.
+ */
+
+.btn--reset,
+.btn--save,
+.btn--submit {
+	
+	span {
+		padding-left: 15px; /* [1] */
+	}
+	
+	&:before {
+		background-image: url(../img/sprite/btn-icons.png);
+		display: block;
+		content: "";
+		float: left;
+		height: 40px;
+		width: 40px;
+	}
+}
+
+.btn--submit:before { background-position: left -120px; }
+.btn--reset:before	{ background-position: left -160px; }
+.btn--save:before	{ background-position: left -200px; }
+
+
+
+
+
+/**
+ * Tooltip icon button - used to active a fancybox overlay.
+ *
+ * 1. We don't specify a @2x image in _2x.scss for this icon because the
+ *    `background-size` is already half the size of the original image.
+ */
+
+.btn-info {
+	background: $button-bg url(../img/sprite/btn-icons.png) no-repeat 0 -120px;
+	background-size: 20px 140px; /* [1] */
+	border-radius: 100%;
+	box-shadow: inset -2px -2px 0 darken($button-bg,2.5%), 1px 1px 0 rgba($black,.10);
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	text-indent: -9999px;
+	position: relative;
+	top: 3px;
+	transition: opacity .25s;
+	width: 20px;
+	
+	&:visited {
+		background-color: $button-bg;
+	}
+	
+	&:hover,
+	&:active {
+		background-color: darken($button-bg,2.5%);
+		box-shadow: inset -2px -2px 0 darken($button-bg,5%), 1px 1px 0 rgba($black,.10);
+	}
+}
+

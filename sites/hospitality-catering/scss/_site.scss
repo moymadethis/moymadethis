@@ -1,0 +1,71 @@
+
+/*------------------------------------*\
+    #ROOT
+\*------------------------------------*/
+
+/**
+ * Viewports.
+ */
+
+@-webkit-viewport { 
+	width: device-width;
+}
+
+@-moz-viewport { 
+	width: device-width;
+}
+
+@-ms-viewport { 
+	width: device-width;
+}
+
+@-o-viewport { 
+	width: device-width;
+}
+
+@viewport { 
+	width: device-width;
+}
+
+
+/**
+ * Base `html` styling.
+ *
+ * 1. A height of 100% is set so when Fancybox is open is doesn't cut off
+ *    background images set on `.container` caused by `overflow-x: hidden` is
+ *    set on `.page` which is extended in _page.scss.
+ */
+
+html {
+	background: $html-bg;
+	font-size: 62.5%;
+	height: 100%; /* [1] */
+	min-height: 100%; /* [1] */
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: lighten($base-color, 75%);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+/**
+ * Base `body` styling.
+ *
+ * 1. A height of 100% is set so when Fancybox is open is doesn't cut off
+ *    background images set on `.container` caused by `overflow-x: hidden` is
+ *    set on `.page` which is extended in _page.scss.
+ */
+
+body {
+	background-color: $body-bg;
+	color: $text-color;
+	font-family: $font-family;
+	@include font-size($font-size);
+	font-weight: 400;
+	height: 100%; /* [1] */
+	min-height: 100%; /* [1] */
+	line-height: $font-lineheight;
+	margin: 0 auto;
+	padding: 0;
+	text-shadow: $text-shadow;
+	width: 100%;
+}
