@@ -1,0 +1,281 @@
+
+/*------------------------------------*\
+    #PALETTES
+\*------------------------------------*/
+
+/**
+ * Greyscale.
+ */
+
+$black 				: rgb(0,0,0);
+$grey-dark			: rgb(14,15,16);
+$grey-dar			: rgb(40,44,46);
+$grey-da			: rgb(66,73,76);
+$grey-d				: rgb(91,101,106);
+$grey				: rgb(117,130,136);
+$grey-l				: rgb(149,158,163);
+$grey-li			: rgb(179,186,189);
+$grey-lit			: rgb(209,213,215);
+$grey-lite			: rgb(239,240,241);
+$white 				: rgb(255,255,255);
+
+
+/**
+ * Primary (sky blue).
+ */
+ 
+$color-primary-darker		: rgb(25,125,172);
+$color-primary-dark			: rgb(28,140,193);
+$color-primary				: rgb(31,156,215);
+$color-primary-light		: rgb(76,176,223);
+$color-primary-lighter 		: rgb(210,235,247);
+
+
+/**
+ * Useful alert colours (traffic light).
+ */
+ 
+$red				: rgb(210,41,66);
+$yellow				: rgb(250,195,20);
+$green				: rgb(178,183,79);
+
+
+
+
+
+/*------------------------------------*\
+    #BASICS
+\*------------------------------------*/
+
+/**
+ * Body styles.
+ */
+
+$html-bg			: $grey-dar url(../img/interface/html-bg.png) center top;
+$body-bg			: transparent;
+$base-bg			: $color-primary;
+$text-color			: $color-primary-lighter;
+$text-shadow		: none;
+
+
+/**
+ * Margins/spacing.
+ */
+
+$baseline			: 20px;
+$gutter				: 20px;
+
+
+
+
+
+/*------------------------------------*\
+    #CONTAINER
+\*------------------------------------*/
+
+/**
+ * Container background and top/bottom shadows.
+ */
+ 
+$container-bg				: $color-primary url(../img/interface/container-bg.png) center top;
+$container-shadow			: inset 0 2px 0 rgba($white,.25), inset 0 -2px 0 rgba($white,.25);
+
+$container-bg-2x			: url(../img/interface/container-bg@2x.png);
+$container-bg-size			: 385px 400px;
+
+
+/**
+ * Left-sided graphic values. 
+ */
+ 
+$container-left-image 		: url(../img/interface/container-bg-left.png) no-repeat 0 0;
+$container-left-height 		: 425px;
+$container-left-width 		: 170px;
+$container-left-vert 		: 50px;
+$container-left-horz 		: -190px;
+
+/**
+ * Right-sided graphic values. 
+ */
+
+$container-right-image 		: url(../img/interface/container-bg-right.png) no-repeat 0 0;
+$container-right-height 	: 305px;
+$container-right-width 		: 140px;
+$container-right-vert 		: 100px;
+$container-right-horz 		: -150px;
+
+
+
+
+
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+/**
+ * Base type styles.
+ */
+
+$font-family			: 'Roboto', Helvetica, Arial, sans-serif;
+$font-size				: 18;
+$font-lineheight		: 1.5em;
+
+/**
+ * Headings.
+ */
+
+$heading-font-family	: 'Patua One', cursive;
+$heading-font-weight	: 400;
+$heading-font-color		: $white;
+$heading-icon-bg		: $color-primary;
+
+/**
+ * Alt fonts.
+ */
+
+$alt-font-family		: "Indie Flower", Helvetica, Arial, sans-serif;
+
+
+/**
+ * Quote styles.
+ */
+
+$quote-font-family		: $alt-font-family;
+$quote-font-color		: $text-color;
+$quote-mark-color		: $heading-font-color;
+$quote-cite-color		: $heading-font-color;
+
+
+/**
+ * Extra type variables
+ */ 
+ 
+$code-font-family		: Monaco, Courier New, monospace;
+$code-font-color		: $heading-font-color;
+
+
+
+
+
+/*------------------------------------*\
+    #COLOUR
+\*------------------------------------*/
+
+/**
+ * Base.
+ */
+
+$base-color 			: $color-primary;
+
+/**
+ * Texture.
+ */
+
+$border-color    		: $color-primary-dark;
+
+/**
+ * Links.
+ */
+
+$link-color				: $yellow;
+$link-color-hover 		: $heading-font-color;
+$link-color-visited		: $link-color;
+$link-color-focus		: $link-color-hover;
+
+
+
+
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * Base button styles.
+ */
+
+$button-bg 							: $grey-da;
+$button-color 						: $white;
+$button-border-color 				: darken($button-bg,10%);
+$button-border-width				: 2px;
+$button-border-style				: solid;
+
+$button-bg-hover					: darken($button-bg,10%);
+$button-border-color-hover			: darken($button-border-color,10%);
+
+/**
+ * Primary button styles.
+ */
+
+$button-primary-bg					: $color-primary;
+$button-primary-border-color		: darken($button-primary-bg,5%);
+
+$button-primary-bg-hover			: darken($button-primary-bg,5%);
+$button-primary-border-color-hover	: darken($button-primary-border-color,5%);
+
+
+
+
+
+/*------------------------------------*\
+    #TABLES
+\*------------------------------------*/
+
+/**
+ * Base table styles.
+ */
+
+$table-bg 				: transparent;
+$table-stripe 			: rgba($color-primary-darker,.50);
+$table-hover 			: darken($table-stripe, 5%);
+$table-border 			: $table-stripe;
+$table-border-width		: 2px;
+$table-border-style		: solid;
+
+
+
+
+
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+
+/**
+ * Inputs.
+ */
+
+$input-bg 				: darken($white,2.5%);
+$input-border 			: $grey-lit;
+$input-border-width		: 3px;
+$input-border-style		: solid;
+$input-hover 			: darken($input-border,5%);
+$input-focus 			: darken($input-border,10%);
+$input-color			: $grey;
+$input-shadow			: darken($input-bg,5%);
+
+/**
+ * Placeholders.
+ */
+
+$placeholder-color 		: $grey-li;
+
+
+/**
+ * Uniform.
+ */
+
+$selector-bg					: $grey-dar;
+$selector-border-color			: darken($selector-bg,5%);
+$selector-bg-hover				: darken($selector-bg,5%);
+$selector-border-color-hover	: darken($selector-border-color,5%);
+
+$checker-bg						: $input-bg;
+$checker-border-color			: $input-border;
+$checker-bg-hover				: $color-primary;
+$checker-border-color-hover		: darken($color-primary,5%);
+
+$radio-bg						: $input-bg;
+$radio-border-color				: $input-border;
+$radio-bg-hover					: $color-primary;
+$radio-border-color-hover		: darken($color-primary,5%);
+

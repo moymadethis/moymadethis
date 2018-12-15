@@ -1,0 +1,345 @@
+
+/*------------------------------------*\
+    #HELPERS
+\*------------------------------------*/
+
+/**
+ * Hide content.
+ */
+
+.hide 			{display: none;}
+
+
+/**
+ * Align content.
+ */
+
+.align-left 	{text-align: left;}
+.align-center	{text-align: center;}
+.align-right 	{text-align: left;}
+
+
+/**
+ * Float images.
+ */
+
+.float-l		{float: left; margin: 0 $baseline $baseline 0;}
+.float-r		{float: right; margin: 0 0 $baseline 0 $baseline;}
+
+
+
+
+
+/*------------------------------------*\
+    #CONTAINERS
+\*------------------------------------*/
+
+/**
+ * `.page` wrapper element. This was added as `overflow: hidden;` set on the
+ * html/body tags provided inconsistant results in Internet Explorer. So we
+ * needed to wrap the entire page in a `div` and apply the styling to that
+ * instead.
+ *
+ * 1. Height of 100% is set so `.container` :before/:after elements aren't cut
+ *    off when content is vertically shorter than these elements.
+ * 2. Prevents horizontal scroll bar when :before/:after elements are cropped
+ *    when viewport is narrower than the content area. `overflow-y: auto;` is
+ *    needed for older versions of Internet Explorer (8).
+ * 3. A `min-width` is used to stop content horizontally scaling at a set point,
+ *    this is because the pages are not required to use a responsive layout.
+ */
+
+.page {
+	height: 100%; /* [1] */
+	min-height: 100%; /* [1] */
+	overflow-x: hidden; /* [2] */
+	overflow-y: auto; /* [2] */
+	min-width: 960px; /* [3] */
+}
+
+
+
+
+
+/**
+ * `.container` groups all the main page content together. A `.wrap` div is used
+ * to center content on the page with a max-width.
+ *
+ * 1. A `z-index` is set so the side elements are above the `.site-map`. Without
+ *    this the side elements can go behind the shadow effect (set on :before) if
+ *    the page is vertically short. Which doesn't look great!
+ * 2. The `.wrap` div's `:before` & `:after` pseudo classes are used to add
+ *    addtional graphics to the outside of either side of the container.
+ */
+
+.container {
+	background: $container-bg;
+	box-shadow: $container-shadow;
+	padding: $baseline*3 150px $baseline*2;
+	position: relative;
+	z-index: 10; /* [1] */
+	
+	.wrap {
+		position: relative;
+		
+		&:before,
+		&:after { /* [2] */
+			content: "";
+			display: block;
+			position: absolute;
+		}
+		
+		&:before {
+			background: $container-left-image;
+			height: $container-left-height;
+			top: $container-left-vert;
+			left: $container-left-horz;
+			width: $container-left-width;
+		}
+		
+		&:after {
+			background: $container-right-image;
+			height: $container-right-height;
+			top: $container-right-vert;
+			right: $container-right-horz;
+			width: $container-right-width;
+		}
+	}
+}
+
+
+/**
+ * Wrap div used to center content. Is also used in `page-head`.
+ */
+
+.wrap {
+	@include clearfix;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0 $baseline;
+	width: 100%;
+	max-width: 1100px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+/**
+ * The website header `page-head` only accommodates a logo, no navigation.
+ *
+ * 1. `.wrap` styles overwritten so it spans the width of the viewport.
+ */
+
+.page-head {
+	padding: 0;
+	position: relative;
+	
+	&:before {
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,.25) 100%);
+		content: "";
+		display: block;
+		height: 10px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+	
+	.wrap { /* [1] */
+		max-width: 100%;
+	}
+}
+
+.page-head__logo {
+	display: block;
+	float: left;
+	margin: $baseline 0;
+	
+	img {
+		display: block;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    #NAVIGATION (pagination)
+\*------------------------------------*/
+
+/**
+ * The navigation consists of a list of (page) numbers and prev/next links.
+ *
+ * 1. Reduced bottom padding on container as each item has 3px `padding-bottom`
+ *    set so the`box-shadow` isn't cut off on prev/next items.
+ * 2. As `overflow: hidden;` is set on the prev/next items, I need to add a few
+ *    pixels of padding so the shadow isn't cut off. I've set this padding on
+ *    ever item rather than just the prev/next items so alignment remains
+ *    consistent.
+ * 3. A class of `.selected` is added to a (page) number when active.
+ * 4. A class of `.inactive` is added to the prev or next link when the user is
+ *    on the first or last page, as that link will not go anywhere.
+ */
+
+.site-nav {
+	@include font-size(20);
+	font-weight: 600;
+	letter-spacing: -1px;
+	margin: 0;
+	padding: $baseline 0 17px; /* [1] */
+	position: relative;
+	text-align: center;
+	
+	&:before {
+		background: linear-gradient(to bottom, rgba(0,0,0,.25) 0%,rgba(0,0,0,0) 100%);
+		content: "";
+		display: block;
+		height: 10px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+
+.site-nav__item {
+	background: none;
+	display: inline-block;
+	margin: 0 5px;
+	padding: 0 0 3px; /* [2] */
+	vertical-align: middle;
+}
+
+.site-nav__link {
+	color: $grey;
+	text-shadow: 1px 1px 0 rgba($black,.25);
+	
+	&:visited {
+		color: $grey;
+	}
+	
+	&:hover,
+	&:focus {
+		color: $white;
+	}
+	
+	&.selected { /* [3] */
+		color: $white;
+		cursor: default;
+	}
+}
+
+/**
+ * Previous and Next buttons.
+ */
+
+.site-nav__prev,
+.site-nav__next {
+	margin: 0;
+	overflow: hidden;
+	text-indent: -9999px;
+	
+	a {
+		background: $color-primary url(../img/sprite/btn-icons.png) no-repeat left top;
+		border-radius: 100%;
+		box-shadow: inset -6px -6px 0 darken($color-primary,2.5%), 3px 3px 0 rgba($black,.10);
+		display: block;
+		height: 40px;
+		margin: 0 $baseline/4;
+		transition: all .25s;
+		width: 40px;
+		
+		&:visited {
+			background-color: $color-primary;
+		}
+		
+		&:hover,
+		&:active {
+			background-color: darken($color-primary,2.5%);
+			box-shadow: inset -6px -6px 0 darken($color-primary,5%), 3px 3px 0 rgba($black,.10);
+		}
+	}
+	
+	&.inactive { /* [4] */
+		opacity: .50;
+		
+		a {
+			background-color: $grey-da;
+			box-shadow: inset -6px -6px 0 darken($grey-da,2.5%), 3px 3px 0 rgba($black,.10);
+			cursor: default;
+		}
+	}
+}
+
+.site-nav__next {
+	
+	a {
+		 background-position: left -40px;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    #GRIDS
+\*------------------------------------*/
+
+/**
+ * Base `.grid` styling.
+ *
+ * 1. If columns are required to be of equal height, you can extend `.grid` with
+ *    `.grid--equal`.
+ * 2. If a `.boxout` element is within an column which has an equal height, we
+ *    also make sure the `.boxout`s height is extended to the height of it's
+ *    parent.
+ */
+ 
+.grid {
+	@include clearfix;
+	margin: 0 0 0 -20px;
+}
+
+.grid--equal { /* [1] */
+	display: flex;
+	
+	.grid__item {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.boxout {
+		flex: 1;
+	}
+}
+
+/**
+ * Columns within the grid have classes of `.grid__item`.
+ */
+
+.grid__item {
+	box-sizing: border-box;
+	float: left;
+	padding-left: 20px;
+}
+
+/**
+ * Width classes, prefixed by the specified namespace.
+ */
+
+.one-half		{width: 50%;}
+
+.one-third 		{width: 33.33333%;}
+.two-thirds 	{width: 66.66666%;}
+
+.one-quarter 	{width: 25%;}
+.two-quarters 	{width: 50%;}
+.three-quarters {width: 75%;}
+
