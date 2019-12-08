@@ -1,0 +1,282 @@
+
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+/**
+ * In the main website footer we overwrite some default text-level styles to
+ * simplify it. In General text becomes slightly smaller, bullets are removed
+ * from lists and anchors inherit the text styling (so underline, dark colouring
+ * and text-shadow are removed.
+ *
+ * 1. If the `.instagram-feed` sits directly above the footer they grey border
+ *    at the top of the footer looks a bit messy, so I've changed it to white.
+ */
+ 
+.page-foot {
+	box-sizing: border-box;
+	border-top: $border;
+	padding-top: ($vertical-spacing * 2);
+	width: 100%;
+	
+	@include bp(bp5) {
+		padding: ($vertical-spacing * 3) ($gutter / 2) 0;
+	}
+	
+	p {
+		@include font-size(12);
+	}
+	
+	ul {
+		@include font-size(12);
+		padding-left: 0;
+	}
+	
+	li {
+		background: none;
+		padding-left: 0;
+	}
+	
+	a {
+		background-image: none;
+		color: $font-color;
+		font-weight: 400;
+		padding: 0;
+		text-shadow: none;
+		
+		&:visited {
+			color: $font-color;
+		}
+		
+		&:hover,
+		&:focus {
+			color: $grey-darker;
+		}
+	}
+	
+	.instagram-feed + & {
+		border-color: $white; /* [1] */
+	}
+}
+
+/**
+ * Recude the `font-size` of headings within the footer.
+ */
+
+.page-foot__title {
+	@include font-size(12);
+	
+	@include bp(bp5) {
+		@include font-size(14);
+	}
+}
+
+/**
+ * The brand footer logo.
+ */
+
+.page-foot__logo {
+	display: block;
+	margin: 0 auto $vertical-spacing;
+	max-width: 150px;
+	
+	@include bp(bp3) {
+		margin-top: $vertical-spacing / 2;
+	}
+}
+
+
+
+/**
+ * Each group of content in the footer is wrapped within a `.page-foot__item`
+ * container. There are several breakpoints setup where content is displayed
+ * stacked or side-by-side when the viewport width allows. This is all applied
+ * on the unique modifier classes on each item.
+ */
+
+.page-foot__item {
+	@include clearfix;
+	margin-bottom: $vertical-spacing;
+}
+
+/**
+ * If one of these groups contains sub-items each list and it's relevant title 
+ * is then wrapped in a `.page-foot__sub-item` div. This is so we can easily
+ * display related content side-by-side when required.
+ */
+
+.page-foot__sub-item {
+	box-sizing: border-box;
+	padding: 0 ($gutter / 2);
+}
+
+
+/**
+ * The about section of the footer displays a brand logo, short description text
+ * and a list of affiliate logos.
+ *
+ * 1. First all the content is stacked.
+ * 2. Then the logo and text are displayed side-by-side.
+ * 3. Finally when there is a bit more horizontal space we adjust the widths and
+ *    padding.
+ * 4. The entire block is also display horizontally inline with the other items.
+ */
+
+.page-foot__item--about {
+	clear: both;
+	width: 100%; /* [1] */
+	
+	@include bp(bp5) {
+		float: left;
+		width: 50%; /* [4] */
+	}
+	
+	.affiliates {
+		margin-top: (-$vertical-spacing / 2);
+	}
+	
+	.page-foot__sub-item {
+		width: 100%; /* [1] */
+		
+		@include bp(bp3) {
+			float: left; /* [2] */
+		}
+	}
+			
+	.page-foot__sub-item--logo {
+		
+		@include bp(bp3) {
+			width: 25%; /* [2] */
+		}
+		
+		@include bp(bp5) {
+			width: 35%; /* [3] */
+		}
+	}
+			
+	.page-foot__sub-item--text {
+		
+		@include bp(bp3) {
+			width: 75%; /* [2] */
+		}
+		
+		@include bp(bp5) {
+			padding-right: $gutter;
+			width: 65%; /* [3] */
+		}		
+	}
+}
+
+/**
+ * The groups that contact website links and contact details share similar rules
+ * at several of the break points. Both of which have 2 titles and lists.
+ *
+ * 1. Each item is stacked but it's sub-items are displayed side-by-side.
+ * 2. Then we display each item side-by-side.
+ * 3. Finally, as we're display the `.page-foot__item--about` div inline with
+ *    the other items we adjust the widths to make room for it.
+ */
+ 
+.page-foot__item--links,
+.page-foot__item--contact {
+	clear: both;
+	width: 100%; /* [1] */
+	
+	.page-foot__sub-item {
+		float: left;
+		width: 50%; /* [1] */
+	}
+	
+	@include bp(bp3) { /* [2] */
+		clear: none;
+		float: left;
+		width: 50%;
+	}
+	
+	@include bp(bp5) {
+		width: 25%; /* [3] */
+	}
+}
+
+/**
+ * Specific rules for the group of contact information.
+ *
+ * 1. There's not quite enough room for both sub-items to be side-by-side when
+ *    all the footer items are displayed horizontally inline, so we target the
+ *    `*--contact` item and stack the sub-items.
+ * 2. Once we have more hozitontal space available, we display them side-by-side
+ *    again.
+ */
+
+.page-foot__item--contact {
+	
+	.page-foot__sub-item {
+		
+		@include bp(bp5) { /* [1] */
+			float: none;
+			width: 100%;
+		}
+		
+		@include bp(bp7) { /* [2] */
+			float: left;
+			width: 50%;
+		}	
+	}
+}
+
+
+
+
+
+/* ==========================================================================
+   #COPYRIGHT + TERMS
+   ========================================================================== */
+   
+/**
+ * Copyright + terms/privacy links at bottom of the page.
+ *
+ * 1. As the `page-foot` div has 15px of left/right padding above `bp5` we need
+ *    to add a negative margin to align `.page-foot__legal` with the edge of the
+ *    page. This is so the border touches the each edge of the page.
+ * 2. We then need to add some additonal padding to the right of the div to make
+ *    up for the additional space.
+ * 3. The left margin, is created by the margin set on the list-items.
+ * 4. The Copyright message is display on top of the other links on smaller
+ *    viewports but displayed inline again when space allows it.
+ */
+
+.page-foot__legal {
+	border-top: $border;
+	@include font-size(10);
+	clear: both;
+	margin: 0;
+	padding: ($vertical-spacing / 2) 0;
+	text-align: center;
+	width: 100%;
+	
+	@include bp(bp5) {
+		@include font-size(11);
+		margin-left: -$gutter / 2; /* [1] */
+		padding: ($vertical-spacing / 2) $gutter ($vertical-spacing / 2) ($gutter / 2); /* [2] */
+		text-align: left;
+	}
+	
+	li {
+		background: none;
+		display: inline-block;
+		margin: 0 ($gutter / 2);
+		padding-left: 0;
+		
+		&.copyright {
+			display: block; /* [4] */
+		}
+		
+		@include bp(bp5) {
+			margin: 0 0 0 $gutter; /* [3] */
+			
+			&.copyright {
+				display: inline-block; /* [4] */
+			}
+		}
+	}
+}

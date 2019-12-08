@@ -1,0 +1,129 @@
+
+/* ==========================================================================
+   #ACCORDION
+   ========================================================================== */
+
+/**
+ * A simple javascript accordion.
+ *
+ * 1. When an `.accordion` element follows a heading, we add a bit more vertical
+ *    space between them.
+ */
+
+.accordion {
+	margin: -$vertical-spacing / 4 0 $vertical-spacing;
+	overflow: hidden;
+	text-align: left;
+	
+	h1 + &,
+	h2 + &,
+	h3 + &,
+	h4 + & {
+		margin-top: $vertical-spacing / 3; /* [1] */
+	}
+}
+
+/**
+ * The container to group the related title + paragraph-level copy.
+ */
+
+.accordion__item {
+	border-bottom: 1px solid $input-border-color;
+	overflow: hidden;
+}
+
+/**
+ * The title of the accordion which is clicked to expand/collapse the content.
+ */
+
+.accordion__title {
+	cursor: pointer;
+	display: block;
+	font-weight: 700;
+	margin: 0 !important;
+	padding: $gutter / 4 $gutter $gutter / 4 0;
+	position: relative;
+	-webkit-transition: all 0.15s;
+	transition: all 0.15s;
+}
+
+/**
+ * We display a plus or minus icon depending on the panels current state.
+ *
+ * 1. The `:before` and `:after` classes are uses to create a plus icon.
+ * 2. When it's parent div has a class of `.open` applied to it, we rotate the
+ *    lines to turn it into a minus icon.
+ */
+
+.accordion__title-icon {
+	position: absolute;
+	display: block;
+	float: right;
+	height: 13px;
+	width: 13px;
+	right: 0;
+	top: 12px;
+	
+	&:before,
+	&:after {
+		background: $grey-light;
+		content: "";
+		line-height: 0;
+		font-size: 0;
+		position: absolute;
+		-webkit-transition: all .20s ease-in;
+		transition: all .20s ease-in;
+	}
+	
+	&:before {
+		height: 100%;
+		top: 0;
+		left: 6px;
+		width: 1px;
+	}
+	
+	&::after {
+		height: 1px;
+		top: 6px;
+		left: 0;
+		width: 100%;  
+	}
+	
+	.accordion__title.open & { /* [2] */
+		
+		&:before {
+			-webkit-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+		
+		&:after {
+			-webkit-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+	}
+}
+
+/**
+ * The paragraph-level panel of any accordion item.
+ *
+ * 1. Reduce the `font-size` and `line-height` of any paragraph.
+ * 2. Remove any margin/padding from `p` tags.
+ */
+
+.accordion__copy {
+	display: none;
+	padding: 0 0 $vertical-spacing / 2;
+  
+	*:last-child {
+		margin-bottom: 0;
+	}
+	
+	p {
+		@include font-size(13); /* [1] */
+		line-height: 1.4; /* [1] */
+		margin: 0; /* [2] */
+		padding: 0; /* [2] */
+	}
+}

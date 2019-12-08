@@ -1,0 +1,84 @@
+
+/* ==========================================================================
+   #INSTAGRAM
+   ========================================================================== */
+
+/**
+ * Displays a wide grid of Instagram photos.
+ */
+
+.instagram-feed {
+	background: $black;
+	@include clearfix;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+/**
+ * The title is positioned over the top of the feed.
+ *
+ * 1. As we use `position: absolute` and `translate` to center the title a width
+ *    of 100% to ensure the title uses all the horizontal space available for
+ *    the text and stops it wrapping too early. Otherwise `translate(-50%,-50%)`
+ *    isn't taken into consideration in terms of how much space is available.
+ */
+
+.instagram-feed__title {
+	color: $white;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10;
+	width: 100%; /* [1] */
+}
+
+/**
+ * Each item is floated left to form a grid. At certain breakpoints the width of
+ * items are reduced so we can get more on one line. The default is 3 per line.
+ *
+ * 1. We then increase it to 4 images per line.
+ * 2. Then 6 images per line.
+ *
+ * Always sticking to numbers (per row) that are multiples of 12 to ensure gaps
+ * are visible and it's always a solid grid.
+ *
+ * 3. As the `instagram-feed` container has a black background, we lower the
+ *    opacity of the items so they're darkened and increase the opacity when one
+ *    of the items is hovered over.
+ */
+
+.instagram-feed__item {
+	float: left;
+	margin: 0;
+	opacity: .45; /* [3] */
+	overflow: hidden;
+	transition: opacity .15s;
+	width: 33.33333%;
+	-webkit-backface-visibility: hidden;
+	
+	&:hover {
+		opacity: .60; /* [3] */
+	}	
+	
+	@include bp(bp4) {
+		width: 25%; /* [1] */
+	}
+	
+	@include bp(bp6) {
+		width: 16.666666%; /* [2] */
+	}
+}
+
+/**
+ * Remove any spacing from the image element so it fills it's parent without any
+ * gaps.
+ */
+
+.instagram-feed__image {
+	display: block;
+	margin: 0;
+	padding: 0;
+}

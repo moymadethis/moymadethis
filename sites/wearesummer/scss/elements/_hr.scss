@@ -1,0 +1,19 @@
+
+/* ==========================================================================
+   #HR
+   ========================================================================== */
+
+/**
+ * Base `hr` styling.
+ */
+
+hr {
+	border: 0;
+	border-bottom: $border-width $border-style $border-color;
+	clear : both;
+	display : block;
+	height: 0;
+	margin: $vertical-spacing 0;
+	padding: 0;
+	width: 50px;
+}

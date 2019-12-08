@@ -1,0 +1,134 @@
+
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * Default styling for buttons. Extend this object with a `.btn--*` skin class
+ * to change background-color, size or apply a relevant icon preceding the text.
+ *
+ * 1. Increase button padding on larger viewports.
+ *
+ * NOTE: I've tried to match `.select`, `.btn` and `.text-input` border-size,
+ * font-size, line-height and padding so they're all consistant heights.
+ */
+
+.btn {
+	background-color: $button-bg;
+	background-image: url(../img/interface/noise.png), linear-gradient(rgba($grey-darker,0) 0%, $grey-darker 100%);
+	background-repeat: repeat;
+	background-size: auto;
+	border: none;
+	border-radius: $button-border-radius;
+	box-sizing: border-box;
+	color: $button-font-color;
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	font-family: $button-font-family;	
+	@include font-size($button-font-size);
+	font-weight: $button-font-weight;
+	height: auto;
+	letter-spacing: $button-letter-spacing;
+	line-height: $font-lineheight;
+	margin-bottom: $vertical-spacing;
+	*margin-left: .3em;
+	padding: 12px $gutter 10px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: $button-font-transform;
+	transition: all .15s;
+	vertical-align: middle;
+	
+	@include bp(bp5) {
+		padding: 12px ($gutter * 1.5) 10px;  /* [1] */
+	}
+
+	&:visited {
+		background-color: $button-bg;
+		color: $button-font-color;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: $button-bg-hover;
+		color: $button-font-color-hover;
+		outline: 0;
+	}
+	
+	&:active {
+		top: 1px;
+	}
+}
+
+/**
+ * Primary button colour.
+ */
+ 
+.btn--primary {
+	background-color: $button-primary-bg;
+	background-image: url(../img/interface/noise.png), linear-gradient(rgba($color-primary,0) 0%, $color-primary 100%);
+	
+	&:visited {
+		background-color: $button-primary-bg;
+	}
+	
+	&:focus,
+	&:hover {
+		background-color: $button-primary-bg-hover;
+	}
+}
+
+/**
+ * Full-width buttons.
+ */
+
+.btn--full {
+	width: 100%;
+}
+
+/**
+ * Add a shadow to make it look as though the right side of the button is lifted
+ * off the page. This is done using the `:after` class.
+ *
+ * 1. Hover effect to make it look as if the button is getting pressed down.
+ */
+
+.btn--shadow {
+	
+	&:after {
+		background: url(../img/interface/btn-shadow.png) no-repeat right bottom;
+		background-size: 80% 100%;
+		bottom: -12px;
+		content: "";
+		display: block;
+		height: 12px;
+		position: absolute;
+		right: -2px;
+		transition: all .15s;	
+		width: 100%;
+	}
+
+	&:hover {
+		
+		&:after { /* [1] */
+			bottom: -4px;
+			height: 4px;
+		}
+	}
+}
+
+/**
+ * Large button styling.
+ */
+
+.btn--large {
+	@include font-size(16);
+
+	@include bp(bp5) {
+		@include font-size(20);
+	}
+}

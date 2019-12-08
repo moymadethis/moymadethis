@@ -1,0 +1,91 @@
+
+/* ==========================================================================
+   #PAGINATION
+   ========================================================================== */
+
+/**
+ * The `.pagination` markup matches the Wordpress theme structure and classes.
+ * ...No BEM here!
+ *
+ * 1. Hide the heading text.
+ */
+ 
+.pagination {
+	clear: both;
+	margin: 0 auto $vertical-spacing;
+	padding: $vertical-spacing * 2 0 0;
+	text-align: center;
+	width: 100%;
+	
+	.screen-reader-text {
+		display: none; /* [1 */
+	}
+}
+
+/**
+ * `.nav-links` is the div that contains all the pagination links and every item
+ * within it has a class of `.page-numbers`. I'm prefixing it with `.nav-links`
+ * to be on the safe side!
+ *
+ * 1. The current page has a class of `.current` on the relevant item so we can
+ *    target it for styling.
+ */
+
+.nav-links .page-numbers {
+	background: none;
+	color: $color-primary;
+	display: inline-block;
+	font-weight: 700;
+	margin: 0 $gutter / 4;
+	padding: 2px;
+	text-shadow: none;
+	
+	&:visited {
+		color: $color-primary;
+	}
+	
+	&:hover,
+	&:active {
+		color: $grey-darker;
+	}
+	
+	&.current { /* [1] */
+		color: $grey-darker;
+		cursor: default;
+		
+		&:visited {
+			color: $grey-darker;
+		}
+	}
+}
+
+/**
+ * The previous and next links are also `.page-numbers` but have an additional
+ * class of either `.prev` or `.next` so we can target them for unique styling,
+ * in this instance custom background images.
+ */
+
+.nav-links .prev,
+.nav-links .next {
+	background: url(../img/interface/icon-chevron-left.svg) no-repeat 0 0;
+	position: relative;
+	height: 20px;
+	opacity: .15;
+	overflow: hidden;
+	top: -1px;
+	text-indent: -9999px;
+	vertical-align: middle;
+	width: 20px;
+	
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.nav-links .prev {
+	background: url(../img/interface/icon-chevron-left.svg) no-repeat 0 0;
+}
+
+.nav-links .next {
+	background: url(../img/interface/icon-chevron-right.svg) no-repeat 0 0;
+}

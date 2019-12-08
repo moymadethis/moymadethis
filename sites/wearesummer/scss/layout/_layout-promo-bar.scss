@@ -1,0 +1,49 @@
+
+/* ==========================================================================
+   #PROMO BAR
+   ========================================================================== */
+
+/**
+ * A thin bar  to draw attention to certain elements. For example "Watch the
+ * Video" or a list of social icons.
+ */
+
+.promo-bar {
+	padding: ($vertical-spacing / 2) 0 0;
+	text-align: center;
+}
+
+/**
+ * Title of the promo bar.
+ */
+
+.promo-bar__title {
+	color: $white;
+	@include font-size(14);
+	display: inline-block;
+	margin: 0 ($gutter / 4) ($vertical-spacing / 2);
+	
+	@include bp(bp5) {
+		@include font-size(16);
+	}
+}
+
+/**
+ * List or paragraph to be displayed inline with the title.
+ */
+
+.promo-bar__cta {
+	display: inline-block;
+	margin: 0 ($gutter / 4) ($vertical-spacing / 2);
+	padding: 0;
+
+	.icon {
+		fill: $color-primary-lighter;
+		height: 20px;
+		width: 20px;
+		
+		&:hover {
+			fill: $white;
+		}
+	}
+}

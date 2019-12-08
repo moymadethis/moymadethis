@@ -1,0 +1,341 @@
+
+/* ==========================================================================
+   #SYSTEM
+   ========================================================================== */
+
+$debug-mode						: false;
+$debug-color-error				: red;
+$debug-color-warning			: yellow;
+$debug-outline-width			: 5px;
+$debug-outline-style			: solid;
+
+
+
+
+
+/* ==========================================================================
+   #COLOUR
+   ========================================================================== */
+
+/**
+ * Greyscale.
+ */
+
+$black 							: rgb(0,0,0);
+$white 							: rgb(255,255,255);
+
+$grey-darker					: rgb(14,16,16);
+$grey-dark						: rgb(66,75,75);
+$grey							: rgb(119,133,134);
+$grey-light						: rgb(179,188,188);
+$grey-lighter					: rgb(239,241,241);
+
+/**
+ * Brand colours.
+ */
+
+$color-primary-darker 			: rgb(21,138,150);
+$color-primary-dark 			: rgb(23,155,168); 
+$color-primary 					: rgb(26,172,187); 
+$color-primary-light 			: rgb(72,189,201); 
+$color-primary-lighter			: rgb(209,238,241); 
+
+/**
+ * Useful colours.
+ */
+
+$color-success					: rgb(185,197,75);
+$color-error					: rgb(196,29,38);
+
+
+
+
+
+/* ==========================================================================
+   #BASICS
+   ========================================================================== */
+
+$body-background 				: $white;
+$base-bg						: $white;
+$vertical-spacing				: 30px;
+$gutter		 					: 30px;
+$max-width						: 90.000rem;
+$MQs							: true;
+$base-bg						: $white;
+
+
+
+
+
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+
+/**
+ * Base.
+ */
+
+$font-size 						: 14;
+$font-family 					: 'Roboto', sans-serif;
+$font-color 					: $grey;
+$font-lineheight 				: 1.8;
+$font-weight 					: 400;
+
+
+/**
+ * Alternative.
+ */
+
+
+$alt-font-family 				: local('Georgia'), serif;
+$alt-font-color 				: inherit;
+$alt-font-lineheight 			: $font-lineheight;
+$alt-font-weight 				: 400;
+
+
+/**
+ * Extra type variables.
+ */
+
+$amp-font-family 				: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');
+$codefont-font-family			: Monaco, Courier New, monospace;
+
+
+/**
+ * Headings.
+ */
+
+$heading-font-color 			: $grey-darker;
+$heading-font-family 			: 'Montserrat', sans-serif;
+$heading-font-style 			: normal;
+$heading-font-weight 			: 900;
+$heading-lineheight				: $font-lineheight;
+
+
+
+
+
+/* ==========================================================================
+   #LINKS
+   ========================================================================== */
+
+$link-color 		    		: $grey-darker;
+$link-color-hover 				: $color-primary;
+$link-color-visited   			: $link-color;
+$link-color-focus 				: $link-color-hover;
+
+
+
+
+
+/* ==========================================================================
+   #TEXTURE
+   ========================================================================== */
+
+$border-color    				: $grey-lighter;
+$border-style					: solid;
+$border-width 					: 2px;
+$border-radius 					: 2px;
+$border							: $border-width $border-style $border-color;
+
+
+
+
+
+/* ==========================================================================
+   #ALERTS
+   ========================================================================== */
+
+/**
+ * Default/base.
+ */
+
+$alert-bg							: $color-primary;
+$alert-border-color					: darken($alert-bg,10%);
+$alert-font-color					: lighten($alert-bg, 50%);
+$alert-font-size					: 14;
+$alert-heading-font-color			: $white;
+$alert-heading-font-size			: 16;
+
+
+/**
+ * Success.
+ */
+
+$alert-success-bg					: $color-success;
+$alert-success-border-color			: darken($alert-success-bg,10%);
+$alert-success-font-color			: lighten($alert-success-bg, 50%);
+$alert-success-heading-font-color	: $alert-heading-font-color;
+
+
+/**
+ * Error.
+ */
+
+$alert-error-bg						: $color-error;
+$alert-error-border-color			: darken($alert-error-bg, 10%);
+$alert-error-font-color				: lighten($alert-error-bg, 50%);
+$alert-error-heading-font-color		: $alert-heading-font-color;
+
+
+
+
+
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * Default/base.
+ */
+
+$button-bg 								: lighten($grey-darker,5%);
+$button-border-color					: $border-color;
+$button-border-style 					: $border-style;
+$button-border-width 					: $border-width;
+$button-border-radius 					: 0;
+
+$button-font-family						: $heading-font-family;
+$button-font-size 						: $font-size;
+$button-font-color 						: $white;
+$button-font-weight 					: 900;
+$button-letter-spacing					: 0;
+$button-font-transform 					: uppercase;
+
+$button-bg-hover 						: $grey-darker;
+$button-border-color-hover				: $grey-darker;
+$button-font-color-hover 				: $white;
+
+/**
+ * Primary buttons.
+ */
+
+$button-primary-bg						: $color-primary-light;
+$button-primary-border-color			: darken($button-primary-bg,10);
+$button-primary-font-color 				: $white;
+
+$button-primary-bg-hover				: $color-primary;
+$button-primary-border-color-hover		: darken($button-primary-border-color,5);
+$button-primary-font-color-hover 		: $button-primary-font-color;
+
+
+
+
+
+/* ==========================================================================
+   #FORMS
+   ========================================================================== */
+
+/**
+ * Form fonts.
+ */
+
+$form-font-family				: $font-family;
+$form-font-color 				: $font-color;
+
+
+/**
+ * Form inputs.
+ */
+
+$input-padding					: 6px;
+$input-bg 						: $white;
+
+$input-border-color				: darken($border-color,10%);
+$input-border-color-hover		: darken($input-border-color,20%);
+$input-border-color-focus		: $color-primary;
+$input-border-style 			: $border-style;
+$input-border-width 			: 2px;
+$input-border-radius 			: 0;
+
+$input-font-family				: $font-family;
+$input-font-size 				: 14;
+$input-font-color 				: $font-color;
+$input-placeholder-color 		: $grey-light;
+$input-placeholder-font-size 	: 14;
+
+$textarea-min-height			: 160px;
+
+
+/**
+ * Form labels.
+ */
+
+$label-font-color 				: $grey-darker;
+$label-font-family				: $font-family;
+$label-font-size 				: $font-size;
+
+
+
+
+
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+
+/**
+ * Figure/figcaptions.
+ */
+
+$figcaption-font-family			: $font-family;
+$figcaption-font-size			: 1.4rem;
+$figcaption-font-style			: normal;
+$figcaption-font-weight			: 400;
+$figcaption-text-transform		: none;
+
+
+
+
+
+/* ==========================================================================
+   #TABLES
+   ========================================================================== */
+
+/**
+ * Default/base.
+ */
+
+$table-padding 					: 15px;
+$table-font-family				: $font-family;
+$table-font-size 				: $font-size;
+$table-condensed-font-size 		: $font-size;
+$table-font-color 				: $font-color;
+$table-header-font-weight 		: 700;
+$table-bg						: transparent;
+
+/**
+ * Table stripes.
+ */
+
+$table-stripe-bg 				: $grey-lighter;
+$table-stripe-font-color 		: $font-color;
+
+/**
+ * Table `:hover` styling.
+ */
+
+$table-hover-bg 				: $white;
+$table-hover-font-color 		: $font-color;
+
+/**
+ * Table borders.
+ */
+
+$table-border-color				: darken($border-color,10%);
+$table-border-style 			: $border-style;
+$table-border-width 			: 2px;
+
+
+
+
+
+/* ==========================================================================
+   #MISC
+   ========================================================================== */
+
+/**
+ * Transitions.
+ */
+
+$transition-duration			: .15s;
+$transition-timing-function		: ease;
