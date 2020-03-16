@@ -1,0 +1,433 @@
+
+/**
+ * Base styling.
+ */
+
+html {
+	background: rgb(255,255,255);
+	font-size: 62.5%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	background-color: transparent;
+	color: rgb(0,0,0);
+	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.6rem;
+	margin: 0;
+	padding: 30px 0 0;
+	text-rendering: optimizeLegibility;
+}
+
+
+
+/**
+ * Carousel
+ */
+
+.carousel {
+	background: rgb(0,0,0);
+	color: rgb(255,255,255);
+	height: 640px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.carousel:after {
+	left: 66.66666%;
+}
+
+
+
+/**
+ * Background (fullwidth) image
+ */
+
+.carousel__bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.carousel__bg.loading {
+	background: url(../img/interface/loading.gif) no-repeat center center;
+}
+
+.carousel__bg img,
+.carousel__bg video {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%; 
+}
+
+
+
+/**
+ * Individual carousel item
+ */
+
+.carousel__item {
+	box-sizing: border-box;
+	float: left;
+	height: 640px;
+	outline: none;
+	position: relative;
+	width: 33.33333%; 
+}
+
+.carousel__item:before {
+	background: rgba(255,255,255,.30);
+	content: "";
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	z-index: 30;
+}
+
+.carousel__item:hover {
+	cursor: pointer;
+}
+
+
+
+/* Text Content */
+
+.carousel__content {
+	background: rgba(0,0,0,.30);
+	box-sizing: border-box;
+	color: rgb(255,255,255);
+	height: 100%;
+	min-height: 100%;
+	padding: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 15;
+}
+
+
+.carousel__title,
+.carousel__subtitle,
+.carousel__flag {
+	color: rgb(255,255,255);
+	letter-spacing: 1px;
+	font-family: 'Anton', sans-serif;
+	font-weight: 400;
+	line-height: 1;
+	margin: 0 0 5px;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+.carousel__title {
+	font-size: 20px;
+	transition: all .25s;
+}
+
+.carousel__subtitle {
+	display: none;
+	font-size: 48px;
+}
+
+.carousel__flag {
+	background: url(../img/interface/icon-chevron--right--yellow.svg) no-repeat left center;
+	background-size: 10px;
+	color: rgb(240,184,0);
+	font-size: 14px;
+	padding-left: 15px;
+}
+
+
+
+/* Button */
+
+.carousel__btn {
+	background: transparent;
+	border: 1px solid rgb(255,255,255);
+	box-sizing: border-box;
+	color: rgb(255,255,255);
+	display: block;
+	font-family: 'Anton', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	height: 45px;
+	line-height: 45px;
+	letter-spacing: 1px;
+	opacity: 0;
+	outline: none;
+	position: absolute;
+	padding: 0 30px;
+	bottom: 30px;
+	left: 30px;
+	right: 30px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all .15s;
+	-webkit-backface-visibility: hidden;
+}
+
+.carousel__btn:visited {
+	background: transparent;
+	color: rgb(255,255,255);
+}
+
+.carousel__btn:focus,
+.carousel__btn:hover {
+	background: rgb(240,184,0);
+	border-color: rgb(240,184,0);
+	color: rgb(0,0,0);
+}
+
+
+
+/* Image */
+
+.carousel__image {
+	display: block;
+	height: 100%;
+	opacity: 1;
+	object-fit: cover;
+	transition: all .30s;
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+}
+
+
+
+/* When hovering over the carousel, fade all the titles out */
+
+.slick-track:hover .carousel__title {
+	opacity: .30;
+}
+
+/* But not the one contained without the 'item' you're hovering over */
+
+.slick-track:hover .carousel__item:hover .carousel__title {
+	opacity: 1;
+}
+
+/* Fade all images out so the fullwidth background image is visble */
+
+.slick-track:hover .carousel__image {
+	opacity: 0;
+}
+
+/* Hide the flag element */
+
+.slick-track:hover .carousel__flag {
+	display: none;
+}
+
+/* Show the subtitle */
+
+.slick-track:hover .carousel__item:hover .carousel__subtitle {
+	display: block;
+}
+
+/* Display the CTA of the active item */
+
+.slick-track:hover .carousel__item:hover .carousel__btn {
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/* Slick Prev/Next */
+
+.slick-carousel,
+.slick-list,
+.slick-track {
+	height: 100%;
+	min-height: 100%;
+}
+
+
+.slick-arrow {
+	background: transparent;
+	border: 1px solid rgb(255,255,255);
+	color: rgb(255,255,255);
+	display: block;
+	font-family: 'Anton', sans-serif;
+	font-size: 24px;
+	height: 45px;
+	line-height: 45px;
+	margin-top: -30px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	text-align: center;
+	transform: rotate(45deg);
+	transition: all .15s;
+	width: 45px;
+	z-index: 60;
+}
+
+.slick-arrow:hover {
+	background: rgb(255,255,255);
+	color: rgb(0,0,0);
+}
+
+.slick-arrow span {
+	display: block;
+	transform: rotate(-45deg);
+}
+
+.slick-arrow--next {
+	left: auto;
+	right: 30px;
+}
+
+
+
+/* Slick Core */
+
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
