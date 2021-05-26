@@ -1,0 +1,194 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * Default styling for buttons. Extend this object with a `.btn--*` skin class
+ * to change `background-color`, size or apply a relevant icon(s).
+ *
+ * 1. To button position on `:focus` and `:hover`.
+ * 2. And again on `:active` to give the impression of it being pressed down.
+ * 3. Reduce vertical space when `.btn` elements are stacked.
+ */
+
+.btn {
+	background-color: $button-bg;
+	background-repeat: no-repeat;
+	border: $button-border-width $button-border-style $button-border-color;
+	border-radius: $button-border-radius;
+	box-sizing: border-box;
+	color: $button-font-color;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $button-font-family;	
+	@include font-size($button-font-size);
+	font-weight: $button-font-weight;
+	height: auto;
+	letter-spacing: $button-letter-spacing;
+	line-height: $font-lineheight;
+	margin-bottom: $vertical-spacing;
+	padding: 9px $gutter 8px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: $button-font-transform;
+	transition: none;
+	vertical-align: middle;
+	width: 100%;
+
+	&:visited {
+		background-color: $button-bg;
+		color: $button-font-color;
+	}
+	
+	&:focus,
+	&:hover {
+		background-color: $button-bg-hover;
+		border-color: $button-border-color-hover;
+		color: $button-font-color-hover;
+		outline: 0;
+		top: 1px; /* [1] */
+		left: 1px; /* [1] */
+	}
+	
+	&:active {
+		top: 4px; /* [2] */
+		left: 4px; /* [2] */
+	}
+	
+	+ .btn {
+		margin-top: -$vertical-spacing/2; /* [3] */
+	}
+}
+
+
+/**
+ * Shadow Buttons.
+ *
+ * Buttons can be modified to display with a shadow. We adjust the distance of
+ * the shadow on different states due to the `.btn` position changing and give
+ * the impression the element is being pressed down.
+ */
+
+.btn--shadow {
+	box-shadow: 4px 4px 0 $color-secondary;
+	
+	&:focus,
+	&:hover {
+		box-shadow: 3px 3px 0 $color-secondary;
+	}
+	
+	&:active {
+		box-shadow: 0 0 0 $color-secondary;
+	}
+}
+
+
+/**
+ * Ghost Button styling overrides.
+ */
+
+.btn--ghost {
+	background: transparent;
+	color: $color-primary;
+	
+	&:visited {
+		border-color: $button-border-color;
+		color: $color-primary;
+	}
+	
+	&:focus,
+	&:hover {
+		background-color: transparent;
+		border-color: $button-border-color-hover;
+		color: $color-primary;
+	}
+}
+
+
+/**
+ * Larger Button styling (64px)
+ */
+
+.btn--large {
+	padding: 17px $gutter 16px;
+}
+
+
+/**
+ * Animated arrow icon buttons.
+ *
+ * 1. Mask the inactive icons.
+ * 2. Padding to accommodate the absolute positioned icons.
+ * 3. Position inactive icon out of view (clipped).
+ * 4. Specify a different icon (colour) for `.btn--ghost` modified elements.
+ * 5. Remove `:hover` position change on as it looks crap with animation.
+ * 6. Switch the padding-left/right values on `:hover` to move the text left.
+ * 7. Update the left/right values on the before/after classes to move the
+ *    icons in/out of view.
+ * 8. Add default `:active` positions as we overrode this on `:hover`.
+ */
+
+.btn--arrow {
+	
+	.label {
+		display: inline-flex;
+		justify-content: center;
+		clip-path: inset(0 0 0 0); /* [1] */
+		padding-right: 32px; /* [2] */
+		position: relative;
+		transition: all 0.16s ease-out;
+		margin: 0;
+		
+		&:before,
+		&:after {
+			background: url(../img/icon-arrow--white.svg) no-repeat 0 0;
+			content: "";
+			height: 24px;
+			position: absolute;
+			top: 1px;
+			right: 0;
+			transition: all 0.16s ease-out;
+			width: 24px;
+		}
+	
+		&:before {
+			right: auto;
+			left: -32px;  /* [3] */
+		}
+	}
+	
+	&.btn--ghost { /* [4] */
+		
+		.label {
+			
+			&:before,
+			&:after {
+				background: url(../img/icon-arrow.svg) no-repeat 0 0;
+			}
+		}
+	}
+	
+	&:focus,
+	&:hover {
+		top: 0; /* [5] */
+		left: 0; /* [5] */
+		
+		.label {
+			padding: 0 0 0 32px;  /* [6] */
+			
+			&:before {
+				left: 0;  /* [7] */
+			}
+			
+			&:after {
+				right: -32px;  /* [7] */
+			}
+		}
+	}
+	
+	&:active {  /* [8] */
+		top: 4px;
+		left: 4px;
+	}
+}

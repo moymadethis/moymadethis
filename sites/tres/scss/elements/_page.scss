@@ -1,0 +1,24 @@
+/* ==========================================================================
+   #CONTAINER
+   ========================================================================== */
+
+/**
+ * Styling for demo page / container.
+ */
+
+.container {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 24px;
+	width: 100%;
+	max-width: 720px;
+}
+
+/**
+ * Helper class for right alignment (demo purposes). `flex` or `text-align`
+ * would be preferable - I guess!
+ */
+
+.align-right {
+	float: right;
+}
