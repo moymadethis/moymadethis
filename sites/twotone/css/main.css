@@ -1,0 +1,811 @@
+/* ==========================================================================
+   #VARIABLES
+   ========================================================================== */
+/* ==========================================================================
+   #SYSTEM
+   ========================================================================== */
+/* ==========================================================================
+   #COLOR
+   ========================================================================== */
+/* ==========================================================================
+   #BASICS
+   ========================================================================== */
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+/**
+ * Base Styling.
+ */
+/**
+ * Headings.
+ */
+/* ==========================================================================
+   #LINKS
+   ========================================================================== */
+/* ==========================================================================
+   #TEXTURE
+   ========================================================================== */
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+/* ==========================================================================
+   #MIXINS
+   ========================================================================== */
+/**
+ * Clearfix
+ */
+/**
+ * Typography
+ */
+/**
+ * Media Queries.
+ * 
+ * 1. $bp2  =  480px 	(30rem)
+ * 2. $bp3  =  600px 	(37.5rem)
+ * 3. $bp4  =  768px 	(48rem)
+ * 4. $bp5  =  1024px 	(64rem)
+ * 5. $bp6  =  1220px 	(76.250rem)
+ * 6. $bp7  =  1400px 	(87.5rem)
+ */
+html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* ==========================================================================
+   #COLOUR
+   ========================================================================== */
+/**
+ * Default anchor styling.
+ */
+a {
+  border-bottom: 4px solid #f0f10d;
+  color: #0000c3;
+  font-weight: 800;
+  letter-spacing: 0;
+  padding: 4px 2px 0;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.08s;
+}
+a:visited {
+  color: #0000c3;
+}
+a:focus, a:hover {
+  background-color: #f0f10d;
+  color: #0000c3;
+  outline: 0;
+  text-decoration: none;
+}
+a:active {
+  top: 2px;
+}
+
+/* ==========================================================================
+   #ANIMATED LINKS
+   ========================================================================== */
+/**
+ * Container/wrapper div that holds everything together.
+ *
+ * 1. Account for `4px` horizontal padding/overhang.
+ * 2. Adjust the `clip-path` width to remove spacing created by padding on the
+ *    `.link__label` (32px). However, we need 8px for the horizontal padding so
+ *    we only subtract `24px`.
+ * 3. Remove default `a` styling.
+ */
+.link {
+  border-bottom: none;
+  /* [3] */
+  -webkit-clip-path: inset(0 -4px 0 0);
+          clip-path: inset(0 -4px 0 0);
+  /* [1] */
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  line-height: 18px;
+  margin-bottom: 24px;
+  padding: 0;
+  /* [3] */
+  position: relative;
+  text-align: right;
+}
+.link:before {
+  background: #f0f10d;
+  content: "";
+  height: 32px;
+  position: absolute;
+  right: -4px;
+  /* [1] */
+  left: auto;
+  width: calc(100% - 24px);
+  /* [2] */
+}
+.link:focus, .link:hover {
+  background: none;
+  /* 3 */
+}
+
+/**
+ * Core styling for animated / sliding links. Displayed icon on right.
+ *
+ * 1. Leave space and position icons within it. Value was originally `36px` so
+ *    icon was 4px away text but amended to `32px` as it looked better with
+ *    space around icon in SVG.
+ * 2. For better (for precise) centred icons.
+ * 3. Update the left/right values on the before/after classes to move the
+ *    icons in/out of view.
+ */
+.link__label {
+  padding: 0 32px 0 0;
+  /* [1] */
+  position: relative;
+  left: 0;
+  transition: all 0.16s ease-out;
+}
+.link__label:before, .link__label:after {
+  background: url(../img/icon-arrow.svg) no-repeat 0 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  /* [2] */
+  left: -32px;
+  /* [1] */
+  transform: translate(0, -50%);
+  /* [2] */
+  transition: all 0.16s ease-out;
+  width: 24px;
+}
+.link__label:after {
+  right: 0;
+  /* [3] */
+  left: auto;
+  /* [3] */
+}
+.link:focus .link__label, .link:hover .link__label {
+  left: 32px;
+  /* [3] */
+}
+
+/**
+ * Animated links that have unique icons which have visible icons shown to the
+ * left side of the text instead of the right. So a lot of resets to switch
+ * values around from right to left.
+ *
+ * 1. Leave space and position icons within it. Value was originally `36px` so
+ *    icon was 4px away text but amended to `32px` as it looked better with
+ *    space around icon in SVG.
+ * 2. Switch the `clip-path` value from right to left. Also increase it from
+ *    `-4px` slightly as these items 'roll' out of view, so it just helps show
+ *    the effect more with a bit more space before it's cropped.
+ * 3. These items `:before` elements rotate on `:hover` as well as the regular
+ *    transition.
+ */
+.link--prohibition,
+.link--filters {
+  -webkit-clip-path: inset(0 0 0 -6px);
+          clip-path: inset(0 0 0 -6px);
+  /* [2] */
+  text-align: left;
+}
+.link--prohibition:before,
+.link--filters:before {
+  right: auto;
+  left: -4px;
+}
+.link--prohibition .link__label,
+.link--filters .link__label {
+  padding: 0 0 0 32px;
+  /* [1] */
+}
+.link--prohibition .link__label:before,
+.link--filters .link__label:before {
+  background: url(../img/icon-no.svg) no-repeat 0 0;
+  left: 0;
+}
+.link--prohibition .link__label:after,
+.link--filters .link__label:after {
+  right: -32px;
+  /* [1] */
+  left: auto;
+}
+.link--prohibition:focus .link__label, .link--prohibition:hover .link__label,
+.link--filters:focus .link__label,
+.link--filters:hover .link__label {
+  left: -32px;
+  /* [1] */
+}
+.link--prohibition:focus .link__label:before, .link--prohibition:hover .link__label:before,
+.link--filters:focus .link__label:before,
+.link--filters:hover .link__label:before {
+  transform: translate(0, -50%) rotate(-180deg);
+  /* [3] */
+}
+
+/**
+ * The filter icon does not have a 2nd icons that is revealed on hover.
+ *
+ * 1. So we hide it.
+ */
+.link--filters .link__label:before {
+  background: url(../img/icon-refresh.svg) no-repeat 0 0;
+}
+.link--filters .link__label:after {
+  display: none;
+  /* [1] */
+}
+
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+/**
+ * Default styling for buttons. Extend this object with a `.btn--*` skin class
+ * to change `background-color`, size or apply a relevant icon(s).
+ *
+ * 1. To button position on `:focus` and `:hover`.
+ * 2. And again on `:active` to give the impression of it being pressed down.
+ * 3. Reduce vertical space when `.btn` elements are stacked.
+ */
+.btn {
+  background-color: #0000c3;
+  background-repeat: no-repeat;
+  border: 2px solid #0000c3;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "mr-eaves-modern", sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  height: auto;
+  letter-spacing: 0;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  padding: 9px 48px 8px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: none;
+  vertical-align: middle;
+  width: 100%;
+}
+.btn:visited {
+  background-color: #0000c3;
+  color: white;
+}
+.btn:focus, .btn:hover {
+  background-color: #0000c3;
+  border-color: #0000c3;
+  color: white;
+  outline: 0;
+  top: 1px;
+  /* [1] */
+  left: 1px;
+  /* [1] */
+}
+.btn:active {
+  top: 4px;
+  /* [2] */
+  left: 4px;
+  /* [2] */
+}
+.btn + .btn {
+  margin-top: -12px;
+  /* [3] */
+}
+
+/**
+ * Shadow Buttons.
+ *
+ * Buttons can be modified to display with a shadow. We adjust the distance of
+ * the shadow on different states due to the `.btn` position changing and give
+ * the impression the element is being pressed down.
+ */
+.btn--shadow {
+  box-shadow: 4px 4px 0 #f0f10d;
+}
+.btn--shadow:focus, .btn--shadow:hover {
+  box-shadow: 3px 3px 0 #f0f10d;
+}
+.btn--shadow:active {
+  box-shadow: 0 0 0 #f0f10d;
+}
+
+/**
+ * Ghost Button styling overrides.
+ */
+.btn--ghost {
+  background: transparent;
+  color: #0000c3;
+}
+.btn--ghost:visited {
+  border-color: #0000c3;
+  color: #0000c3;
+}
+.btn--ghost:focus, .btn--ghost:hover {
+  background-color: transparent;
+  border-color: #0000c3;
+  color: #0000c3;
+}
+
+/**
+ * Larger Button styling (64px)
+ */
+.btn--large {
+  padding: 17px 48px 16px;
+}
+
+/**
+ * Animated arrow icon buttons.
+ *
+ * 1. Mask the inactive icons.
+ * 2. Padding to accommodate the absolute positioned icons.
+ * 3. Position inactive icon out of view (clipped).
+ * 4. Specify a different icon (colour) for `.btn--ghost` modified elements.
+ * 5. Remove `:hover` position change on as it looks crap with animation.
+ * 6. Switch the padding-left/right values on `:hover` to move the text left.
+ * 7. Update the left/right values on the before/after classes to move the
+ *    icons in/out of view.
+ * 8. Add default `:active` positions as we overrode this on `:hover`.
+ */
+.btn--arrow .label {
+  display: inline-flex;
+  justify-content: center;
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+  /* [1] */
+  padding-right: 32px;
+  /* [2] */
+  position: relative;
+  transition: all 0.16s ease-out;
+  margin: 0;
+}
+.btn--arrow .label:before, .btn--arrow .label:after {
+  background: url(../img/icon-arrow--white.svg) no-repeat 0 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  transition: all 0.16s ease-out;
+  width: 24px;
+}
+.btn--arrow .label:before {
+  right: auto;
+  left: -32px;
+  /* [3] */
+}
+.btn--arrow.btn--ghost {
+  /* [4] */
+}
+.btn--arrow.btn--ghost .label:before, .btn--arrow.btn--ghost .label:after {
+  background: url(../img/icon-arrow.svg) no-repeat 0 0;
+}
+.btn--arrow:focus, .btn--arrow:hover {
+  top: 0;
+  /* [5] */
+  left: 0;
+  /* [5] */
+}
+.btn--arrow:focus .label, .btn--arrow:hover .label {
+  padding: 0 0 0 32px;
+  /* [6] */
+}
+.btn--arrow:focus .label:before, .btn--arrow:hover .label:before {
+  left: 0;
+  /* [7] */
+}
+.btn--arrow:focus .label:after, .btn--arrow:hover .label:after {
+  right: -32px;
+  /* [7] */
+}
+.btn--arrow:active {
+  /* [8] */
+  top: 4px;
+  left: 4px;
+}
+
+/* ==========================================================================
+   #HR
+   ========================================================================== */
+/**
+ * Base `hr` styling.
+ */
+hr {
+  border: 0;
+  border-bottom: 2px solid #eaeafa;
+  clear: both;
+  display: block;
+  height: 0;
+  margin: 24px 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+/**
+ * Base `img` styles.
+ */
+img {
+  border-width: 0;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;
+}
+
+img[width],
+img[height] {
+  max-width: none;
+}
+
+/* ==========================================================================
+   #SITE
+   ========================================================================== */
+/**
+ * Viewports.
+ */
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+/**
+ * Base `html` styling.
+ */
+html {
+  background: #f7f7fd;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: white;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Base `body` styling.
+ */
+body {
+  background-color: transparent;
+  color: #0000c3;
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+  font-family: "mr-eaves-modern", sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.032em;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+/**
+ * Putting touch-action: manipulation; on a clickable element makes WebKit
+ * consider touches that begin on the element only for the purposes of panning 
+ * and pinching to zoom. This means WebKit does not consider double-tap gestures
+ * on the element, so single taps are dispatched immediately.
+ */
+a,
+button,
+input,
+select,
+textarea,
+label,
+summary {
+  touch-action: manipulation;
+}
+
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+/**
+ * Base styling for heading elements.
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0000c3;
+  font-family: "mr-eaves-modern", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0 0 24px;
+  transition: font-size 0.2s;
+}
+
+h1 {
+  font-size: 48px;
+  font-size: 4.8rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 37.5em) {
+  h1 {
+    font-size: 60px;
+    font-size: 6rem;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  font-size: 3.6rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 37.5em) {
+  h2 {
+    font-size: 48px;
+    font-size: 4.8rem;
+  }
+}
+
+h3 {
+  font-size: 30px;
+  font-size: 3rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 37.5em) {
+  h3 {
+    font-size: 36px;
+    font-size: 3.6rem;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 37.5em) {
+  h4 {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 37.5em) {
+  h5 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+}
+
+h6 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 37.5em) {
+  h6 {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   #PARAGRAPHS
+   ========================================================================== */
+/**
+ * Base paragraph styles.
+ */
+p {
+  margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+.grid {
+  padding: 24px 24px 0;
+}
+
+.grid__item {
+  display: grid;
+  grid-column-gap: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 64em) {
+  .grid__item {
+    align-items: center;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 0;
+  }
+}
+.grid__item + .grid__item {
+  margin-top: 48px;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 64em) {
+  .grid__item + .grid__item {
+    margin-top: 0;
+  }
+}
+
+.grid__item--image,
+.grid__item--caption {
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 64em) {
+  .grid__item--image,
+.grid__item--caption {
+    grid-column: span 6;
+  }
+}
+
+.grid__item--image {
+  margin-bottom: 24px;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 64em) {
+  .grid__item--image {
+    margin-bottom: 0;
+  }
+  .grid__item--image img {
+    background-position: fixed;
+    height: calc(100vh - 48px);
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+
+.grid__item--caption .btn {
+  margin-bottom: 0;
+}
+
+.grid__item--flipped {
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 64em) {
+  .grid__item--flipped {
+    direction: rtl;
+  }
+  .grid__item--flipped .grid__item--image,
+.grid__item--flipped .grid__item--caption {
+    direction: ltr;
+  }
+  .grid__item--flipped .grid__item--caption-title {
+    left: auto;
+    right: -25%;
+    text-align: right;
+  }
+  .grid__item--flipped .grid__item--caption-title:before {
+    -webkit-clip-path: inset(0% 0% 0% calc(75% + 24px));
+            clip-path: inset(0% 0% 0% calc(75% + 24px));
+    justify-content: flex-end;
+    text-align: right;
+  }
+}
+
+/* Title */
+.grid__item--caption-title {
+  font-size: 60px;
+  font-size: 6rem;
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 64em) {
+  .grid__item--caption-title {
+    font-size: 72px;
+    font-size: 7.2rem;
+    left: -25%;
+    position: relative;
+  }
+  .grid__item--caption-title:before {
+    -webkit-clip-path: inset(0% calc(75% + 24px) 0% 0%);
+            clip-path: inset(0% calc(75% + 24px) 0% 0%);
+    color: white;
+    content: attr(data-title);
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+  }
+}
+@media (min-width : 76.250em) {
+  .grid__item--caption-title {
+    font-size: 84px;
+    font-size: 8.4rem;
+  }
+}

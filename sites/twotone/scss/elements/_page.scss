@@ -1,0 +1,109 @@
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+
+.grid {
+	padding: $vertical-spacing $vertical-spacing 0;
+}
+
+.grid__item {
+	display: grid;
+	grid-column-gap: $vertical-spacing;
+	margin-bottom: $vertical-spacing;
+	width: 100%;
+
+	@include bp(bp5) {
+		align-items: center;
+		grid-template-columns: repeat(12, 1fr);
+		margin-top: 0;
+	}
+	
+	+ .grid__item {
+		margin-top: $vertical-spacing*2;
+		
+		@include bp(bp5) {
+			margin-top: 0;
+		}
+	}
+}
+
+.grid__item--image,
+.grid__item--caption {
+	
+	@include bp(bp5) {
+		grid-column: span 6;
+	}
+}
+
+.grid__item--image {
+	margin-bottom: $vertical-spacing;
+	
+	@include bp(bp5) {
+		margin-bottom: 0;
+		
+		img {
+			background-position: fixed;
+			height: calc(100vh - #{$vertical-spacing*2});
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}
+
+.grid__item--caption {
+	
+	.btn {
+		margin-bottom: 0;
+	}
+}
+
+.grid__item--flipped {
+
+	@include bp(bp5) {
+		direction: rtl;
+		
+		.grid__item--image,
+		.grid__item--caption {
+			direction: ltr;
+		}
+		
+		.grid__item--caption-title {
+			left: auto;
+			right: -25%;
+			text-align: right;
+			
+			&:before {
+				clip-path: inset(0% 0% 0% calc(75% + #{$vertical-spacing});
+				justify-content: flex-end;
+				text-align: right;
+			}
+		}
+	}
+}
+
+/* Title */
+
+.grid__item--caption-title {
+	@include font-size(60);
+
+	@include bp(bp5) {
+		@include font-size(72);
+		left: -25%;
+		position: relative;
+		
+		&:before {
+			clip-path: inset(0% calc(75% + #{$vertical-spacing}) 0% 0%);
+			color: $white;
+			content: attr(data-title);
+			display: flex;
+			overflow: hidden;
+			position: absolute;
+			text-align: left;
+			width: 100%;
+		}
+	}
+	
+	@include bp(bp6) {
+		@include font-size(84);
+	}
+}

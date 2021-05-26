@@ -1,0 +1,195 @@
+/* ==========================================================================
+   #COLOUR
+   ========================================================================== */
+
+/**
+ * Default anchor styling.
+ */
+
+a {
+	border-bottom: 4px solid $color-secondary;
+	color: $link-color;
+	font-weight: $heading-font-weight;
+	letter-spacing: 0;
+	padding: 4px 2px 0;
+	position: relative;
+	text-decoration: none;
+	transition: all .08s;
+	
+	&:visited {
+		color: $link-color-visited;
+	}
+
+	&:focus,
+	&:hover {
+		background-color: $color-secondary;
+		color: $link-color;
+		// outline: thin dotted;
+		outline: 0;
+		text-decoration: none;
+	}
+	
+	&:active {
+		top: 2px;
+	}
+}
+
+
+
+
+
+/* ==========================================================================
+   #ANIMATED LINKS
+   ========================================================================== */
+
+/**
+ * Container/wrapper div that holds everything together.
+ *
+ * 1. Account for `4px` horizontal padding/overhang.
+ * 2. Adjust the `clip-path` width to remove spacing created by padding on the
+ *    `.link__label` (32px). However, we need 8px for the horizontal padding so
+ *    we only subtract `24px`.
+ * 3. Remove default `a` styling.
+ */
+
+.link {
+	border-bottom: none; /* [3] */
+	clip-path: inset(0 -4px 0 0); /* [1] */
+	display: inline-flex;
+	align-items: center;
+	height: 32px;
+	line-height: 18px;
+	margin-bottom: $vertical-spacing;
+	padding: 0; /* [3] */
+	position: relative;
+	text-align: right;
+
+	&:before {
+		background: $color-secondary;
+		content: "";
+		height: 32px;
+		position: absolute;
+		right: -4px; /* [1] */
+		left: auto;
+		width: calc(100% - 24px); /* [2] */
+	}
+	
+	&:focus,
+	&:hover {
+		background: none; /* 3 */
+	}
+}
+
+/**
+ * Core styling for animated / sliding links. Displayed icon on right.
+ *
+ * 1. Leave space and position icons within it. Value was originally `36px` so
+ *    icon was 4px away text but amended to `32px` as it looked better with
+ *    space around icon in SVG.
+ * 2. For better (for precise) centred icons.
+ * 3. Update the left/right values on the before/after classes to move the
+ *    icons in/out of view.
+ */
+
+.link__label {
+	padding: 0 32px 0 0; /* [1] */
+	position: relative;
+	left: 0;
+	transition: all 0.16s ease-out;
+
+	&:before,
+	&:after {
+		background: url(../img/icon-arrow.svg) no-repeat 0 0;
+		content: "";
+		height: 24px;
+		position: absolute;
+		top: 50%; /* [2] */
+		left: -32px; /* [1] */
+		transform: translate(0, -50%); /* [2] */
+		transition: all 0.16s ease-out;
+		width: 24px;
+	}
+
+	&:after {
+		right: 0; /* [3] */
+		left: auto; /* [3] */
+	}
+
+	.link:focus &,
+	.link:hover & {
+		left: 32px; /* [3] */
+	}
+}
+
+
+/**
+ * Animated links that have unique icons which have visible icons shown to the
+ * left side of the text instead of the right. So a lot of resets to switch
+ * values around from right to left.
+ *
+ * 1. Leave space and position icons within it. Value was originally `36px` so
+ *    icon was 4px away text but amended to `32px` as it looked better with
+ *    space around icon in SVG.
+ * 2. Switch the `clip-path` value from right to left. Also increase it from
+ *    `-4px` slightly as these items 'roll' out of view, so it just helps show
+ *    the effect more with a bit more space before it's cropped.
+ * 3. These items `:before` elements rotate on `:hover` as well as the regular
+ *    transition.
+ */
+
+.link--prohibition,
+.link--filters {
+	clip-path: inset(0 0 0 -6px); /* [2] */
+	text-align: left;
+	
+	&:before {
+		right: auto;
+		left: -4px;
+	}
+
+	.link__label {
+		padding: 0 0 0 32px; /* [1] */
+		
+		&:before {
+			background: url(../img/icon-no.svg) no-repeat 0 0;
+			left: 0;
+		}
+		&:after {
+			right: -32px;  /* [1] */
+			left: auto;
+		}
+	}
+	
+	&:focus,
+	&:hover {
+		
+		.link__label {
+			left: -32px;  /* [1] */
+		
+			&:before {
+				transform: translate(0, -50%) rotate(-180deg); /* [3] */
+			}
+		}
+	}
+}
+
+
+/**
+ * The filter icon does not have a 2nd icons that is revealed on hover.
+ *
+ * 1. So we hide it.
+ */
+
+.link--filters {
+	
+	.link__label {
+		
+		&:before {
+			background: url(../img/icon-refresh.svg) no-repeat 0 0;
+		}
+		
+		&:after {
+			display: none; /* [1] */
+		}
+	}
+}

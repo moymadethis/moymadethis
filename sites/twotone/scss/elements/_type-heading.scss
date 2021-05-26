@@ -1,0 +1,70 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/**
+ * Base styling for heading elements.
+ */
+ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $heading-font-color;
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
+	letter-spacing: $heading-letterspacing;
+	line-height: $heading-lineheight;
+	margin: 0 0 $vertical-spacing;
+	transition: font-size .20s;
+}
+
+h1 { 
+	@include font-size(48);
+	
+	@include bp(bp3) {
+		@include font-size(60);
+	}
+}
+
+h2 { 
+	@include font-size(36);
+	
+	@include bp(bp3) {
+		@include font-size(48);
+	}
+}
+
+h3 { 
+	@include font-size(30);
+	
+	@include bp(bp3) {
+		@include font-size(36);
+	}
+}
+
+h4 { 
+	@include font-size(24);
+	
+	@include bp(bp3) {
+		@include font-size(30);
+	}
+}
+
+h5 { 
+	@include font-size(18);
+	
+	@include bp(bp3) {
+		@include font-size(24);
+	}
+}
+
+h6 { 
+	@include font-size(16);
+	
+	@include bp(bp3) {
+		@include font-size(18);
+	}
+}
