@@ -108,8 +108,10 @@ a:active {
   -webkit-clip-path: inset(0 -4px 0 0);
           clip-path: inset(0 -4px 0 0);
   /* [1] */
+  display: -webkit-inline-flex;
   display: inline-flex;
-  align-items: center;
+  -webkit-align-items: center;
+          align-items: center;
   height: 32px;
   line-height: 18px;
   margin-bottom: 24px;
@@ -160,7 +162,8 @@ a:active {
   /* [2] */
   left: -32px;
   /* [1] */
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   /* [2] */
   transition: all 0.16s ease-out;
   width: 24px;
@@ -227,7 +230,8 @@ a:active {
 .link--prohibition:focus .link__label:before, .link--prohibition:hover .link__label:before,
 .link--filters:focus .link__label:before,
 .link--filters:hover .link__label:before {
-  transform: translate(0, -50%) rotate(-180deg);
+  -webkit-transform: translate(0, -50%) rotate(-180deg);
+          transform: translate(0, -50%) rotate(-180deg);
   /* [3] */
 }
 
@@ -361,8 +365,10 @@ a:active {
  * 8. Add default `:active` positions as we overrode this on `:hover`.
  */
 .btn--arrow .label {
+  display: -webkit-inline-flex;
   display: inline-flex;
-  justify-content: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   -webkit-clip-path: inset(0 0 0 0);
           clip-path: inset(0 0 0 0);
   /* [1] */
@@ -675,7 +681,8 @@ p {
 }
 @media (min-width : 64em) {
   .grid__item {
-    align-items: center;
+    -webkit-align-items: center;
+            align-items: center;
     grid-template-columns: repeat(12, 1fr);
     margin-top: 0;
   }
@@ -695,22 +702,6 @@ p {
   }
 }
 
-.grid__item--image,
-.grid__item--caption {
-  /* [1] */
-  /* [2] */
-  /* [3] */
-  /* [4] */
-  /* [5] */
-  /* [6] */
-}
-@media (min-width : 64em) {
-  .grid__item--image,
-.grid__item--caption {
-    grid-column: span 6;
-  }
-}
-
 .grid__item--image {
   margin-bottom: 24px;
   /* [1] */
@@ -722,6 +713,7 @@ p {
 }
 @media (min-width : 64em) {
   .grid__item--image {
+    grid-column: 1/7;
     margin-bottom: 0;
   }
   .grid__item--image img {
@@ -734,11 +726,7 @@ p {
   }
 }
 
-.grid__item--caption .btn {
-  margin-bottom: 0;
-}
-
-.grid__item--flipped {
+.grid__item--caption {
   /* [1] */
   /* [2] */
   /* [3] */
@@ -746,24 +734,12 @@ p {
   /* [5] */
   /* [6] */
 }
+.grid__item--caption .btn {
+  margin-bottom: 0;
+}
 @media (min-width : 64em) {
-  .grid__item--flipped {
-    direction: rtl;
-  }
-  .grid__item--flipped .grid__item--image,
-.grid__item--flipped .grid__item--caption {
-    direction: ltr;
-  }
-  .grid__item--flipped .grid__item--caption-title {
-    left: auto;
-    right: -25%;
-    text-align: right;
-  }
-  .grid__item--flipped .grid__item--caption-title:before {
-    -webkit-clip-path: inset(0% 0% 0% calc(75% + 24px));
-            clip-path: inset(0% 0% 0% calc(75% + 24px));
-    justify-content: flex-end;
-    text-align: right;
+  .grid__item--caption {
+    grid-column: 7/13;
   }
 }
 
@@ -796,6 +772,7 @@ p {
             clip-path: inset(0% calc(75% + 24px) 0% 0%);
     color: white;
     content: attr(data-title);
+    display: -webkit-flex;
     display: flex;
     overflow: hidden;
     position: absolute;
@@ -808,4 +785,53 @@ p {
     font-size: 84px;
     font-size: 8.4rem;
   }
+}
+
+.grid__item--flipped {
+  /* [1] */
+  /* [2] */
+  /* [3] */
+  /* [4] */
+  /* [5] */
+  /* [6] */
+}
+@media (min-width : 64em) {
+  .grid__item--flipped {
+    direction: rtl;
+  }
+  .grid__item--flipped .grid__item--image,
+.grid__item--flipped .grid__item--caption {
+    direction: ltr;
+  }
+  .grid__item--flipped .grid__item--caption-title {
+    left: auto;
+    right: -25%;
+    text-align: right;
+  }
+  .grid__item--flipped .grid__item--caption-title:before {
+    -webkit-clip-path: inset(0% 0% 0% calc(75% + 24px));
+            clip-path: inset(0% 0% 0% calc(75% + 24px));
+    -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+    text-align: right;
+  }
+}
+
+.stotty .grid__item {
+  grid-column-gap: 0;
+}
+.stotty .grid__item--image {
+  grid-column: 1/span 6;
+  grid-row: 1;
+}
+.stotty .grid__item--caption {
+  grid-column: 6/span 6;
+  grid-row: 1;
+}
+.stotty .grid__item--caption-title {
+  left: 0 !important;
+}
+.stotty .grid__item--caption-title:before {
+  -webkit-clip-path: inset(0% calc((5 / 6) * 100%) 0% 0%);
+          clip-path: inset(0% calc((5 / 6) * 100%) 0% 0%);
 }
