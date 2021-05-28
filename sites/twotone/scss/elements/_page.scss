@@ -92,14 +92,6 @@
 			direction: ltr;
 		}
 		
-		// .grid__item--image {
-		// 	grid-column: 7/13;			
-		// }
-		// 
-		// .grid__item--caption {
-		// 	grid-column: 1/7;
-		// }
-		
 		.grid__item--caption-title {
 			left: auto;
 			right: -25%;
@@ -113,6 +105,11 @@
 		}
 	}
 }
+
+
+/* ==========================================================================
+#STOTTY - BLOCK OVER IMAGE, P/BTN THEN INDENTED
+========================================================================== */
 
 @include bp(bp5) {
 
@@ -161,6 +158,59 @@
 			p,
 			.btn {
 				margin-left: calc(((-1 / 6) * 100%) + ((-1 / 6) * #{$vertical-spacing}));
+			}
+		}
+	}
+}
+
+
+/* ==========================================================================
+#MOY - BLOCK IN GRID, TITLE INDENTED
+========================================================================== */
+
+@include bp(bp5) {
+
+	.moy {
+		
+		.grid__item {
+			grid-column-gap: $vertical-spacing;
+		}
+		
+		.grid__item--image {
+			grid-column: 1 / span 6;
+			grid-row: 1;
+		}
+		
+		.grid__item--caption {
+			grid-column: 7 / span 6;
+			grid-row: 1;
+		}
+		
+		
+		// Commented out are values if you want to use margin instead of left. Which
+		// will allow text to span 100% of the column still.
+		.grid__item--caption-title { 
+			left: calc(((-1 / 6) * 100%) + ((-1 / 6) * #{$vertical-spacing}));
+			//left: 0 !important;
+			//margin-left: calc(((-1 / 6) * 100%) + ((-1 / 6) * #{$vertical-spacing}));
+			
+			&:before {
+				clip-path: inset(0% calc(((5 / 6) * 100%) + ((5 / 6) * #{$vertical-spacing})) 0% 0%);
+				//clip-path: inset(0% calc(((6 / 7) * 100%) + ((5 / 6) * #{$vertical-spacing})) 0% 0%);
+			}
+		}
+		
+		.grid__item--flipped {
+				
+			.grid__item--caption-title {
+				left: calc(((1 / 6) * 100%) + ((1 / 6) * #{$vertical-spacing}));
+				//left: 0 !important;
+				//margin-right: calc(((-1 / 6) * 100%) + ((-1 / 6) * #{$vertical-spacing}));
+					
+				&:before {
+					clip-path: inset(0% 0% 0% calc(((5 / 6) * 100%) + ((5 / 6) * #{$vertical-spacing})));
+					//clip-path: inset(0% 0% 0% calc(((6 / 7) * 100%) + ((5 / 6) * #{$vertical-spacing})));
+				}
 			}
 		}
 	}
