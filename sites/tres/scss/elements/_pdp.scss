@@ -1,0 +1,70 @@
+/* ==========================================================================
+   #CONTAINER
+   ========================================================================== */
+
+/**
+ * Styling for demo page / container.
+ */
+
+.container {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 24px;
+	width: 100%;
+	max-width: 720px;
+}
+
+/**
+ * Helper class for right alignment (demo purposes). `flex` or `text-align`
+ * would be preferable - I guess!
+ */
+
+.align-right {
+	float: right;
+}
+
+
+
+
+
+/* ==========================================================================
+#GRID
+========================================================================== */
+
+
+.pdp {
+   display: grid;
+   grid-column-gap: $vertical-spacing;
+   grid-template-columns: repeat(12, 1fr);
+   margin-bottom: $vertical-spacing;
+   padding: $vertical-spacing $vertical-spacing 0;
+}
+
+.pdp__image {
+   grid-column: 1 / span 9;
+   grid-row: 1;
+}
+
+.pdp__carousel {
+   overflow: auto;
+   position: sticky;
+   top: $vertical-spacing;
+   white-space: nowrap;
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+   
+   &::-webkit-scrollbar {
+      display: none;
+   }
+
+   img {
+      height: calc(100vh - #{$vertical-spacing*2});
+      width: auto;
+   }
+}
+
+.pdp__desc {
+   grid-column: 10 / span 3;
+   grid-row: 1;
+   position: relative;
+}

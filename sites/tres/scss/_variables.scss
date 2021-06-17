@@ -2,11 +2,11 @@
    #SYSTEM
    ========================================================================== */
 
-$debug-mode						: false;
+$debug-mode						   : false;
 $debug-color-error				: red;
-$debug-color-warning			: yellow;
-$debug-outline-width			: 5px;
-$debug-outline-style			: solid;
+$debug-color-warning			   : yellow;
+$debug-outline-width			   : 5px;
+$debug-outline-style			   : solid;
 
 
 
@@ -16,12 +16,12 @@ $debug-outline-style			: solid;
    #COLOR
    ========================================================================== */
 
-$black 							: rgb(0,0,0);
-$white 							: rgb(255,255,255);
+$black 							   : rgb(0,0,0);
+$white 							   : rgb(255,255,255);
 $color-primary 					: rgb(0,0,195); 
-$color-secondary 				: rgb(240,241,13);
+$color-secondary 				   : rgb(240,241,13);
 
-$base-bg						: $white;
+$base-bg						      : $white;
 
 
 
@@ -31,11 +31,11 @@ $base-bg						: $white;
    #BASICS
    ========================================================================== */
 
-$body-background 				: rgb(247,247,253);
-$vertical-spacing				: 24px;
-$gutter		 					: 48px;
-$max-width						: 90.000rem;
-$MQs							: true;
+$body-background 				   : rgb(247,247,253);
+$vertical-spacing				   : 24px;
+$gutter		 					   : 48px;
+$max-width						   : 90.000rem;
+$MQs							      : true;
 
 
 
@@ -49,20 +49,20 @@ $MQs							: true;
  * Base Styling.
  */
 
-$font-size 						: 18;
-$font-family 					: "mr-eaves-modern", sans-serif;
-$font-color 					: $color-primary;
-$font-letterspacing 			: 0.032em;
-$font-lineheight 				: 1.5;
-$font-weight 					: 400;
+$font-size 						   : 18;
+$font-family 					   : "mr-eaves-modern", sans-serif;
+$font-color 					   : $color-primary;
+$font-letterspacing 			   : 0.032em;
+$font-lineheight 				   : 1.5;
+$font-weight 					   : 400;
 
 /**
  * Headings.
  */
 
-$heading-font-color 			: $color-primary;
+$heading-font-color 			   : $color-primary;
 $heading-font-family 			: "mr-eaves-modern", sans-serif;
-$heading-font-style 			: normal;
+$heading-font-style 			   : normal;
 $heading-font-weight 			: 800;
 $heading-letterspacing 		 	: 0;
 $heading-lineheight				: 1;
@@ -75,7 +75,7 @@ $heading-lineheight				: 1;
    #LINKS
    ========================================================================== */
 
-$link-color 		    		: $color-primary;
+$link-color                   : $color-primary;
 $link-color-hover 				: $link-color;
 $link-color-visited   			: $link-color;
 $link-color-focus 				: $link-color;
@@ -88,11 +88,11 @@ $link-color-focus 				: $link-color;
    #TEXTURE
    ========================================================================== */
 
-$border-color    				: rgb(234,234,250);
-$border-style					: solid;
-$border-width 					: 2px;
+$border-color    				   : rgb(234,234,250);
+$border-style					   : solid;
+$border-width 					   : 2px;
 $border-radius 					: 0;
-$border							: $border-width $border-style $border-color;
+$border							   : $border-width $border-style $border-color;
 
 
 
@@ -102,8 +102,8 @@ $border							: $border-width $border-style $border-color;
    #BUTTONS
    ========================================================================== */
 
-$button-bg 						: $color-primary;
-$button-border-color			: $color-primary;
+$button-bg 						   : $color-primary;
+$button-border-color			   : $color-primary;
 $button-border-style 			: $border-style;
 $button-border-width 			: $border-width;
 $button-border-radius 			: $border-radius;
@@ -111,10 +111,10 @@ $button-border-radius 			: $border-radius;
 $button-font-family				: $heading-font-family;
 $button-font-size 				: $font-size;
 $button-font-color 				: $white;
-$button-font-weight 			: 800;
+$button-font-weight 			   : 800;
 $button-letter-spacing			: 0;
 $button-font-transform 			: none;
 
-$button-bg-hover 				: $button-bg;
+$button-bg-hover 				   : $button-bg;
 $button-border-color-hover		: $button-border-color;
 $button-font-color-hover 		: $button-font-color;
