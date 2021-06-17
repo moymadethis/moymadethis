@@ -48,7 +48,8 @@
 }
 
 .pdp__carousel {
-   overflow: auto;
+   overflow: hidden;
+   overflow-x: auto;
    position: sticky;
    top: $vertical-spacing;
    white-space: nowrap;
@@ -72,11 +73,11 @@
 .pdp__desc {
    grid-column: 10 / span 3;
    grid-row: 1;
-   position: relative;
    
    .btn {
       margin-bottom: 0;
       position: sticky;
+      display: block; // Breaks in Safari if removed
       bottom: 24px;
       
       &:before,
