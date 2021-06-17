@@ -33,11 +33,13 @@
 
 
 .pdp {
-   display: grid;
-   grid-column-gap: $vertical-spacing;
-   grid-template-columns: repeat(12, 1fr);
-   margin-bottom: $vertical-spacing;
    padding: $vertical-spacing $vertical-spacing 0;
+   
+   @include bp(bp5) {
+      display: grid;
+      grid-column-gap: $vertical-spacing;
+      grid-template-columns: repeat(12, 1fr);
+   }
 }
 
 .pdp__image {
@@ -58,8 +60,12 @@
    }
 
    img {
-      height: calc(100vh - #{$vertical-spacing*2});
-      width: auto;
+      max-width: 100%;
+      
+      @include bp(bp5) {
+         height: calc(100vh - #{$vertical-spacing*2});
+         width: auto;
+      }
    }
 }
 
@@ -67,4 +73,28 @@
    grid-column: 10 / span 3;
    grid-row: 1;
    position: relative;
+   
+   .btn {
+      margin-bottom: 0;
+      position: sticky;
+      bottom: 24px;
+      
+      &:before,
+      &:after {
+         background: $body-background;
+         content: "";
+         display: block;
+         position: absolute;
+         top: -8px;
+         left: -2px;
+         height: 8px;
+         width: calc(100% + 4px);
+         z-index: -1;
+      }
+      
+      &:after {
+         top: calc(100% + 2px);
+         height: 24px;
+      }
+   }
 }
